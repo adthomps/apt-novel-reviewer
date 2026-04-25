@@ -1,0 +1,305 @@
+🧠 ONE-SHOT AI CODING AGENT PROMPT
+
+Project: APT Local Novel Review Desktop App (V1)
+
+🧾 ROLE
+
+You are a senior full-stack engineer + product architect building a production-structured desktop application.
+
+You must:
+
+follow the spec exactly
+avoid scope creep
+produce clean, modular, maintainable code
+generate all required docs and structure
+prioritize working end-to-end functionality
+🎯 OBJECTIVE
+
+Build a local-first desktop application that allows users to:
+
+Import a .docx manuscript
+Parse it into chapters
+Run local AI-powered review modes using Ollama
+Store structured findings
+Track versions of the manuscript
+Compare review results across versions
+
+This is a review tool, NOT a writing tool.
+
+🚫 NON-GOALS (DO NOT BUILD)
+No chat assistant UI
+No cloud APIs
+No collaboration
+No manuscript editing inside app
+No rewriting engine
+No plugin system
+No telemetry by default
+No Word export with tracked changes
+🧱 TECH STACK (LOCKED)
+Desktop
+Electron
+Frontend
+React
+TypeScript
+Vite
+UI / Styling
+Tailwind CSS
+APT Design System (dark-first, card-based, low-noise)
+Backend (local)
+Node (Electron main process)
+Storage
+SQLite (better-sqlite3 or equivalent)
+Local filesystem
+LLM Runtime
+Ollama (local only)
+Default Model
+gpt-oss:20b
+Validation
+Zod for schema validation
+🧭 APP ARCHITECTURE
+Electron App
+ ├── Renderer (React UI)
+ ├── Main Process (Node)
+ ├── SQLite DB
+ ├── File Storage (/projects)
+ └── Ollama Local API
+📁 REQUIRED PROJECT STRUCTURE
+/apps/desktop
+  /src
+    /main
+    /renderer
+    /shared
+
+/packages
+  /ui (APT components)
+  /db
+  /types
+  /lib
+
+/docs
+📦 CORE FEATURES
+1. FIRST RUN SETUP
+Detect:
+Ollama installed
+Ollama running
+Model gpt-oss:20b installed
+Show UI:
+Runtime status card
+Model status card
+Setup instructions if missing
+2. PROJECT SYSTEM
+User can:
+create project
+open project
+delete project
+Project contains:
+manuscript versions
+chapters
+canon docs
+review runs
+findings
+3. DOCX IMPORT PIPELINE
+Input:
+
+.docx
+
+Output:
+structured chapters
+Requirements:
+extract text
+detect chapter headings
+fallback manual split UI
+store chapters in DB
+4. VERSIONING SYSTEM
+Rule:
+
+Every import = new version
+
+Track:
+version number
+timestamp
+chapter hashes
+Detect:
+unchanged
+modified
+new
+removed
+5. REVIEW ENGINE
+Review Modes:
+chapter_review
+continuity_review
+character_review
+timeline_review
+6. OLLAMA INTEGRATION
+Requirements:
+call local Ollama API
+configurable model
+default: gpt-oss:20b
+error handling if unavailable
+7. REVIEW OUTPUT CONTRACT
+MUST RETURN JSON ONLY
+Schema:
+type ReviewResult = {
+  templateId: string;
+  reviewType: string;
+  status: "success" | "partial" | "error";
+  model: string;
+
+  summary: {
+    overallAssessment: string;
+    issueCount: number;
+    highSeverityCount: number;
+    mediumSeverityCount: number;
+    lowSeverityCount: number;
+  };
+
+  findings: Finding[];
+  notes: Note[];
+  warnings: Warning[];
+
+  generatedAt: string;
+};
+Finding Schema
+type Finding = {
+  id: string;
+  type: string;
+  severity: "low" | "medium" | "high";
+  confidence: "low" | "medium" | "high";
+
+  location: {
+    chapterId: string;
+    textAnchor: string;
+  };
+
+  issue: string;
+  whyItMatters: string;
+  evidence: string[];
+  suggestedFix: string;
+
+  status?: "new" | "still" | "resolved";
+};
+🔄 VERSION COMPARISON
+Compare:
+
+Previous vs Current
+
+Classify findings:
+resolved
+still present
+new
+🖥️ UI SPEC (APT SYSTEM)
+Global Layout
+Left nav
+Top bar
+Main workspace
+Right context panel
+Bottom status bar
+Pages
+1. Setup
+
+Runtime + model detection
+
+2. Library
+
+Project list (cards)
+
+3. Project Dashboard
+
+Overview cards
+
+4. Manuscript
+
+Chapter list + reader
+
+5. Canon
+
+Character + timeline notes
+
+6. Review Center
+
+Run review modes
+
+7. Findings
+
+List of issues (core screen)
+
+8. Compare
+
+Version diff
+
+9. Settings
+
+Runtime + model config
+
+🎨 DESIGN RULES (APT)
+Dark-first UI
+Card-based layout
+One accent color
+Minimal noise
+Typography-first hierarchy
+Subtle motion only
+⚠️ ERROR STATES
+
+Handle:
+
+Ollama not installed
+Ollama not running
+Model missing
+DOCX parse failure
+No chapters detected
+Review failure
+Invalid model JSON
+🧪 TESTS (MINIMUM)
+runtime detection
+schema validation
+chapter parsing
+version diff logic
+findings parsing
+📄 REQUIRED DOCUMENTATION
+
+Generate:
+
+README.md
+AGENTS.md
+PROJECT_RULES.md
+docs/ARCHITECTURE.md
+docs/UX_SPEC.md
+docs/DATA_MODEL.md
+docs/OLLAMA_INTEGRATION.md
+docs/IMPORT_PIPELINE.md
+🧠 IMPLEMENTATION PRIORITY
+Build in this order:
+App shell
+Setup screen (runtime detection)
+Project system
+DOCX import
+Chapter parsing UI
+SQLite schema
+Ollama integration
+Chapter review
+Findings screen
+Versioning system
+Compare screen
+Remaining review modes
+⚡ FINAL REQUIREMENT
+
+The output must be:
+
+runnable locally
+structured for extension
+cleanly separated (UI / logic / data)
+not a prototype mock — a working POC
+🧩 OPTIONAL (IF TIME)
+markdown export of review
+model switcher UI
+manual chapter edit UI
+✅ OUTPUT EXPECTATION
+
+Generate:
+
+full project scaffold
+working app shell
+core flows implemented
+minimal styling applied using APT system
+functioning Ollama call layer
+valid JSON parsing for review results

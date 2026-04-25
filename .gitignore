@@ -1,0 +1,12 @@
+node_modules
+.pnpm-store
+dist
+out
+coverage
+*.log
+.DS_Store
+apps/desktop/.electron-vite
+*.db
+*.db-shm
+*.db-wal
+projects/

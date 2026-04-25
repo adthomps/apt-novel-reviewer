@@ -1,0 +1,22 @@
+{
+  "name": "@apt/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@apt/types": "workspace:*",
+    "better-sqlite3": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.15.2",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "pnpm exec tsc -p tsconfig.json --emitDeclarationOnly",
+    "typecheck": "pnpm exec tsc -p tsconfig.json --noEmit",
+    "test": "echo \"No tests for @apt/db\""
+  }
+}
