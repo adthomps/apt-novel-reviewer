@@ -1,0 +1,732 @@
+{
+  "generated_at": "2026-04-27T00:34:20.255Z",
+  "audit_date": "2026-04-27",
+  "source": "apt-principles/scripts/sweep-project-profiles.mjs",
+  "repo": "apt-novel-reviewer",
+  "repo_root": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-novel-reviewer",
+  "profile_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-novel-reviewer/docs/apt/references/project-profile.json",
+  "audit_report_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-novel-reviewer/docs/apt/reports/apt-principles-audit-2026-04-26.md",
+  "findings": [
+    {
+      "severity": "Minor",
+      "layer": "Operations",
+      "finding": "Operational readiness evidence is lighter than implementation evidence for a desktop app with native and local-AI dependencies."
+    },
+    {
+      "severity": "Minor",
+      "layer": "Quality",
+      "finding": "Automated coverage is strongest in packages/lib, while desktop UI and packaging paths still rely mostly on manual validation."
+    }
+  ],
+  "top_findings": [
+    {
+      "severity": "Minor",
+      "layer": "Operations",
+      "finding": "Operational readiness evidence is lighter than implementation evidence for a desktop app with native and local-AI dependencies."
+    },
+    {
+      "severity": "Minor",
+      "layer": "Quality",
+      "finding": "Automated coverage is strongest in packages/lib, while desktop UI and packaging paths still rely mostly on manual validation."
+    }
+  ],
+  "rubric_scores": [
+    {
+      "layer": "Thinking",
+      "score": "Pass"
+    },
+    {
+      "layer": "Design",
+      "score": "Partial"
+    },
+    {
+      "layer": "Architecture",
+      "score": "Pass"
+    },
+    {
+      "layer": "System Standards",
+      "score": "Pass"
+    },
+    {
+      "layer": "Security",
+      "score": "Pass"
+    },
+    {
+      "layer": "Execution",
+      "score": "Pass"
+    },
+    {
+      "layer": "Quality",
+      "score": "Partial"
+    },
+    {
+      "layer": "Release",
+      "score": "Partial"
+    },
+    {
+      "layer": "Operations",
+      "score": "Partial"
+    },
+    {
+      "layer": "Knowledge",
+      "score": "Pass"
+    },
+    {
+      "layer": "AI",
+      "score": "Pass"
+    }
+  ],
+  "top_actions": [
+    "Add a short desktop release/operations note for packaging, native dependency support, and Ollama runtime prerequisites.",
+    "Add a small smoke or integration test layer for desktop UI and packaging-critical flows.",
+    "Refresh the local audit once CI has real hosted runs and release packaging is documented."
+  ],
+  "status": "passed",
+  "errors": [],
+  "workspace_summary": {
+    "workspace_root": "C:/Users/sanch/Documents/Github/Applied Practical Thinking",
+    "repos_scanned": 6,
+    "passed": [
+      "applied-practical-thinking",
+      "apt-coach",
+      "apt-dream-to-reality",
+      "apt-novel-reviewer",
+      "apt-payment-rpc-api",
+      "crt-world"
+    ],
+    "failed": [],
+    "skipped": [],
+    "findings_by_severity": {
+      "Blocking": 0,
+      "Major": 6,
+      "Minor": 13,
+      "Other": 0
+    },
+    "findings_by_layer": {
+      "Design": 3,
+      "Knowledge": 3,
+      "Design / Quality": 2,
+      "Quality": 2,
+      "Security / Operations": 2,
+      "AI": 1,
+      "AI / Knowledge": 1,
+      "Architecture": 1,
+      "Architecture / AI": 1,
+      "Operations": 1,
+      "Release / Knowledge": 1,
+      "System Standards": 1
+    },
+    "rubric_summary_by_layer": {
+      "AI": {
+        "pass": 1,
+        "partial": 3,
+        "gap": 0,
+        "not_applicable": 1,
+        "other": 0
+      },
+      "Architecture": {
+        "pass": 5,
+        "partial": 0,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "Design": {
+        "pass": 0,
+        "partial": 5,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "Execution": {
+        "pass": 5,
+        "partial": 0,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "Knowledge": {
+        "pass": 2,
+        "partial": 3,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "Operations": {
+        "pass": 0,
+        "partial": 5,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "Quality": {
+        "pass": 1,
+        "partial": 4,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "Release": {
+        "pass": 0,
+        "partial": 5,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "Security": {
+        "pass": 1,
+        "partial": 4,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "System Standards": {
+        "pass": 4,
+        "partial": 1,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      },
+      "Thinking": {
+        "pass": 5,
+        "partial": 0,
+        "gap": 0,
+        "not_applicable": 0,
+        "other": 0
+      }
+    },
+    "action_queue": [
+      {
+        "repo": "applied-practical-thinking",
+        "action": "Keep docs/apt/adoption.md and docs/apt/project-profile.md updated whenever architecture, validation flow, or maturity posture changes."
+      },
+      {
+        "repo": "applied-practical-thinking",
+        "action": "Maintain schema-compatible docs/apt/references/project-profile.json and enforce validation in CI."
+      },
+      {
+        "repo": "applied-practical-thinking",
+        "action": "Add a short AI adoption note covering prompt ownership, worker route boundaries, and human-review expectations."
+      },
+      {
+        "repo": "apt-coach",
+        "action": "Keep docs/apt/adoption.md and docs/apt/project-profile.md updated as constraints, maturity, and security posture evolve."
+      },
+      {
+        "repo": "apt-coach",
+        "action": "Maintain schema-compatible docs/apt/references/project-profile.json and enforce CI validation."
+      },
+      {
+        "repo": "apt-coach",
+        "action": "Expand adaptive coaching prompt documentation before treating AI guidance as showcase-ready."
+      },
+      {
+        "repo": "apt-dream-to-reality",
+        "action": "Create docs/apt/adoption.md with adoption mode apply + showcase, canonical source, validation commands, and local exceptions."
+      },
+      {
+        "repo": "apt-dream-to-reality",
+        "action": "Create docs/apt/project-profile.md describing Dream to Reality as an APT planning/spec workflow example."
+      },
+      {
+        "repo": "apt-dream-to-reality",
+        "action": "Resolve prompt canonicality: either generate index.ts content from Markdown or mark Markdown files as reference-only and align versions."
+      },
+      {
+        "repo": "apt-novel-reviewer",
+        "action": "Add a short desktop release/operations note for packaging, native dependency support, and Ollama runtime prerequisites."
+      }
+    ],
+    "results": [
+      {
+        "repo": "applied-practical-thinking",
+        "repo_root": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/applied-practical-thinking",
+        "profile_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/applied-practical-thinking/docs/apt/references/project-profile.json",
+        "report_dir": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/applied-practical-thinking/docs/apt/reports/static",
+        "audit_report_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/applied-practical-thinking/docs/apt/reports/apt-principles-audit-2026-04-26.md",
+        "findings": [
+          {
+            "severity": "Minor",
+            "layer": "Knowledge",
+            "finding": "Local APT adoption/profile layer is now present and aligned to canonical doctrine; keep it synchronized with future principle updates."
+          },
+          {
+            "severity": "Major",
+            "layer": "Release / Knowledge",
+            "finding": "The working tree already contains modified generated APT publication artifacts. That is acceptable if intentional, but audit/remediation work must not overwrite or normalize them accidentally."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Design",
+            "finding": "About.tsx still contains a few inline visual comments and decorative gradient/glow details. They use semantic tokens, so this is not a contract violation, but the page is more presentation-heavy than the current APT public-doc posture."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Architecture / AI",
+            "finding": "Worker AI/content runtime has clear route grouping and contracts, but the local AI review evidence is scattered across docs, prompt files, and worker code rather than summarized as adoption evidence."
+          }
+        ],
+        "top_findings": [
+          {
+            "severity": "Minor",
+            "layer": "Knowledge",
+            "finding": "Local APT adoption/profile layer is now present and aligned to canonical doctrine; keep it synchronized with future principle updates."
+          },
+          {
+            "severity": "Major",
+            "layer": "Release / Knowledge",
+            "finding": "The working tree already contains modified generated APT publication artifacts. That is acceptable if intentional, but audit/remediation work must not overwrite or normalize them accidentally."
+          }
+        ],
+        "rubric_scores": [
+          {
+            "layer": "Thinking",
+            "score": "Pass"
+          },
+          {
+            "layer": "Design",
+            "score": "Partial"
+          },
+          {
+            "layer": "Architecture",
+            "score": "Pass"
+          },
+          {
+            "layer": "System Standards",
+            "score": "Pass"
+          },
+          {
+            "layer": "Security",
+            "score": "Partial"
+          },
+          {
+            "layer": "Execution",
+            "score": "Pass"
+          },
+          {
+            "layer": "Quality",
+            "score": "Pass"
+          },
+          {
+            "layer": "Release",
+            "score": "Partial"
+          },
+          {
+            "layer": "Operations",
+            "score": "Partial"
+          },
+          {
+            "layer": "Knowledge",
+            "score": "Partial"
+          },
+          {
+            "layer": "AI",
+            "score": "Partial"
+          }
+        ],
+        "top_actions": [
+          "Keep docs/apt/adoption.md and docs/apt/project-profile.md updated whenever architecture, validation flow, or maturity posture changes.",
+          "Maintain schema-compatible docs/apt/references/project-profile.json and enforce validation in CI.",
+          "Add a short AI adoption note covering prompt ownership, worker route boundaries, and human-review expectations."
+        ],
+        "status": "passed",
+        "errors": []
+      },
+      {
+        "repo": "apt-coach",
+        "repo_root": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-coach",
+        "profile_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-coach/docs/apt/references/project-profile.json",
+        "report_dir": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-coach/docs/apt/reports/static",
+        "audit_report_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-coach/docs/apt/reports/apt-principles-audit-2026-04-26.md",
+        "findings": [
+          {
+            "severity": "Major",
+            "layer": "Security / Operations",
+            "finding": "D1 dev and production currently point to the same physical database. The README correctly warns that migrations and writes are production-impacting, but this remains the largest operational risk."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Knowledge",
+            "finding": "Local APT adoption/profile layer is now present and linked to canonical doctrine; keep it synchronized with domain and operating changes."
+          },
+          {
+            "severity": "Major",
+            "layer": "Design / Quality",
+            "finding": "Existing design audit passes objective gates but in changed mode only. Manual-review-only areas remain brand intent, responsive behavior, copy nuance, and accessibility/readability."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Design",
+            "finding": "Main dashboard and daily-system surfaces are dense but task-oriented, using shared design-system components and compact state patterns. No small safe design-gap fix was obvious without a product decision."
+          },
+          {
+            "severity": "Minor",
+            "layer": "AI",
+            "finding": "Adaptive coaching prompt registry exists, but prompt contract is very light for a health-adjacent domain."
+          }
+        ],
+        "top_findings": [
+          {
+            "severity": "Major",
+            "layer": "Security / Operations",
+            "finding": "D1 dev and production currently point to the same physical database. The README correctly warns that migrations and writes are production-impacting, but this remains the largest operational risk."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Knowledge",
+            "finding": "Local APT adoption/profile layer is now present and linked to canonical doctrine; keep it synchronized with domain and operating changes."
+          }
+        ],
+        "rubric_scores": [
+          {
+            "layer": "Thinking",
+            "score": "Pass"
+          },
+          {
+            "layer": "Design",
+            "score": "Partial"
+          },
+          {
+            "layer": "Architecture",
+            "score": "Pass"
+          },
+          {
+            "layer": "System Standards",
+            "score": "Pass"
+          },
+          {
+            "layer": "Security",
+            "score": "Partial"
+          },
+          {
+            "layer": "Execution",
+            "score": "Pass"
+          },
+          {
+            "layer": "Quality",
+            "score": "Partial"
+          },
+          {
+            "layer": "Release",
+            "score": "Partial"
+          },
+          {
+            "layer": "Operations",
+            "score": "Partial"
+          },
+          {
+            "layer": "Knowledge",
+            "score": "Partial"
+          },
+          {
+            "layer": "AI",
+            "score": "Partial"
+          }
+        ],
+        "top_actions": [
+          "Keep docs/apt/adoption.md and docs/apt/project-profile.md updated as constraints, maturity, and security posture evolve.",
+          "Maintain schema-compatible docs/apt/references/project-profile.json and enforce CI validation.",
+          "Expand adaptive coaching prompt documentation before treating AI guidance as showcase-ready."
+        ],
+        "status": "passed",
+        "errors": []
+      },
+      {
+        "repo": "apt-dream-to-reality",
+        "repo_root": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-dream-to-reality",
+        "profile_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-dream-to-reality/docs/apt/references/project-profile.json",
+        "report_dir": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-dream-to-reality/docs/apt/reports/static",
+        "audit_report_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-dream-to-reality/docs/apt/reports/apt-principles-audit-2026-04-26.md",
+        "findings": [
+          {
+            "severity": "Minor",
+            "layer": "Knowledge",
+            "finding": "Local APT adoption/profile layer is now present and aligned to canonical doctrine; keep it current as workflow and maturity evolve."
+          },
+          {
+            "severity": "Major",
+            "layer": "AI / Knowledge",
+            "finding": "AI prompt source of truth is split between Markdown prompt files and an embedded TypeScript registry. Versions differ for generate-spec (1.1.0 in registry vs 1.0.0 in Markdown), creating drift risk."
+          },
+          {
+            "severity": "Major",
+            "layer": "Design / Quality",
+            "finding": "Existing full design audit reports 71 major contract findings while still showing overall pass via exception policy. This is valid as a gate result but not strong showcase evidence without a findings summary."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Architecture",
+            "finding": "D1 schema documentation still says the current implementation uses mock data/localStorage with D1 as target, while architecture docs say shipped platform uses D1."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Design",
+            "finding": "Project and refinement flows use shared APT components, states, and explicit filters. No safe local code fix was obvious without changing product behavior."
+          }
+        ],
+        "top_findings": [
+          {
+            "severity": "Minor",
+            "layer": "Knowledge",
+            "finding": "Local APT adoption/profile layer is now present and aligned to canonical doctrine; keep it current as workflow and maturity evolve."
+          },
+          {
+            "severity": "Major",
+            "layer": "AI / Knowledge",
+            "finding": "AI prompt source of truth is split between Markdown prompt files and an embedded TypeScript registry. Versions differ for generate-spec (1.1.0 in registry vs 1.0.0 in Markdown), creating drift risk."
+          }
+        ],
+        "rubric_scores": [
+          {
+            "layer": "Thinking",
+            "score": "Pass"
+          },
+          {
+            "layer": "Design",
+            "score": "Partial"
+          },
+          {
+            "layer": "Architecture",
+            "score": "Pass"
+          },
+          {
+            "layer": "System Standards",
+            "score": "Partial"
+          },
+          {
+            "layer": "Security",
+            "score": "Partial"
+          },
+          {
+            "layer": "Execution",
+            "score": "Pass"
+          },
+          {
+            "layer": "Quality",
+            "score": "Partial"
+          },
+          {
+            "layer": "Release",
+            "score": "Partial"
+          },
+          {
+            "layer": "Operations",
+            "score": "Partial"
+          },
+          {
+            "layer": "Knowledge",
+            "score": "Partial"
+          },
+          {
+            "layer": "AI",
+            "score": "Partial"
+          }
+        ],
+        "top_actions": [
+          "Create docs/apt/adoption.md with adoption mode apply + showcase, canonical source, validation commands, and local exceptions.",
+          "Create docs/apt/project-profile.md describing Dream to Reality as an APT planning/spec workflow example.",
+          "Resolve prompt canonicality: either generate index.ts content from Markdown or mark Markdown files as reference-only and align versions."
+        ],
+        "status": "passed",
+        "errors": []
+      },
+      {
+        "repo": "apt-novel-reviewer",
+        "repo_root": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-novel-reviewer",
+        "profile_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-novel-reviewer/docs/apt/references/project-profile.json",
+        "report_dir": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-novel-reviewer/docs/apt/reports/static",
+        "audit_report_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-novel-reviewer/docs/apt/reports/apt-principles-audit-2026-04-26.md",
+        "findings": [
+          {
+            "severity": "Minor",
+            "layer": "Operations",
+            "finding": "Operational readiness evidence is lighter than implementation evidence for a desktop app with native and local-AI dependencies."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Quality",
+            "finding": "Automated coverage is strongest in packages/lib, while desktop UI and packaging paths still rely mostly on manual validation."
+          }
+        ],
+        "top_findings": [
+          {
+            "severity": "Minor",
+            "layer": "Operations",
+            "finding": "Operational readiness evidence is lighter than implementation evidence for a desktop app with native and local-AI dependencies."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Quality",
+            "finding": "Automated coverage is strongest in packages/lib, while desktop UI and packaging paths still rely mostly on manual validation."
+          }
+        ],
+        "rubric_scores": [
+          {
+            "layer": "Thinking",
+            "score": "Pass"
+          },
+          {
+            "layer": "Design",
+            "score": "Partial"
+          },
+          {
+            "layer": "Architecture",
+            "score": "Pass"
+          },
+          {
+            "layer": "System Standards",
+            "score": "Pass"
+          },
+          {
+            "layer": "Security",
+            "score": "Pass"
+          },
+          {
+            "layer": "Execution",
+            "score": "Pass"
+          },
+          {
+            "layer": "Quality",
+            "score": "Partial"
+          },
+          {
+            "layer": "Release",
+            "score": "Partial"
+          },
+          {
+            "layer": "Operations",
+            "score": "Partial"
+          },
+          {
+            "layer": "Knowledge",
+            "score": "Pass"
+          },
+          {
+            "layer": "AI",
+            "score": "Pass"
+          }
+        ],
+        "top_actions": [
+          "Add a short desktop release/operations note for packaging, native dependency support, and Ollama runtime prerequisites.",
+          "Add a small smoke or integration test layer for desktop UI and packaging-critical flows.",
+          "Refresh the local audit once CI has real hosted runs and release packaging is documented."
+        ],
+        "status": "passed",
+        "errors": []
+      },
+      {
+        "repo": "apt-payment-rpc-api",
+        "repo_root": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-payment-rpc-api",
+        "profile_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-payment-rpc-api/docs/apt/references/project-profile.json",
+        "report_dir": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-payment-rpc-api/docs/apt/reports/static",
+        "audit_report_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/apt-payment-rpc-api/docs/apt/reports/apt-principles-audit-2026-04-26.md",
+        "findings": [
+          {
+            "severity": "Major",
+            "layer": "System Standards",
+            "finding": "Workspace root lacks explicit validation scripts used by APT (e.g. check:design, test:contracts, typecheck). Running pnpm run check:design at the repo root failed with: \"Missing script: check:design\"."
+          }
+        ],
+        "top_findings": [
+          {
+            "severity": "Major",
+            "layer": "System Standards",
+            "finding": "Workspace root lacks explicit validation scripts used by APT (e.g. check:design, test:contracts, typecheck). Running pnpm run check:design at the repo root failed with: \"Missing script: check:design\"."
+          }
+        ],
+        "rubric_scores": [],
+        "top_actions": [
+          "Create or update the local adoption/profile evidence layer.",
+          "Resolve the highest-priority repo-specific finding with linked validation evidence.",
+          "Refresh generated audit artifacts and record residual risk."
+        ],
+        "status": "passed",
+        "errors": []
+      },
+      {
+        "repo": "crt-world",
+        "repo_root": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/crt-world",
+        "profile_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/crt-world/docs/apt/references/project-profile.json",
+        "report_dir": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/crt-world/docs/apt/reports/static",
+        "audit_report_path": "C:/Users/sanch/Documents/Github/Applied Practical Thinking/crt-world/docs/apt/reports/apt-principles-audit-2026-04-26.md",
+        "findings": [
+          {
+            "severity": "Minor",
+            "layer": "Security / Operations",
+            "finding": "Deployment and auth configuration are documented, but this audit did not verify live Cloudflare secrets, JWT issuer/audience values, or D1 environment state."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Quality",
+            "finding": "Automated coverage is centered on the worker package; frontend UI behavior and editorial workflows still rely more on manual validation than repo-level tests."
+          }
+        ],
+        "top_findings": [
+          {
+            "severity": "Minor",
+            "layer": "Security / Operations",
+            "finding": "Deployment and auth configuration are documented, but this audit did not verify live Cloudflare secrets, JWT issuer/audience values, or D1 environment state."
+          },
+          {
+            "severity": "Minor",
+            "layer": "Quality",
+            "finding": "Automated coverage is centered on the worker package; frontend UI behavior and editorial workflows still rely more on manual validation than repo-level tests."
+          }
+        ],
+        "rubric_scores": [
+          {
+            "layer": "Thinking",
+            "score": "Pass"
+          },
+          {
+            "layer": "Design",
+            "score": "Partial"
+          },
+          {
+            "layer": "Architecture",
+            "score": "Pass"
+          },
+          {
+            "layer": "System Standards",
+            "score": "Pass"
+          },
+          {
+            "layer": "Security",
+            "score": "Partial"
+          },
+          {
+            "layer": "Execution",
+            "score": "Pass"
+          },
+          {
+            "layer": "Quality",
+            "score": "Partial"
+          },
+          {
+            "layer": "Release",
+            "score": "Partial"
+          },
+          {
+            "layer": "Operations",
+            "score": "Partial"
+          },
+          {
+            "layer": "Knowledge",
+            "score": "Pass"
+          },
+          {
+            "layer": "AI",
+            "score": "Not Applicable"
+          }
+        ],
+        "top_actions": [
+          "Add an operations/security checklist that verifies production Cloudflare secrets, JWT config, and D1 environment assumptions.",
+          "Add a small frontend smoke test layer for critical site/admin routes.",
+          "Refresh the local audit once hosted CI runs and production environment verification evidence exist."
+        ],
+        "status": "passed",
+        "errors": []
+      }
+    ]
+  }
+}

@@ -18,6 +18,7 @@
   },
   "scripts": {
     "build": "pnpm exec tsc -p tsconfig.json --emitDeclarationOnly",
+    "lint": "eslint src --ext .ts,.tsx",
     "typecheck": "pnpm exec tsc -p tsconfig.json --noEmit",
     "test": "vitest run"
   }
