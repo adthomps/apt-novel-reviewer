@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T00:34:20.255Z",
+  "generated_at": "2026-04-27T04:53:04.586Z",
   "audit_date": "2026-04-27",
   "source": "apt-principles/scripts/sweep-project-profiles.mjs",
   "repo": "apt-novel-reviewer",
@@ -99,7 +99,7 @@
     "findings_by_severity": {
       "Blocking": 0,
       "Major": 6,
-      "Minor": 13,
+      "Minor": 14,
       "Other": 0
     },
     "findings_by_layer": {
@@ -114,7 +114,8 @@
       "Architecture / AI": 1,
       "Operations": 1,
       "Release / Knowledge": 1,
-      "System Standards": 1
+      "System Standards": 1,
+      "System Standards / Release": 1
     },
     "rubric_summary_by_layer": {
       "AI": {
@@ -146,8 +147,8 @@
         "other": 0
       },
       "Knowledge": {
-        "pass": 2,
-        "partial": 3,
+        "pass": 3,
+        "partial": 2,
         "gap": 0,
         "not_applicable": 0,
         "other": 0
@@ -181,8 +182,8 @@
         "other": 0
       },
       "System Standards": {
-        "pass": 4,
-        "partial": 1,
+        "pass": 3,
+        "partial": 2,
         "gap": 0,
         "not_applicable": 0,
         "other": 0
@@ -214,11 +215,11 @@
       },
       {
         "repo": "apt-coach",
-        "action": "Maintain schema-compatible docs/apt/references/project-profile.json and enforce CI validation."
+        "action": "Split dev/prod D1 databases when a production-safe replacement binding is available; until then, follow the temporary risk acceptance in docs/DECISION_LOG.md."
       },
       {
         "repo": "apt-coach",
-        "action": "Expand adaptive coaching prompt documentation before treating AI guidance as showcase-ready."
+        "action": "Resolve duplicate migration prefix 0013 in a migration-safe pass that first confirms which migrations are already applied remotely."
       },
       {
         "repo": "apt-dream-to-reality",
@@ -347,12 +348,12 @@
           {
             "severity": "Minor",
             "layer": "Knowledge",
-            "finding": "Local APT adoption/profile layer is now present and linked to canonical doctrine; keep it synchronized with domain and operating changes."
+            "finding": "Local APT adoption/profile layer is present, linked to canonical doctrine, and validated in CI."
           },
           {
-            "severity": "Major",
+            "severity": "Minor",
             "layer": "Design / Quality",
-            "finding": "Existing design audit passes objective gates but in changed mode only. Manual-review-only areas remain brand intent, responsive behavior, copy nuance, and accessibility/readability."
+            "finding": "Full objective design audit now passes with zero contract findings. Manual-review-only areas still require qualitative evidence before Design and Quality can move to Pass."
           },
           {
             "severity": "Minor",
@@ -362,7 +363,12 @@
           {
             "severity": "Minor",
             "layer": "AI",
-            "finding": "Adaptive coaching prompt registry exists, but prompt contract is very light for a health-adjacent domain."
+            "finding": "Adaptive coaching prompt registry exists and the prompt contract has been expanded, but the prompt remains draft until health-adjacent review and API tests confirm production readiness."
+          },
+          {
+            "severity": "Major",
+            "layer": "System Standards / Release",
+            "finding": "Migration prefix validation currently fails because two migration files use numeric prefix 0013. This predates the docs-only audit follow-up but blocks a clean release gate."
           }
         ],
         "top_findings": [
@@ -374,7 +380,7 @@
           {
             "severity": "Minor",
             "layer": "Knowledge",
-            "finding": "Local APT adoption/profile layer is now present and linked to canonical doctrine; keep it synchronized with domain and operating changes."
+            "finding": "Local APT adoption/profile layer is present, linked to canonical doctrine, and validated in CI."
           }
         ],
         "rubric_scores": [
@@ -392,7 +398,7 @@
           },
           {
             "layer": "System Standards",
-            "score": "Pass"
+            "score": "Partial"
           },
           {
             "layer": "Security",
@@ -416,7 +422,7 @@
           },
           {
             "layer": "Knowledge",
-            "score": "Partial"
+            "score": "Pass"
           },
           {
             "layer": "AI",
@@ -425,8 +431,8 @@
         ],
         "top_actions": [
           "Keep docs/apt/adoption.md and docs/apt/project-profile.md updated as constraints, maturity, and security posture evolve.",
-          "Maintain schema-compatible docs/apt/references/project-profile.json and enforce CI validation.",
-          "Expand adaptive coaching prompt documentation before treating AI guidance as showcase-ready."
+          "Split dev/prod D1 databases when a production-safe replacement binding is available; until then, follow the temporary risk acceptance in docs/DECISION_LOG.md.",
+          "Resolve duplicate migration prefix 0013 in a migration-safe pass that first confirms which migrations are already applied remotely."
         ],
         "status": "passed",
         "errors": []
