@@ -25,6 +25,8 @@ const NAV_ITEMS = [
 
 type NavItem = (typeof NAV_ITEMS)[number];
 
+const HEADER_NAV_ITEMS = ["Setup", "Library", "Review Center", "Findings", "Settings"] as const satisfies readonly NavItem[];
+
 const FOOTER_GROUPS = [
   {
     title: "Workflow",
@@ -138,9 +140,45 @@ export function App() {
 
   return (
     <div className="grid min-h-screen grid-rows-[64px_1fr_auto]">
-      <header className="flex items-center justify-between border-b border-slate-800 px-4 backdrop-blur">
-        <h1 className="text-lg font-semibold tracking-wide">APT Novel Reviewer</h1>
-        <p className="text-xs text-slate-400">Review-focused local desktop workflow</p>
+      <header className="flex items-center gap-4 border-b border-slate-800/80 bg-slate-950/75 px-4 backdrop-blur">
+        <div className="flex min-w-0 shrink-0 items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full border border-sky-400/50 bg-slate-950 text-sm font-semibold text-sky-200">
+            A
+          </div>
+          <div>
+            <h1 className="text-sm font-semibold tracking-tight text-slate-100">APT Novel Reviewer</h1>
+            <p className="text-xs uppercase tracking-[0.16em] text-slate-500">Applied Practical Thinking</p>
+          </div>
+        </div>
+
+        <nav className="flex min-w-0 flex-1 items-center justify-center" aria-label="Primary workflow navigation">
+          <div className="flex items-center gap-1 overflow-x-auto rounded-lg border border-slate-800 bg-slate-900/50 p-1">
+            {HEADER_NAV_ITEMS.map((item) => (
+              <button
+                key={item}
+                className={`whitespace-nowrap rounded-md px-3 py-2 text-sm transition ${
+                  active === item ? "bg-sky-500/15 text-sky-100" : "text-slate-400 hover:bg-slate-800 hover:text-slate-100"
+                }`}
+                type="button"
+                onClick={() => setActive(item)}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        </nav>
+
+        <div className="hidden shrink-0 items-center gap-3 text-right lg:flex">
+          <div>
+            <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Runtime</p>
+            <p className="text-sm text-slate-300">Local Ollama</p>
+          </div>
+          <div className="h-8 border-l border-slate-800" />
+          <div>
+            <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Model</p>
+            <p className="text-sm text-slate-300">gpt-oss:20b</p>
+          </div>
+        </div>
       </header>
 
       <div className="grid grid-cols-[220px_1fr_260px] overflow-hidden">
