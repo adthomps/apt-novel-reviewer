@@ -25,6 +25,17 @@ const NAV_ITEMS = [
 
 type NavItem = (typeof NAV_ITEMS)[number];
 
+const FOOTER_GROUPS = [
+  {
+    title: "Workflow",
+    items: ["Library", "Manuscript", "Review Center"] as const
+  },
+  {
+    title: "Resources",
+    items: ["Findings", "Compare", "Settings"] as const
+  }
+] as const;
+
 export function App() {
   const api = window.aptApi;
   const [active, setActive] = useState<NavItem>("Setup");
@@ -126,7 +137,7 @@ export function App() {
   }
 
   return (
-    <div className="grid min-h-screen grid-rows-[64px_1fr_30px]">
+    <div className="grid min-h-screen grid-rows-[64px_1fr_auto]">
       <header className="flex items-center justify-between border-b border-slate-800 px-4 backdrop-blur">
         <h1 className="text-lg font-semibold tracking-wide">APT Novel Reviewer</h1>
         <p className="text-xs text-slate-400">Review-focused local desktop workflow</p>
@@ -231,9 +242,49 @@ export function App() {
         </aside>
       </div>
 
-      <footer className="flex items-center justify-between border-t border-slate-800 px-4 text-xs text-slate-400">
-        <span>Runtime: Local Ollama</span>
-        <span>Model: gpt-oss:20b</span>
+      <footer className="border-t border-slate-800/80 bg-slate-900/55 px-4 py-6 backdrop-blur">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+          <div className="md:col-span-2">
+            <div className="mb-3 flex items-center gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-sky-400/50 bg-slate-950 text-sm font-semibold text-sky-200">
+                A
+              </div>
+              <div>
+                <p className="text-sm font-semibold tracking-tight text-slate-100">APT Novel Reviewer</p>
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">Applied Practical Thinking</p>
+              </div>
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-slate-400">
+              A local manuscript review workspace for project setup, canon checks, findings, and version comparison.
+            </p>
+          </div>
+
+          {FOOTER_GROUPS.map((group) => (
+            <div key={group.title}>
+              <h3 className="mb-3 text-sm font-semibold text-slate-100">{group.title}</h3>
+              <ul className="space-y-2 text-sm text-slate-400">
+                {group.items.map((item) => (
+                  <li key={item}>
+                    <button
+                      className="text-left transition hover:text-slate-100"
+                      type="button"
+                      onClick={() => setActive(item)}
+                    >
+                      {item}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="my-5 border-t border-slate-800/80" />
+
+        <div className="flex flex-col gap-3 text-sm text-slate-400 sm:flex-row sm:items-start sm:justify-between">
+          <p>Runtime: Local Ollama</p>
+          <p className="text-xs sm:text-right">Model: gpt-oss:20b</p>
+        </div>
       </footer>
     </div>
   );
