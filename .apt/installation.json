@@ -1,0 +1,2385 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "repository": "apt-principles-agents",
+    "version": "0.1.0",
+    "commit": "4cc8a31ecfa1112111dbf7acc05ce8853d1501e9"
+  },
+  "manifests": [
+    "core",
+    "ai-development",
+    "documentation",
+    "ux-review"
+  ],
+  "platforms": [
+    "codex",
+    "claude",
+    "copilot",
+    "gemini"
+  ],
+  "managedFiles": [
+    {
+      "source": "agents/beginner-reviewers/apt-beginner-user-reviewer.md",
+      "target": ".apt/agents/beginner-reviewers/apt-beginner-user-reviewer.md",
+      "kind": "canonical",
+      "sha256": "c8649e6cea7b42e8e5a331cd7ffa3588599ea6025e0ec0f6f1e1bbbc1ff408c6"
+    },
+    {
+      "source": "agents/beginner-reviewers/apt-new-developer-reviewer.md",
+      "target": ".apt/agents/beginner-reviewers/apt-new-developer-reviewer.md",
+      "kind": "canonical",
+      "sha256": "216362857508443206fbb0107c124c3928389fe275bf9c5da03ee21a3056539e"
+    },
+    {
+      "source": "agents/beginner-reviewers/apt-new-merchant-reviewer.md",
+      "target": ".apt/agents/beginner-reviewers/apt-new-merchant-reviewer.md",
+      "kind": "canonical",
+      "sha256": "094046fcac7534b1a71e8edaea2357552ec777a6c44586b52df0566c020dd22e"
+    },
+    {
+      "source": "agents/beginner-reviewers/apt-new-support-agent-reviewer.md",
+      "target": ".apt/agents/beginner-reviewers/apt-new-support-agent-reviewer.md",
+      "kind": "canonical",
+      "sha256": "92813bfd159832efc261b4633ac04422a4d76219bcd951f48cf643def25eb961"
+    },
+    {
+      "source": "agents/core/apt-architecture-lead.md",
+      "target": ".apt/agents/core/apt-architecture-lead.md",
+      "kind": "canonical",
+      "sha256": "1daef9807e8b44adffcaf1cc8bdcf1cac83d48a004f1dbbfab8637e635046c0a"
+    },
+    {
+      "source": "agents/core/apt-design-lead.md",
+      "target": ".apt/agents/core/apt-design-lead.md",
+      "kind": "canonical",
+      "sha256": "0ba149860f8c4f9ef6e637d99eacad56ec846c4552953bc6156c165bf2ae04a7"
+    },
+    {
+      "source": "agents/core/apt-execution-lead.md",
+      "target": ".apt/agents/core/apt-execution-lead.md",
+      "kind": "canonical",
+      "sha256": "e90b9ff07b965db381916e078b976201175455268d33496aafab63a5f845217d"
+    },
+    {
+      "source": "agents/core/apt-principal.md",
+      "target": ".apt/agents/core/apt-principal.md",
+      "kind": "canonical",
+      "sha256": "7cca8650fe43685ac90edcda32bf381ae35cd3105943c776feb54923467c3bd2"
+    },
+    {
+      "source": "agents/core/apt-router.md",
+      "target": ".apt/agents/core/apt-router.md",
+      "kind": "canonical",
+      "sha256": "81a7332ce1ca1601cdf77fcb14b201afba2798eb83f0ca0fffcf613a91ed0f51"
+    },
+    {
+      "source": "agents/core/apt-thinking-lead.md",
+      "target": ".apt/agents/core/apt-thinking-lead.md",
+      "kind": "canonical",
+      "sha256": "1425ace0e38402e7755814ea91142f1937ef6161244a4bd7ac694173c306cd71"
+    },
+    {
+      "source": "agents/customer/apt-ai-agent-user-reviewer.md",
+      "target": ".apt/agents/customer/apt-ai-agent-user-reviewer.md",
+      "kind": "canonical",
+      "sha256": "6da91b39cad49bc3033be3d02cca47482969f8ae738edc4f4ffd95493668d717"
+    },
+    {
+      "source": "agents/customer/apt-bank-acquirer-reviewer.md",
+      "target": ".apt/agents/customer/apt-bank-acquirer-reviewer.md",
+      "kind": "canonical",
+      "sha256": "970b66a52ad42706e522763efb1e609ebbefbf2f1a7901a78ab39467523d1381"
+    },
+    {
+      "source": "agents/customer/apt-business-user-reviewer.md",
+      "target": ".apt/agents/customer/apt-business-user-reviewer.md",
+      "kind": "canonical",
+      "sha256": "3d51a340347b259a5b07a6ea1214a9ed44f66df6a310501f802c73d0bfe6788b"
+    },
+    {
+      "source": "agents/customer/apt-developer-integrator-reviewer.md",
+      "target": ".apt/agents/customer/apt-developer-integrator-reviewer.md",
+      "kind": "canonical",
+      "sha256": "a8c3affca9e2556ba5cc9067bc4037e74cb788fdfbdfe5743d86a5f4a0e94a08"
+    },
+    {
+      "source": "agents/customer/apt-support-operations-reviewer.md",
+      "target": ".apt/agents/customer/apt-support-operations-reviewer.md",
+      "kind": "canonical",
+      "sha256": "dbf71b28d085679c7ddac85aa585acb6a0d465c673de568bbaff0799e8b80589"
+    },
+    {
+      "source": "agents/docs/apt-api-docs-writer.md",
+      "target": ".apt/agents/docs/apt-api-docs-writer.md",
+      "kind": "canonical",
+      "sha256": "3ff8980cb871ae48491559873204d57bdbb6934f0cc995a22836c21c91ac1607"
+    },
+    {
+      "source": "agents/docs/apt-audience-docs-reviewer.md",
+      "target": ".apt/agents/docs/apt-audience-docs-reviewer.md",
+      "kind": "canonical",
+      "sha256": "64506169cce9c2db4e1142eec4f4a466b55a531d35735802441db42cbe88407f"
+    },
+    {
+      "source": "agents/docs/apt-demo-and-diagram-planner.md",
+      "target": ".apt/agents/docs/apt-demo-and-diagram-planner.md",
+      "kind": "canonical",
+      "sha256": "9a80d9f916650cf8fa2949d9a4d158049aca6abbe3f767943d7a61967fe4b865"
+    },
+    {
+      "source": "agents/docs/apt-docs-reviewer.md",
+      "target": ".apt/agents/docs/apt-docs-reviewer.md",
+      "kind": "canonical",
+      "sha256": "5ac50b7c499b8a3474f62b22986ab44813255181fc0ddbdfb7e1c5989c832c28"
+    },
+    {
+      "source": "agents/docs/apt-implementation-blueprint-writer.md",
+      "target": ".apt/agents/docs/apt-implementation-blueprint-writer.md",
+      "kind": "canonical",
+      "sha256": "6dddc645d8accf46a2982dd535104d156a72fa2e5f63a9ae04f74b20dc397061"
+    },
+    {
+      "source": "agents/docs/apt-product-hub-builder.md",
+      "target": ".apt/agents/docs/apt-product-hub-builder.md",
+      "kind": "canonical",
+      "sha256": "86a1117a802861ed2b6fcbea54df94e43bdf4b36aab0dc7135b5bca60d974b0a"
+    },
+    {
+      "source": "agents/harness/apt-architect.md",
+      "target": ".apt/agents/harness/apt-architect.md",
+      "kind": "canonical",
+      "sha256": "7d8f909cbb190816cd4d9ff287c05311dded877649a19e674e50e234bdc12425"
+    },
+    {
+      "source": "agents/harness/apt-cloudflare-builder.md",
+      "target": ".apt/agents/harness/apt-cloudflare-builder.md",
+      "kind": "canonical",
+      "sha256": "c4a93d7a77714e0ca79c5ef9b393352cc56accc6fc11d398df103ecd5fbebd0a"
+    },
+    {
+      "source": "agents/harness/apt-code-reviewer.md",
+      "target": ".apt/agents/harness/apt-code-reviewer.md",
+      "kind": "canonical",
+      "sha256": "8fad40e881709446c62f80e5f121d189dad83c277616b178061f779040bd0fc3"
+    },
+    {
+      "source": "agents/harness/apt-cost-controller.md",
+      "target": ".apt/agents/harness/apt-cost-controller.md",
+      "kind": "canonical",
+      "sha256": "7578a2588ad3cc3bcc53ea1475016d17b62d96b246479e7fe262f3001782b89f"
+    },
+    {
+      "source": "agents/harness/apt-docs-reviewer.md",
+      "target": ".apt/agents/harness/apt-docs-reviewer.md",
+      "kind": "canonical",
+      "sha256": "462be0aa4daeb40d0cfd68cf34e138575506c1c2561b35db9d2e54a55ae8c405"
+    },
+    {
+      "source": "agents/harness/apt-installer.md",
+      "target": ".apt/agents/harness/apt-installer.md",
+      "kind": "canonical",
+      "sha256": "8884bba4bb34d0e1af767569a51ad574c34dddc3b917448868c621555da589b5"
+    },
+    {
+      "source": "agents/harness/apt-model-router.md",
+      "target": ".apt/agents/harness/apt-model-router.md",
+      "kind": "canonical",
+      "sha256": "609c8ced7009e5c79efcf9e8ebef9d66cece65d62bfd2ecc063cba06b34999c9"
+    },
+    {
+      "source": "agents/harness/apt-repair-agent.md",
+      "target": ".apt/agents/harness/apt-repair-agent.md",
+      "kind": "canonical",
+      "sha256": "ee0b985b622b604783c8a24c9e179125d6d48a7d821747389555ece07f107314"
+    },
+    {
+      "source": "agents/harness/apt-repo-scanner.md",
+      "target": ".apt/agents/harness/apt-repo-scanner.md",
+      "kind": "canonical",
+      "sha256": "c496a4f3190b718180184aa8da7c1b78e16ab9a0bfb22c3961316d654c0d8155"
+    },
+    {
+      "source": "agents/harness/apt-router.md",
+      "target": ".apt/agents/harness/apt-router.md",
+      "kind": "canonical",
+      "sha256": "c34af79380e6a2f9f64560406a2881a4fe9386ef73cf0032038725bddd6b70a3"
+    },
+    {
+      "source": "agents/harness/apt-security-reviewer.md",
+      "target": ".apt/agents/harness/apt-security-reviewer.md",
+      "kind": "canonical",
+      "sha256": "06c0d45f03c73c3d722aae46e64602401abedc37db3a2867164d9a7947bf0c11"
+    },
+    {
+      "source": "agents/harness/apt-ui-reviewer.md",
+      "target": ".apt/agents/harness/apt-ui-reviewer.md",
+      "kind": "canonical",
+      "sha256": "c0edaf57dada2a2f36d730058dd959136e3ae258659c42d65c6507013733e3d5"
+    },
+    {
+      "source": "agents/harness/apt-verifier.md",
+      "target": ".apt/agents/harness/apt-verifier.md",
+      "kind": "canonical",
+      "sha256": "5d04e07e340f41984043ae993d27c99c78a66991f958b9809adf8f1bc66f4b71"
+    },
+    {
+      "source": "checklists/ai-agent-review-checklist.md",
+      "target": ".apt/checklists/ai-agent-review-checklist.md",
+      "kind": "canonical",
+      "sha256": "b762f8d083ba99cb9db068797721b3c6506d480a19ca84039ab8d851c75f2639"
+    },
+    {
+      "source": "checklists/architecture-review-checklist.md",
+      "target": ".apt/checklists/architecture-review-checklist.md",
+      "kind": "canonical",
+      "sha256": "b55432e8c701582995344f7e8d4b5c232b4b30d230d1396c6138c3f278507398"
+    },
+    {
+      "source": "checklists/design-review-checklist.md",
+      "target": ".apt/checklists/design-review-checklist.md",
+      "kind": "canonical",
+      "sha256": "02e846d9907b1c14067c9fc88cc2b4ed8592de55522356d3de2c50c1dbeb38aa"
+    },
+    {
+      "source": "checklists/documentation-checklist.md",
+      "target": ".apt/checklists/documentation-checklist.md",
+      "kind": "canonical",
+      "sha256": "87e6b43f724170b3521bb628cf97c3fc5047d5d2d5acbd68f7887816991ab409"
+    },
+    {
+      "source": "checklists/execution-readiness-checklist.md",
+      "target": ".apt/checklists/execution-readiness-checklist.md",
+      "kind": "canonical",
+      "sha256": "1e3bbb794ede4ceb4647b01a85991d37c3322231fb505137866f121f83e3c119"
+    },
+    {
+      "source": "checklists/knowledge-system-checklist.md",
+      "target": ".apt/checklists/knowledge-system-checklist.md",
+      "kind": "canonical",
+      "sha256": "f84a38b3843061acf35d10ca93100a191fb7e9721eb92fc572d5c394dabfc229"
+    },
+    {
+      "source": "checklists/thinking-review-checklist.md",
+      "target": ".apt/checklists/thinking-review-checklist.md",
+      "kind": "canonical",
+      "sha256": "42462b58e4eec8594003469c5835392c678406e03b311b5c1bdb83259bf67a6e"
+    },
+    {
+      "source": "context-packs/apt-agent-pack.md",
+      "target": ".apt/context-packs/apt-agent-pack.md",
+      "kind": "canonical",
+      "sha256": "3ffae36e57605ec8b3bb1b5360f8501338e2dcf7f67775c2b43377ad77f31e03"
+    },
+    {
+      "source": "context-packs/apt-core-pack.md",
+      "target": ".apt/context-packs/apt-core-pack.md",
+      "kind": "canonical",
+      "sha256": "71f0ba3b2de2590c982740c29636f5ab857e5e4d40ed5338e848c2de37a2d816"
+    },
+    {
+      "source": "context-packs/apt-docs-pack.md",
+      "target": ".apt/context-packs/apt-docs-pack.md",
+      "kind": "canonical",
+      "sha256": "92493ae8f476458a0d8df8700c9ff2ae5d87a658b85ea0eafab23b7f72154f92"
+    },
+    {
+      "source": "context-packs/apt-ui-pack.md",
+      "target": ".apt/context-packs/apt-ui-pack.md",
+      "kind": "canonical",
+      "sha256": "b22836268b6e3061699bf3241aaec939d05c610cf858c1e73582790e017e0fa2"
+    },
+    {
+      "source": "context/documentation/README.md",
+      "target": ".apt/context/documentation/README.md",
+      "kind": "canonical",
+      "sha256": "bc37899bec6e4e6d67317a58b5dae1ef5cf0fe40bd440c4836489db1df59ed70"
+    },
+    {
+      "source": "context/ui/README.md",
+      "target": ".apt/context/ui/README.md",
+      "kind": "canonical",
+      "sha256": "afaa0ed38cbbeac7a75d284c9816c634d71379dd309c7dca336851d57ed0a8b0"
+    },
+    {
+      "source": "platforms/claude/README.md",
+      "target": ".apt/platforms/claude/README.md",
+      "kind": "canonical",
+      "sha256": "90598280b8df892e1583ae23fd09ecd85a84d0eebb2e1ccc4d1cb62b846fa420"
+    },
+    {
+      "source": "platforms/claude/source/agents/intent-ux-reviewer.md",
+      "target": ".apt/platforms/claude/source/agents/intent-ux-reviewer.md",
+      "kind": "canonical",
+      "sha256": "d27e4e8f0ff1148a83c32cf79d85336ca6515a3b91466d842373038ac6b6d047"
+    },
+    {
+      "source": "platforms/codex/README.md",
+      "target": ".apt/platforms/codex/README.md",
+      "kind": "canonical",
+      "sha256": "8f52e76de2878c5d97bbf7d5c71fd58cb825361d383df882e1b3f6035a1d9624"
+    },
+    {
+      "source": "platforms/codex/source/skills/ai-output-review/SKILL.md",
+      "target": ".apt/platforms/codex/source/skills/ai-output-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "6a9db15014e1b47855094fd779baa4becbf7b25f9e722737422f37ce33cb3325"
+    },
+    {
+      "source": "platforms/codex/source/skills/ux-review/SKILL.md",
+      "target": ".apt/platforms/codex/source/skills/ux-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "41d6b7498dfa1e2bab61260096a44d9e2266bdb553ae835c5a758905f5457e4a"
+    },
+    {
+      "source": "platforms/gemini/README.md",
+      "target": ".apt/platforms/gemini/README.md",
+      "kind": "canonical",
+      "sha256": "eeef454f5a25bcd21b42f66cfd44a464896021c63a22ca38185708473a41c2f2"
+    },
+    {
+      "source": "platforms/github-copilot/README.md",
+      "target": ".apt/platforms/github-copilot/README.md",
+      "kind": "canonical",
+      "sha256": "9e7124f275a829025c1ed1b07c97011b70508acb3ec6f6e58a1fe60127796660"
+    },
+    {
+      "source": "principles/ai/agent-design.md",
+      "target": ".apt/principles/ai/agent-design.md",
+      "kind": "canonical",
+      "sha256": "baaff899d09349364dc3539fddd7efb601e114f6e5b7989bf589f256cd540d85"
+    },
+    {
+      "source": "principles/ai/ai-safety-and-evaluation.md",
+      "target": ".apt/principles/ai/ai-safety-and-evaluation.md",
+      "kind": "canonical",
+      "sha256": "7755f6ffc3a77bfed1149baacf853682d4637da3494848c3ec2874c99a728363"
+    },
+    {
+      "source": "principles/ai/local-llm-routing.md",
+      "target": ".apt/principles/ai/local-llm-routing.md",
+      "kind": "canonical",
+      "sha256": "edbf040c3e51c6530b443282f5756fe3a2e3d91dd5c1b8e634e5ef4cd9c27c32"
+    },
+    {
+      "source": "principles/ai/model-routing.md",
+      "target": ".apt/principles/ai/model-routing.md",
+      "kind": "canonical",
+      "sha256": "8f9535b9412348227975f385168db12254628d82ea79e07ab7e621d1156ef167"
+    },
+    {
+      "source": "principles/ai/prompt-engineering.md",
+      "target": ".apt/principles/ai/prompt-engineering.md",
+      "kind": "canonical",
+      "sha256": "d81f1fee66f22fbc252e33866ccb47861d1757b997e401d1d0e6487842d39da4"
+    },
+    {
+      "source": "principles/ai/README.md",
+      "target": ".apt/principles/ai/README.md",
+      "kind": "canonical",
+      "sha256": "fb0e2b94686564681ff54063163f95e05c0e80a77b3c7256b86f6f350e2125bf"
+    },
+    {
+      "source": "principles/ai/skill-design.md",
+      "target": ".apt/principles/ai/skill-design.md",
+      "kind": "canonical",
+      "sha256": "51edd10e169ff3faa882487c3fd6337530b80981dde9d828219068d4a9b58a39"
+    },
+    {
+      "source": "principles/ai/swarm-review.md",
+      "target": ".apt/principles/ai/swarm-review.md",
+      "kind": "canonical",
+      "sha256": "2299eb614499f6d4f5973185639bde90fa80f58e1f4d3f078f7a0342ed99525f"
+    },
+    {
+      "source": "principles/architecture/api-architecture.md",
+      "target": ".apt/principles/architecture/api-architecture.md",
+      "kind": "canonical",
+      "sha256": "2f39dbba4fe2da223aacfd55c764a75ecc0bf29ef9378c395f51e75a40cf3231"
+    },
+    {
+      "source": "principles/architecture/cloudflare-hono-architecture.md",
+      "target": ".apt/principles/architecture/cloudflare-hono-architecture.md",
+      "kind": "canonical",
+      "sha256": "23a549abe416551329b53a45e44e798ac4b6c61717083264727cf7869e853f51"
+    },
+    {
+      "source": "principles/architecture/event-driven-architecture.md",
+      "target": ".apt/principles/architecture/event-driven-architecture.md",
+      "kind": "canonical",
+      "sha256": "7028f30a71da7146313a84633dcfabc70775ee844828db8322060934f284b5e9"
+    },
+    {
+      "source": "principles/architecture/integration-architecture.md",
+      "target": ".apt/principles/architecture/integration-architecture.md",
+      "kind": "canonical",
+      "sha256": "58f5277be568bb72167b3b347d12c0ee52915c191d7d1bce8508200c0e0c4318"
+    },
+    {
+      "source": "principles/architecture/modernization-architecture.md",
+      "target": ".apt/principles/architecture/modernization-architecture.md",
+      "kind": "canonical",
+      "sha256": "a0e3ece0f9f578599a4ddcefd54817784c50e7e4b6f38a11f6fa46b66c23e1cf"
+    },
+    {
+      "source": "principles/architecture/payment-architecture.md",
+      "target": ".apt/principles/architecture/payment-architecture.md",
+      "kind": "canonical",
+      "sha256": "b9de0c54049ef72e9e125d8dedcac32369f7b822b24a4a58b46ea8530bc804e2"
+    },
+    {
+      "source": "principles/architecture/README.md",
+      "target": ".apt/principles/architecture/README.md",
+      "kind": "canonical",
+      "sha256": "259534e020ab8c6520b23e8e114f43f9297b288d3b355e14e8de472a4eb9abd7"
+    },
+    {
+      "source": "principles/architecture/system-architecture.md",
+      "target": ".apt/principles/architecture/system-architecture.md",
+      "kind": "canonical",
+      "sha256": "663ca6982e194c1a3dca3e626121d7d3128f9641d8b76fb70d555f5c65045a55"
+    },
+    {
+      "source": "principles/design/accessibility.md",
+      "target": ".apt/principles/design/accessibility.md",
+      "kind": "canonical",
+      "sha256": "05334e5b6270812db9fd7d058a62a86efcaf26df42c6b81f6235073239adbe20"
+    },
+    {
+      "source": "principles/design/customer-journey-design.md",
+      "target": ".apt/principles/design/customer-journey-design.md",
+      "kind": "canonical",
+      "sha256": "a6b4339c863946a17c22b75dab9bb76b6155058e0879c0ef1ca04ab2166f69e1"
+    },
+    {
+      "source": "principles/design/demo-first-design.md",
+      "target": ".apt/principles/design/demo-first-design.md",
+      "kind": "canonical",
+      "sha256": "fbb5c743baae7e1b3e0a91ea18914529cd5cb403fa0f273b2da589d3c4c76f17"
+    },
+    {
+      "source": "principles/design/intent-based-design.md",
+      "target": ".apt/principles/design/intent-based-design.md",
+      "kind": "canonical",
+      "sha256": "35af9d9a926932b351660a2e5fc38db6a57505d5b079ce6fdc58255d4d5b624d"
+    },
+    {
+      "source": "principles/design/README.md",
+      "target": ".apt/principles/design/README.md",
+      "kind": "canonical",
+      "sha256": "90bfd30be84145c788aded461c59ca66acff2e74a9699de03271cc8145a7a8d8"
+    },
+    {
+      "source": "principles/design/role-based-experience.md",
+      "target": ".apt/principles/design/role-based-experience.md",
+      "kind": "canonical",
+      "sha256": "e696a61debb01bea9915e1a070079a5204af820c905bf2a1e5e6ec2184c3cf62"
+    },
+    {
+      "source": "principles/design/ui-api-alignment.md",
+      "target": ".apt/principles/design/ui-api-alignment.md",
+      "kind": "canonical",
+      "sha256": "3c6481f44df3b3ecbdc4502bf5b621eb4bf3c2ff57c155d3a01ee288f962b758"
+    },
+    {
+      "source": "principles/documentation/ai-usage-examples.md",
+      "target": ".apt/principles/documentation/ai-usage-examples.md",
+      "kind": "canonical",
+      "sha256": "48c765b19761f116029971d4cbff676f69efb23b1578ae9f6e343aa898976390"
+    },
+    {
+      "source": "principles/documentation/api-examples.md",
+      "target": ".apt/principles/documentation/api-examples.md",
+      "kind": "canonical",
+      "sha256": "bc12920b57606da2bd005d669ad1e9d55ecb0caca1fe898a1ba776ce00d63449"
+    },
+    {
+      "source": "principles/documentation/audience-layered-docs.md",
+      "target": ".apt/principles/documentation/audience-layered-docs.md",
+      "kind": "canonical",
+      "sha256": "1d8bbd8f2c17d8f1fdb71f191147246e2f5d56176e9e35e176c9079f73a75700"
+    },
+    {
+      "source": "principles/documentation/diagrams-and-demos.md",
+      "target": ".apt/principles/documentation/diagrams-and-demos.md",
+      "kind": "canonical",
+      "sha256": "19903dbda62f99e83d884ad9c91a5a4c3b0e0ef6e4d7739cb533ce279b349f46"
+    },
+    {
+      "source": "principles/documentation/implementation-blueprints.md",
+      "target": ".apt/principles/documentation/implementation-blueprints.md",
+      "kind": "canonical",
+      "sha256": "bf2951a61a1d99a531317d9e9e6583a919627bd0b46d2487929e57d4760960a7"
+    },
+    {
+      "source": "principles/documentation/migration-guides.md",
+      "target": ".apt/principles/documentation/migration-guides.md",
+      "kind": "canonical",
+      "sha256": "8c8ba26eaaa734ef1640aa1a6395f2aaf6722d6bae048db4da4ec648b7f52147"
+    },
+    {
+      "source": "principles/documentation/product-hub-standard.md",
+      "target": ".apt/principles/documentation/product-hub-standard.md",
+      "kind": "canonical",
+      "sha256": "4c5d6178a0c6dcb53c18fd1bc2f78eeb4f628f21319b8fb091e8757c8b99f73c"
+    },
+    {
+      "source": "principles/documentation/README.md",
+      "target": ".apt/principles/documentation/README.md",
+      "kind": "canonical",
+      "sha256": "052e19c726fb476d0d5591d0aa011f3a30bb724161ac61738e785445d8b3c411"
+    },
+    {
+      "source": "principles/documentation/support-ready-docs.md",
+      "target": ".apt/principles/documentation/support-ready-docs.md",
+      "kind": "canonical",
+      "sha256": "7c9a217af0ae543b50127b9f98455698dc8279726d5445f3a9fe6e25d3b4e0ee"
+    },
+    {
+      "source": "principles/execution/delivery-increments.md",
+      "target": ".apt/principles/execution/delivery-increments.md",
+      "kind": "canonical",
+      "sha256": "4430d172f82859cf8233febb58a8f1417a62bbfd2f0b7b513fd12b6c8391922b"
+    },
+    {
+      "source": "principles/execution/knowledge-and-learning.md",
+      "target": ".apt/principles/execution/knowledge-and-learning.md",
+      "kind": "canonical",
+      "sha256": "58e86fe09c84bb2c424712c8fe045475ecbcefbaa0eb1d903b77d63466f50ce9"
+    },
+    {
+      "source": "principles/execution/operations-and-support.md",
+      "target": ".apt/principles/execution/operations-and-support.md",
+      "kind": "canonical",
+      "sha256": "28658ab74e1104031a85d712c2aff3048af8ec51807fe0efae28057ca0a9cdb4"
+    },
+    {
+      "source": "principles/execution/quality-and-testing.md",
+      "target": ".apt/principles/execution/quality-and-testing.md",
+      "kind": "canonical",
+      "sha256": "ae595d2cf56e4f8781fc08dd01c2d033464c97e9280941c788c78bc91ad93921"
+    },
+    {
+      "source": "principles/execution/README.md",
+      "target": ".apt/principles/execution/README.md",
+      "kind": "canonical",
+      "sha256": "a7f46ea1995ae578de519946a3c8219ade50447e7c83d2e18bbbd6091541869b"
+    },
+    {
+      "source": "principles/execution/release-and-change-management.md",
+      "target": ".apt/principles/execution/release-and-change-management.md",
+      "kind": "canonical",
+      "sha256": "1bdfc783874651e1709d4cd2999ed1227580e96de9dee4d24534bef0ca50d637"
+    },
+    {
+      "source": "principles/framework.md",
+      "target": ".apt/principles/framework.md",
+      "kind": "canonical",
+      "sha256": "e50145ae58ca7380c0e54ed45432364fca714245117ef2362a45a633196f4a0d"
+    },
+    {
+      "source": "principles/thinking/assumption-checking.md",
+      "target": ".apt/principles/thinking/assumption-checking.md",
+      "kind": "canonical",
+      "sha256": "f1c4ed58c98541da2df2dd613992a8d3006c66b13a6a4a5b6cbe362a7a14806b"
+    },
+    {
+      "source": "principles/thinking/beginner-clarity.md",
+      "target": ".apt/principles/thinking/beginner-clarity.md",
+      "kind": "canonical",
+      "sha256": "0c9e18d8a70c17321ed622583cab2943da42af126b8597ad14ab8c70b1f4b57a"
+    },
+    {
+      "source": "principles/thinking/decision-framing.md",
+      "target": ".apt/principles/thinking/decision-framing.md",
+      "kind": "canonical",
+      "sha256": "38f0a6904e79603758cb2a531364487955512ceca18430dac62dce1172cec297"
+    },
+    {
+      "source": "principles/thinking/practical-thinking.md",
+      "target": ".apt/principles/thinking/practical-thinking.md",
+      "kind": "canonical",
+      "sha256": "f4235730329f284315b27960890b207bd5f639fe67abd7d6ec1a7116f87602ac"
+    },
+    {
+      "source": "principles/thinking/README.md",
+      "target": ".apt/principles/thinking/README.md",
+      "kind": "canonical",
+      "sha256": "706bba65d79f6d5ed1a2842e4c29e0b7f03f856793fbcfa2f55fd4b747203507"
+    },
+    {
+      "source": "principles/thinking/tradeoff-analysis.md",
+      "target": ".apt/principles/thinking/tradeoff-analysis.md",
+      "kind": "canonical",
+      "sha256": "ee623b63b6f906604f509938ca08bb5e298b4ff31866cfe3f504450a551bce49"
+    },
+    {
+      "source": "prompts/agent-harness-review-prompt.md",
+      "target": ".apt/prompts/agent-harness-review-prompt.md",
+      "kind": "canonical",
+      "sha256": "f0a3208529fe30787d52735af5e9313778f6b57cf397eb199d0926ce92109d69"
+    },
+    {
+      "source": "prompts/planning/api-design-plan.md",
+      "target": ".apt/prompts/planning/api-design-plan.md",
+      "kind": "canonical",
+      "sha256": "8cf77a57762503e9ba962f6ed8fbbff94aba87d1377b2b80903e2c51a1132e5b"
+    },
+    {
+      "source": "prompts/planning/implementation-blueprint-plan.md",
+      "target": ".apt/prompts/planning/implementation-blueprint-plan.md",
+      "kind": "canonical",
+      "sha256": "3b5c5d559b23fdad7ef5bfe80821e28f365cefbf1e60b8718720298c77b11d5d"
+    },
+    {
+      "source": "prompts/planning/payment-product-plan.md",
+      "target": ".apt/prompts/planning/payment-product-plan.md",
+      "kind": "canonical",
+      "sha256": "10f8bfb35ec6d102c1a880e1cafdce62ebeff04dd95e90f3fbe83d9136ffc807"
+    },
+    {
+      "source": "prompts/planning/product-plan.md",
+      "target": ".apt/prompts/planning/product-plan.md",
+      "kind": "canonical",
+      "sha256": "8f43eb0c3364bcab05f10de78742cb0e677ad8161d20a0acba6ac4d8c169e3f7"
+    },
+    {
+      "source": "prompts/planning/README.md",
+      "target": ".apt/prompts/planning/README.md",
+      "kind": "canonical",
+      "sha256": "362528240409c450cfd4e9858e543043c9cccaef823e71da89692e174e9df4c0"
+    },
+    {
+      "source": "prompts/product-hubs/create-ai-examples.md",
+      "target": ".apt/prompts/product-hubs/create-ai-examples.md",
+      "kind": "canonical",
+      "sha256": "5c760eb76cc3da7308a08506a35be6a1b1b64400ca6e79adfb0c608dc5d69634"
+    },
+    {
+      "source": "prompts/product-hubs/create-demo-plan.md",
+      "target": ".apt/prompts/product-hubs/create-demo-plan.md",
+      "kind": "canonical",
+      "sha256": "83ad4d5db430b79e5a812a10d938209d9b33a528fa60eec3254ea6859f06ce5c"
+    },
+    {
+      "source": "prompts/product-hubs/create-product-hub.md",
+      "target": ".apt/prompts/product-hubs/create-product-hub.md",
+      "kind": "canonical",
+      "sha256": "a94051c3559c7a105c3e18155965fe8ce23253ddc6657d90d08751f3803a5067"
+    },
+    {
+      "source": "prompts/product-hubs/README.md",
+      "target": ".apt/prompts/product-hubs/README.md",
+      "kind": "canonical",
+      "sha256": "c33ddbe314e1240af45aac46d9159e32d4ad4b887b79d05ec5880bbb0abb42d5"
+    },
+    {
+      "source": "prompts/product-hubs/review-product-hub.md",
+      "target": ".apt/prompts/product-hubs/review-product-hub.md",
+      "kind": "canonical",
+      "sha256": "9781614a295954bce2a3597b646b39cbcf998aa18ab58be447f0a63fdd1e053a"
+    },
+    {
+      "source": "prompts/reviews/api-design-review.md",
+      "target": ".apt/prompts/reviews/api-design-review.md",
+      "kind": "canonical",
+      "sha256": "f50152ef1162666e0c06d46f00d116136b85fb96cf7614ed6b4250261d2e5c55"
+    },
+    {
+      "source": "prompts/reviews/docs-review.md",
+      "target": ".apt/prompts/reviews/docs-review.md",
+      "kind": "canonical",
+      "sha256": "a693c60fb53d83b7ec685e42562a20f3510680672719ae65f0ece614ed97c9af"
+    },
+    {
+      "source": "prompts/reviews/payment-review.md",
+      "target": ".apt/prompts/reviews/payment-review.md",
+      "kind": "canonical",
+      "sha256": "12a78a3b2fe7bcf1bb964aa4f0df1f22b9cdab26701b57346e41b5d585296d92"
+    },
+    {
+      "source": "prompts/reviews/README.md",
+      "target": ".apt/prompts/reviews/README.md",
+      "kind": "canonical",
+      "sha256": "453054ee2d760c6747e39643670bbab824fdeddf9cbb35bef0bcb477cc9cb812"
+    },
+    {
+      "source": "prompts/reviews/security-risk-review.md",
+      "target": ".apt/prompts/reviews/security-risk-review.md",
+      "kind": "canonical",
+      "sha256": "aadff48941f5f2f924a39442a749514e363aefd60453add5ed5d38851838c9d1"
+    },
+    {
+      "source": "prompts/reviews/ui-api-alignment-review.md",
+      "target": ".apt/prompts/reviews/ui-api-alignment-review.md",
+      "kind": "canonical",
+      "sha256": "5bfaf16f6aa12e1a3535703931664acef9eded7ec11e47bb700cd4b2ae0bf06b"
+    },
+    {
+      "source": "prompts/swarm-reviews/beginner-user-review.md",
+      "target": ".apt/prompts/swarm-reviews/beginner-user-review.md",
+      "kind": "canonical",
+      "sha256": "f69df8e1e9515a1d9fab0faf4da85a0dacd45f89571b61c7155e936f2bcd077e"
+    },
+    {
+      "source": "prompts/swarm-reviews/decision-review.md",
+      "target": ".apt/prompts/swarm-reviews/decision-review.md",
+      "kind": "canonical",
+      "sha256": "746390cc7d79af0f2578fac1d34c357fb165d67f2768ac6a5c5852f3134e5359"
+    },
+    {
+      "source": "prompts/swarm-reviews/design-rationalization.md",
+      "target": ".apt/prompts/swarm-reviews/design-rationalization.md",
+      "kind": "canonical",
+      "sha256": "e3869c66e47a80798d1de2cd44e41c2ed10ac6db4a34c806117832efaef9bbb9"
+    },
+    {
+      "source": "prompts/swarm-reviews/expert-panel-review.md",
+      "target": ".apt/prompts/swarm-reviews/expert-panel-review.md",
+      "kind": "canonical",
+      "sha256": "14a6bb96b0f2eb574ea734ab91a55e2e6952da6f448bdef4ca23caf277bedc9b"
+    },
+    {
+      "source": "prompts/swarm-reviews/micro-group-review.md",
+      "target": ".apt/prompts/swarm-reviews/micro-group-review.md",
+      "kind": "canonical",
+      "sha256": "e0a48952eb77da60b797f2e8a7aeaa79906566c3e47a33c6f87a67a3ce3a319f"
+    },
+    {
+      "source": "prompts/swarm-reviews/README.md",
+      "target": ".apt/prompts/swarm-reviews/README.md",
+      "kind": "canonical",
+      "sha256": "8d056834d2e5f1de7aa2a2e2b3f68dcdb6f93aec84a0a50ca02c0df62df83ef0"
+    },
+    {
+      "source": "prompts/swarm-reviews/red-team-review.md",
+      "target": ".apt/prompts/swarm-reviews/red-team-review.md",
+      "kind": "canonical",
+      "sha256": "4a0a249f0910e60edbd3e89ecbf7f1f93b45314b7fb3348c3824fc69c789a548"
+    },
+    {
+      "source": "prompts/swarm-reviews/troubleshooting-swarm.md",
+      "target": ".apt/prompts/swarm-reviews/troubleshooting-swarm.md",
+      "kind": "canonical",
+      "sha256": "b5d060450d35c4a684b061b6692c8884ef0a4e0ef6f79e14ca45a9d7ef2f825a"
+    },
+    {
+      "source": "prompts/troubleshooting/customer-confusion.md",
+      "target": ".apt/prompts/troubleshooting/customer-confusion.md",
+      "kind": "canonical",
+      "sha256": "1820bd95c2f66877360b045578dfe12d3c3f26973b4493b9bfe0e5a9d66cbfdc"
+    },
+    {
+      "source": "skills/ai-agents/agent-routing/SKILL.md",
+      "target": ".apt/skills/ai-agents/agent-routing/SKILL.md",
+      "kind": "canonical",
+      "sha256": "6b4bb98247264cbf9fe19bd2ddaf29f55510bb5d5d94c2172f33186f43ead8ef"
+    },
+    {
+      "source": "skills/ai-agents/hallucination-review/SKILL.md",
+      "target": ".apt/skills/ai-agents/hallucination-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "fbf7b241aceda4ddbc7565fa6674be1fadf76a9a9e7b8649d26fde080b114da2"
+    },
+    {
+      "source": "skills/ai-agents/local-llm-routing/SKILL.md",
+      "target": ".apt/skills/ai-agents/local-llm-routing/SKILL.md",
+      "kind": "canonical",
+      "sha256": "7c5c561919855902b0734bb55df5ba4baec84d0ef1eab897325864ad912cd71b"
+    },
+    {
+      "source": "skills/ai-agents/micro-group-review/SKILL.md",
+      "target": ".apt/skills/ai-agents/micro-group-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "5f6c5429626bc1378ebcc7e7ed6e52667a2b05e0cab0a63ae180e595916943a6"
+    },
+    {
+      "source": "skills/ai-agents/model-selection/SKILL.md",
+      "target": ".apt/skills/ai-agents/model-selection/SKILL.md",
+      "kind": "canonical",
+      "sha256": "6c39e40d0b3a4607f6e6e417486da80a73da6b2b13c5419376941ba771c3e4ec"
+    },
+    {
+      "source": "skills/ai-agents/prompt-engineering/SKILL.md",
+      "target": ".apt/skills/ai-agents/prompt-engineering/SKILL.md",
+      "kind": "canonical",
+      "sha256": "6028a289de6742d0bc1ee7277396dac53a82d7c558dc43b2e7b48b1f6960baec"
+    },
+    {
+      "source": "skills/ai-agents/red-team-review/SKILL.md",
+      "target": ".apt/skills/ai-agents/red-team-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "eb3850bd56ad5dab191fac6b672afbca8617c871a63a28a22b22c0a5c8d0afe9"
+    },
+    {
+      "source": "skills/ai-agents/skill-authoring/SKILL.md",
+      "target": ".apt/skills/ai-agents/skill-authoring/SKILL.md",
+      "kind": "canonical",
+      "sha256": "315a2a29eec987055eb8d9e79a4a06746849c046ff7c4fdcb61226fcbcd64767"
+    },
+    {
+      "source": "skills/ai-agents/swarm-review/SKILL.md",
+      "target": ".apt/skills/ai-agents/swarm-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "b1205bedbfad9c762157441099c6cd8ba856026231d72c8ed00bd6853dd24ac7"
+    },
+    {
+      "source": "skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "target": ".apt/skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "kind": "canonical",
+      "sha256": "7b4f803650d8b3f72ff21447352390476a0a8dc58dd94cbc603bbb275ecfff7d"
+    },
+    {
+      "source": "skills/architecture/api-architecture-review/SKILL.md",
+      "target": ".apt/skills/architecture/api-architecture-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "696121961274f110f41fdd388d67546d631db3ce286d7821b9200eef05783a7e"
+    },
+    {
+      "source": "skills/architecture/bridge-architecture-review/SKILL.md",
+      "target": ".apt/skills/architecture/bridge-architecture-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "1131eb60b07b3d53d78951f6d4bff4160c6f5c755f0c0be0ac14efb995ec6b76"
+    },
+    {
+      "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "target": ".apt/skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "kind": "canonical",
+      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+    },
+    {
+      "source": "skills/architecture/integration-architecture-review/SKILL.md",
+      "target": ".apt/skills/architecture/integration-architecture-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "e1b59daf724c38321dd381d78854bf49e797eddac4f33931423bb8d4dacea635"
+    },
+    {
+      "source": "skills/architecture/payment-architecture-review/SKILL.md",
+      "target": ".apt/skills/architecture/payment-architecture-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "ba7b89f31b943eeec97ca96392dc15d501fb748fa832afe18a253c2948b5a099"
+    },
+    {
+      "source": "skills/architecture/system-architecture-review/SKILL.md",
+      "target": ".apt/skills/architecture/system-architecture-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
+    },
+    {
+      "source": "skills/design/customer-journey-mapping/SKILL.md",
+      "target": ".apt/skills/design/customer-journey-mapping/SKILL.md",
+      "kind": "canonical",
+      "sha256": "4e94c244a356f678bd5de59d0e0526ab8c73128aaaed9966daf1a2eaf0cd5fcf"
+    },
+    {
+      "source": "skills/design/demo-flow-design/SKILL.md",
+      "target": ".apt/skills/design/demo-flow-design/SKILL.md",
+      "kind": "canonical",
+      "sha256": "dbaf73c068228b21f1d4875b17ce597a74d009eb233977d80cdb88eed327cb8e"
+    },
+    {
+      "source": "skills/design/intent-based-ui-design/SKILL.md",
+      "target": ".apt/skills/design/intent-based-ui-design/SKILL.md",
+      "kind": "canonical",
+      "sha256": "694d364c3f9444b748ea4c4697e49d4d0bdb44c1f0bfd8ad945b4f91c6c2060e"
+    },
+    {
+      "source": "skills/design/role-permission-flow-design/SKILL.md",
+      "target": ".apt/skills/design/role-permission-flow-design/SKILL.md",
+      "kind": "canonical",
+      "sha256": "d62fd0fdb3009c6892b8f2c6f8224b10eaf8244c49bccd98e4803711f0b3169f"
+    },
+    {
+      "source": "skills/design/ui-api-alignment-review/SKILL.md",
+      "target": ".apt/skills/design/ui-api-alignment-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "d6d3e6e7feac28c5df2252a04e2bd537c1195fdcbb7b66dca80b3d1714706819"
+    },
+    {
+      "source": "skills/documentation/ai-example-builder/SKILL.md",
+      "target": ".apt/skills/documentation/ai-example-builder/SKILL.md",
+      "kind": "canonical",
+      "sha256": "47415aaeea95619092b759d8dc4de0886cfce0f2c0ed15972e1c7334da7bac25"
+    },
+    {
+      "source": "skills/documentation/api-example-builder/SKILL.md",
+      "target": ".apt/skills/documentation/api-example-builder/SKILL.md",
+      "kind": "canonical",
+      "sha256": "3b6e5ae55ccc244f0ea30522ed738d1ae304c68ecc56d369dce5306440551bba"
+    },
+    {
+      "source": "skills/documentation/api-guide-writer/SKILL.md",
+      "target": ".apt/skills/documentation/api-guide-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "f2c340f13cf49dc449ff189030f930dbdb60bec20cdb38b3c46e96aa9fcd622e"
+    },
+    {
+      "source": "skills/documentation/audience-layered-docs/SKILL.md",
+      "target": ".apt/skills/documentation/audience-layered-docs/SKILL.md",
+      "kind": "canonical",
+      "sha256": "14a971b7b47cb4f4035a555a3b75669e0abf5346ecde9b431934ee45b833059f"
+    },
+    {
+      "source": "skills/documentation/business-guide-writer/SKILL.md",
+      "target": ".apt/skills/documentation/business-guide-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "dc6a3e29c14021eef505f144bd2617b0d432d2b9f37bec851959e56c76075614"
+    },
+    {
+      "source": "skills/documentation/demo-plan-writer/SKILL.md",
+      "target": ".apt/skills/documentation/demo-plan-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "6e750a0b07ab9686a4fe1038f29ed96bfdd8652a74dde5a924ed902f03f43f03"
+    },
+    {
+      "source": "skills/documentation/developer-guide-writer/SKILL.md",
+      "target": ".apt/skills/documentation/developer-guide-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "d0f8c40526e3818a390ea1bc3ca2abc8c6de668bc1c00730793d85e14dd1ad73"
+    },
+    {
+      "source": "skills/documentation/diagram-generator/SKILL.md",
+      "target": ".apt/skills/documentation/diagram-generator/SKILL.md",
+      "kind": "canonical",
+      "sha256": "49350468e76e9c0f45bc1a05acc2f4f61a5e92301cfaa64e5fc6d3e59c7c0455"
+    },
+    {
+      "source": "skills/documentation/implementation-blueprint-writer/SKILL.md",
+      "target": ".apt/skills/documentation/implementation-blueprint-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "72a1d92e6fde8c6ad8531d74130930f8d04f7190f0821faaac49a7ccd0c0d907"
+    },
+    {
+      "source": "skills/documentation/migration-guide-writer/SKILL.md",
+      "target": ".apt/skills/documentation/migration-guide-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "de2337a22bd3d3458ae84b210d62cb4c10cfae5c3afb73667bb00c31cf49e747"
+    },
+    {
+      "source": "skills/documentation/operations-guide-writer/SKILL.md",
+      "target": ".apt/skills/documentation/operations-guide-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "68d1d8d9f58b8b7875bdf2b521077fc486d3ad55348bd6ee68fcf05769344c4e"
+    },
+    {
+      "source": "skills/documentation/partner-acquirer-guide-writer/SKILL.md",
+      "target": ".apt/skills/documentation/partner-acquirer-guide-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "fdc855e1d44ecca768d0df6dff0cf6b5f8631bb3caeef6a9a064f66f9adef06a"
+    },
+    {
+      "source": "skills/documentation/product-hub-builder/SKILL.md",
+      "target": ".apt/skills/documentation/product-hub-builder/SKILL.md",
+      "kind": "canonical",
+      "sha256": "8f3c9ff1f25960f1be894fcbcd3d85e75635e2231f526c92a4b06b0aa0445766"
+    },
+    {
+      "source": "skills/documentation/troubleshooting-guide-writer/SKILL.md",
+      "target": ".apt/skills/documentation/troubleshooting-guide-writer/SKILL.md",
+      "kind": "canonical",
+      "sha256": "5c93d59a10ef55a8bb7f5bdcbd5969f605290d0cf7ce35f2ef6ddeedd7b00683"
+    },
+    {
+      "source": "skills/engineering/contract-change-review/SKILL.md",
+      "target": ".apt/skills/engineering/contract-change-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "903fbbfe805d2a7dcceedf7bfb474083425e64de1245ed7d6b33e61c41b1f8a8"
+    },
+    {
+      "source": "skills/engineering/implementation-review/SKILL.md",
+      "target": ".apt/skills/engineering/implementation-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "5f5728234edde48957f7d030644218103d234994fc6f16a3c4a338030b6dbee4"
+    },
+    {
+      "source": "skills/engineering/refactor-safety/SKILL.md",
+      "target": ".apt/skills/engineering/refactor-safety/SKILL.md",
+      "kind": "canonical",
+      "sha256": "31af10f5151fb66bba476620ff04e6b02c045412eab4797fb0578f7d4e0e79f6"
+    },
+    {
+      "source": "skills/thinking/assumption-check/SKILL.md",
+      "target": ".apt/skills/thinking/assumption-check/SKILL.md",
+      "kind": "canonical",
+      "sha256": "255ef347bb6191e810502585a85f23fb8cd09ea82eef1b2ad84bb7f1f9556034"
+    },
+    {
+      "source": "skills/thinking/beginner-clarity-review/SKILL.md",
+      "target": ".apt/skills/thinking/beginner-clarity-review/SKILL.md",
+      "kind": "canonical",
+      "sha256": "94e42a90b86e492a8a9a4b7150a3de563035b6fa745ff5e3fe0ba6670e9f9f7a"
+    },
+    {
+      "source": "skills/thinking/decision-rationalization/SKILL.md",
+      "target": ".apt/skills/thinking/decision-rationalization/SKILL.md",
+      "kind": "canonical",
+      "sha256": "eeb3f25f80964fb6bb7b929a11229084c0fbb483445b9561a3316093594c543b"
+    },
+    {
+      "source": "skills/thinking/problem-framing/SKILL.md",
+      "target": ".apt/skills/thinking/problem-framing/SKILL.md",
+      "kind": "canonical",
+      "sha256": "e97c13c43cfd0a3688257618ca1506e5d4d139fe01e81cb869f92150956f6450"
+    },
+    {
+      "source": "skills/thinking/tradeoff-analysis/SKILL.md",
+      "target": ".apt/skills/thinking/tradeoff-analysis/SKILL.md",
+      "kind": "canonical",
+      "sha256": "1923860b5b40b65e01e0520218b933f96f22c5ea9d9ccb887f234fd10ace86a5"
+    },
+    {
+      "source": "standards/ai/agent-harness-standard.md",
+      "target": ".apt/standards/ai/agent-harness-standard.md",
+      "kind": "canonical",
+      "sha256": "b0d0b744418715f5474b6a3de923dffd09613b682b0ef4ce743221430a8b1af5"
+    },
+    {
+      "source": "standards/ai/ai-orchestration-standard.md",
+      "target": ".apt/standards/ai/ai-orchestration-standard.md",
+      "kind": "canonical",
+      "sha256": "e8a0011a8133db9236d8089c7b4ec68622ca0e6ff41073103033ccb12097546f"
+    },
+    {
+      "source": "standards/ai/local-first-ai-standard.md",
+      "target": ".apt/standards/ai/local-first-ai-standard.md",
+      "kind": "canonical",
+      "sha256": "eaec5dcc857f20ea2fe3d7c142ef732e138827c9c1666b4a6963375eb0c580e6"
+    },
+    {
+      "source": "standards/ai/model-routing-standard.md",
+      "target": ".apt/standards/ai/model-routing-standard.md",
+      "kind": "canonical",
+      "sha256": "124bb6a470edadeea2889fadcdaf448e54463fb7ea4c497b863b1073f97b1fbd"
+    },
+    {
+      "source": "standards/ai/repository-lifecycle-standard.md",
+      "target": ".apt/standards/ai/repository-lifecycle-standard.md",
+      "kind": "canonical",
+      "sha256": "c0a2e6843d0798d276dd11ff803e38f66ef708251ac7f53c1f6a1b7023d0c65e"
+    },
+    {
+      "source": "standards/ai/security-harness-standard.md",
+      "target": ".apt/standards/ai/security-harness-standard.md",
+      "kind": "canonical",
+      "sha256": "b347d90ed897f36d518b455546204c963bc237f1894ecf9152dab43c176015a0"
+    },
+    {
+      "source": "standards/ai/token-efficiency-standard.md",
+      "target": ".apt/standards/ai/token-efficiency-standard.md",
+      "kind": "canonical",
+      "sha256": "5f18a7a8e26c546d0e08105439f77836643f026a248aec159fbeb32511bbe6f4"
+    },
+    {
+      "source": "standards/ai/verification-standard.md",
+      "target": ".apt/standards/ai/verification-standard.md",
+      "kind": "canonical",
+      "sha256": "81d713ab89ca3039dcb50866178bb86b376336fa8abec1a6078f936775ee163d"
+    },
+    {
+      "source": "standards/coding/coding-standards.md",
+      "target": ".apt/standards/coding/coding-standards.md",
+      "kind": "canonical",
+      "sha256": "4efc774749b852083eb6b08aff8bb849c42a933a3d1a3d0bd43445fc4dbf373e"
+    },
+    {
+      "source": "standards/documentation/documentation-standards.md",
+      "target": ".apt/standards/documentation/documentation-standards.md",
+      "kind": "canonical",
+      "sha256": "521f45e0fe37fb8595d66c0a0e41db1af72544691ee9e34f8f0fc4e2359e940b"
+    },
+    {
+      "source": "standards/installable-summaries/ux-standards.md",
+      "target": ".apt/standards/installable-summaries/ux-standards.md",
+      "kind": "canonical",
+      "sha256": "de201f7aed343618a8ab0c0774841c4b96984fd2264ce6947d3d018c2e88e15e"
+    },
+    {
+      "source": "standards/README.md",
+      "target": ".apt/standards/README.md",
+      "kind": "canonical",
+      "sha256": "317c997988720c4e1bb82038609d3ff2cedc735e5125b11a9c9555aa50d5178c"
+    },
+    {
+      "source": "standards/testing/testing-standards.md",
+      "target": ".apt/standards/testing/testing-standards.md",
+      "kind": "canonical",
+      "sha256": "a2e7dbafb34f028774d23253ccae2dcb0b6a5161c5cf7d10a0839997444b4a97"
+    },
+    {
+      "source": "templates/decision-records/ADR.md",
+      "target": ".apt/templates/decision-records/ADR.md",
+      "kind": "canonical",
+      "sha256": "d2c60d4ba43ca582ef879a31d917370b2b45658df055599f7dd154a1a8c31d34"
+    },
+    {
+      "source": "templates/decision-records/README.md",
+      "target": ".apt/templates/decision-records/README.md",
+      "kind": "canonical",
+      "sha256": "52522e28b6091c5e71da4d58ab2358c9d50f189d5d1ac9a56365d2a435268e47"
+    },
+    {
+      "source": "templates/docs/ai-usage-examples.md",
+      "target": ".apt/templates/docs/ai-usage-examples.md",
+      "kind": "canonical",
+      "sha256": "ee26ef48785a0b9334a481e65a54ab65ec97a0558dedad15f382c17559672a18"
+    },
+    {
+      "source": "templates/docs/api-guide.md",
+      "target": ".apt/templates/docs/api-guide.md",
+      "kind": "canonical",
+      "sha256": "fc4e44b4cc782c65d2e81b2f7e237cc9223e5f618e2302dd4897da24381adf2b"
+    },
+    {
+      "source": "templates/docs/bank-acquirer-partner-guide.md",
+      "target": ".apt/templates/docs/bank-acquirer-partner-guide.md",
+      "kind": "canonical",
+      "sha256": "3269de0dc35276ab3fdd7363cdae3c85117bf6bcc0da5e2acd888fa2dec562a0"
+    },
+    {
+      "source": "templates/docs/business-guide.md",
+      "target": ".apt/templates/docs/business-guide.md",
+      "kind": "canonical",
+      "sha256": "ff6e3afa0b99839d408fed38f9a73772c791db0e6930689b52fb86adb9bda6bd"
+    },
+    {
+      "source": "templates/docs/demo-plan.md",
+      "target": ".apt/templates/docs/demo-plan.md",
+      "kind": "canonical",
+      "sha256": "7c1a0c384d6e1110ad68c89e30727e0e58236124469aacc58ca3d5b2374b91c4"
+    },
+    {
+      "source": "templates/docs/developer-integrator-guide.md",
+      "target": ".apt/templates/docs/developer-integrator-guide.md",
+      "kind": "canonical",
+      "sha256": "c5538b4fe53ceecfb782af1a7f09ca309b6d5b0d449bfffb5ef3cebd0d7c6aa8"
+    },
+    {
+      "source": "templates/docs/implementation-blueprint.md",
+      "target": ".apt/templates/docs/implementation-blueprint.md",
+      "kind": "canonical",
+      "sha256": "a54df43ea0ecc08322bc17bf3cdb397965071d3760ff6fff6914633a88e2782e"
+    },
+    {
+      "source": "templates/docs/README.md",
+      "target": ".apt/templates/docs/README.md",
+      "kind": "canonical",
+      "sha256": "cf9dd5fc6bd91541ca02109c1b585be0b2d32d44e444bfbcc5b9535e540e194c"
+    },
+    {
+      "source": "templates/docs/troubleshooting-guide.md",
+      "target": ".apt/templates/docs/troubleshooting-guide.md",
+      "kind": "canonical",
+      "sha256": "2dc8a215987c248b2b6c50700340e121b43f5f4ef026b52ece384db5e993ea84"
+    },
+    {
+      "source": "templates/product/audience-map.md",
+      "target": ".apt/templates/product/audience-map.md",
+      "kind": "canonical",
+      "sha256": "568c4d872e0cbaa943d13e9692d8cd2263e581c1012f8e886df44688134c70b2"
+    },
+    {
+      "source": "templates/product/product-decision-record.md",
+      "target": ".apt/templates/product/product-decision-record.md",
+      "kind": "canonical",
+      "sha256": "7164b223d8c1df6c903e14bb6784fea2d245d22457e26840eba6e8175f0728ce"
+    },
+    {
+      "source": "templates/product/product-hub-checklist.md",
+      "target": ".apt/templates/product/product-hub-checklist.md",
+      "kind": "canonical",
+      "sha256": "8dda2a3be1ea27bc5d7f3b0c97d4376f7e9122b12c7cda7c82583bf3305301c4"
+    },
+    {
+      "source": "templates/product/product-overview.md",
+      "target": ".apt/templates/product/product-overview.md",
+      "kind": "canonical",
+      "sha256": "d68e618751f00fe687bf3a2bc960734381e76686618e951348c42c5ffa257f11"
+    },
+    {
+      "source": "templates/product/README.md",
+      "target": ".apt/templates/product/README.md",
+      "kind": "canonical",
+      "sha256": "e9ce46adfa8917d799c59b5af9710030045724a690a891aff118591e516b3679"
+    },
+    {
+      "source": "templates/support/customer-safe-explanation.md",
+      "target": ".apt/templates/support/customer-safe-explanation.md",
+      "kind": "canonical",
+      "sha256": "18437140dd6f8fd9df0bcf7763e58decc6f7bb75e12c272d48d7f21a624c212f"
+    },
+    {
+      "source": "templates/support/escalation-path.md",
+      "target": ".apt/templates/support/escalation-path.md",
+      "kind": "canonical",
+      "sha256": "4ce4396898e53cbe680280ff8a83acdb74a5b1734752260af935addacccbc697"
+    },
+    {
+      "source": "templates/support/kb-article.md",
+      "target": ".apt/templates/support/kb-article.md",
+      "kind": "canonical",
+      "sha256": "d3794ee11438a0e08118c991fea383f37856c9a61c8c5357e60206af4ed25b72"
+    },
+    {
+      "source": "templates/support/README.md",
+      "target": ".apt/templates/support/README.md",
+      "kind": "canonical",
+      "sha256": "f985525a0408b39e504693f9d30dff1ba4654d417eb8d5cfce5e761be953aeff"
+    },
+    {
+      "source": "templates/support/support-runbook.md",
+      "target": ".apt/templates/support/support-runbook.md",
+      "kind": "canonical",
+      "sha256": "5e490ed137da6204cde7d5d48584ffb364011e208a4bc2fc5e511c693143012f"
+    },
+    {
+      "source": "skills/ai-agents/agent-routing/SKILL.md",
+      "target": ".claude/skills/ai-agents/agent-routing/SKILL.md",
+      "kind": "platform",
+      "sha256": "6b4bb98247264cbf9fe19bd2ddaf29f55510bb5d5d94c2172f33186f43ead8ef"
+    },
+    {
+      "source": "skills/ai-agents/hallucination-review/SKILL.md",
+      "target": ".claude/skills/ai-agents/hallucination-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "fbf7b241aceda4ddbc7565fa6674be1fadf76a9a9e7b8649d26fde080b114da2"
+    },
+    {
+      "source": "skills/ai-agents/local-llm-routing/SKILL.md",
+      "target": ".claude/skills/ai-agents/local-llm-routing/SKILL.md",
+      "kind": "platform",
+      "sha256": "7c5c561919855902b0734bb55df5ba4baec84d0ef1eab897325864ad912cd71b"
+    },
+    {
+      "source": "skills/ai-agents/micro-group-review/SKILL.md",
+      "target": ".claude/skills/ai-agents/micro-group-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "5f6c5429626bc1378ebcc7e7ed6e52667a2b05e0cab0a63ae180e595916943a6"
+    },
+    {
+      "source": "skills/ai-agents/model-selection/SKILL.md",
+      "target": ".claude/skills/ai-agents/model-selection/SKILL.md",
+      "kind": "platform",
+      "sha256": "6c39e40d0b3a4607f6e6e417486da80a73da6b2b13c5419376941ba771c3e4ec"
+    },
+    {
+      "source": "skills/ai-agents/prompt-engineering/SKILL.md",
+      "target": ".claude/skills/ai-agents/prompt-engineering/SKILL.md",
+      "kind": "platform",
+      "sha256": "6028a289de6742d0bc1ee7277396dac53a82d7c558dc43b2e7b48b1f6960baec"
+    },
+    {
+      "source": "skills/ai-agents/red-team-review/SKILL.md",
+      "target": ".claude/skills/ai-agents/red-team-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "eb3850bd56ad5dab191fac6b672afbca8617c871a63a28a22b22c0a5c8d0afe9"
+    },
+    {
+      "source": "skills/ai-agents/skill-authoring/SKILL.md",
+      "target": ".claude/skills/ai-agents/skill-authoring/SKILL.md",
+      "kind": "platform",
+      "sha256": "315a2a29eec987055eb8d9e79a4a06746849c046ff7c4fdcb61226fcbcd64767"
+    },
+    {
+      "source": "skills/ai-agents/swarm-review/SKILL.md",
+      "target": ".claude/skills/ai-agents/swarm-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "b1205bedbfad9c762157441099c6cd8ba856026231d72c8ed00bd6853dd24ac7"
+    },
+    {
+      "source": "skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "target": ".claude/skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "kind": "platform",
+      "sha256": "7b4f803650d8b3f72ff21447352390476a0a8dc58dd94cbc603bbb275ecfff7d"
+    },
+    {
+      "source": "platforms/codex/source/skills/ai-output-review/SKILL.md",
+      "target": ".claude/skills/ai-output-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "6a9db15014e1b47855094fd779baa4becbf7b25f9e722737422f37ce33cb3325"
+    },
+    {
+      "source": "skills/architecture/api-architecture-review/SKILL.md",
+      "target": ".claude/skills/architecture/api-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "696121961274f110f41fdd388d67546d631db3ce286d7821b9200eef05783a7e"
+    },
+    {
+      "source": "skills/architecture/bridge-architecture-review/SKILL.md",
+      "target": ".claude/skills/architecture/bridge-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "1131eb60b07b3d53d78951f6d4bff4160c6f5c755f0c0be0ac14efb995ec6b76"
+    },
+    {
+      "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "target": ".claude/skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "kind": "platform",
+      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+    },
+    {
+      "source": "skills/architecture/integration-architecture-review/SKILL.md",
+      "target": ".claude/skills/architecture/integration-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "e1b59daf724c38321dd381d78854bf49e797eddac4f33931423bb8d4dacea635"
+    },
+    {
+      "source": "skills/architecture/payment-architecture-review/SKILL.md",
+      "target": ".claude/skills/architecture/payment-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "ba7b89f31b943eeec97ca96392dc15d501fb748fa832afe18a253c2948b5a099"
+    },
+    {
+      "source": "skills/architecture/system-architecture-review/SKILL.md",
+      "target": ".claude/skills/architecture/system-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
+    },
+    {
+      "source": "skills/design/customer-journey-mapping/SKILL.md",
+      "target": ".claude/skills/design/customer-journey-mapping/SKILL.md",
+      "kind": "platform",
+      "sha256": "4e94c244a356f678bd5de59d0e0526ab8c73128aaaed9966daf1a2eaf0cd5fcf"
+    },
+    {
+      "source": "skills/design/demo-flow-design/SKILL.md",
+      "target": ".claude/skills/design/demo-flow-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "dbaf73c068228b21f1d4875b17ce597a74d009eb233977d80cdb88eed327cb8e"
+    },
+    {
+      "source": "skills/design/intent-based-ui-design/SKILL.md",
+      "target": ".claude/skills/design/intent-based-ui-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "694d364c3f9444b748ea4c4697e49d4d0bdb44c1f0bfd8ad945b4f91c6c2060e"
+    },
+    {
+      "source": "skills/design/role-permission-flow-design/SKILL.md",
+      "target": ".claude/skills/design/role-permission-flow-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "d62fd0fdb3009c6892b8f2c6f8224b10eaf8244c49bccd98e4803711f0b3169f"
+    },
+    {
+      "source": "skills/design/ui-api-alignment-review/SKILL.md",
+      "target": ".claude/skills/design/ui-api-alignment-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "d6d3e6e7feac28c5df2252a04e2bd537c1195fdcbb7b66dca80b3d1714706819"
+    },
+    {
+      "source": "skills/documentation/ai-example-builder/SKILL.md",
+      "target": ".claude/skills/documentation/ai-example-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "47415aaeea95619092b759d8dc4de0886cfce0f2c0ed15972e1c7334da7bac25"
+    },
+    {
+      "source": "skills/documentation/api-example-builder/SKILL.md",
+      "target": ".claude/skills/documentation/api-example-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "3b6e5ae55ccc244f0ea30522ed738d1ae304c68ecc56d369dce5306440551bba"
+    },
+    {
+      "source": "skills/documentation/api-guide-writer/SKILL.md",
+      "target": ".claude/skills/documentation/api-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "f2c340f13cf49dc449ff189030f930dbdb60bec20cdb38b3c46e96aa9fcd622e"
+    },
+    {
+      "source": "skills/documentation/audience-layered-docs/SKILL.md",
+      "target": ".claude/skills/documentation/audience-layered-docs/SKILL.md",
+      "kind": "platform",
+      "sha256": "14a971b7b47cb4f4035a555a3b75669e0abf5346ecde9b431934ee45b833059f"
+    },
+    {
+      "source": "skills/documentation/business-guide-writer/SKILL.md",
+      "target": ".claude/skills/documentation/business-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "dc6a3e29c14021eef505f144bd2617b0d432d2b9f37bec851959e56c76075614"
+    },
+    {
+      "source": "skills/documentation/demo-plan-writer/SKILL.md",
+      "target": ".claude/skills/documentation/demo-plan-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "6e750a0b07ab9686a4fe1038f29ed96bfdd8652a74dde5a924ed902f03f43f03"
+    },
+    {
+      "source": "skills/documentation/developer-guide-writer/SKILL.md",
+      "target": ".claude/skills/documentation/developer-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "d0f8c40526e3818a390ea1bc3ca2abc8c6de668bc1c00730793d85e14dd1ad73"
+    },
+    {
+      "source": "skills/documentation/diagram-generator/SKILL.md",
+      "target": ".claude/skills/documentation/diagram-generator/SKILL.md",
+      "kind": "platform",
+      "sha256": "49350468e76e9c0f45bc1a05acc2f4f61a5e92301cfaa64e5fc6d3e59c7c0455"
+    },
+    {
+      "source": "skills/documentation/implementation-blueprint-writer/SKILL.md",
+      "target": ".claude/skills/documentation/implementation-blueprint-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "72a1d92e6fde8c6ad8531d74130930f8d04f7190f0821faaac49a7ccd0c0d907"
+    },
+    {
+      "source": "skills/documentation/migration-guide-writer/SKILL.md",
+      "target": ".claude/skills/documentation/migration-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "de2337a22bd3d3458ae84b210d62cb4c10cfae5c3afb73667bb00c31cf49e747"
+    },
+    {
+      "source": "skills/documentation/operations-guide-writer/SKILL.md",
+      "target": ".claude/skills/documentation/operations-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "68d1d8d9f58b8b7875bdf2b521077fc486d3ad55348bd6ee68fcf05769344c4e"
+    },
+    {
+      "source": "skills/documentation/partner-acquirer-guide-writer/SKILL.md",
+      "target": ".claude/skills/documentation/partner-acquirer-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "fdc855e1d44ecca768d0df6dff0cf6b5f8631bb3caeef6a9a064f66f9adef06a"
+    },
+    {
+      "source": "skills/documentation/product-hub-builder/SKILL.md",
+      "target": ".claude/skills/documentation/product-hub-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "8f3c9ff1f25960f1be894fcbcd3d85e75635e2231f526c92a4b06b0aa0445766"
+    },
+    {
+      "source": "skills/documentation/troubleshooting-guide-writer/SKILL.md",
+      "target": ".claude/skills/documentation/troubleshooting-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "5c93d59a10ef55a8bb7f5bdcbd5969f605290d0cf7ce35f2ef6ddeedd7b00683"
+    },
+    {
+      "source": "skills/engineering/contract-change-review/SKILL.md",
+      "target": ".claude/skills/engineering/contract-change-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "903fbbfe805d2a7dcceedf7bfb474083425e64de1245ed7d6b33e61c41b1f8a8"
+    },
+    {
+      "source": "skills/engineering/implementation-review/SKILL.md",
+      "target": ".claude/skills/engineering/implementation-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "5f5728234edde48957f7d030644218103d234994fc6f16a3c4a338030b6dbee4"
+    },
+    {
+      "source": "skills/engineering/refactor-safety/SKILL.md",
+      "target": ".claude/skills/engineering/refactor-safety/SKILL.md",
+      "kind": "platform",
+      "sha256": "31af10f5151fb66bba476620ff04e6b02c045412eab4797fb0578f7d4e0e79f6"
+    },
+    {
+      "source": "skills/thinking/assumption-check/SKILL.md",
+      "target": ".claude/skills/thinking/assumption-check/SKILL.md",
+      "kind": "platform",
+      "sha256": "255ef347bb6191e810502585a85f23fb8cd09ea82eef1b2ad84bb7f1f9556034"
+    },
+    {
+      "source": "skills/thinking/beginner-clarity-review/SKILL.md",
+      "target": ".claude/skills/thinking/beginner-clarity-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "94e42a90b86e492a8a9a4b7150a3de563035b6fa745ff5e3fe0ba6670e9f9f7a"
+    },
+    {
+      "source": "skills/thinking/decision-rationalization/SKILL.md",
+      "target": ".claude/skills/thinking/decision-rationalization/SKILL.md",
+      "kind": "platform",
+      "sha256": "eeb3f25f80964fb6bb7b929a11229084c0fbb483445b9561a3316093594c543b"
+    },
+    {
+      "source": "skills/thinking/problem-framing/SKILL.md",
+      "target": ".claude/skills/thinking/problem-framing/SKILL.md",
+      "kind": "platform",
+      "sha256": "e97c13c43cfd0a3688257618ca1506e5d4d139fe01e81cb869f92150956f6450"
+    },
+    {
+      "source": "skills/thinking/tradeoff-analysis/SKILL.md",
+      "target": ".claude/skills/thinking/tradeoff-analysis/SKILL.md",
+      "kind": "platform",
+      "sha256": "1923860b5b40b65e01e0520218b933f96f22c5ea9d9ccb887f234fd10ace86a5"
+    },
+    {
+      "source": "platforms/codex/source/skills/ux-review/SKILL.md",
+      "target": ".claude/skills/ux-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "41d6b7498dfa1e2bab61260096a44d9e2266bdb553ae835c5a758905f5457e4a"
+    },
+    {
+      "source": "skills/ai-agents/agent-routing/SKILL.md",
+      "target": ".codex/skills/ai-agents/agent-routing/SKILL.md",
+      "kind": "platform",
+      "sha256": "6b4bb98247264cbf9fe19bd2ddaf29f55510bb5d5d94c2172f33186f43ead8ef"
+    },
+    {
+      "source": "skills/ai-agents/hallucination-review/SKILL.md",
+      "target": ".codex/skills/ai-agents/hallucination-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "fbf7b241aceda4ddbc7565fa6674be1fadf76a9a9e7b8649d26fde080b114da2"
+    },
+    {
+      "source": "skills/ai-agents/local-llm-routing/SKILL.md",
+      "target": ".codex/skills/ai-agents/local-llm-routing/SKILL.md",
+      "kind": "platform",
+      "sha256": "7c5c561919855902b0734bb55df5ba4baec84d0ef1eab897325864ad912cd71b"
+    },
+    {
+      "source": "skills/ai-agents/micro-group-review/SKILL.md",
+      "target": ".codex/skills/ai-agents/micro-group-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "5f6c5429626bc1378ebcc7e7ed6e52667a2b05e0cab0a63ae180e595916943a6"
+    },
+    {
+      "source": "skills/ai-agents/model-selection/SKILL.md",
+      "target": ".codex/skills/ai-agents/model-selection/SKILL.md",
+      "kind": "platform",
+      "sha256": "6c39e40d0b3a4607f6e6e417486da80a73da6b2b13c5419376941ba771c3e4ec"
+    },
+    {
+      "source": "skills/ai-agents/prompt-engineering/SKILL.md",
+      "target": ".codex/skills/ai-agents/prompt-engineering/SKILL.md",
+      "kind": "platform",
+      "sha256": "6028a289de6742d0bc1ee7277396dac53a82d7c558dc43b2e7b48b1f6960baec"
+    },
+    {
+      "source": "skills/ai-agents/red-team-review/SKILL.md",
+      "target": ".codex/skills/ai-agents/red-team-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "eb3850bd56ad5dab191fac6b672afbca8617c871a63a28a22b22c0a5c8d0afe9"
+    },
+    {
+      "source": "skills/ai-agents/skill-authoring/SKILL.md",
+      "target": ".codex/skills/ai-agents/skill-authoring/SKILL.md",
+      "kind": "platform",
+      "sha256": "315a2a29eec987055eb8d9e79a4a06746849c046ff7c4fdcb61226fcbcd64767"
+    },
+    {
+      "source": "skills/ai-agents/swarm-review/SKILL.md",
+      "target": ".codex/skills/ai-agents/swarm-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "b1205bedbfad9c762157441099c6cd8ba856026231d72c8ed00bd6853dd24ac7"
+    },
+    {
+      "source": "skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "target": ".codex/skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "kind": "platform",
+      "sha256": "7b4f803650d8b3f72ff21447352390476a0a8dc58dd94cbc603bbb275ecfff7d"
+    },
+    {
+      "source": "platforms/codex/source/skills/ai-output-review/SKILL.md",
+      "target": ".codex/skills/ai-output-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "6a9db15014e1b47855094fd779baa4becbf7b25f9e722737422f37ce33cb3325"
+    },
+    {
+      "source": "skills/architecture/api-architecture-review/SKILL.md",
+      "target": ".codex/skills/architecture/api-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "696121961274f110f41fdd388d67546d631db3ce286d7821b9200eef05783a7e"
+    },
+    {
+      "source": "skills/architecture/bridge-architecture-review/SKILL.md",
+      "target": ".codex/skills/architecture/bridge-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "1131eb60b07b3d53d78951f6d4bff4160c6f5c755f0c0be0ac14efb995ec6b76"
+    },
+    {
+      "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "target": ".codex/skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "kind": "platform",
+      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+    },
+    {
+      "source": "skills/architecture/integration-architecture-review/SKILL.md",
+      "target": ".codex/skills/architecture/integration-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "e1b59daf724c38321dd381d78854bf49e797eddac4f33931423bb8d4dacea635"
+    },
+    {
+      "source": "skills/architecture/payment-architecture-review/SKILL.md",
+      "target": ".codex/skills/architecture/payment-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "ba7b89f31b943eeec97ca96392dc15d501fb748fa832afe18a253c2948b5a099"
+    },
+    {
+      "source": "skills/architecture/system-architecture-review/SKILL.md",
+      "target": ".codex/skills/architecture/system-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
+    },
+    {
+      "source": "skills/design/customer-journey-mapping/SKILL.md",
+      "target": ".codex/skills/design/customer-journey-mapping/SKILL.md",
+      "kind": "platform",
+      "sha256": "4e94c244a356f678bd5de59d0e0526ab8c73128aaaed9966daf1a2eaf0cd5fcf"
+    },
+    {
+      "source": "skills/design/demo-flow-design/SKILL.md",
+      "target": ".codex/skills/design/demo-flow-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "dbaf73c068228b21f1d4875b17ce597a74d009eb233977d80cdb88eed327cb8e"
+    },
+    {
+      "source": "skills/design/intent-based-ui-design/SKILL.md",
+      "target": ".codex/skills/design/intent-based-ui-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "694d364c3f9444b748ea4c4697e49d4d0bdb44c1f0bfd8ad945b4f91c6c2060e"
+    },
+    {
+      "source": "skills/design/role-permission-flow-design/SKILL.md",
+      "target": ".codex/skills/design/role-permission-flow-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "d62fd0fdb3009c6892b8f2c6f8224b10eaf8244c49bccd98e4803711f0b3169f"
+    },
+    {
+      "source": "skills/design/ui-api-alignment-review/SKILL.md",
+      "target": ".codex/skills/design/ui-api-alignment-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "d6d3e6e7feac28c5df2252a04e2bd537c1195fdcbb7b66dca80b3d1714706819"
+    },
+    {
+      "source": "skills/documentation/ai-example-builder/SKILL.md",
+      "target": ".codex/skills/documentation/ai-example-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "47415aaeea95619092b759d8dc4de0886cfce0f2c0ed15972e1c7334da7bac25"
+    },
+    {
+      "source": "skills/documentation/api-example-builder/SKILL.md",
+      "target": ".codex/skills/documentation/api-example-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "3b6e5ae55ccc244f0ea30522ed738d1ae304c68ecc56d369dce5306440551bba"
+    },
+    {
+      "source": "skills/documentation/api-guide-writer/SKILL.md",
+      "target": ".codex/skills/documentation/api-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "f2c340f13cf49dc449ff189030f930dbdb60bec20cdb38b3c46e96aa9fcd622e"
+    },
+    {
+      "source": "skills/documentation/audience-layered-docs/SKILL.md",
+      "target": ".codex/skills/documentation/audience-layered-docs/SKILL.md",
+      "kind": "platform",
+      "sha256": "14a971b7b47cb4f4035a555a3b75669e0abf5346ecde9b431934ee45b833059f"
+    },
+    {
+      "source": "skills/documentation/business-guide-writer/SKILL.md",
+      "target": ".codex/skills/documentation/business-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "dc6a3e29c14021eef505f144bd2617b0d432d2b9f37bec851959e56c76075614"
+    },
+    {
+      "source": "skills/documentation/demo-plan-writer/SKILL.md",
+      "target": ".codex/skills/documentation/demo-plan-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "6e750a0b07ab9686a4fe1038f29ed96bfdd8652a74dde5a924ed902f03f43f03"
+    },
+    {
+      "source": "skills/documentation/developer-guide-writer/SKILL.md",
+      "target": ".codex/skills/documentation/developer-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "d0f8c40526e3818a390ea1bc3ca2abc8c6de668bc1c00730793d85e14dd1ad73"
+    },
+    {
+      "source": "skills/documentation/diagram-generator/SKILL.md",
+      "target": ".codex/skills/documentation/diagram-generator/SKILL.md",
+      "kind": "platform",
+      "sha256": "49350468e76e9c0f45bc1a05acc2f4f61a5e92301cfaa64e5fc6d3e59c7c0455"
+    },
+    {
+      "source": "skills/documentation/implementation-blueprint-writer/SKILL.md",
+      "target": ".codex/skills/documentation/implementation-blueprint-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "72a1d92e6fde8c6ad8531d74130930f8d04f7190f0821faaac49a7ccd0c0d907"
+    },
+    {
+      "source": "skills/documentation/migration-guide-writer/SKILL.md",
+      "target": ".codex/skills/documentation/migration-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "de2337a22bd3d3458ae84b210d62cb4c10cfae5c3afb73667bb00c31cf49e747"
+    },
+    {
+      "source": "skills/documentation/operations-guide-writer/SKILL.md",
+      "target": ".codex/skills/documentation/operations-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "68d1d8d9f58b8b7875bdf2b521077fc486d3ad55348bd6ee68fcf05769344c4e"
+    },
+    {
+      "source": "skills/documentation/partner-acquirer-guide-writer/SKILL.md",
+      "target": ".codex/skills/documentation/partner-acquirer-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "fdc855e1d44ecca768d0df6dff0cf6b5f8631bb3caeef6a9a064f66f9adef06a"
+    },
+    {
+      "source": "skills/documentation/product-hub-builder/SKILL.md",
+      "target": ".codex/skills/documentation/product-hub-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "8f3c9ff1f25960f1be894fcbcd3d85e75635e2231f526c92a4b06b0aa0445766"
+    },
+    {
+      "source": "skills/documentation/troubleshooting-guide-writer/SKILL.md",
+      "target": ".codex/skills/documentation/troubleshooting-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "5c93d59a10ef55a8bb7f5bdcbd5969f605290d0cf7ce35f2ef6ddeedd7b00683"
+    },
+    {
+      "source": "skills/engineering/contract-change-review/SKILL.md",
+      "target": ".codex/skills/engineering/contract-change-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "903fbbfe805d2a7dcceedf7bfb474083425e64de1245ed7d6b33e61c41b1f8a8"
+    },
+    {
+      "source": "skills/engineering/implementation-review/SKILL.md",
+      "target": ".codex/skills/engineering/implementation-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "5f5728234edde48957f7d030644218103d234994fc6f16a3c4a338030b6dbee4"
+    },
+    {
+      "source": "skills/engineering/refactor-safety/SKILL.md",
+      "target": ".codex/skills/engineering/refactor-safety/SKILL.md",
+      "kind": "platform",
+      "sha256": "31af10f5151fb66bba476620ff04e6b02c045412eab4797fb0578f7d4e0e79f6"
+    },
+    {
+      "source": "skills/thinking/assumption-check/SKILL.md",
+      "target": ".codex/skills/thinking/assumption-check/SKILL.md",
+      "kind": "platform",
+      "sha256": "255ef347bb6191e810502585a85f23fb8cd09ea82eef1b2ad84bb7f1f9556034"
+    },
+    {
+      "source": "skills/thinking/beginner-clarity-review/SKILL.md",
+      "target": ".codex/skills/thinking/beginner-clarity-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "94e42a90b86e492a8a9a4b7150a3de563035b6fa745ff5e3fe0ba6670e9f9f7a"
+    },
+    {
+      "source": "skills/thinking/decision-rationalization/SKILL.md",
+      "target": ".codex/skills/thinking/decision-rationalization/SKILL.md",
+      "kind": "platform",
+      "sha256": "eeb3f25f80964fb6bb7b929a11229084c0fbb483445b9561a3316093594c543b"
+    },
+    {
+      "source": "skills/thinking/problem-framing/SKILL.md",
+      "target": ".codex/skills/thinking/problem-framing/SKILL.md",
+      "kind": "platform",
+      "sha256": "e97c13c43cfd0a3688257618ca1506e5d4d139fe01e81cb869f92150956f6450"
+    },
+    {
+      "source": "skills/thinking/tradeoff-analysis/SKILL.md",
+      "target": ".codex/skills/thinking/tradeoff-analysis/SKILL.md",
+      "kind": "platform",
+      "sha256": "1923860b5b40b65e01e0520218b933f96f22c5ea9d9ccb887f234fd10ace86a5"
+    },
+    {
+      "source": "platforms/codex/source/skills/ux-review/SKILL.md",
+      "target": ".codex/skills/ux-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "41d6b7498dfa1e2bab61260096a44d9e2266bdb553ae835c5a758905f5457e4a"
+    },
+    {
+      "source": "prompts/agent-harness-review-prompt.md",
+      "target": ".gemini/commands/agent-harness-review-prompt.md",
+      "kind": "platform",
+      "sha256": "f0a3208529fe30787d52735af5e9313778f6b57cf397eb199d0926ce92109d69"
+    },
+    {
+      "source": "prompts/planning/api-design-plan.md",
+      "target": ".gemini/commands/planning/api-design-plan.md",
+      "kind": "platform",
+      "sha256": "8cf77a57762503e9ba962f6ed8fbbff94aba87d1377b2b80903e2c51a1132e5b"
+    },
+    {
+      "source": "prompts/planning/implementation-blueprint-plan.md",
+      "target": ".gemini/commands/planning/implementation-blueprint-plan.md",
+      "kind": "platform",
+      "sha256": "3b5c5d559b23fdad7ef5bfe80821e28f365cefbf1e60b8718720298c77b11d5d"
+    },
+    {
+      "source": "prompts/planning/payment-product-plan.md",
+      "target": ".gemini/commands/planning/payment-product-plan.md",
+      "kind": "platform",
+      "sha256": "10f8bfb35ec6d102c1a880e1cafdce62ebeff04dd95e90f3fbe83d9136ffc807"
+    },
+    {
+      "source": "prompts/planning/product-plan.md",
+      "target": ".gemini/commands/planning/product-plan.md",
+      "kind": "platform",
+      "sha256": "8f43eb0c3364bcab05f10de78742cb0e677ad8161d20a0acba6ac4d8c169e3f7"
+    },
+    {
+      "source": "prompts/planning/README.md",
+      "target": ".gemini/commands/planning/README.md",
+      "kind": "platform",
+      "sha256": "362528240409c450cfd4e9858e543043c9cccaef823e71da89692e174e9df4c0"
+    },
+    {
+      "source": "prompts/product-hubs/create-ai-examples.md",
+      "target": ".gemini/commands/product-hubs/create-ai-examples.md",
+      "kind": "platform",
+      "sha256": "5c760eb76cc3da7308a08506a35be6a1b1b64400ca6e79adfb0c608dc5d69634"
+    },
+    {
+      "source": "prompts/product-hubs/create-demo-plan.md",
+      "target": ".gemini/commands/product-hubs/create-demo-plan.md",
+      "kind": "platform",
+      "sha256": "83ad4d5db430b79e5a812a10d938209d9b33a528fa60eec3254ea6859f06ce5c"
+    },
+    {
+      "source": "prompts/product-hubs/create-product-hub.md",
+      "target": ".gemini/commands/product-hubs/create-product-hub.md",
+      "kind": "platform",
+      "sha256": "a94051c3559c7a105c3e18155965fe8ce23253ddc6657d90d08751f3803a5067"
+    },
+    {
+      "source": "prompts/product-hubs/README.md",
+      "target": ".gemini/commands/product-hubs/README.md",
+      "kind": "platform",
+      "sha256": "c33ddbe314e1240af45aac46d9159e32d4ad4b887b79d05ec5880bbb0abb42d5"
+    },
+    {
+      "source": "prompts/product-hubs/review-product-hub.md",
+      "target": ".gemini/commands/product-hubs/review-product-hub.md",
+      "kind": "platform",
+      "sha256": "9781614a295954bce2a3597b646b39cbcf998aa18ab58be447f0a63fdd1e053a"
+    },
+    {
+      "source": "prompts/reviews/api-design-review.md",
+      "target": ".gemini/commands/reviews/api-design-review.md",
+      "kind": "platform",
+      "sha256": "f50152ef1162666e0c06d46f00d116136b85fb96cf7614ed6b4250261d2e5c55"
+    },
+    {
+      "source": "prompts/reviews/docs-review.md",
+      "target": ".gemini/commands/reviews/docs-review.md",
+      "kind": "platform",
+      "sha256": "a693c60fb53d83b7ec685e42562a20f3510680672719ae65f0ece614ed97c9af"
+    },
+    {
+      "source": "prompts/reviews/payment-review.md",
+      "target": ".gemini/commands/reviews/payment-review.md",
+      "kind": "platform",
+      "sha256": "12a78a3b2fe7bcf1bb964aa4f0df1f22b9cdab26701b57346e41b5d585296d92"
+    },
+    {
+      "source": "prompts/reviews/README.md",
+      "target": ".gemini/commands/reviews/README.md",
+      "kind": "platform",
+      "sha256": "453054ee2d760c6747e39643670bbab824fdeddf9cbb35bef0bcb477cc9cb812"
+    },
+    {
+      "source": "prompts/reviews/security-risk-review.md",
+      "target": ".gemini/commands/reviews/security-risk-review.md",
+      "kind": "platform",
+      "sha256": "aadff48941f5f2f924a39442a749514e363aefd60453add5ed5d38851838c9d1"
+    },
+    {
+      "source": "prompts/reviews/ui-api-alignment-review.md",
+      "target": ".gemini/commands/reviews/ui-api-alignment-review.md",
+      "kind": "platform",
+      "sha256": "5bfaf16f6aa12e1a3535703931664acef9eded7ec11e47bb700cd4b2ae0bf06b"
+    },
+    {
+      "source": "prompts/swarm-reviews/beginner-user-review.md",
+      "target": ".gemini/commands/swarm-reviews/beginner-user-review.md",
+      "kind": "platform",
+      "sha256": "f69df8e1e9515a1d9fab0faf4da85a0dacd45f89571b61c7155e936f2bcd077e"
+    },
+    {
+      "source": "prompts/swarm-reviews/decision-review.md",
+      "target": ".gemini/commands/swarm-reviews/decision-review.md",
+      "kind": "platform",
+      "sha256": "746390cc7d79af0f2578fac1d34c357fb165d67f2768ac6a5c5852f3134e5359"
+    },
+    {
+      "source": "prompts/swarm-reviews/design-rationalization.md",
+      "target": ".gemini/commands/swarm-reviews/design-rationalization.md",
+      "kind": "platform",
+      "sha256": "e3869c66e47a80798d1de2cd44e41c2ed10ac6db4a34c806117832efaef9bbb9"
+    },
+    {
+      "source": "prompts/swarm-reviews/expert-panel-review.md",
+      "target": ".gemini/commands/swarm-reviews/expert-panel-review.md",
+      "kind": "platform",
+      "sha256": "14a6bb96b0f2eb574ea734ab91a55e2e6952da6f448bdef4ca23caf277bedc9b"
+    },
+    {
+      "source": "prompts/swarm-reviews/micro-group-review.md",
+      "target": ".gemini/commands/swarm-reviews/micro-group-review.md",
+      "kind": "platform",
+      "sha256": "e0a48952eb77da60b797f2e8a7aeaa79906566c3e47a33c6f87a67a3ce3a319f"
+    },
+    {
+      "source": "prompts/swarm-reviews/README.md",
+      "target": ".gemini/commands/swarm-reviews/README.md",
+      "kind": "platform",
+      "sha256": "8d056834d2e5f1de7aa2a2e2b3f68dcdb6f93aec84a0a50ca02c0df62df83ef0"
+    },
+    {
+      "source": "prompts/swarm-reviews/red-team-review.md",
+      "target": ".gemini/commands/swarm-reviews/red-team-review.md",
+      "kind": "platform",
+      "sha256": "4a0a249f0910e60edbd3e89ecbf7f1f93b45314b7fb3348c3824fc69c789a548"
+    },
+    {
+      "source": "prompts/swarm-reviews/troubleshooting-swarm.md",
+      "target": ".gemini/commands/swarm-reviews/troubleshooting-swarm.md",
+      "kind": "platform",
+      "sha256": "b5d060450d35c4a684b061b6692c8884ef0a4e0ef6f79e14ca45a9d7ef2f825a"
+    },
+    {
+      "source": "prompts/troubleshooting/customer-confusion.md",
+      "target": ".gemini/commands/troubleshooting/customer-confusion.md",
+      "kind": "platform",
+      "sha256": "1820bd95c2f66877360b045578dfe12d3c3f26973b4493b9bfe0e5a9d66cbfdc"
+    },
+    {
+      "source": "platforms/github-copilot/copilot-instructions.md",
+      "target": ".github/copilot-instructions.md",
+      "kind": "instruction",
+      "sha256": "fdbf0d942ac08882cfe0597557b52586f3cca4b80239f8b9d1a8d142c1c0716e"
+    },
+    {
+      "source": "prompts/agent-harness-review-prompt.md",
+      "target": ".github/prompts/agent-harness-review-prompt.md",
+      "kind": "platform",
+      "sha256": "f0a3208529fe30787d52735af5e9313778f6b57cf397eb199d0926ce92109d69"
+    },
+    {
+      "source": "prompts/planning/api-design-plan.md",
+      "target": ".github/prompts/planning/api-design-plan.md",
+      "kind": "platform",
+      "sha256": "8cf77a57762503e9ba962f6ed8fbbff94aba87d1377b2b80903e2c51a1132e5b"
+    },
+    {
+      "source": "prompts/planning/implementation-blueprint-plan.md",
+      "target": ".github/prompts/planning/implementation-blueprint-plan.md",
+      "kind": "platform",
+      "sha256": "3b5c5d559b23fdad7ef5bfe80821e28f365cefbf1e60b8718720298c77b11d5d"
+    },
+    {
+      "source": "prompts/planning/payment-product-plan.md",
+      "target": ".github/prompts/planning/payment-product-plan.md",
+      "kind": "platform",
+      "sha256": "10f8bfb35ec6d102c1a880e1cafdce62ebeff04dd95e90f3fbe83d9136ffc807"
+    },
+    {
+      "source": "prompts/planning/product-plan.md",
+      "target": ".github/prompts/planning/product-plan.md",
+      "kind": "platform",
+      "sha256": "8f43eb0c3364bcab05f10de78742cb0e677ad8161d20a0acba6ac4d8c169e3f7"
+    },
+    {
+      "source": "prompts/planning/README.md",
+      "target": ".github/prompts/planning/README.md",
+      "kind": "platform",
+      "sha256": "362528240409c450cfd4e9858e543043c9cccaef823e71da89692e174e9df4c0"
+    },
+    {
+      "source": "prompts/product-hubs/create-ai-examples.md",
+      "target": ".github/prompts/product-hubs/create-ai-examples.md",
+      "kind": "platform",
+      "sha256": "5c760eb76cc3da7308a08506a35be6a1b1b64400ca6e79adfb0c608dc5d69634"
+    },
+    {
+      "source": "prompts/product-hubs/create-demo-plan.md",
+      "target": ".github/prompts/product-hubs/create-demo-plan.md",
+      "kind": "platform",
+      "sha256": "83ad4d5db430b79e5a812a10d938209d9b33a528fa60eec3254ea6859f06ce5c"
+    },
+    {
+      "source": "prompts/product-hubs/create-product-hub.md",
+      "target": ".github/prompts/product-hubs/create-product-hub.md",
+      "kind": "platform",
+      "sha256": "a94051c3559c7a105c3e18155965fe8ce23253ddc6657d90d08751f3803a5067"
+    },
+    {
+      "source": "prompts/product-hubs/README.md",
+      "target": ".github/prompts/product-hubs/README.md",
+      "kind": "platform",
+      "sha256": "c33ddbe314e1240af45aac46d9159e32d4ad4b887b79d05ec5880bbb0abb42d5"
+    },
+    {
+      "source": "prompts/product-hubs/review-product-hub.md",
+      "target": ".github/prompts/product-hubs/review-product-hub.md",
+      "kind": "platform",
+      "sha256": "9781614a295954bce2a3597b646b39cbcf998aa18ab58be447f0a63fdd1e053a"
+    },
+    {
+      "source": "prompts/reviews/api-design-review.md",
+      "target": ".github/prompts/reviews/api-design-review.md",
+      "kind": "platform",
+      "sha256": "f50152ef1162666e0c06d46f00d116136b85fb96cf7614ed6b4250261d2e5c55"
+    },
+    {
+      "source": "prompts/reviews/docs-review.md",
+      "target": ".github/prompts/reviews/docs-review.md",
+      "kind": "platform",
+      "sha256": "a693c60fb53d83b7ec685e42562a20f3510680672719ae65f0ece614ed97c9af"
+    },
+    {
+      "source": "prompts/reviews/payment-review.md",
+      "target": ".github/prompts/reviews/payment-review.md",
+      "kind": "platform",
+      "sha256": "12a78a3b2fe7bcf1bb964aa4f0df1f22b9cdab26701b57346e41b5d585296d92"
+    },
+    {
+      "source": "prompts/reviews/README.md",
+      "target": ".github/prompts/reviews/README.md",
+      "kind": "platform",
+      "sha256": "453054ee2d760c6747e39643670bbab824fdeddf9cbb35bef0bcb477cc9cb812"
+    },
+    {
+      "source": "prompts/reviews/security-risk-review.md",
+      "target": ".github/prompts/reviews/security-risk-review.md",
+      "kind": "platform",
+      "sha256": "aadff48941f5f2f924a39442a749514e363aefd60453add5ed5d38851838c9d1"
+    },
+    {
+      "source": "prompts/reviews/ui-api-alignment-review.md",
+      "target": ".github/prompts/reviews/ui-api-alignment-review.md",
+      "kind": "platform",
+      "sha256": "5bfaf16f6aa12e1a3535703931664acef9eded7ec11e47bb700cd4b2ae0bf06b"
+    },
+    {
+      "source": "prompts/swarm-reviews/beginner-user-review.md",
+      "target": ".github/prompts/swarm-reviews/beginner-user-review.md",
+      "kind": "platform",
+      "sha256": "f69df8e1e9515a1d9fab0faf4da85a0dacd45f89571b61c7155e936f2bcd077e"
+    },
+    {
+      "source": "prompts/swarm-reviews/decision-review.md",
+      "target": ".github/prompts/swarm-reviews/decision-review.md",
+      "kind": "platform",
+      "sha256": "746390cc7d79af0f2578fac1d34c357fb165d67f2768ac6a5c5852f3134e5359"
+    },
+    {
+      "source": "prompts/swarm-reviews/design-rationalization.md",
+      "target": ".github/prompts/swarm-reviews/design-rationalization.md",
+      "kind": "platform",
+      "sha256": "e3869c66e47a80798d1de2cd44e41c2ed10ac6db4a34c806117832efaef9bbb9"
+    },
+    {
+      "source": "prompts/swarm-reviews/expert-panel-review.md",
+      "target": ".github/prompts/swarm-reviews/expert-panel-review.md",
+      "kind": "platform",
+      "sha256": "14a6bb96b0f2eb574ea734ab91a55e2e6952da6f448bdef4ca23caf277bedc9b"
+    },
+    {
+      "source": "prompts/swarm-reviews/micro-group-review.md",
+      "target": ".github/prompts/swarm-reviews/micro-group-review.md",
+      "kind": "platform",
+      "sha256": "e0a48952eb77da60b797f2e8a7aeaa79906566c3e47a33c6f87a67a3ce3a319f"
+    },
+    {
+      "source": "prompts/swarm-reviews/README.md",
+      "target": ".github/prompts/swarm-reviews/README.md",
+      "kind": "platform",
+      "sha256": "8d056834d2e5f1de7aa2a2e2b3f68dcdb6f93aec84a0a50ca02c0df62df83ef0"
+    },
+    {
+      "source": "prompts/swarm-reviews/red-team-review.md",
+      "target": ".github/prompts/swarm-reviews/red-team-review.md",
+      "kind": "platform",
+      "sha256": "4a0a249f0910e60edbd3e89ecbf7f1f93b45314b7fb3348c3824fc69c789a548"
+    },
+    {
+      "source": "prompts/swarm-reviews/troubleshooting-swarm.md",
+      "target": ".github/prompts/swarm-reviews/troubleshooting-swarm.md",
+      "kind": "platform",
+      "sha256": "b5d060450d35c4a684b061b6692c8884ef0a4e0ef6f79e14ca45a9d7ef2f825a"
+    },
+    {
+      "source": "prompts/troubleshooting/customer-confusion.md",
+      "target": ".github/prompts/troubleshooting/customer-confusion.md",
+      "kind": "platform",
+      "sha256": "1820bd95c2f66877360b045578dfe12d3c3f26973b4493b9bfe0e5a9d66cbfdc"
+    },
+    {
+      "source": "skills/ai-agents/agent-routing/SKILL.md",
+      "target": ".github/skills/ai-agents/agent-routing/SKILL.md",
+      "kind": "platform",
+      "sha256": "6b4bb98247264cbf9fe19bd2ddaf29f55510bb5d5d94c2172f33186f43ead8ef"
+    },
+    {
+      "source": "skills/ai-agents/hallucination-review/SKILL.md",
+      "target": ".github/skills/ai-agents/hallucination-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "fbf7b241aceda4ddbc7565fa6674be1fadf76a9a9e7b8649d26fde080b114da2"
+    },
+    {
+      "source": "skills/ai-agents/local-llm-routing/SKILL.md",
+      "target": ".github/skills/ai-agents/local-llm-routing/SKILL.md",
+      "kind": "platform",
+      "sha256": "7c5c561919855902b0734bb55df5ba4baec84d0ef1eab897325864ad912cd71b"
+    },
+    {
+      "source": "skills/ai-agents/micro-group-review/SKILL.md",
+      "target": ".github/skills/ai-agents/micro-group-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "5f6c5429626bc1378ebcc7e7ed6e52667a2b05e0cab0a63ae180e595916943a6"
+    },
+    {
+      "source": "skills/ai-agents/model-selection/SKILL.md",
+      "target": ".github/skills/ai-agents/model-selection/SKILL.md",
+      "kind": "platform",
+      "sha256": "6c39e40d0b3a4607f6e6e417486da80a73da6b2b13c5419376941ba771c3e4ec"
+    },
+    {
+      "source": "skills/ai-agents/prompt-engineering/SKILL.md",
+      "target": ".github/skills/ai-agents/prompt-engineering/SKILL.md",
+      "kind": "platform",
+      "sha256": "6028a289de6742d0bc1ee7277396dac53a82d7c558dc43b2e7b48b1f6960baec"
+    },
+    {
+      "source": "skills/ai-agents/red-team-review/SKILL.md",
+      "target": ".github/skills/ai-agents/red-team-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "eb3850bd56ad5dab191fac6b672afbca8617c871a63a28a22b22c0a5c8d0afe9"
+    },
+    {
+      "source": "skills/ai-agents/skill-authoring/SKILL.md",
+      "target": ".github/skills/ai-agents/skill-authoring/SKILL.md",
+      "kind": "platform",
+      "sha256": "315a2a29eec987055eb8d9e79a4a06746849c046ff7c4fdcb61226fcbcd64767"
+    },
+    {
+      "source": "skills/ai-agents/swarm-review/SKILL.md",
+      "target": ".github/skills/ai-agents/swarm-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "b1205bedbfad9c762157441099c6cd8ba856026231d72c8ed00bd6853dd24ac7"
+    },
+    {
+      "source": "skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "target": ".github/skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "kind": "platform",
+      "sha256": "7b4f803650d8b3f72ff21447352390476a0a8dc58dd94cbc603bbb275ecfff7d"
+    },
+    {
+      "source": "platforms/codex/source/skills/ai-output-review/SKILL.md",
+      "target": ".github/skills/ai-output-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "6a9db15014e1b47855094fd779baa4becbf7b25f9e722737422f37ce33cb3325"
+    },
+    {
+      "source": "skills/architecture/api-architecture-review/SKILL.md",
+      "target": ".github/skills/architecture/api-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "696121961274f110f41fdd388d67546d631db3ce286d7821b9200eef05783a7e"
+    },
+    {
+      "source": "skills/architecture/bridge-architecture-review/SKILL.md",
+      "target": ".github/skills/architecture/bridge-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "1131eb60b07b3d53d78951f6d4bff4160c6f5c755f0c0be0ac14efb995ec6b76"
+    },
+    {
+      "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "target": ".github/skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "kind": "platform",
+      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+    },
+    {
+      "source": "skills/architecture/integration-architecture-review/SKILL.md",
+      "target": ".github/skills/architecture/integration-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "e1b59daf724c38321dd381d78854bf49e797eddac4f33931423bb8d4dacea635"
+    },
+    {
+      "source": "skills/architecture/payment-architecture-review/SKILL.md",
+      "target": ".github/skills/architecture/payment-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "ba7b89f31b943eeec97ca96392dc15d501fb748fa832afe18a253c2948b5a099"
+    },
+    {
+      "source": "skills/architecture/system-architecture-review/SKILL.md",
+      "target": ".github/skills/architecture/system-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
+    },
+    {
+      "source": "skills/design/customer-journey-mapping/SKILL.md",
+      "target": ".github/skills/design/customer-journey-mapping/SKILL.md",
+      "kind": "platform",
+      "sha256": "4e94c244a356f678bd5de59d0e0526ab8c73128aaaed9966daf1a2eaf0cd5fcf"
+    },
+    {
+      "source": "skills/design/demo-flow-design/SKILL.md",
+      "target": ".github/skills/design/demo-flow-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "dbaf73c068228b21f1d4875b17ce597a74d009eb233977d80cdb88eed327cb8e"
+    },
+    {
+      "source": "skills/design/intent-based-ui-design/SKILL.md",
+      "target": ".github/skills/design/intent-based-ui-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "694d364c3f9444b748ea4c4697e49d4d0bdb44c1f0bfd8ad945b4f91c6c2060e"
+    },
+    {
+      "source": "skills/design/role-permission-flow-design/SKILL.md",
+      "target": ".github/skills/design/role-permission-flow-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "d62fd0fdb3009c6892b8f2c6f8224b10eaf8244c49bccd98e4803711f0b3169f"
+    },
+    {
+      "source": "skills/design/ui-api-alignment-review/SKILL.md",
+      "target": ".github/skills/design/ui-api-alignment-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "d6d3e6e7feac28c5df2252a04e2bd537c1195fdcbb7b66dca80b3d1714706819"
+    },
+    {
+      "source": "skills/documentation/ai-example-builder/SKILL.md",
+      "target": ".github/skills/documentation/ai-example-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "47415aaeea95619092b759d8dc4de0886cfce0f2c0ed15972e1c7334da7bac25"
+    },
+    {
+      "source": "skills/documentation/api-example-builder/SKILL.md",
+      "target": ".github/skills/documentation/api-example-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "3b6e5ae55ccc244f0ea30522ed738d1ae304c68ecc56d369dce5306440551bba"
+    },
+    {
+      "source": "skills/documentation/api-guide-writer/SKILL.md",
+      "target": ".github/skills/documentation/api-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "f2c340f13cf49dc449ff189030f930dbdb60bec20cdb38b3c46e96aa9fcd622e"
+    },
+    {
+      "source": "skills/documentation/audience-layered-docs/SKILL.md",
+      "target": ".github/skills/documentation/audience-layered-docs/SKILL.md",
+      "kind": "platform",
+      "sha256": "14a971b7b47cb4f4035a555a3b75669e0abf5346ecde9b431934ee45b833059f"
+    },
+    {
+      "source": "skills/documentation/business-guide-writer/SKILL.md",
+      "target": ".github/skills/documentation/business-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "dc6a3e29c14021eef505f144bd2617b0d432d2b9f37bec851959e56c76075614"
+    },
+    {
+      "source": "skills/documentation/demo-plan-writer/SKILL.md",
+      "target": ".github/skills/documentation/demo-plan-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "6e750a0b07ab9686a4fe1038f29ed96bfdd8652a74dde5a924ed902f03f43f03"
+    },
+    {
+      "source": "skills/documentation/developer-guide-writer/SKILL.md",
+      "target": ".github/skills/documentation/developer-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "d0f8c40526e3818a390ea1bc3ca2abc8c6de668bc1c00730793d85e14dd1ad73"
+    },
+    {
+      "source": "skills/documentation/diagram-generator/SKILL.md",
+      "target": ".github/skills/documentation/diagram-generator/SKILL.md",
+      "kind": "platform",
+      "sha256": "49350468e76e9c0f45bc1a05acc2f4f61a5e92301cfaa64e5fc6d3e59c7c0455"
+    },
+    {
+      "source": "skills/documentation/implementation-blueprint-writer/SKILL.md",
+      "target": ".github/skills/documentation/implementation-blueprint-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "72a1d92e6fde8c6ad8531d74130930f8d04f7190f0821faaac49a7ccd0c0d907"
+    },
+    {
+      "source": "skills/documentation/migration-guide-writer/SKILL.md",
+      "target": ".github/skills/documentation/migration-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "de2337a22bd3d3458ae84b210d62cb4c10cfae5c3afb73667bb00c31cf49e747"
+    },
+    {
+      "source": "skills/documentation/operations-guide-writer/SKILL.md",
+      "target": ".github/skills/documentation/operations-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "68d1d8d9f58b8b7875bdf2b521077fc486d3ad55348bd6ee68fcf05769344c4e"
+    },
+    {
+      "source": "skills/documentation/partner-acquirer-guide-writer/SKILL.md",
+      "target": ".github/skills/documentation/partner-acquirer-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "fdc855e1d44ecca768d0df6dff0cf6b5f8631bb3caeef6a9a064f66f9adef06a"
+    },
+    {
+      "source": "skills/documentation/product-hub-builder/SKILL.md",
+      "target": ".github/skills/documentation/product-hub-builder/SKILL.md",
+      "kind": "platform",
+      "sha256": "8f3c9ff1f25960f1be894fcbcd3d85e75635e2231f526c92a4b06b0aa0445766"
+    },
+    {
+      "source": "skills/documentation/troubleshooting-guide-writer/SKILL.md",
+      "target": ".github/skills/documentation/troubleshooting-guide-writer/SKILL.md",
+      "kind": "platform",
+      "sha256": "5c93d59a10ef55a8bb7f5bdcbd5969f605290d0cf7ce35f2ef6ddeedd7b00683"
+    },
+    {
+      "source": "skills/engineering/contract-change-review/SKILL.md",
+      "target": ".github/skills/engineering/contract-change-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "903fbbfe805d2a7dcceedf7bfb474083425e64de1245ed7d6b33e61c41b1f8a8"
+    },
+    {
+      "source": "skills/engineering/implementation-review/SKILL.md",
+      "target": ".github/skills/engineering/implementation-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "5f5728234edde48957f7d030644218103d234994fc6f16a3c4a338030b6dbee4"
+    },
+    {
+      "source": "skills/engineering/refactor-safety/SKILL.md",
+      "target": ".github/skills/engineering/refactor-safety/SKILL.md",
+      "kind": "platform",
+      "sha256": "31af10f5151fb66bba476620ff04e6b02c045412eab4797fb0578f7d4e0e79f6"
+    },
+    {
+      "source": "skills/thinking/assumption-check/SKILL.md",
+      "target": ".github/skills/thinking/assumption-check/SKILL.md",
+      "kind": "platform",
+      "sha256": "255ef347bb6191e810502585a85f23fb8cd09ea82eef1b2ad84bb7f1f9556034"
+    },
+    {
+      "source": "skills/thinking/beginner-clarity-review/SKILL.md",
+      "target": ".github/skills/thinking/beginner-clarity-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "94e42a90b86e492a8a9a4b7150a3de563035b6fa745ff5e3fe0ba6670e9f9f7a"
+    },
+    {
+      "source": "skills/thinking/decision-rationalization/SKILL.md",
+      "target": ".github/skills/thinking/decision-rationalization/SKILL.md",
+      "kind": "platform",
+      "sha256": "eeb3f25f80964fb6bb7b929a11229084c0fbb483445b9561a3316093594c543b"
+    },
+    {
+      "source": "skills/thinking/problem-framing/SKILL.md",
+      "target": ".github/skills/thinking/problem-framing/SKILL.md",
+      "kind": "platform",
+      "sha256": "e97c13c43cfd0a3688257618ca1506e5d4d139fe01e81cb869f92150956f6450"
+    },
+    {
+      "source": "skills/thinking/tradeoff-analysis/SKILL.md",
+      "target": ".github/skills/thinking/tradeoff-analysis/SKILL.md",
+      "kind": "platform",
+      "sha256": "1923860b5b40b65e01e0520218b933f96f22c5ea9d9ccb887f234fd10ace86a5"
+    },
+    {
+      "source": "platforms/codex/source/skills/ux-review/SKILL.md",
+      "target": ".github/skills/ux-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "41d6b7498dfa1e2bab61260096a44d9e2266bdb553ae835c5a758905f5457e4a"
+    },
+    {
+      "source": "CLAUDE.md",
+      "target": "CLAUDE.md",
+      "kind": "instruction",
+      "sha256": "d372ec17278dc5985e26af30e87d9008ef89c67706e6a4510dabfb728e6d81ab"
+    },
+    {
+      "source": "CODEX.md",
+      "target": "CODEX.md",
+      "kind": "instruction",
+      "sha256": "a972a3796516236507f973e6a8f7adc82e61620855b75de0b54c526e9a917a05"
+    },
+    {
+      "source": "GEMINI.md",
+      "target": "GEMINI.md",
+      "kind": "instruction",
+      "sha256": "5326230a362c84dff39c3b7be7e8514ff0b2f6311b5e8c30c06d8b4a8b8bb97a"
+    }
+  ],
+  "localContext": "docs/project-context.md",
+  "lastOperation": {
+    "type": "repair",
+    "at": "2026-06-28T18:28:57.028Z"
+  }
+}

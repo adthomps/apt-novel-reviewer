@@ -10,13 +10,13 @@ status: draft
 
 ## Purpose
 
-`apt-novel-reviewer` applies APT to a local-first desktop manuscript review workflow. The repo keeps project-specific implementation evidence locally while canonical doctrine, checklists, and templates remain in `apt-principles`.
+`apt-novel-reviewer` applies APT to a local-first desktop manuscript review workflow. The repo keeps project-specific implementation evidence locally while canonical doctrine, checklists, and templates remain in `apt-principles-agents`.
 
 ## Adoption Mode
 
 Primary mode: `apply + showcase`
 
-- Canonical principle guidance stays in `apt-principles`.
+- Canonical principle guidance stays in `apt-principles-agents`.
 - This repo keeps only local evidence, operating constraints, and review outputs under `docs/apt/`.
 - Review results are intended to remain inspectable by human operators and not hidden behind opaque runtime behavior.
 
@@ -56,7 +56,7 @@ pnpm test
 Canonical doctrine validation:
 
 ```powershell
-cd ../apt-principles
+cd ../apt-principles-agents
 npm run validate
 ```
 
@@ -67,6 +67,6 @@ npm run validate
 - `docs/ARCHITECTURE.md`
 - `docs/OLLAMA_INTEGRATION.md`
 - `docs/UX_SPEC.md`
-- `docs/apt/reports/apt-principles-audit-2026-04-26.md`
-- `../apt-principles/checklists/project-adoption-checklist.md`
-- `../apt-principles/references/project-profile.schema.json`
+- `docs/apt/reports/apt-principles-agents-audit-2026-04-26.md`
+- `../apt-principles-agents/checklists/project-adoption-checklist.md`
+- `../apt-principles-agents/references/project-profile.schema.json`
