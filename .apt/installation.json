@@ -3,7 +3,7 @@
   "source": {
     "repository": "apt-principles-agents",
     "version": "1.0.0",
-    "commit": "9d310885d6f2691167d5a56eddb08e46ed2499d9"
+    "commit": "8e3f9a68aa391789b4a746be38078282a1505346"
   },
   "manifests": [
     "core",
@@ -2379,7 +2379,7 @@
   ],
   "localContext": "docs/project-context.md",
   "lastOperation": {
-    "type": "repair",
-    "at": "2026-06-29T01:34:36.226Z"
+    "type": "sync",
+    "at": "2026-06-29T02:04:29.979Z"
   }
 }
