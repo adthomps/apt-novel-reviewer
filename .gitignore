@@ -10,3 +10,4 @@ apps/desktop/.electron-vite
 *.db-shm
 *.db-wal
 projects/
+.apt-backups/

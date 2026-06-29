@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "source": {
     "repository": "apt-principles-agents",
-    "version": "0.1.0",
-    "commit": "4cc8a31ecfa1112111dbf7acc05ce8853d1501e9"
+    "version": "1.0.0",
+    "commit": "9d310885d6f2691167d5a56eddb08e46ed2499d9"
   },
   "manifests": [
     "core",
@@ -328,7 +328,7 @@
       "source": "platforms/codex/source/skills/ux-review/SKILL.md",
       "target": ".apt/platforms/codex/source/skills/ux-review/SKILL.md",
       "kind": "canonical",
-      "sha256": "41d6b7498dfa1e2bab61260096a44d9e2266bdb553ae835c5a758905f5457e4a"
+      "sha256": "698d0bbd325463c87788ea03791e7b6e20780b4ae22fa3ba69139e24c32ed675"
     },
     {
       "source": "platforms/gemini/README.md",
@@ -1096,7 +1096,7 @@
       "source": "standards/README.md",
       "target": ".apt/standards/README.md",
       "kind": "canonical",
-      "sha256": "317c997988720c4e1bb82038609d3ff2cedc735e5125b11a9c9555aa50d5178c"
+      "sha256": "fc34afb907b3715e58662c16fe0f4a10c377b555b042e9c00ebe1194cb1ad0a8"
     },
     {
       "source": "standards/testing/testing-standards.md",
@@ -1498,7 +1498,7 @@
       "source": "platforms/codex/source/skills/ux-review/SKILL.md",
       "target": ".claude/skills/ux-review/SKILL.md",
       "kind": "platform",
-      "sha256": "41d6b7498dfa1e2bab61260096a44d9e2266bdb553ae835c5a758905f5457e4a"
+      "sha256": "698d0bbd325463c87788ea03791e7b6e20780b4ae22fa3ba69139e24c32ed675"
     },
     {
       "source": "skills/ai-agents/agent-routing/SKILL.md",
@@ -1768,7 +1768,7 @@
       "source": "platforms/codex/source/skills/ux-review/SKILL.md",
       "target": ".codex/skills/ux-review/SKILL.md",
       "kind": "platform",
-      "sha256": "41d6b7498dfa1e2bab61260096a44d9e2266bdb553ae835c5a758905f5457e4a"
+      "sha256": "698d0bbd325463c87788ea03791e7b6e20780b4ae22fa3ba69139e24c32ed675"
     },
     {
       "source": "prompts/agent-harness-review-prompt.md",
@@ -2356,30 +2356,30 @@
       "source": "platforms/codex/source/skills/ux-review/SKILL.md",
       "target": ".github/skills/ux-review/SKILL.md",
       "kind": "platform",
-      "sha256": "41d6b7498dfa1e2bab61260096a44d9e2266bdb553ae835c5a758905f5457e4a"
+      "sha256": "698d0bbd325463c87788ea03791e7b6e20780b4ae22fa3ba69139e24c32ed675"
     },
     {
       "source": "CLAUDE.md",
       "target": "CLAUDE.md",
       "kind": "instruction",
-      "sha256": "d372ec17278dc5985e26af30e87d9008ef89c67706e6a4510dabfb728e6d81ab"
+      "sha256": "c6c34c1c5da94e59c46aad2e1a21e45869125923230f8a49cd8b44d92b921b06"
     },
     {
       "source": "CODEX.md",
       "target": "CODEX.md",
       "kind": "instruction",
-      "sha256": "a972a3796516236507f973e6a8f7adc82e61620855b75de0b54c526e9a917a05"
+      "sha256": "45fe0380ce8376d689e59c7d4768203d38989ac371753ceb56c3ffef80164dfc"
     },
     {
       "source": "GEMINI.md",
       "target": "GEMINI.md",
       "kind": "instruction",
-      "sha256": "5326230a362c84dff39c3b7be7e8514ff0b2f6311b5e8c30c06d8b4a8b8bb97a"
+      "sha256": "86bf9a43158f4400aa09d4caba98f2551d841725d30c3e7b6c939981330449a0"
     }
   ],
   "localContext": "docs/project-context.md",
   "lastOperation": {
     "type": "repair",
-    "at": "2026-06-28T18:28:57.028Z"
+    "at": "2026-06-29T01:34:36.226Z"
   }
 }

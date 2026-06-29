@@ -22,7 +22,7 @@ Use for pages, flows, dashboards, forms, onboarding, and responsive UI changes.
 Do not use for backend-only changes.
 
 ## Required Reading
-Read `apt-core/ux-standards.md`, product context, relevant UI code, and screenshots if available. For React, TypeScript, and Tailwind projects, also inspect `components.json` when present, component folders, import aliases, Tailwind config or global CSS, installed shadcn primitives, APT wrappers, and product blocks before recommending new components.
+Read `.apt/standards/installable-summaries/ux-standards.md`, product context, relevant UI code, and screenshots if available. For React, TypeScript, and Tailwind projects, also inspect `components.json` when present, component folders, import aliases, Tailwind config or global CSS, installed shadcn primitives, APT wrappers, and product blocks before recommending new components.
 
 ## Process
 Identify primary intent, inspect states, check responsive layout and accessibility, and prioritize workflow blockers. When shadcn/ui applies, verify the project composes existing `components/ui` primitives before adding components, keeps reusable APT wrappers in `components/apt`, keeps workflow blocks in `components/blocks`, and preserves token styling, semantic structure, keyboard behavior, focus states, and ARIA behavior.

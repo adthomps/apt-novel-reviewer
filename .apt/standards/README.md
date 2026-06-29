@@ -5,7 +5,7 @@ last_updated: 2026-06-21
 owner: APT
 status: stable
 kind: "standard"
-domain: "README"
+domain: "navigation"
 source_paths: ["apt-principles/standards/README.md"]
 ---
 
