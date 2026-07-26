@@ -3,7 +3,7 @@
   "source": {
     "repository": "apt-principles-agents",
     "version": "1.0.0",
-    "commit": "58505a53e718b6fd939bdda6b07d132e54af62b9"
+    "commit": "d506b16bad69761111e590e4e06cdccea35ad124"
   },
   "manifests": [
     "core",
@@ -604,7 +604,7 @@
       "source": "principles/framework.md",
       "target": ".apt/principles/framework.md",
       "kind": "canonical",
-      "sha256": "e50145ae58ca7380c0e54ed45432364fca714245117ef2362a45a633196f4a0d"
+      "sha256": "7e68692b08cc496791e9e04675c40908a22c12fd53b77452454f0f0029af0d9e"
     },
     {
       "source": "principles/thinking/assumption-checking.md",
@@ -2410,6 +2410,6 @@
   "localContext": "docs/project-context.md",
   "lastOperation": {
     "type": "sync",
-    "at": "2026-07-26T20:18:55.246Z"
+    "at": "2026-07-26T20:57:46.628Z"
   }
 }

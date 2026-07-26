@@ -139,6 +139,14 @@ APT work is complete when the lifecycle has a traceable evidence loop:
 
 If a change skips one layer, the release or decision record should explain why that layer is not applicable.
 
+## Idea-To-Project Flow
+
+For projects that begin as raw ideas, APT uses Working Backwards to keep creativity connected to delivery evidence. An idea should become a customer problem, intended outcome, assumptions, constraints, demo or mock evidence, requirements, generated assets, implementation prompts, validation commands, release readiness, telemetry, and captured learning.
+
+Generated assets are part of the evidence loop. Diagrams, media, examples, copy, screenshots, demo plans, and AI prompts must trace to approved intent and should make the work easier to design, build, test, deploy, support, or reuse. They should not become disconnected artifacts that agents treat as product truth.
+
+Build work starts only when the handoff names what to build, what not to build, how to validate it, where it will run, how rollback or support works, and which human approvals are required.
+
 ## Project Adoption Model
 
 APT projects should apply this framework without duplicating and drifting the doctrine. Supported adoption modes are:
