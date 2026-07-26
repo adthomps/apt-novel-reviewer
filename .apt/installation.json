@@ -3,7 +3,7 @@
   "source": {
     "repository": "apt-principles-agents",
     "version": "1.0.0",
-    "commit": "8e3f9a68aa391789b4a746be38078282a1505346"
+    "commit": "58505a53e718b6fd939bdda6b07d132e54af62b9"
   },
   "manifests": [
     "core",
@@ -299,6 +299,36 @@
       "target": ".apt/context/ui/README.md",
       "kind": "canonical",
       "sha256": "afaa0ed38cbbeac7a75d284c9816c634d71379dd309c7dca336851d57ed0a8b0"
+    },
+    {
+      "source": "knowledge/okf/decisions/okf-adoption.md",
+      "target": ".apt/knowledge/okf/decisions/okf-adoption.md",
+      "kind": "canonical",
+      "sha256": "fa7ac5151c2e50489e827276906136fca0f669b4627d2e39e09c515fe17ab979"
+    },
+    {
+      "source": "knowledge/okf/index.md",
+      "target": ".apt/knowledge/okf/index.md",
+      "kind": "canonical",
+      "sha256": "6f1d81d26d10410fc4924e3860a5b9ed7cee549e809de26fe7fa6e0905cd189c"
+    },
+    {
+      "source": "knowledge/okf/principles/knowledge-system.md",
+      "target": ".apt/knowledge/okf/principles/knowledge-system.md",
+      "kind": "canonical",
+      "sha256": "c35f41629829f8c9f6b9cfb126d30ec07c2ecd0c55699e425f73090f2e4ec4fa"
+    },
+    {
+      "source": "knowledge/okf/skills/voice-of-customer.md",
+      "target": ".apt/knowledge/okf/skills/voice-of-customer.md",
+      "kind": "canonical",
+      "sha256": "9128ebb7dcb7a7543b2e55019c724696fcd33d38533d70f2269d22f022c42e4b"
+    },
+    {
+      "source": "knowledge/okf/workflows/cross-repo-guidance-sync.md",
+      "target": ".apt/knowledge/okf/workflows/cross-repo-guidance-sync.md",
+      "kind": "canonical",
+      "sha256": "794e49f662fb3794f0b5078b200e514b7ea442365f47ef3cca7752102256308c"
     },
     {
       "source": "platforms/claude/README.md",
@@ -2380,6 +2410,6 @@
   "localContext": "docs/project-context.md",
   "lastOperation": {
     "type": "sync",
-    "at": "2026-06-29T02:04:29.979Z"
+    "at": "2026-07-26T20:18:55.246Z"
   }
 }
