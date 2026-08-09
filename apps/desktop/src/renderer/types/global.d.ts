@@ -1,5 +1,38 @@
 import type { CreateProjectInput, RuntimeStatus, ReviewMode } from "@apt/types";
 
+type FindingRow = {
+  id: string;
+  reviewRunId: string;
+  reviewType: string;
+  chapterId: string;
+  findingType: string;
+  severity: string;
+  confidence: string;
+  textAnchor: string;
+  issue: string;
+  whyItMatters: string;
+  evidence: string;
+  suggestedFix: string;
+  status: string;
+};
+
+type ReviewStartResult = {
+  runId: string;
+  status: string;
+  errors?: string[];
+  chapterId?: string;
+  summary?: {
+    overallAssessment: string;
+    issueCount: number;
+    highSeverityCount: number;
+    mediumSeverityCount: number;
+    lowSeverityCount: number;
+  };
+  warnings?: string[];
+  findingCount?: number;
+  notes?: string[];
+};
+
 declare global {
   interface Window {
     aptApi: {
@@ -9,6 +42,7 @@ declare global {
       };
       projects: {
         list: () => Promise<Array<{ id: string; name: string; updatedAt: number }>>;
+        get: (projectId: string) => Promise<{ id: string; name: string; updatedAt: number } | null>;
         create: (input: CreateProjectInput) => Promise<{ id: string; name: string }>;
         delete: (projectId: string) => Promise<void>;
         open: (projectId: string) => Promise<void>;
@@ -79,7 +113,12 @@ declare global {
         chapters: (versionId: string) => Promise<Array<{ id: string; title: string; chapterNumber: number; content: string }>>;
       };
       reviews: {
-        start: (input: { projectId: string; versionId: string; reviewType: ReviewMode; chapterId?: string }) => Promise<{ runId: string; status: string; errors?: string[] }>;
+        start: (input: {
+          projectId: string;
+          versionId: string;
+          reviewType: ReviewMode;
+          chapterId?: string;
+        }) => Promise<ReviewStartResult>;
         listRuns: (versionId: string) => Promise<
           Array<{
             id: string;
@@ -90,50 +129,29 @@ declare global {
             startedAt: number;
             completedAt: number | null;
             errorMessage: string | null;
+            summaryJson: string | null;
+            notesJson: string | null;
+            warningsJson: string | null;
           }>
         >;
         deleteRun: (runId: string) => Promise<{ ok: true; deletedCount: number }>;
-        deleteRunsByStatus: (versionId: string, statuses: Array<"success" | "partial" | "error">) => Promise<{ ok: true; deletedCount: number }>;
+        deleteRunsByStatus: (
+          versionId: string,
+          statuses: Array<"success" | "partial" | "error">
+        ) => Promise<{ ok: true; deletedCount: number }>;
       };
       findings: {
-        list: (projectId: string) => Promise<
-          Array<{
-            id: string;
-            reviewRunId: string;
-            reviewType: string;
-            chapterId: string;
-            findingType: string;
-            severity: string;
-            confidence: string;
-            textAnchor: string;
-            issue: string;
-            whyItMatters: string;
-            evidence: string;
-            suggestedFix: string;
-            status: string;
-          }>
-        >;
+        list: (projectId: string, versionId?: string) => Promise<FindingRow[]>;
         export: (input: {
           projectId: string;
           format: "json" | "csv";
           activeVersionLabel: string;
-          findings: Array<{
-            id: string;
-            reviewRunId: string;
-            reviewType: string;
-            chapterId: string;
-            findingType: string;
-            severity: string;
-            confidence: string;
-            textAnchor: string;
-            issue: string;
-            whyItMatters: string;
-            evidence: string;
-            suggestedFix: string;
-            status: string;
-          }>;
+          findings: FindingRow[];
         }) => Promise<{ ok: true; canceled: boolean; filePath?: string }>;
         updateStatus: (findingId: string, status: "new" | "still" | "resolved") => Promise<{ ok: true }>;
+        applyStatuses: (
+          updates: Array<{ id: string; status: "new" | "still" | "resolved" }>
+        ) => Promise<{ ok: true; updatedCount: number }>;
       };
       compare: {
         versions: (

@@ -12,7 +12,19 @@ export function initDb(dbPath: string): Database.Database {
   fs.mkdirSync(path.dirname(dbPath), { recursive: true });
   db = new Database(dbPath);
   db.pragma("foreign_keys = ON");
-  db.exec(loadMigrationSql());
+  for (const sql of loadMigrationSqlFiles()) {
+    for (const statement of splitSqlStatements(sql)) {
+      try {
+        db.exec(statement);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        // Additive migrations may re-run against existing DBs.
+        if (!/duplicate column name/i.test(message)) {
+          throw error;
+        }
+      }
+    }
+  }
   return db;
 }
 
@@ -37,18 +49,37 @@ export * as reviewRepo from "./repositories/reviews";
 export * as compareRepo from "./repositories/compare";
 export * as noteRepo from "./repositories/notes";
 
-function loadMigrationSql(): string {
-  const candidates = [
-    path.resolve(__dirname, "migrations", "001_init.sql"),
-    path.resolve(process.cwd(), "packages", "db", "src", "migrations", "001_init.sql"),
-    path.resolve(process.cwd(), "..", "..", "packages", "db", "src", "migrations", "001_init.sql")
+function splitSqlStatements(sql: string): string[] {
+  return sql
+    .split(";")
+    .map((part) => part.trim())
+    .filter((part) => part.length > 0)
+    .map((part) => `${part};`);
+}
+
+function loadMigrationSqlFiles(): string[] {
+  const dirCandidates = [
+    path.resolve(__dirname, "migrations"),
+    path.resolve(process.cwd(), "packages", "db", "src", "migrations"),
+    path.resolve(process.cwd(), "..", "..", "packages", "db", "src", "migrations")
   ];
 
-  for (const candidate of candidates) {
-    if (fs.existsSync(candidate)) {
-      return fs.readFileSync(candidate, "utf8");
+  for (const dir of dirCandidates) {
+    if (!fs.existsSync(dir)) {
+      continue;
     }
+
+    const files = fs
+      .readdirSync(dir)
+      .filter((name) => /^\d+_.*\.sql$/i.test(name))
+      .sort((a, b) => a.localeCompare(b));
+
+    if (files.length === 0) {
+      continue;
+    }
+
+    return files.map((name) => fs.readFileSync(path.join(dir, name), "utf8"));
   }
 
-  throw new Error(`Migration file not found. Checked: ${candidates.join(", ")}`);
+  throw new Error(`Migration directory not found. Checked: ${dirCandidates.join(", ")}`);
 }

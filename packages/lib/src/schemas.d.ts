@@ -1,7 +1,8 @@
 import { z } from "zod";
+export declare const FindingTypeSchema: z.ZodEnum<["continuity", "character", "timeline", "chapter", "pacing", "clarity", "consistency"]>;
 export declare const FindingSchema: z.ZodObject<{
     id: z.ZodString;
-    type: z.ZodString;
+    type: z.ZodEnum<["continuity", "character", "timeline", "chapter", "pacing", "clarity", "consistency"]>;
     severity: z.ZodEnum<["low", "medium", "high"]>;
     confidence: z.ZodEnum<["low", "medium", "high"]>;
     location: z.ZodObject<{
@@ -21,7 +22,7 @@ export declare const FindingSchema: z.ZodObject<{
     status: z.ZodOptional<z.ZodEnum<["new", "still", "resolved"]>>;
 }, "strip", z.ZodTypeAny, {
     id: string;
-    type: string;
+    type: "continuity" | "character" | "timeline" | "chapter" | "pacing" | "clarity" | "consistency";
     severity: "low" | "medium" | "high";
     confidence: "low" | "medium" | "high";
     location: {
@@ -35,7 +36,7 @@ export declare const FindingSchema: z.ZodObject<{
     status?: "new" | "still" | "resolved" | undefined;
 }, {
     id: string;
-    type: string;
+    type: "continuity" | "character" | "timeline" | "chapter" | "pacing" | "clarity" | "consistency";
     severity: "low" | "medium" | "high";
     confidence: "low" | "medium" | "high";
     location: {
@@ -74,7 +75,7 @@ export declare const ReviewResultSchema: z.ZodObject<{
     }>;
     findings: z.ZodArray<z.ZodObject<{
         id: z.ZodString;
-        type: z.ZodString;
+        type: z.ZodEnum<["continuity", "character", "timeline", "chapter", "pacing", "clarity", "consistency"]>;
         severity: z.ZodEnum<["low", "medium", "high"]>;
         confidence: z.ZodEnum<["low", "medium", "high"]>;
         location: z.ZodObject<{
@@ -94,7 +95,7 @@ export declare const ReviewResultSchema: z.ZodObject<{
         status: z.ZodOptional<z.ZodEnum<["new", "still", "resolved"]>>;
     }, "strip", z.ZodTypeAny, {
         id: string;
-        type: string;
+        type: "continuity" | "character" | "timeline" | "chapter" | "pacing" | "clarity" | "consistency";
         severity: "low" | "medium" | "high";
         confidence: "low" | "medium" | "high";
         location: {
@@ -108,7 +109,7 @@ export declare const ReviewResultSchema: z.ZodObject<{
         status?: "new" | "still" | "resolved" | undefined;
     }, {
         id: string;
-        type: string;
+        type: "continuity" | "character" | "timeline" | "chapter" | "pacing" | "clarity" | "consistency";
         severity: "low" | "medium" | "high";
         confidence: "low" | "medium" | "high";
         location: {
@@ -138,7 +139,7 @@ export declare const ReviewResultSchema: z.ZodObject<{
     };
     findings: {
         id: string;
-        type: string;
+        type: "continuity" | "character" | "timeline" | "chapter" | "pacing" | "clarity" | "consistency";
         severity: "low" | "medium" | "high";
         confidence: "low" | "medium" | "high";
         location: {
@@ -168,7 +169,7 @@ export declare const ReviewResultSchema: z.ZodObject<{
     };
     findings: {
         id: string;
-        type: string;
+        type: "continuity" | "character" | "timeline" | "chapter" | "pacing" | "clarity" | "consistency";
         severity: "low" | "medium" | "high";
         confidence: "low" | "medium" | "high";
         location: {

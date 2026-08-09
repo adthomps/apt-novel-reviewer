@@ -20,7 +20,9 @@ interface FindingLite {
 export function FindingsPage(props: {
   projectId: string | null;
   findings: FindingLite[];
+  chapters: Array<{ id: string; chapterNumber: number; title: string }>;
   activeVersionLabel: string;
+  onViewInManuscript: (chapterId: string) => void;
   onStatusUpdated: () => Promise<void>;
 }) {
   const [reviewLens, setReviewLens] = useState<"all" | "continuity" | "character" | "timeline" | "chapter">("all");
@@ -34,30 +36,46 @@ export function FindingsPage(props: {
   );
   const [isExporting, setIsExporting] = useState(false);
 
+  const chapterLabelById = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const chapter of props.chapters) {
+      map.set(chapter.id, `Chapter ${chapter.chapterNumber} · ${chapter.title}`);
+    }
+    return map;
+  }, [props.chapters]);
+
+  function chapterLabel(chapterId: string): string {
+    return chapterLabelById.get(chapterId) ?? (chapterId ? `Chapter ${chapterId.slice(0, 8)}` : "Unknown chapter");
+  }
+
   const filteredFindings = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     return props.findings.filter((finding) => {
       const severityMatch = severityFilter === "all" || finding.severity === severityFilter;
       const statusMatch = statusFilter === "all" || finding.status === statusFilter;
       const lensMatch = reviewLens === "all" || matchesLens(finding, reviewLens);
+      const label = chapterLabel(finding.chapterId).toLowerCase();
       const queryMatch =
         normalizedQuery.length === 0 ||
         finding.issue.toLowerCase().includes(normalizedQuery) ||
         finding.findingType.toLowerCase().includes(normalizedQuery) ||
-        finding.chapterId.toLowerCase().includes(normalizedQuery);
+        finding.chapterId.toLowerCase().includes(normalizedQuery) ||
+        label.includes(normalizedQuery);
       return severityMatch && statusMatch && lensMatch && queryMatch;
     });
-  }, [props.findings, query, reviewLens, severityFilter, statusFilter]);
+  }, [props.findings, query, reviewLens, severityFilter, statusFilter, chapterLabelById]);
 
   const lensSummaries = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     const pool = props.findings.filter((finding) => {
       const statusMatch = statusFilter === "all" || finding.status === statusFilter;
+      const label = chapterLabel(finding.chapterId).toLowerCase();
       const queryMatch =
         normalizedQuery.length === 0 ||
         finding.issue.toLowerCase().includes(normalizedQuery) ||
         finding.findingType.toLowerCase().includes(normalizedQuery) ||
-        finding.chapterId.toLowerCase().includes(normalizedQuery);
+        finding.chapterId.toLowerCase().includes(normalizedQuery) ||
+        label.includes(normalizedQuery);
       return statusMatch && queryMatch;
     });
 
@@ -290,7 +308,7 @@ export function FindingsPage(props: {
                 <Badge tone="info">{finding.reviewType || "unknown_review"}</Badge>
               </div>
               <p className="text-sm text-slate-100">{finding.issue}</p>
-              <p className="mt-1 text-xs text-slate-400">Chapter {finding.chapterId || "unknown"}</p>
+              <p className="mt-1 text-xs text-slate-400">{chapterLabel(finding.chapterId)}</p>
             </button>
           ))}
         </div>
@@ -306,8 +324,16 @@ export function FindingsPage(props: {
                 <Badge tone={toneForStatus(selectedFinding.status)}>{selectedFinding.status}</Badge>
                 <Badge tone="info">{selectedFinding.reviewType || "unknown_review"}</Badge>
               </div>
-              <p className="text-xs text-slate-400">Chapter: {selectedFinding.chapterId}</p>
+              <p className="text-xs text-slate-400">{chapterLabel(selectedFinding.chapterId)}</p>
               <p className="text-xs text-slate-400">Anchor: {selectedFinding.textAnchor || "N/A"}</p>
+              {selectedFinding.chapterId ? (
+                <button
+                  className="rounded border border-sky-700/70 bg-sky-950/25 px-2 py-1 text-xs text-sky-200"
+                  onClick={() => props.onViewInManuscript(selectedFinding.chapterId)}
+                >
+                  View in manuscript
+                </button>
+              ) : null}
               <section>
                 <h4 className="text-xs uppercase text-slate-400">Why It Matters</h4>
                 <p className="mt-1 text-sm text-slate-200">{selectedFinding.whyItMatters}</p>
@@ -386,7 +412,7 @@ function buildEnhancementAreas(finding: FindingLite): string[] {
   const evidence = parseEvidence(finding.evidence);
   const lens = inferLens(finding);
   const focus = [
-    `Inspect chapter ${finding.chapterId || "unknown"} near anchor: ${finding.textAnchor || "N/A"}.`,
+    `Inspect near anchor: ${finding.textAnchor || "N/A"}.`,
     `Target issue: ${finding.issue}`,
     `Apply fix direction: ${finding.suggestedFix}`
   ];

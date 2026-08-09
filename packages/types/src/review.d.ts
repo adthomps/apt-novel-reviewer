@@ -1,9 +1,10 @@
 export type ReviewMode = "chapter_review" | "continuity_review" | "character_review" | "timeline_review";
+export type FindingType = "continuity" | "character" | "timeline" | "chapter" | "pacing" | "clarity" | "consistency";
 export type Severity = "low" | "medium" | "high";
 export type Confidence = "low" | "medium" | "high";
 export interface Finding {
     id: string;
-    type: string;
+    type: FindingType;
     severity: Severity;
     confidence: Confidence;
     location: {

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Card, StatusIndicator } from "@apt/ui";
 import type { RuntimeStatus } from "@apt/types";
 
-export function SetupPage() {
+export function SetupPage(props: { onStatusLoaded?: (status: RuntimeStatus) => void }) {
   const [status, setStatus] = useState<RuntimeStatus | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -16,11 +16,14 @@ export function SetupPage() {
       .getStatus()
       .then((nextStatus) => {
         setStatus(nextStatus);
+        props.onStatusLoaded?.(nextStatus);
         setError(null);
       })
       .catch((reason: unknown) => {
         setError(reason instanceof Error ? reason.message : "Failed to fetch runtime status.");
       });
+    // Load once on mount; status is also refreshed from App shell.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const runtimeOk = status?.ollamaRunning && status?.ollamaInstalled;
@@ -31,8 +34,14 @@ export function SetupPage() {
       <Card title="Runtime Status">
         {status ? (
           <div className="space-y-2">
-            <StatusIndicator label={`Ollama installed: ${status.ollamaInstalled ? "yes" : "no"}`} status={status.ollamaInstalled ? "ok" : "error"} />
-            <StatusIndicator label={`Ollama running: ${status.ollamaRunning ? "yes" : "no"}`} status={runtimeOk ? "ok" : "warn"} />
+            <StatusIndicator
+              label={`Ollama installed: ${status.ollamaInstalled ? "yes" : "no"}`}
+              status={status.ollamaInstalled ? "ok" : "error"}
+            />
+            <StatusIndicator
+              label={`Ollama running: ${status.ollamaRunning ? "yes" : "no"}`}
+              status={runtimeOk ? "ok" : "warn"}
+            />
             <p className="text-xs text-slate-400">{status.message}</p>
           </div>
         ) : (

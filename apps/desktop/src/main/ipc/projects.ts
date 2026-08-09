@@ -7,6 +7,8 @@ import { getDefaultProjectsRoot } from "../services/paths";
 export function registerProjectsIpc() {
   ipcMain.handle(IPC.projectsList, async () => projectRepo.listProjects());
 
+  ipcMain.handle(IPC.projectsGet, async (_event, projectId: string) => projectRepo.getProject(projectId));
+
   ipcMain.handle(IPC.projectsCreate, async (_event, input: { name: string; description?: string }) => {
     const projectPath = path.join(getDefaultProjectsRoot(), sanitizeFolderName(input.name));
     return projectRepo.createProject({ ...input, projectPath });

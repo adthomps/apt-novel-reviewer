@@ -29,16 +29,25 @@ export class OllamaClient {
     return (payload.models ?? []).map((model) => model.name ?? "").filter(Boolean);
   }
 
-  async generate(prompt: string): Promise<string> {
+  async generate(prompt: string, options?: { format?: "json" }): Promise<string> {
     let attempt = 0;
     while (attempt <= this.config.retries) {
       try {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), this.config.timeoutMs);
+        const payload: Record<string, unknown> = {
+          model: this.config.model,
+          prompt,
+          stream: false
+        };
+        if (options?.format === "json") {
+          payload.format = "json";
+        }
+
         const response = await fetch(`${this.config.baseUrl}/api/generate`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ model: this.config.model, prompt, stream: false }),
+          body: JSON.stringify(payload),
           signal: controller.signal
         });
         clearTimeout(timeout);

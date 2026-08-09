@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { app, dialog, ipcMain } from "electron";
 import { RunReviewInputSchema } from "@apt/lib";
-import { compareRepo, reviewRepo, versionRepo } from "@apt/db";
+import { compareRepo, noteRepo, reviewRepo, versionRepo } from "@apt/db";
 import { IPC } from "../../shared/ipc";
 import { runReview } from "../services/review";
 
@@ -17,15 +17,34 @@ export function registerReviewIpc() {
     });
 
     try {
-      const chapter = selectChapter(parsed.versionId, parsed.chapterId);
-      const result = await runReview(parsed.reviewType, chapter);
+      const chapters = versionRepo.listChapters(parsed.versionId);
+      const chapter = selectChapter(chapters, parsed.chapterId);
+      const priorChapters = chapters.filter((item) => item.chapterNumber < chapter.chapterNumber);
+      const canonNotes = noteRepo.listNotes(parsed.projectId).map((note) => ({
+        category: note.category,
+        title: note.title,
+        content: note.content
+      }));
+
+      const result = await runReview(parsed.reviewType, chapter, {
+        priorChapters,
+        canonNotes
+      });
       if (!result.success || !result.data) {
         reviewRepo.failReviewRun(run.id, result.errors.join("; "));
         return { runId: run.id, status: "error", errors: result.errors };
       }
 
       reviewRepo.completeReviewRun(run.id, result.data);
-      return { runId: run.id, status: result.data.status };
+      return {
+        runId: run.id,
+        status: result.data.status,
+        chapterId: chapter.id,
+        summary: result.data.summary,
+        warnings: result.data.warnings,
+        findingCount: result.data.findings.length,
+        notes: result.data.notes
+      };
     } catch (error) {
       const message = error instanceof Error ? error.message : "Unknown review error";
       reviewRepo.failReviewRun(run.id, message);
@@ -33,7 +52,12 @@ export function registerReviewIpc() {
     }
   });
 
-  ipcMain.handle(IPC.findingsList, async (_event, projectId: string) => reviewRepo.listFindingsByProject(projectId));
+  ipcMain.handle(IPC.findingsList, async (_event, projectId: string, versionId?: string) => {
+    if (versionId) {
+      return reviewRepo.listFindingsByVersion(projectId, versionId);
+    }
+    return reviewRepo.listFindingsByProject(projectId);
+  });
 
   ipcMain.handle(
     IPC.findingsExport,
@@ -105,6 +129,17 @@ export function registerReviewIpc() {
     reviewRepo.updateFindingStatus(findingId, status);
     return { ok: true };
   });
+
+  ipcMain.handle(
+    IPC.findingsApplyStatuses,
+    async (
+      _event,
+      updates: Array<{ id: string; status: "new" | "still" | "resolved" }>
+    ) => {
+      const updatedCount = reviewRepo.updateFindingStatuses(updates ?? []);
+      return { ok: true, updatedCount };
+    }
+  );
 
   ipcMain.handle(IPC.reviewRunsList, async (_event, versionId: string) => reviewRepo.listReviewRunsByVersion(versionId));
 
@@ -204,8 +239,7 @@ function parseEvidenceArray(raw: string): string[] {
   }
 }
 
-function selectChapter(versionId: string, chapterId?: string) {
-  const chapters = versionRepo.listChapters(versionId);
+function selectChapter<T extends { id: string }>(chapters: T[], chapterId?: string): T {
   if (chapters.length === 0) {
     throw new Error("No chapters detected");
   }

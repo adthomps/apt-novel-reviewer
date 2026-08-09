@@ -8,6 +8,7 @@ contextBridge.exposeInMainWorld("aptApi", {
   },
   projects: {
     list: () => ipcRenderer.invoke(IPC.projectsList),
+    get: (projectId: string) => ipcRenderer.invoke(IPC.projectsGet, projectId),
     create: (input: { name: string; description?: string }) => ipcRenderer.invoke(IPC.projectsCreate, input),
     delete: (projectId: string) => ipcRenderer.invoke(IPC.projectsDelete, projectId),
     open: (projectId: string) => ipcRenderer.invoke(IPC.projectsOpen, projectId)
@@ -45,7 +46,7 @@ contextBridge.exposeInMainWorld("aptApi", {
       ipcRenderer.invoke(IPC.reviewRunsDeleteByStatus, versionId, statuses)
   },
   findings: {
-    list: (projectId: string) => ipcRenderer.invoke(IPC.findingsList, projectId),
+    list: (projectId: string, versionId?: string) => ipcRenderer.invoke(IPC.findingsList, projectId, versionId),
     export: (input: {
       projectId: string;
       format: "json" | "csv";
@@ -67,7 +68,9 @@ contextBridge.exposeInMainWorld("aptApi", {
       }>;
     }) => ipcRenderer.invoke(IPC.findingsExport, input),
     updateStatus: (findingId: string, status: "new" | "still" | "resolved") =>
-      ipcRenderer.invoke(IPC.findingUpdateStatus, findingId, status)
+      ipcRenderer.invoke(IPC.findingUpdateStatus, findingId, status),
+    applyStatuses: (updates: Array<{ id: string; status: "new" | "still" | "resolved" }>) =>
+      ipcRenderer.invoke(IPC.findingsApplyStatuses, updates)
   },
   compare: {
     versions: (projectId: string, fromVersionId: string, toVersionId: string) =>

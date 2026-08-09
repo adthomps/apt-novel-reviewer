@@ -1,5 +1,6 @@
 import type { CreateProjectInput, Project } from "@apt/types";
 export declare function listProjects(): Project[];
+export declare function getProject(projectId: string): Project | null;
 export declare function createProject(input: CreateProjectInput & {
     projectPath: string;
 }): Project;

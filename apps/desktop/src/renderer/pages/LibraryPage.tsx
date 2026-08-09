@@ -8,7 +8,8 @@ interface ProjectLite {
 }
 
 export function LibraryPage(props: {
-  onSelectProject: (projectId: string | null) => void;
+  onSelectProject: (projectId: string) => void;
+  onClearProject: () => void;
   selectedProjectId: string | null;
 }) {
   const [projects, setProjects] = useState<ProjectLite[]>([]);
@@ -16,11 +17,17 @@ export function LibraryPage(props: {
   const [nameInputKey, setNameInputKey] = useState(0);
   const [pendingDeleteProject, setPendingDeleteProject] = useState<ProjectLite | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const nameInputRef = useRef<HTMLInputElement | null>(null);
 
   async function reload() {
-    const list = await window.aptApi.projects.list();
-    setProjects(list);
+    try {
+      const list = await window.aptApi.projects.list();
+      setProjects(list);
+      setError(null);
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Failed to load projects.");
+    }
   }
 
   useEffect(() => {
@@ -33,10 +40,14 @@ export function LibraryPage(props: {
 
   async function create() {
     if (!name.trim()) return;
-    await window.aptApi.projects.create({ name: name.trim() });
-    setName("");
-    await reload();
-    nameInputRef.current?.focus();
+    try {
+      await window.aptApi.projects.create({ name: name.trim() });
+      setName("");
+      await reload();
+      nameInputRef.current?.focus();
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Failed to create project.");
+    }
   }
 
   async function removeConfirmed(project: ProjectLite) {
@@ -48,7 +59,7 @@ export function LibraryPage(props: {
       setIsDeleting(true);
       await window.aptApi.projects.delete(project.id);
       if (props.selectedProjectId === project.id) {
-        props.onSelectProject(null);
+        props.onClearProject();
       }
       await reload();
       setPendingDeleteProject(null);
@@ -58,6 +69,8 @@ export function LibraryPage(props: {
         nameInputRef.current?.focus();
         nameInputRef.current?.select();
       }, 0);
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Failed to delete project.");
     } finally {
       setIsDeleting(false);
     }
@@ -71,8 +84,12 @@ export function LibraryPage(props: {
   }
 
   async function open(projectId: string) {
-    await window.aptApi.projects.open(projectId);
-    props.onSelectProject(projectId);
+    try {
+      await window.aptApi.projects.open(projectId);
+      props.onSelectProject(projectId);
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Failed to open project.");
+    }
   }
 
   return (
@@ -95,28 +112,36 @@ export function LibraryPage(props: {
       </Card>
 
       <Card title="Project Library">
-        <div className="grid gap-3 md:grid-cols-2">
-          {projects.map((project) => (
-            <div key={project.id} className="rounded-lg border border-slate-800 bg-slate-900/70 p-3">
-              <h3 className="font-semibold">{project.name}</h3>
-              <p className="text-xs text-slate-400">Updated {new Date(project.updatedAt).toLocaleString()}</p>
-              <div className="mt-3 flex gap-2">
-                <Button
-                  className={props.selectedProjectId === project.id ? "bg-emerald-300" : ""}
-                  onClick={() => void open(project.id)}
-                >
-                  Open
-                </Button>
-                <button
-                  className="rounded-lg border border-slate-700 px-3 py-2 text-xs"
-                  onClick={() => requestDelete(project)}
-                >
-                  Delete
-                </button>
+        {error ? <p className="mb-3 text-xs text-rose-300">{error}</p> : null}
+        {projects.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-slate-700 bg-slate-950/40 p-6 text-center">
+            <p className="text-sm text-slate-200">No projects yet</p>
+            <p className="mt-1 text-xs text-slate-400">Create a project above to import a manuscript and run reviews.</p>
+          </div>
+        ) : (
+          <div className="grid gap-3 md:grid-cols-2">
+            {projects.map((project) => (
+              <div key={project.id} className="rounded-lg border border-slate-800 bg-slate-900/70 p-3">
+                <h3 className="font-semibold">{project.name}</h3>
+                <p className="text-xs text-slate-400">Updated {new Date(project.updatedAt).toLocaleString()}</p>
+                <div className="mt-3 flex gap-2">
+                  <Button
+                    className={props.selectedProjectId === project.id ? "bg-emerald-300" : ""}
+                    onClick={() => void open(project.id)}
+                  >
+                    Open
+                  </Button>
+                  <button
+                    className="rounded-lg border border-slate-700 px-3 py-2 text-xs"
+                    onClick={() => requestDelete(project)}
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </Card>
 
       {pendingDeleteProject ? (

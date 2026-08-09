@@ -1,5 +1,6 @@
 import { jsonrepair } from "jsonrepair";
 import { ReviewResultSchema, type ReviewResultParsed } from "../schemas";
+import { normalizeFindingType } from "./quality";
 
 export interface ParseResult {
   success: boolean;
@@ -102,7 +103,7 @@ function normalizeFinding(value: unknown, index: number): Record<string, unknown
   const severity = normalizeLevel(value.severity);
   const confidence = normalizeLevel(value.confidence);
   const issue = asNonEmptyString(value.issue, "Issue not specified");
-  const type = asNonEmptyString(value.type, "consistency");
+  const type = normalizeFindingType(asNonEmptyString(value.type, "consistency"));
 
   return {
     ...value,

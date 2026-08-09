@@ -7,6 +7,11 @@ export function listProjects(): Project[] {
   return statement.all() as Project[];
 }
 
+export function getProject(projectId: string): Project | null {
+  const project = getDb().prepare("SELECT * FROM projects WHERE id = ?").get(projectId) as Project | undefined;
+  return project ?? null;
+}
+
 export function createProject(input: CreateProjectInput & { projectPath: string }): Project {
   const now = Date.now();
   const project: Project = {

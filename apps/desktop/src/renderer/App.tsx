@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import type { RuntimeStatus } from "@apt/types";
 import {
   ComparePage,
   DashboardPage,
@@ -25,26 +26,26 @@ const NAV_ITEMS = [
 
 type NavItem = (typeof NAV_ITEMS)[number];
 
-const HEADER_NAV_ITEMS = ["Setup", "Library", "Review Center", "Findings", "Settings"] as const satisfies readonly NavItem[];
-
-const FOOTER_GROUPS = [
-  {
-    title: "Workflow",
-    items: ["Library", "Manuscript", "Review Center"] as const
-  },
-  {
-    title: "Resources",
-    items: ["Findings", "Compare", "Settings"] as const
-  }
-] as const;
+const HEADER_NAV_ITEMS = [
+  "Library",
+  "Manuscript",
+  "Review Center",
+  "Findings",
+  "Compare",
+  "Canon"
+] as const satisfies readonly NavItem[];
 
 export function App() {
   const api = window.aptApi;
   const [active, setActive] = useState<NavItem>("Setup");
   const [projectId, setProjectId] = useState<string | null>(null);
+  const [projectName, setProjectName] = useState<string | null>(null);
   const [versions, setVersions] = useState<Array<{ id: string; versionNumber: number; timestamp: number }>>([]);
   const [activeVersionId, setActiveVersionId] = useState<string | null>(null);
-  const [chapters, setChapters] = useState<Array<{ id: string; title: string; chapterNumber: number; content: string }>>([]);
+  const [chapters, setChapters] = useState<Array<{ id: string; title: string; chapterNumber: number; content: string }>>(
+    []
+  );
+  const [selectedChapterId, setSelectedChapterId] = useState<string | null>(null);
   const [findings, setFindings] = useState<
     Array<{
       id: string;
@@ -62,6 +63,8 @@ export function App() {
       status: string;
     }>
   >([]);
+  const [runtimeStatus, setRuntimeStatus] = useState<RuntimeStatus | null>(null);
+  const [lastReviewAt, setLastReviewAt] = useState<number | null>(null);
 
   const activeVersion = useMemo(
     () => versions.find((version) => version.id === activeVersionId) ?? versions[0] ?? null,
@@ -74,12 +77,55 @@ export function App() {
     return `v${activeVersion.versionNumber} • ${new Date(activeVersion.timestamp).toLocaleString()}`;
   }, [activeVersion]);
 
+  const projectLabel = useMemo(() => {
+    if (!projectId) {
+      return "None";
+    }
+    const shortId = projectId.slice(0, 8);
+    return projectName ? `${projectName} (${shortId})` : shortId;
+  }, [projectId, projectName]);
+
+  const runtimeLabel = useMemo(() => {
+    if (!runtimeStatus) {
+      return "Checking…";
+    }
+    if (runtimeStatus.ollamaRunning) {
+      return "Ollama running";
+    }
+    if (runtimeStatus.ollamaInstalled) {
+      return "Ollama installed";
+    }
+    return "Ollama missing";
+  }, [runtimeStatus]);
+
+  const modelLabel = useMemo(() => {
+    if (!runtimeStatus) {
+      return "gpt-oss:20b";
+    }
+    return runtimeStatus.modelInstalled
+      ? runtimeStatus.requiredModel
+      : `${runtimeStatus.requiredModel} (missing)`;
+  }, [runtimeStatus]);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+    void api.runtime
+      .getStatus()
+      .then(setRuntimeStatus)
+      .catch(() => setRuntimeStatus(null));
+  }, [api]);
+
   useEffect(() => {
     if (!projectId) {
       setVersions([]);
       setActiveVersionId(null);
       setChapters([]);
       setFindings([]);
+      setProjectName(null);
+      setSelectedChapterId(null);
+      setLastReviewAt(null);
       return;
     }
     void refreshProjectData(projectId);
@@ -88,38 +134,103 @@ export function App() {
   useEffect(() => {
     if (!activeVersion?.id) {
       setChapters([]);
+      setFindings([]);
+      setLastReviewAt(null);
       return;
     }
     void loadChapters(activeVersion.id);
-  }, [activeVersion?.id]);
+    if (projectId) {
+      void loadFindings(projectId, activeVersion.id);
+      void loadLastReview(activeVersion.id);
+    }
+  }, [activeVersion?.id, projectId]);
 
   async function refreshProjectData(selectedProjectId: string, preferLatestVersion = false) {
     if (!api) {
       return;
     }
 
-    const nextVersions = await api.versions.list(selectedProjectId);
-    setVersions(nextVersions);
-    setActiveVersionId((current) => {
-      if (preferLatestVersion) {
-        return nextVersions[0]?.id ?? null;
-      }
-      if (current && nextVersions.some((version) => version.id === current)) {
-        return current;
-      }
-      return nextVersions[0]?.id ?? null;
-    });
+    try {
+      const project = await api.projects.get(selectedProjectId);
+      setProjectName(project?.name ?? null);
 
-    const findingList = await api.findings.list(selectedProjectId);
-    setFindings(findingList);
+      const nextVersions = await api.versions.list(selectedProjectId);
+      setVersions(nextVersions);
+      setActiveVersionId((current) => {
+        if (preferLatestVersion) {
+          return nextVersions[0]?.id ?? null;
+        }
+        if (current && nextVersions.some((version) => version.id === current)) {
+          return current;
+        }
+        return nextVersions[0]?.id ?? null;
+      });
+    } catch {
+      setVersions([]);
+      setFindings([]);
+    }
   }
 
   async function loadChapters(versionId: string) {
     if (!api) {
       return;
     }
-    const chapterList = await api.versions.chapters(versionId);
-    setChapters(chapterList);
+    try {
+      const chapterList = await api.versions.chapters(versionId);
+      setChapters(chapterList);
+      setSelectedChapterId((current) => {
+        if (current && chapterList.some((chapter) => chapter.id === current)) {
+          return current;
+        }
+        return chapterList[0]?.id ?? null;
+      });
+    } catch {
+      setChapters([]);
+    }
+  }
+
+  async function loadFindings(selectedProjectId: string, versionId: string) {
+    if (!api) {
+      return;
+    }
+    try {
+      const findingList = await api.findings.list(selectedProjectId, versionId);
+      setFindings(findingList);
+    } catch {
+      setFindings([]);
+    }
+  }
+
+  async function loadLastReview(versionId: string) {
+    if (!api) {
+      return;
+    }
+    try {
+      const runs = await api.reviews.listRuns(versionId);
+      const latest = runs.find((run) => run.status === "success" || run.status === "partial") ?? runs[0];
+      setLastReviewAt(latest?.completedAt ?? latest?.startedAt ?? null);
+    } catch {
+      setLastReviewAt(null);
+    }
+  }
+
+  async function handleOpenProject(nextProjectId: string) {
+    setProjectId(nextProjectId);
+    if (!api) {
+      setActive("Project Dashboard");
+      return;
+    }
+    try {
+      const nextVersions = await api.versions.list(nextProjectId);
+      setActive(nextVersions.length === 0 ? "Manuscript" : "Project Dashboard");
+    } catch {
+      setActive("Project Dashboard");
+    }
+  }
+
+  function navigateToManuscriptChapter(chapterId: string) {
+    setSelectedChapterId(chapterId);
+    setActive("Manuscript");
   }
 
   if (!api) {
@@ -139,7 +250,7 @@ export function App() {
   }
 
   return (
-    <div className="grid min-h-screen grid-rows-[64px_1fr_auto]">
+    <div className="grid min-h-screen grid-rows-[64px_1fr_36px]">
       <header className="flex items-center gap-4 border-b border-slate-800/80 bg-slate-950/75 px-4 backdrop-blur">
         <div className="flex min-w-0 shrink-0 items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-full border border-sky-400/50 bg-slate-950 text-sm font-semibold text-sky-200">
@@ -171,12 +282,12 @@ export function App() {
         <div className="hidden shrink-0 items-center gap-3 text-right lg:flex">
           <div>
             <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Runtime</p>
-            <p className="text-sm text-slate-300">Local Ollama</p>
+            <p className="text-sm text-slate-300">{runtimeLabel}</p>
           </div>
           <div className="h-8 border-l border-slate-800" />
           <div>
             <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Model</p>
-            <p className="text-sm text-slate-300">gpt-oss:20b</p>
+            <p className="text-sm text-slate-300">{modelLabel}</p>
           </div>
         </div>
       </header>
@@ -199,16 +310,24 @@ export function App() {
         </aside>
 
         <main className="overflow-auto p-4">
-          {active === "Setup" ? <SetupPage /> : null}
+          {active === "Setup" ? <SetupPage onStatusLoaded={setRuntimeStatus} /> : null}
           {active === "Library" ? (
-            <LibraryPage onSelectProject={(nextProjectId) => setProjectId(nextProjectId)} selectedProjectId={projectId} />
+            <LibraryPage
+              onSelectProject={handleOpenProject}
+              onClearProject={() => setProjectId(null)}
+              selectedProjectId={projectId}
+            />
           ) : null}
           {active === "Project Dashboard" ? (
             <DashboardPage
               projectId={projectId}
+              projectName={projectName}
               versionCount={versions.length}
+              chapterCount={chapters.length}
               findingCount={findings.length}
               activeVersionLabel={activeVersionLabel}
+              lastReviewAt={lastReviewAt}
+              onNavigate={(target) => setActive(target)}
             />
           ) : null}
           {active === "Manuscript" ? (
@@ -216,6 +335,8 @@ export function App() {
               projectId={projectId}
               chapters={chapters}
               activeVersionLabel={activeVersionLabel}
+              selectedChapterId={selectedChapterId}
+              onSelectChapter={setSelectedChapterId}
               onImportCompleted={() => (projectId ? refreshProjectData(projectId, true) : Promise.resolve())}
             />
           ) : null}
@@ -235,27 +356,64 @@ export function App() {
               projectId={projectId}
               versionId={activeVersion?.id ?? null}
               activeVersionLabel={activeVersionLabel}
-              onReviewCompleted={() => (projectId ? refreshProjectData(projectId) : Promise.resolve())}
+              chapters={chapters.map((chapter) => ({
+                id: chapter.id,
+                chapterNumber: chapter.chapterNumber,
+                title: chapter.title
+              }))}
+              onNavigateToFindings={() => setActive("Findings")}
+              onReviewCompleted={async () => {
+                if (!projectId || !activeVersion?.id) {
+                  return;
+                }
+                await refreshProjectData(projectId);
+                await loadFindings(projectId, activeVersion.id);
+                await loadLastReview(activeVersion.id);
+              }}
             />
           ) : null}
           {active === "Findings" ? (
             <FindingsPage
               projectId={projectId}
               findings={findings}
+              chapters={chapters.map((chapter) => ({
+                id: chapter.id,
+                chapterNumber: chapter.chapterNumber,
+                title: chapter.title
+              }))}
               activeVersionLabel={activeVersionLabel}
-              onStatusUpdated={() => (projectId ? refreshProjectData(projectId) : Promise.resolve())}
+              onViewInManuscript={navigateToManuscriptChapter}
+              onStatusUpdated={async () => {
+                if (projectId && activeVersion?.id) {
+                  await loadFindings(projectId, activeVersion.id);
+                }
+              }}
             />
           ) : null}
           {active === "Compare" ? (
-            <ComparePage projectId={projectId} versions={versions} activeVersionLabel={activeVersionLabel} />
+            <ComparePage
+              projectId={projectId}
+              versions={versions}
+              chapters={chapters.map((chapter) => ({
+                id: chapter.id,
+                chapterNumber: chapter.chapterNumber,
+                title: chapter.title
+              }))}
+              activeVersionLabel={activeVersionLabel}
+              onStatusesApplied={async () => {
+                if (projectId && activeVersion?.id) {
+                  await loadFindings(projectId, activeVersion.id);
+                }
+              }}
+            />
           ) : null}
-          {active === "Settings" ? <SettingsPage /> : null}
+          {active === "Settings" ? <SettingsPage runtimeStatus={runtimeStatus} /> : null}
         </main>
 
         <aside className="border-l border-slate-800 p-3">
           <h2 className="mb-3 text-xs uppercase tracking-[0.15em] text-slate-400">Context</h2>
           <div className="space-y-2 text-sm text-slate-300">
-            <p>Project: {projectId ?? "None"}</p>
+            <p>Project: {projectLabel}</p>
             <div className="space-y-1">
               <p className="text-xs uppercase tracking-[0.1em] text-slate-500">Active version</p>
               <select
@@ -280,49 +438,13 @@ export function App() {
         </aside>
       </div>
 
-      <footer className="border-t border-slate-800/80 bg-slate-900/55 px-4 py-6 backdrop-blur">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
-          <div className="md:col-span-2">
-            <div className="mb-3 flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-sky-400/50 bg-slate-950 text-sm font-semibold text-sky-200">
-                A
-              </div>
-              <div>
-                <p className="text-sm font-semibold tracking-tight text-slate-100">APT Novel Reviewer</p>
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">Applied Practical Thinking</p>
-              </div>
-            </div>
-            <p className="max-w-md text-sm leading-relaxed text-slate-400">
-              A local manuscript review workspace for project setup, canon checks, findings, and version comparison.
-            </p>
-          </div>
-
-          {FOOTER_GROUPS.map((group) => (
-            <div key={group.title}>
-              <h3 className="mb-3 text-sm font-semibold text-slate-100">{group.title}</h3>
-              <ul className="space-y-2 text-sm text-slate-400">
-                {group.items.map((item) => (
-                  <li key={item}>
-                    <button
-                      className="text-left transition hover:text-slate-100"
-                      type="button"
-                      onClick={() => setActive(item)}
-                    >
-                      {item}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="my-5 border-t border-slate-800/80" />
-
-        <div className="flex flex-col gap-3 text-sm text-slate-400 sm:flex-row sm:items-start sm:justify-between">
-          <p>Runtime: Local Ollama</p>
-          <p className="text-xs sm:text-right">Model: gpt-oss:20b</p>
-        </div>
+      <footer className="flex items-center justify-between gap-3 border-t border-slate-800/80 bg-slate-900/70 px-4 text-xs text-slate-400">
+        <p>
+          {projectName ? `${projectName} · ${activeVersionLabel}` : "No project open"} · Findings {findings.length}
+        </p>
+        <p>
+          {runtimeLabel} · {modelLabel}
+        </p>
       </footer>
     </div>
   );

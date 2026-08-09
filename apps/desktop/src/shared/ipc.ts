@@ -21,5 +21,7 @@ export const IPC = {
   findingsList: "findings:list",
   findingsExport: "findings:export",
   findingUpdateStatus: "finding:update-status",
+  findingsApplyStatuses: "findings:apply-statuses",
+  projectsGet: "projects:get",
   compareVersions: "compare:versions"
 } as const;

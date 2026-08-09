@@ -47,6 +47,9 @@ CREATE TABLE IF NOT EXISTS review_runs (
   startedAt INTEGER NOT NULL,
   completedAt INTEGER,
   errorMessage TEXT,
+  summaryJson TEXT,
+  notesJson TEXT,
+  warningsJson TEXT,
   FOREIGN KEY(projectId) REFERENCES projects(id) ON DELETE CASCADE,
   FOREIGN KEY(versionId) REFERENCES versions(id) ON DELETE CASCADE
 );

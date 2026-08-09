@@ -8,6 +8,8 @@ export declare class OllamaClient {
     private readonly config;
     constructor(config?: Partial<OllamaClientConfig>);
     listModels(): Promise<string[]>;
-    generate(prompt: string): Promise<string>;
+    generate(prompt: string, options?: {
+        format?: "json";
+    }): Promise<string>;
 }
 //# sourceMappingURL=client.d.ts.map

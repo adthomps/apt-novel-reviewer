@@ -41,7 +41,18 @@ export function completeReviewRun(runId: string, result: ReviewResult): void {
   }
 
   const tx = db.transaction(() => {
-    db.prepare("UPDATE review_runs SET status = ?, completedAt = ? WHERE id = ?").run(result.status, doneAt, runId);
+    db.prepare(
+      `UPDATE review_runs
+       SET status = ?, completedAt = ?, summaryJson = ?, notesJson = ?, warningsJson = ?
+       WHERE id = ?`
+    ).run(
+      result.status,
+      doneAt,
+      JSON.stringify(result.summary),
+      JSON.stringify(result.notes ?? []),
+      JSON.stringify(result.warnings ?? []),
+      runId
+    );
 
     const insertFinding = db.prepare(
       `INSERT INTO findings (
@@ -53,9 +64,18 @@ export function completeReviewRun(runId: string, result: ReviewResult): void {
       )`
     );
 
+    const insertWarning = db.prepare(
+      `INSERT INTO warnings (id, projectId, reviewRunId, type, message, severity, timestamp, resolved)
+       VALUES (?, ?, ?, ?, ?, ?, ?, 0)`
+    );
+
     result.findings.forEach((finding, index) => {
       insertFinding.run(toFindingRow(run, runId, finding, index));
     });
+
+    for (const warning of result.warnings ?? []) {
+      insertWarning.run(randomUUID(), run.projectId, runId, "review", warning, "medium", doneAt);
+    }
   });
 
   tx();
@@ -67,7 +87,7 @@ export function failReviewRun(runId: string, message: string): void {
     .run(Date.now(), message, runId);
 }
 
-export function listFindingsByProject(projectId: string): Array<{
+type FindingListRow = {
   id: string;
   reviewRunId: string;
   reviewType: string;
@@ -81,43 +101,39 @@ export function listFindingsByProject(projectId: string): Array<{
   evidence: string;
   suggestedFix: string;
   status: string;
-}> {
+};
+
+const FINDING_LIST_SELECT = `SELECT
+  f.id,
+  f.reviewRunId,
+  rr.reviewType AS reviewType,
+  f.chapterId,
+  f.findingType,
+  f.severity,
+  f.confidence,
+  f.textAnchor,
+  f.issue,
+  f.whyItMatters,
+  f.evidence,
+  f.suggestedFix,
+  f.status
+ FROM findings f
+ LEFT JOIN review_runs rr ON rr.id = f.reviewRunId`;
+
+export function listFindingsByProject(projectId: string): FindingListRow[] {
+  return getDb()
+    .prepare(`${FINDING_LIST_SELECT} WHERE f.projectId = ? ORDER BY f.createdAt DESC`)
+    .all(projectId) as FindingListRow[];
+}
+
+export function listFindingsByVersion(projectId: string, versionId: string): FindingListRow[] {
   return getDb()
     .prepare(
-      `SELECT
-        f.id,
-        f.reviewRunId,
-        rr.reviewType AS reviewType,
-        f.chapterId,
-        f.findingType,
-        f.severity,
-        f.confidence,
-        f.textAnchor,
-        f.issue,
-        f.whyItMatters,
-        f.evidence,
-        f.suggestedFix,
-        f.status
-       FROM findings f
-       LEFT JOIN review_runs rr ON rr.id = f.reviewRunId
-       WHERE f.projectId = ?
+      `${FINDING_LIST_SELECT}
+       WHERE f.projectId = ? AND rr.versionId = ?
        ORDER BY f.createdAt DESC`
     )
-    .all(projectId) as Array<{
-    id: string;
-    reviewRunId: string;
-    reviewType: string;
-    chapterId: string;
-    findingType: string;
-    severity: string;
-    confidence: string;
-    textAnchor: string;
-    issue: string;
-    whyItMatters: string;
-    evidence: string;
-    suggestedFix: string;
-    status: string;
-  }>;
+    .all(projectId, versionId) as FindingListRow[];
 }
 
 export function updateFindingStatus(
@@ -126,6 +142,28 @@ export function updateFindingStatus(
 ): void {
   const resolvedAt = status === "resolved" ? Date.now() : null;
   getDb().prepare("UPDATE findings SET status = ?, resolvedAt = ? WHERE id = ?").run(status, resolvedAt, findingId);
+}
+
+export function updateFindingStatuses(
+  updates: Array<{ id: string; status: "new" | "still" | "resolved" }>
+): number {
+  if (updates.length === 0) {
+    return 0;
+  }
+
+  const db = getDb();
+  const statement = db.prepare("UPDATE findings SET status = ?, resolvedAt = ? WHERE id = ?");
+  const tx = db.transaction(() => {
+    let changed = 0;
+    for (const update of updates) {
+      const resolvedAt = update.status === "resolved" ? Date.now() : null;
+      const result = statement.run(update.status, resolvedAt, update.id);
+      changed += result.changes;
+    }
+    return changed;
+  });
+
+  return tx();
 }
 
 export function listReviewRunsByVersion(versionId: string): Array<{
@@ -137,10 +175,14 @@ export function listReviewRunsByVersion(versionId: string): Array<{
   startedAt: number;
   completedAt: number | null;
   errorMessage: string | null;
+  summaryJson: string | null;
+  notesJson: string | null;
+  warningsJson: string | null;
 }> {
   return getDb()
     .prepare(
-      `SELECT id, versionId, reviewType, model, status, startedAt, completedAt, errorMessage
+      `SELECT id, versionId, reviewType, model, status, startedAt, completedAt, errorMessage,
+              summaryJson, notesJson, warningsJson
        FROM review_runs WHERE versionId = ? ORDER BY startedAt DESC`
     )
     .all(versionId) as Array<{
@@ -152,6 +194,9 @@ export function listReviewRunsByVersion(versionId: string): Array<{
     startedAt: number;
     completedAt: number | null;
     errorMessage: string | null;
+    summaryJson: string | null;
+    notesJson: string | null;
+    warningsJson: string | null;
   }>;
 }
 

@@ -1,8 +1,18 @@
 import { z } from "zod";
 
+export const FindingTypeSchema = z.enum([
+  "continuity",
+  "character",
+  "timeline",
+  "chapter",
+  "pacing",
+  "clarity",
+  "consistency"
+]);
+
 export const FindingSchema = z.object({
   id: z.string().min(1),
-  type: z.string().min(1),
+  type: FindingTypeSchema,
   severity: z.enum(["low", "medium", "high"]),
   confidence: z.enum(["low", "medium", "high"]),
   location: z.object({
