@@ -22,10 +22,6 @@ source_paths: ["apt-principles-agents/agents/harness/apt-repo-scanner.md"]
 
 # apt-repo-scanner
 
-Category: Utility
-
-## Purpose
-Inspect target repositories for installed APT agent standards, drift, missing files, duplicates, and repair needs.
 
 ## Responsibilities
 - Detect legacy `.apt/installation.json` and new `.apt/installation.json/manifest.json`.
@@ -36,13 +32,10 @@ Inspect target repositories for installed APT agent standards, drift, missing fi
 
 ## Perspective-Specific Checks
 
-- Detect legacy `.apt/installation.json` and new `.apt/installation.json/manifest.json`.
-- Compare managed target files with source files.
-- Report missing, drifted, unmanaged duplicate, and conflict candidates.
-- Generate scan reports without modifying managed files.
-
-## Output
-Return install state, profile state, drift summary, missing files, conflicts, and repair recommendations.
+- Compare every managed file's on-disk hash to installation.json and list each mismatch with its canonical source.
+- Flag files under managed paths that installation.json does not track (untracked drift).
+- Check for duplicate or superseded agent and skill files left behind by a removed manifest entry.
+- Confirm the recorded source commit is reachable and current.
 
 ## Role
 

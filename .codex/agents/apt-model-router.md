@@ -13,11 +13,6 @@ title: "apt-model-router"
 
 # apt-model-router
 
-Category: Router
-
-## Purpose
-Choose the smallest sufficient local or cloud model tier for an APT task.
-
 ## Responsibilities
 - Estimate task complexity, context size, and verification needs.
 - Prefer local models for classification, summarization, checklist review, and task-packet creation.
@@ -27,27 +22,16 @@ Choose the smallest sufficient local or cloud model tier for an APT task.
 
 ## Perspective-Specific Checks
 
-- Estimate task complexity, context size, and verification needs.
-- Prefer local models for classification, summarization, checklist review, and task-packet creation.
-- Escalate to mid-tier models for implementation and documentation.
-- Escalate to frontier models for architecture, security, complex debugging, major migrations, and final review.
-- Record why escalation is necessary.
+- Confirm the task's risk, ambiguity, context size, modality, and reversibility were each assessed before a tier was chosen.
+- Check that a local or deterministic option was ruled out with a stated reason, not skipped.
+- Flag a routing decision that names a specific vendor model instead of a capability tier.
+- Confirm a deterministic fallback is defined for provider failure or low confidence.
 
 ## Required Inputs
 - Task packet from `apt-router`.
 - `routing/model-registry.json`.
 - `routing/model-capability-matrix.md`.
 - Token budget and context-pack request.
-
-## Output
-Return a routing decision with:
-
-- selected tier
-- candidate model families
-- local/cloud recommendation
-- token budget
-- context loading plan
-- escalation reason, if any
 
 ## Boundaries
 Model routing is advisory. Human approval is required before material repo changes, paid API use, deployment, or destructive repair.

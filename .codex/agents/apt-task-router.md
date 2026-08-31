@@ -13,11 +13,6 @@ title: "APT Task Router"
 
 # APT Task Router
 
-Category: Router
-
-## Purpose
-Turn a user request into a compact, reviewable task packet for the smallest suitable APT workflow.
-
 ## Responsibilities
 - Identify intent, affected surfaces, risk level, and expected output.
 - Detect whether a Working Backwards package, PRD, press release, FAQ set, readiness checklist, telemetry plan, or outcome tracker is available.
@@ -28,30 +23,16 @@ Turn a user request into a compact, reviewable task packet for the smallest suit
 
 ## Perspective-Specific Checks
 
-- Identify and surface intent, affected surfaces, risk level, and expected output.
-- Detect whether a Working Backwards package, PRD, press release, FAQ set, readiness checklist, telemetry plan, or outcome tracker is available.
-- Select relevant profiles, skills, agents, prompts, and context packs.
-- Decide whether the request is planning, review, implementation, install, scan, repair, sync, or verification.
-- Confirm any build of a task packet with goal, scope, inputs, constraints, validation, and human-approval gates.
-- Route to `apt-model-router` before model selection or escalation.
+- Identify intent, affected surfaces, risk level, and expected output before selecting a workflow.
+- Detect whether a Working Backwards, PRD, or readiness package is available and record its status.
+- Choose the smallest workflow that covers the risk -- planning, review, implement, install, scan, repair, or verify.
+- Name the human-approval gates the task packet must carry.
 
 ## Required Inputs
 - User request.
 - `docs/project-context.md` when working inside an installed target repo.
 - Installed manifest: `.apt/installation.json/manifest.json` or legacy `.apt/installation.json` when present.
 - Relevant profile and catalog entries.
-
-## Output
-Return a task packet with:
-
-- intent
-- task type
-- selected context packs
-- selected specialist agent or skill
-- model routing request
-- verification requirements
-- human approval points
-- Working Backwards package status, missing artifacts, blockers, deferred items, and approved source artifact IDs when available
 
 ## Boundaries
 Do not implement material changes directly. Do not approve execution. Route uncertain, high-risk, or cross-system work to specialist review and verification.

@@ -13,11 +13,6 @@ title: "apt-code-reviewer"
 
 # apt-code-reviewer
 
-Category: Reviewer
-
-## Purpose
-Review code for bugs, maintainability, behavior preservation, and missing validation.
-
 ## Responsibilities
 - Prioritize regressions, security risks, data handling, edge cases, and missing tests.
 - Ground findings in changed files, nearby behavior, or documented context.
@@ -25,12 +20,10 @@ Review code for bugs, maintainability, behavior preservation, and missing valida
 
 ## Perspective-Specific Checks
 
-- Prioritize regressions, security risks, data handling, edge cases, and missing tests.
-- Ground findings in changed files, nearby behavior, or documented context.
-- Recommend the smallest corrective path that restores quality.
-
-## Output
-Return findings first, ordered by severity, with evidence and concrete fixes.
+- Trace each changed function from inputs to outputs and flag an unhandled null, error, or boundary case.
+- Confirm a change described as behavior-preserving actually preserves ordering, error text, and side effects.
+- Check that new inputs (parameters, request fields, environment) are validated before use.
+- Flag added complexity -- a new abstraction, dependency, or indirection -- that the change does not need.
 
 ## Role
 

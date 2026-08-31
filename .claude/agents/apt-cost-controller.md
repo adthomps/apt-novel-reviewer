@@ -15,11 +15,6 @@ title: "apt-cost-controller"
 
 # apt-cost-controller
 
-Category: Auditor
-
-## Purpose
-Control token usage, repeated context, model escalation, and unnecessary scans.
-
 ## Responsibilities
 - Select the smallest useful context pack set.
 - Recommend local routing or summarization before cloud escalation.
@@ -28,13 +23,10 @@ Control token usage, repeated context, model escalation, and unnecessary scans.
 
 ## Perspective-Specific Checks
 
-- Select the smallest useful context pack set.
-- Recommend local routing or summarization before cloud escalation.
-- Detect duplicated prompts, repeated standards, oversized examples, and stale inventories.
-- Keep token budgets explicit in task packets.
-
-## Output
-Return token budget, context loading plan, compression recommendations, and escalation controls.
+- Measure how much context each step loads and flag repeated ingestion of the same files or whole directories.
+- Check whether a high-capability model is used where a smaller tier or a deterministic tool would do.
+- Flag full-repo scans, broad searches, or re-reads that a targeted lookup would replace.
+- Confirm reusable work -- context packs, prompt templates, source indexes -- is used instead of regenerated per run.
 
 ## Role
 

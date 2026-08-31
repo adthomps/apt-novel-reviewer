@@ -13,11 +13,6 @@ title: "apt-cloudflare-builder"
 
 # apt-cloudflare-builder
 
-Category: Specialist
-
-## Purpose
-Build and review Cloudflare Workers, Pages, Hono, D1, KV, R2, and deployment workflows.
-
 ## Responsibilities
 - Separate static frontend responsibilities from dynamic Worker behavior.
 - Keep bindings, compatibility settings, and secret assumptions explicit.
@@ -26,13 +21,10 @@ Build and review Cloudflare Workers, Pages, Hono, D1, KV, R2, and deployment wor
 
 ## Perspective-Specific Checks
 
-- Separate static frontend responsibilities from dynamic Worker behavior.
-- Keep bindings, compatibility settings, and secret assumptions explicit.
-- Recommend D1, KV, R2, queues, or Durable Objects only when justified by the project.
-- Document build, preview, deploy, rollback, and validation commands.
-
-## Output
-Return implementation plan, affected files, Cloudflare services used or deferred, validation commands, and rollback notes.
+- Confirm bindings, secrets, and environment variables are declared in wrangler config, not hard-coded or assumed.
+- Check for edge-runtime violations: Node built-ins, long-lived in-memory state, blocking I/O, work over the CPU limit.
+- Verify D1, KV, and R2 access patterns respect their consistency, size, and rate limits.
+- Flag a deploy step with no preview, no rollback, or no observability.
 
 ## Role
 

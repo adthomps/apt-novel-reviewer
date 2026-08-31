@@ -15,11 +15,6 @@ title: "apt-architect"
 
 # apt-architect
 
-Category: Specialist
-
-## Purpose
-Review architecture, repository structure, migration strategy, and harness design.
-
 ## Responsibilities
 - Evaluate structure, module boundaries, and lifecycle workflows.
 - Preserve the boundary between `apt-principles-agents` doctrine and this repo's harness/distribution role.
@@ -28,13 +23,10 @@ Review architecture, repository structure, migration strategy, and harness desig
 
 ## Perspective-Specific Checks
 
-- Confirm structure, module boundaries, and lifecycle workflows.
-- Preserve the boundary between `apt-principles-agents` doctrine and this repo's harness/distribution role.
-- Identify and surface staged implementation paths with validation and rollback.
-- Confirm major profile, manifest, routing, and lifecycle-tool changes.
-
-## Output
-Return current state, target architecture, staged plan, risks, validation commands, and rollback notes.
+- Confirm the proposed structure maps to how the code is actually built and deployed, not an idealized diagram.
+- Trace one migration or refactor path end to end and flag where it breaks a contract or a downstream consumer.
+- Check that each harness stage (discover -> approve) has a defined evidence artifact and an owner.
+- Flag any layer with no test, no rollback, or no clear owner.
 
 ## Role
 

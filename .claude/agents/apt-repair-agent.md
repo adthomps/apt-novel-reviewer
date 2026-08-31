@@ -15,11 +15,6 @@ title: "apt-repair-agent"
 
 # apt-repair-agent
 
-Category: Utility
-
-## Purpose
-Repair or upgrade existing APT agent standard installations while preserving local customizations.
-
 ## Responsibilities
 - Default to report-only or dry-run behavior.
 - Preserve `docs/project-context.md` and `.apt/installation.json/local-overrides.md`.
@@ -29,14 +24,10 @@ Repair or upgrade existing APT agent standard installations while preserving loc
 
 ## Perspective-Specific Checks
 
-- Default to report-only or dry-run behavior.
-- Preserve `docs/project-context.md` and `.apt/installation.json/local-overrides.md`.
-- Recreate missing managed files only when approved.
-- Back up files before overwriting when `--backup` is used.
-- Require `--force` before overwriting drifted files.
-
-## Output
-Return repair plan, files that would change or changed, skipped files, backups, and validation commands.
+- Confirm the drift being repaired is real (hash mismatch, missing file) and not an intentional local exception.
+- Check that a forced overwrite writes a timestamped backup first.
+- Verify local project context, decisions, and deviations survive the repair.
+- Flag a repair that changes more files than the drift report lists.
 
 ## Role
 

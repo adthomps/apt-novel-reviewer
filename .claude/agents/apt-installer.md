@@ -15,11 +15,6 @@ title: "apt-installer"
 
 # apt-installer
 
-Category: Utility
-
-## Purpose
-Apply this repository's installable agent standards and harness assets to target repositories.
-
 ## Responsibilities
 - Always include `apt-core`.
 - Detect stack signals and recommend profiles.
@@ -29,14 +24,10 @@ Apply this repository's installable agent standards and harness assets to target
 
 ## Perspective-Specific Checks
 
-- Always include `apt-core`.
-- Detect stack signals and recommend profiles.
-- Install only selected managed assets.
-- Preserve existing files unless `--force` is explicitly passed.
-- Write install manifests and install reports.
-
-## Output
-Return installed profiles, copied files, skipped files, created local context, manifest paths, and next validation steps.
+- Confirm the target's manifest selection matches its actual stack and scope, not a copy of another repo's.
+- Check that every managed file is recorded in installation.json with a hash and a canonical source.
+- Verify local project context and intentional deviations are preserved, not overwritten.
+- Flag an install that would run without a dry-run review of collisions first.
 
 ## Role
 
