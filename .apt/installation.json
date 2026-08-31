@@ -3,7 +3,7 @@
   "source": {
     "repository": "apt-principles-agents",
     "version": "1.0.0",
-    "commit": "d506b16bad69761111e590e4e06cdccea35ad124"
+    "commit": "620fc6ad36d11cf2e1e68ae7805b26a36668c3c7"
   },
   "manifests": [
     "core",
@@ -22,127 +22,127 @@
       "source": "agents/beginner-reviewers/apt-beginner-user-reviewer.md",
       "target": ".apt/agents/beginner-reviewers/apt-beginner-user-reviewer.md",
       "kind": "canonical",
-      "sha256": "c8649e6cea7b42e8e5a331cd7ffa3588599ea6025e0ec0f6f1e1bbbc1ff408c6"
+      "sha256": "3904be95e05c086814b5a6c476a21788dce379d1012175cb254c4a613b03b8e5"
     },
     {
       "source": "agents/beginner-reviewers/apt-new-developer-reviewer.md",
       "target": ".apt/agents/beginner-reviewers/apt-new-developer-reviewer.md",
       "kind": "canonical",
-      "sha256": "216362857508443206fbb0107c124c3928389fe275bf9c5da03ee21a3056539e"
+      "sha256": "c7365a95eff85e9949d3d225e49d9c576186f3cff5b841bfbb824dbd8114efcb"
     },
     {
       "source": "agents/beginner-reviewers/apt-new-merchant-reviewer.md",
       "target": ".apt/agents/beginner-reviewers/apt-new-merchant-reviewer.md",
       "kind": "canonical",
-      "sha256": "094046fcac7534b1a71e8edaea2357552ec777a6c44586b52df0566c020dd22e"
+      "sha256": "e33c71ab1639dcefae5f49adb3a9748ea560d7d7cf099c554792eab882972416"
     },
     {
       "source": "agents/beginner-reviewers/apt-new-support-agent-reviewer.md",
       "target": ".apt/agents/beginner-reviewers/apt-new-support-agent-reviewer.md",
       "kind": "canonical",
-      "sha256": "92813bfd159832efc261b4633ac04422a4d76219bcd951f48cf643def25eb961"
+      "sha256": "d672b3b6fcda8b49e59974dbc9caf0e4bb15f36a66ce8b3421929775bbb93d39"
     },
     {
       "source": "agents/core/apt-architecture-lead.md",
       "target": ".apt/agents/core/apt-architecture-lead.md",
       "kind": "canonical",
-      "sha256": "1daef9807e8b44adffcaf1cc8bdcf1cac83d48a004f1dbbfab8637e635046c0a"
+      "sha256": "9393233aeba78430e10e45a65bc08b209746edba40ad5eb09eb34104172cbc11"
     },
     {
       "source": "agents/core/apt-design-lead.md",
       "target": ".apt/agents/core/apt-design-lead.md",
       "kind": "canonical",
-      "sha256": "0ba149860f8c4f9ef6e637d99eacad56ec846c4552953bc6156c165bf2ae04a7"
+      "sha256": "d1ac474aac5885ea56d47f78b3b170bc39ab5e9e4ff021f25855d221de33bee9"
     },
     {
       "source": "agents/core/apt-execution-lead.md",
       "target": ".apt/agents/core/apt-execution-lead.md",
       "kind": "canonical",
-      "sha256": "e90b9ff07b965db381916e078b976201175455268d33496aafab63a5f845217d"
+      "sha256": "745893b2b7b09cdb49970cd88acaeb03252a12fddbb338d5ca493498f9c9b10a"
     },
     {
       "source": "agents/core/apt-principal.md",
       "target": ".apt/agents/core/apt-principal.md",
       "kind": "canonical",
-      "sha256": "7cca8650fe43685ac90edcda32bf381ae35cd3105943c776feb54923467c3bd2"
+      "sha256": "a5c596a5805e1447b893721dff73dc7b08bc0bf366ce86203acfccf4d13e312c"
     },
     {
       "source": "agents/core/apt-router.md",
       "target": ".apt/agents/core/apt-router.md",
       "kind": "canonical",
-      "sha256": "81a7332ce1ca1601cdf77fcb14b201afba2798eb83f0ca0fffcf613a91ed0f51"
+      "sha256": "58f68dbbd2597bf1e061c0dda0183142de9db06f8b93bee690b24ce1a6ec6b09"
     },
     {
       "source": "agents/core/apt-thinking-lead.md",
       "target": ".apt/agents/core/apt-thinking-lead.md",
       "kind": "canonical",
-      "sha256": "1425ace0e38402e7755814ea91142f1937ef6161244a4bd7ac694173c306cd71"
+      "sha256": "e1ebcd468dda2f94a25210e9060cd18da5b8283e360e148d47b865b141297866"
     },
     {
       "source": "agents/customer/apt-ai-agent-user-reviewer.md",
       "target": ".apt/agents/customer/apt-ai-agent-user-reviewer.md",
       "kind": "canonical",
-      "sha256": "6da91b39cad49bc3033be3d02cca47482969f8ae738edc4f4ffd95493668d717"
+      "sha256": "77183c72872e819db3aebfd74233a78b00f35aed73d1edbac63fafe2671e2bff"
     },
     {
       "source": "agents/customer/apt-bank-acquirer-reviewer.md",
       "target": ".apt/agents/customer/apt-bank-acquirer-reviewer.md",
       "kind": "canonical",
-      "sha256": "970b66a52ad42706e522763efb1e609ebbefbf2f1a7901a78ab39467523d1381"
+      "sha256": "7c1e5f5a6ea41848532e1f1475048e53f49202dd1eeb517a5d29237cec7a3d1a"
     },
     {
       "source": "agents/customer/apt-business-user-reviewer.md",
       "target": ".apt/agents/customer/apt-business-user-reviewer.md",
       "kind": "canonical",
-      "sha256": "3d51a340347b259a5b07a6ea1214a9ed44f66df6a310501f802c73d0bfe6788b"
+      "sha256": "c720e1f2edc44711f9c9ac7fdb46f4f99dc6ff7ed8884e6776f98a86887b980a"
     },
     {
       "source": "agents/customer/apt-developer-integrator-reviewer.md",
       "target": ".apt/agents/customer/apt-developer-integrator-reviewer.md",
       "kind": "canonical",
-      "sha256": "a8c3affca9e2556ba5cc9067bc4037e74cb788fdfbdfe5743d86a5f4a0e94a08"
+      "sha256": "683cee9a94a2dde1b7c15f11829c383ae8c19ab7fa369b86cc88b59d57a66f2a"
     },
     {
       "source": "agents/customer/apt-support-operations-reviewer.md",
       "target": ".apt/agents/customer/apt-support-operations-reviewer.md",
       "kind": "canonical",
-      "sha256": "dbf71b28d085679c7ddac85aa585acb6a0d465c673de568bbaff0799e8b80589"
+      "sha256": "0533d46748b4cb958e5b194a4fe6dc1ba16ce495ac6485720f1da4490157dec1"
     },
     {
       "source": "agents/docs/apt-api-docs-writer.md",
       "target": ".apt/agents/docs/apt-api-docs-writer.md",
       "kind": "canonical",
-      "sha256": "3ff8980cb871ae48491559873204d57bdbb6934f0cc995a22836c21c91ac1607"
+      "sha256": "2ad3d969e38ac04408c54b1b085b1bb587bac88e7270e3521fdae98abf5031bb"
     },
     {
       "source": "agents/docs/apt-audience-docs-reviewer.md",
       "target": ".apt/agents/docs/apt-audience-docs-reviewer.md",
       "kind": "canonical",
-      "sha256": "64506169cce9c2db4e1142eec4f4a466b55a531d35735802441db42cbe88407f"
+      "sha256": "84dcef6b56446b6d563520c276f155c41fe6970c321961ce08b028a5d10367bc"
     },
     {
       "source": "agents/docs/apt-demo-and-diagram-planner.md",
       "target": ".apt/agents/docs/apt-demo-and-diagram-planner.md",
       "kind": "canonical",
-      "sha256": "9a80d9f916650cf8fa2949d9a4d158049aca6abbe3f767943d7a61967fe4b865"
+      "sha256": "cd5c86c04ba14a72b578e856aef2b88179ebdb8f5b3d99ac9ff5823931419e3e"
     },
     {
       "source": "agents/docs/apt-docs-reviewer.md",
       "target": ".apt/agents/docs/apt-docs-reviewer.md",
       "kind": "canonical",
-      "sha256": "5ac50b7c499b8a3474f62b22986ab44813255181fc0ddbdfb7e1c5989c832c28"
+      "sha256": "d08c643ea24cbcaefaaadff242bd894d7fa4b59caab7baec6f3c91a2623fcba5"
     },
     {
       "source": "agents/docs/apt-implementation-blueprint-writer.md",
       "target": ".apt/agents/docs/apt-implementation-blueprint-writer.md",
       "kind": "canonical",
-      "sha256": "6dddc645d8accf46a2982dd535104d156a72fa2e5f63a9ae04f74b20dc397061"
+      "sha256": "21fb16c14e7c584eb05afb7ae0a7638ca05f70f28d4af7d239248d9c0f9b87d9"
     },
     {
       "source": "agents/docs/apt-product-hub-builder.md",
       "target": ".apt/agents/docs/apt-product-hub-builder.md",
       "kind": "canonical",
-      "sha256": "86a1117a802861ed2b6fcbea54df94e43bdf4b36aab0dc7135b5bca60d974b0a"
+      "sha256": "8dd29002b449ee05252535922444409a830a07f87525fddeeeb4e02b6b3ca97a"
     },
     {
       "source": "agents/harness/apt-architect.md",
@@ -1081,10 +1081,22 @@
       "sha256": "124bb6a470edadeea2889fadcdaf448e54463fb7ea4c497b863b1073f97b1fbd"
     },
     {
+      "source": "standards/ai/provider-neutral-ai-task-contract.md",
+      "target": ".apt/standards/ai/provider-neutral-ai-task-contract.md",
+      "kind": "canonical",
+      "sha256": "d83832d1277672d3b8f56d37eaac01a168385fc989f672c9f2e676fd8cf420ca"
+    },
+    {
       "source": "standards/ai/repository-lifecycle-standard.md",
       "target": ".apt/standards/ai/repository-lifecycle-standard.md",
       "kind": "canonical",
       "sha256": "c0a2e6843d0798d276dd11ff803e38f66ef708251ac7f53c1f6a1b7023d0c65e"
+    },
+    {
+      "source": "standards/ai/responsible-ai-standard.md",
+      "target": ".apt/standards/ai/responsible-ai-standard.md",
+      "kind": "canonical",
+      "sha256": "28dd20b7d5d4b71ac3474b00a3028cb0a5e89d03c1fc72508949bc2df9a929f3"
     },
     {
       "source": "standards/ai/security-harness-standard.md",
@@ -1183,6 +1195,12 @@
       "sha256": "c5538b4fe53ceecfb782af1a7f09ca309b6d5b0d449bfffb5ef3cebd0d7c6aa8"
     },
     {
+      "source": "templates/docs/flagship-case-study.md",
+      "target": ".apt/templates/docs/flagship-case-study.md",
+      "kind": "canonical",
+      "sha256": "d35ec768c43e486e1086231dc93347c13209daa6a4c973256695f87a91aad335"
+    },
+    {
       "source": "templates/docs/implementation-blueprint.md",
       "target": ".apt/templates/docs/implementation-blueprint.md",
       "kind": "canonical",
@@ -1205,6 +1223,12 @@
       "target": ".apt/templates/product/audience-map.md",
       "kind": "canonical",
       "sha256": "568c4d872e0cbaa943d13e9692d8cd2263e581c1012f8e886df44688134c70b2"
+    },
+    {
+      "source": "templates/product/intake-routing-decision.md",
+      "target": ".apt/templates/product/intake-routing-decision.md",
+      "kind": "canonical",
+      "sha256": "3407850ba844208335dff2250862a5cb4113804c466fee789449642f89a818c3"
     },
     {
       "source": "templates/product/product-decision-record.md",
@@ -1259,6 +1283,354 @@
       "target": ".apt/templates/support/support-runbook.md",
       "kind": "canonical",
       "sha256": "5e490ed137da6204cde7d5d48584ffb364011e208a4bc2fc5e511c693143012f"
+    },
+    {
+      "source": "platforms/claude/source/agents/ai-output-auditor.md",
+      "target": ".claude/agents/ai-output-auditor.md",
+      "kind": "platform",
+      "sha256": "422b2106fc5bd8ad453bc514db32c960361915c269176f219688fa1d2df699bd"
+    },
+    {
+      "source": "platforms/claude/source/agents/api-architect.md",
+      "target": ".claude/agents/api-architect.md",
+      "kind": "platform",
+      "sha256": "4b3e296b710f2280fac014c1a9aaface98101892bbba606fecd58e3c7bdbca64"
+    },
+    {
+      "source": "platforms/claude/source/agents/api-experience-reviewer.md",
+      "target": ".claude/agents/api-experience-reviewer.md",
+      "kind": "platform",
+      "sha256": "c90239768f0036e558f1bf53c9e60aac1ebe6b4438fd51584db1f557183598c5"
+    },
+    {
+      "source": "platforms/claude/source/agents/customer/apt-ai-agent-user-reviewer.md",
+      "target": ".claude/agents/apt-ai-agent-user-reviewer.md",
+      "kind": "platform",
+      "sha256": "e35858f58b8702a1807f261b6ae89c4b1f528489f3441bbfc244f88ef53f9e35"
+    },
+    {
+      "source": "platforms/claude/source/agents/docs/apt-api-docs-writer.md",
+      "target": ".claude/agents/apt-api-docs-writer.md",
+      "kind": "platform",
+      "sha256": "2b560d2ae9f00df7b5f1cfce76620720549106207bd706b7cf2b9fa4ff97f61c"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-architect.md",
+      "target": ".claude/agents/apt-architect.md",
+      "kind": "platform",
+      "sha256": "9c343a4c3faf8b7f11222425448e80c76944dce238198e09c2f47d5bb58b0576"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-architecture-lead.md",
+      "target": ".claude/agents/apt-architecture-lead.md",
+      "kind": "platform",
+      "sha256": "5bf01a977d85a21383f6d6287e0a8491ac96d73fea1631b4bba2dde08f290000"
+    },
+    {
+      "source": "platforms/claude/source/agents/docs/apt-audience-docs-reviewer.md",
+      "target": ".claude/agents/apt-audience-docs-reviewer.md",
+      "kind": "platform",
+      "sha256": "2218bb5f6f833d8aa6e2c959244f20db9b7ffcd902194bd602a2d84a58e61b0f"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-auditor.md",
+      "target": ".claude/agents/apt-auditor.md",
+      "kind": "platform",
+      "sha256": "2ac963fd88756651709ab16e0d0bba78f18b40c63756b015de1beba3ddd7e44e"
+    },
+    {
+      "source": "platforms/claude/source/agents/customer/apt-bank-acquirer-reviewer.md",
+      "target": ".claude/agents/apt-bank-acquirer-reviewer.md",
+      "kind": "platform",
+      "sha256": "8a99e8a33f79ffb8a0cd3c315da5acd4bfcfad4ff87c1798cca3235f91e1c552"
+    },
+    {
+      "source": "platforms/claude/source/agents/beginner-reviewers/apt-beginner-user-reviewer.md",
+      "target": ".claude/agents/apt-beginner-user-reviewer.md",
+      "kind": "platform",
+      "sha256": "c30c381f802407cd9d6aa127e57a52dba8691c08eff99b1b5a9e8842ddab03cd"
+    },
+    {
+      "source": "platforms/claude/source/agents/customer/apt-business-user-reviewer.md",
+      "target": ".claude/agents/apt-business-user-reviewer.md",
+      "kind": "platform",
+      "sha256": "b5c1a5f89373832fbe1ee5f49ac9f327a7e46f2dfefbc8c701e6f0277410fc71"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-cloudflare-builder.md",
+      "target": ".claude/agents/apt-cloudflare-builder.md",
+      "kind": "platform",
+      "sha256": "d6a6ce38dd6cc4ec2c5f316e7e39f12bb57a2715f8f55a6cc2260f188d6ed84a"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-code-reviewer.md",
+      "target": ".claude/agents/apt-code-reviewer.md",
+      "kind": "platform",
+      "sha256": "6e7aa2d607cbf3068036dcfabd4c391dff9a700cf2390a4cab35ce1c5f313809"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-cost-controller.md",
+      "target": ".claude/agents/apt-cost-controller.md",
+      "kind": "platform",
+      "sha256": "9910e07aaeae66c747b3ecbac37d7d980a55339313ef50f7918a5bd2acaa85e9"
+    },
+    {
+      "source": "platforms/claude/source/agents/docs/apt-demo-and-diagram-planner.md",
+      "target": ".claude/agents/apt-demo-and-diagram-planner.md",
+      "kind": "platform",
+      "sha256": "e138f30e28d4030f8c7f360317d87b865268ca7c68ff30953e993bd839a807c4"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-design-lead.md",
+      "target": ".claude/agents/apt-design-lead.md",
+      "kind": "platform",
+      "sha256": "bf0fc71cf7c5068c25b793b04c0ebc7600d6b16565b8c6a714909c0aacc171de"
+    },
+    {
+      "source": "platforms/claude/source/agents/customer/apt-developer-integrator-reviewer.md",
+      "target": ".claude/agents/apt-developer-integrator-reviewer.md",
+      "kind": "platform",
+      "sha256": "e079239c4eb2a255adcd4da14c8453861a9c0a18bdea0132a4c616d1cdb32b6e"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-execution-lead.md",
+      "target": ".claude/agents/apt-execution-lead.md",
+      "kind": "platform",
+      "sha256": "77cedb820db514f2eedfee92d0d933ddb90f6b8949585201af6549cfe057a905"
+    },
+    {
+      "source": "platforms/claude/source/agents/docs/apt-implementation-blueprint-writer.md",
+      "target": ".claude/agents/apt-implementation-blueprint-writer.md",
+      "kind": "platform",
+      "sha256": "6f476452eda880a9f0da520ece095192e56f975da775c4b052660e8a04800e14"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-installer.md",
+      "target": ".claude/agents/apt-installer.md",
+      "kind": "platform",
+      "sha256": "bf3faec2dd584f9b315c1424d69fa775625b02f01877b7108afab6acfcf268e8"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-model-router.md",
+      "target": ".claude/agents/apt-model-router.md",
+      "kind": "platform",
+      "sha256": "3212a4151b345e4eca81a7ed9daa7946fd5c455436a63fbfce88068f6a69d8dd"
+    },
+    {
+      "source": "platforms/claude/source/agents/beginner-reviewers/apt-new-developer-reviewer.md",
+      "target": ".claude/agents/apt-new-developer-reviewer.md",
+      "kind": "platform",
+      "sha256": "b970b29d84fe2bbdd05df7e38640cdac30958d6491035caeb2debff84a693c74"
+    },
+    {
+      "source": "platforms/claude/source/agents/beginner-reviewers/apt-new-merchant-reviewer.md",
+      "target": ".claude/agents/apt-new-merchant-reviewer.md",
+      "kind": "platform",
+      "sha256": "9ceae393f9f7ed240dca002e36e20c0e40d905bbaa8e57b598ccf2d349a8d36c"
+    },
+    {
+      "source": "platforms/claude/source/agents/beginner-reviewers/apt-new-support-agent-reviewer.md",
+      "target": ".claude/agents/apt-new-support-agent-reviewer.md",
+      "kind": "platform",
+      "sha256": "dcf76db9a9b3b6cca0ef1d8044dd29661252697ed0c6f749a6051ada70d56144"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-principal.md",
+      "target": ".claude/agents/apt-principal.md",
+      "kind": "platform",
+      "sha256": "81f2f365b06563e9c7f357e2b51808aae55142855903ab4731b9cec36b0d2584"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-principles-reviewer.md",
+      "target": ".claude/agents/apt-principles-reviewer.md",
+      "kind": "platform",
+      "sha256": "948e06797ba2e5f841283bc113def7693e012e62ca857ec510e4f9f0ee0ee727"
+    },
+    {
+      "source": "platforms/claude/source/agents/docs/apt-product-hub-builder.md",
+      "target": ".claude/agents/apt-product-hub-builder.md",
+      "kind": "platform",
+      "sha256": "6bca2935006bec6185d096354b5fb7279eb90f217c660001dc688621cc278bb7"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-readiness-auditor.md",
+      "target": ".claude/agents/apt-readiness-auditor.md",
+      "kind": "platform",
+      "sha256": "b33edafeb19361efeb2c75e58a523785c7097174fd61659eaa17714b33dccdc6"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-repair-agent.md",
+      "target": ".claude/agents/apt-repair-agent.md",
+      "kind": "platform",
+      "sha256": "a5fa4098962183720f7566108d91fc9d3471d2fb0da3264e410a9857a26caa8b"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-repo-scanner.md",
+      "target": ".claude/agents/apt-repo-scanner.md",
+      "kind": "platform",
+      "sha256": "2272c8640354eb6a8d0adea1c262d4c2e1d27c97b15a25289eadbd6f115f0ab3"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-router.md",
+      "target": ".claude/agents/apt-router.md",
+      "kind": "platform",
+      "sha256": "000ca07df217d9d6830cbacf654f49bb5663fe001ceb88652d9c530d3e8aa20c"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-security-reviewer.md",
+      "target": ".claude/agents/apt-security-reviewer.md",
+      "kind": "platform",
+      "sha256": "2e691fe1aba2458368920588ac4869026ad9359dca5fa4f02975719710135cc0"
+    },
+    {
+      "source": "platforms/claude/source/agents/customer/apt-support-operations-reviewer.md",
+      "target": ".claude/agents/apt-support-operations-reviewer.md",
+      "kind": "platform",
+      "sha256": "fef5d82c77537c66e0189881e74b6ebfebe86e5a98237cb18c9e978ce3be9e3a"
+    },
+    {
+      "source": "platforms/claude/source/agents/apt-thinking-lead.md",
+      "target": ".claude/agents/apt-thinking-lead.md",
+      "kind": "platform",
+      "sha256": "f2f7e393d94e5d4256eaa2139bfcaa9f1fd93caf9568448f0b739df24723d1ef"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-ui-reviewer.md",
+      "target": ".claude/agents/apt-ui-reviewer.md",
+      "kind": "platform",
+      "sha256": "e64d9b04227f58e92d785d249a745b74f8ea0df34a48251422b0feffacff1154"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-verifier.md",
+      "target": ".claude/agents/apt-verifier.md",
+      "kind": "platform",
+      "sha256": "d049fcc3eb923c98c4b7c9f6ddda1db8c4f87872a5371ec23da2c7680cebfe1a"
+    },
+    {
+      "source": "platforms/claude/source/agents/cloudflare-react-hono-architect.md",
+      "target": ".claude/agents/cloudflare-react-hono-architect.md",
+      "kind": "platform",
+      "sha256": "0e260d2bd0a99f3bc98b09a174f0d3a67ddb117dddb16140741ae3b0aef2a600"
+    },
+    {
+      "source": "platforms/claude/source/agents/docs/apt-docs-reviewer.md",
+      "target": ".claude/agents/docs-apt-docs-reviewer.md",
+      "kind": "platform",
+      "sha256": "59e2ee7212e8ed238ed7201db3d2470b63286d27582b6de78e133f6e444c310e"
+    },
+    {
+      "source": "platforms/claude/source/agents/documentation-architect.md",
+      "target": ".claude/agents/documentation-architect.md",
+      "kind": "platform",
+      "sha256": "ac1d759113f5d0223003dcbbd9dfd836ff3e99a00ade19440ff9450ca743e8ce"
+    },
+    {
+      "source": "platforms/claude/source/agents/documentation-normalizer.md",
+      "target": ".claude/agents/documentation-normalizer.md",
+      "kind": "platform",
+      "sha256": "d232741a5a3e1e6a8783c55060f746e055680fe40883a6289ca204e9783871dd"
+    },
+    {
+      "source": "platforms/claude/source/agents/drack.md",
+      "target": ".claude/agents/drack.md",
+      "kind": "platform",
+      "sha256": "5e496baa9755d1c786c46666e0ece63bac0964a1fbe332ae03140f3644337e9a"
+    },
+    {
+      "source": "platforms/claude/source/agents/frontend-implementer.md",
+      "target": ".claude/agents/frontend-implementer.md",
+      "kind": "platform",
+      "sha256": "1a47f5625d8acab6823f1d8ff7c58288383c55655c59a53cca8fb3956a31126c"
+    },
+    {
+      "source": "platforms/claude/source/agents/glyph.md",
+      "target": ".claude/agents/glyph.md",
+      "kind": "platform",
+      "sha256": "6a1aa8bdcdcc9e1c6e57d11797cecf21ab0714074983faa412e405a379ba3b05"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-docs-reviewer.md",
+      "target": ".claude/agents/harness-apt-docs-reviewer.md",
+      "kind": "platform",
+      "sha256": "c720cac4f57bb26ee9631ec6723dd587da95e20095305074bfd159ad44b10fe9"
+    },
+    {
+      "source": "platforms/claude/source/agents/harness/apt-router.md",
+      "target": ".claude/agents/harness-apt-router.md",
+      "kind": "platform",
+      "sha256": "c32b466bc959f85aa8cd39a13ba010a1a37d6275925f29f6f97df3d0217a9bb8"
+    },
+    {
+      "source": "platforms/claude/source/agents/intent-ux-reviewer.md",
+      "target": ".claude/agents/intent-ux-reviewer.md",
+      "kind": "platform",
+      "sha256": "8a9d970710ccffc5746ccee6f4870ce091c1f1a5838a1d1a0da7821085a1e963"
+    },
+    {
+      "source": "platforms/claude/source/agents/javik.md",
+      "target": ".claude/agents/javik.md",
+      "kind": "platform",
+      "sha256": "0fce58d5d609677511ef8a1f2cce317c8f69ffcbf1b0cd2dc8de539ff5967c50"
+    },
+    {
+      "source": "platforms/claude/source/agents/kaidan.md",
+      "target": ".claude/agents/kaidan.md",
+      "kind": "platform",
+      "sha256": "a2f99d9cfffe5f463aa4b786630fde7f7b642f14d91fa3e5672466e9b055b3c5"
+    },
+    {
+      "source": "platforms/claude/source/agents/kasumi.md",
+      "target": ".claude/agents/kasumi.md",
+      "kind": "platform",
+      "sha256": "810b95c3593fcf9b5b536d713e9ecbacfda3865ea04302f13693eb01bbd8dcc2"
+    },
+    {
+      "source": "platforms/claude/source/agents/miranda.md",
+      "target": ".claude/agents/miranda.md",
+      "kind": "platform",
+      "sha256": "71e810e4759c06c44a1d8d662a8ebbbcde63cab0e92692dff729996e27e3617a"
+    },
+    {
+      "source": "platforms/claude/source/agents/repo-standardizer.md",
+      "target": ".claude/agents/repo-standardizer.md",
+      "kind": "platform",
+      "sha256": "4b33664790ac7a7050fa6a0df9b71ac6497933b103988190888d4356ba6489a8"
+    },
+    {
+      "source": "platforms/claude/source/agents/samara.md",
+      "target": ".claude/agents/samara.md",
+      "kind": "platform",
+      "sha256": "e8950daf0a9eb1fac4cabe76669da69d94411257f66315c627dfa7fbfb2574f0"
+    },
+    {
+      "source": "platforms/claude/source/agents/service-readiness-reviewer.md",
+      "target": ".claude/agents/service-readiness-reviewer.md",
+      "kind": "platform",
+      "sha256": "46e226244860dd8dd1f1318c4372a97e0aef4a98d1bd84b9e2cb7fd8318e092f"
+    },
+    {
+      "source": "platforms/claude/source/agents/suvi.md",
+      "target": ".claude/agents/suvi.md",
+      "kind": "platform",
+      "sha256": "db9e49d9d703a24f658d92215c80241b021271bfee0ef01784862d4bb2a36054"
+    },
+    {
+      "source": "platforms/claude/source/agents/test-engineer.md",
+      "target": ".claude/agents/test-engineer.md",
+      "kind": "platform",
+      "sha256": "9102efa0bfde97af217eb8ba210b49e2462915f86d1fe7c22df56e830de9228c"
+    },
+    {
+      "source": "platforms/claude/source/agents/wrex.md",
+      "target": ".claude/agents/wrex.md",
+      "kind": "platform",
+      "sha256": "6717354fbcd1cf03070c5b0aa6fcb80f96374d8a91f08ca56816570cb6d287ae"
+    },
+    {
+      "source": "platforms/claude/source/settings.json",
+      "target": ".claude/settings.json",
+      "kind": "platform",
+      "sha256": "1208de3685f658aec8c7079f605cf83ab1cea5ff6894ceb4a682b5785a632f9f"
     },
     {
       "source": "skills/ai-agents/agent-routing/SKILL.md",
@@ -2410,6 +2782,6 @@
   "localContext": "docs/project-context.md",
   "lastOperation": {
     "type": "sync",
-    "at": "2026-07-26T20:57:46.628Z"
+    "at": "2026-08-30T15:58:07.166Z"
   }
 }

@@ -3,7 +3,7 @@ title: Apt AI Agent User Reviewer
 kind: agent
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-29
 source: apt-agent-standards roles and APT doctrine
 domain: "customer"
 source_paths: ["apt-principles-agents/agents/customer/apt-ai-agent-user-reviewer.md"]
@@ -17,7 +17,7 @@ Provide the Apt AI Agent User Reviewer perspective while keeping APT principles,
 
 ## When to Use
 
-Use when a decision or deliverable must frame the real problem, expose assumptions, compare meaningful options, and explain decisions in beginner-clear language, especially when it affects multiple audiences or high-accuracy domains.
+Use when an autonomous AI agent (not a human) is the one integrating with or acting on the product, to confirm it can act safely and correctly without human-oriented affordances it can't use.
 
 ## Responsibilities
 
@@ -26,9 +26,16 @@ Use when a decision or deliverable must frame the real problem, expose assumptio
 - Identify blockers, risks, tradeoffs, and required approvals.
 - Make recommendations concrete enough to validate.
 
+## Perspective-Specific Checks
+
+- Confirm the product surfaces machine-readable intents, states, and confirmations an agent can act on without screen-scraping or guessing.
+- Check that irreversible or high-risk actions require an explicit, checkable confirmation step an agent can't skip accidentally.
+- Confirm error responses give an agent enough structured information to retry or recover, not just a human-readable message.
+- Flag places where the only path to complete a task assumes a human reading a screen.
+
 ## Required Skills
 
-- [Problem Framing](../../skills/thinking/problem-framing/SKILL.md)
+- [Agent Routing](../../skills/ai-agents/agent-routing/SKILL.md)
 - Cross-audience review and source verification.
 
 ## Inputs

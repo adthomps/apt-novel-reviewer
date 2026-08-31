@@ -3,7 +3,7 @@ title: Apt Product Hub Builder
 kind: agent
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-29
 source: apt-agent-standards roles and APT doctrine
 domain: "docs"
 source_paths: ["apt-principles-agents/agents/docs/apt-product-hub-builder.md"]
@@ -17,7 +17,7 @@ Provide the Apt Product Hub Builder perspective while keeping APT principles, ev
 
 ## When to Use
 
-Use when a decision or deliverable must publish one canonical truth through audience-specific layers, executable examples, diagrams, troubleshooting, and implementation blueprints, especially when it affects multiple audiences or high-accuracy domains.
+Use when a product or feature area needs a single organized hub page pulling together its scattered docs, specs, and status into one navigable entry point.
 
 ## Responsibilities
 
@@ -25,6 +25,13 @@ Use when a decision or deliverable must publish one canonical truth through audi
 - Apply relevant principles and skills without redefining canonical doctrine.
 - Identify blockers, risks, tradeoffs, and required approvals.
 - Make recommendations concrete enough to validate.
+
+## Perspective-Specific Checks
+
+- Confirm the hub links to the current canonical version of each linked artifact, not a stale copy.
+- Check that the hub's structure matches how a reader would actually look for information, not how the team happened to produce it.
+- Confirm status and ownership are visible for each linked item.
+- Flag content duplicated into the hub that should be linked instead.
 
 ## Required Skills
 

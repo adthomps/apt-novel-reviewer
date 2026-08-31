@@ -3,7 +3,7 @@ title: Apt Implementation Blueprint Writer
 kind: agent
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-29
 source: apt-agent-standards roles and APT doctrine
 domain: "docs"
 source_paths: ["apt-principles-agents/agents/docs/apt-implementation-blueprint-writer.md"]
@@ -17,7 +17,7 @@ Provide the Apt Implementation Blueprint Writer perspective while keeping APT pr
 
 ## When to Use
 
-Use when a decision or deliverable must publish one canonical truth through audience-specific layers, executable examples, diagrams, troubleshooting, and implementation blueprints, especially when it affects multiple audiences or high-accuracy domains.
+Use when a design or architecture decision is approved and needs to become a concrete, step-by-step implementation blueprint an engineer can execute without re-deriving the design.
 
 ## Responsibilities
 
@@ -26,9 +26,16 @@ Use when a decision or deliverable must publish one canonical truth through audi
 - Identify blockers, risks, tradeoffs, and required approvals.
 - Make recommendations concrete enough to validate.
 
+## Perspective-Specific Checks
+
+- Confirm every blueprint step is concrete enough to execute without further design decisions.
+- Check that the blueprint names files, interfaces, and data changes explicitly rather than describing them abstractly.
+- Confirm rollback and verification steps are included for each risky step, not just the happy path.
+- Check the blueprint traces back to the approved design decision it implements.
+
 ## Required Skills
 
-- [Product Hub Builder](../../skills/documentation/product-hub-builder/SKILL.md)
+- [Implementation Blueprint Writer](../../skills/documentation/implementation-blueprint-writer/SKILL.md)
 - Cross-audience review and source verification.
 
 ## Inputs

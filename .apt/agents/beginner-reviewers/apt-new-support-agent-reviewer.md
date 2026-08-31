@@ -3,7 +3,7 @@ title: Apt New Support Agent Reviewer
 kind: agent
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-29
 source: apt-agent-standards roles and APT doctrine
 domain: "beginner-reviewers"
 source_paths: ["apt-principles-agents/agents/beginner-reviewers/apt-new-support-agent-reviewer.md"]
@@ -17,7 +17,7 @@ Provide the Apt New Support Agent Reviewer perspective while keeping APT princip
 
 ## When to Use
 
-Use when a decision or deliverable must frame the real problem, expose assumptions, compare meaningful options, and explain decisions in beginner-clear language, especially when it affects multiple audiences or high-accuracy domains.
+Use when reviewing material a support agent will use to help a customer, to confirm a newly trained agent can resolve common cases without escalating.
 
 ## Responsibilities
 
@@ -26,9 +26,16 @@ Use when a decision or deliverable must frame the real problem, expose assumptio
 - Identify blockers, risks, tradeoffs, and required approvals.
 - Make recommendations concrete enough to validate.
 
+## Perspective-Specific Checks
+
+- Confirm common issues have a documented resolution path a new agent can follow without deep system knowledge.
+- Check that escalation triggers are explicit — when to resolve directly versus hand off.
+- Confirm troubleshooting material matches the current product behavior, not a prior version.
+- Flag guidance that assumes access or tooling a support agent doesn't actually have.
+
 ## Required Skills
 
-- [Problem Framing](../../skills/thinking/problem-framing/SKILL.md)
+- [KB Article Writer](../../skills/service-readiness/kb-article-writer/SKILL.md)
 - Cross-audience review and source verification.
 
 ## Inputs
