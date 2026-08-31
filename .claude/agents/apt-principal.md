@@ -1,15 +1,17 @@
 ---
-name: "APT Principal"
+name: apt-principal
 description: "Use as the final synthesis step after specialist perspectives have reported, when scattered concerns, risks, and tradeoffs must be reconciled into one accountable, evidence-backed decision with a clear approval status."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: opus
+kind: agent-adapter
+domain: core
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/core/apt-principal.md"]
+title: "Apt Principal"
 ---
+<!-- Generated from apt-principles-agents/agents/core/apt-principal.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Principal
 
@@ -37,8 +39,12 @@ Use as the final synthesis step after specialist perspectives have reported, whe
 
 ## Required Skills
 
-- [Decision Rationalization](../../skills/thinking/decision-rationalization/SKILL.md)
-- Cross-perspective synthesis and final accountability.
+- `decision-rationalization` — installed under `.claude/skills/decision-rationalization/`.
+
+## Enforces
+
+- APT Principles Framework — check the work against this principle and cite the clause any finding rests on.
+- Practical Thinking — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

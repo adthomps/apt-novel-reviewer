@@ -1,11 +1,23 @@
 ---
-title: "apt-repo-scanner"
-kind: "agent"
-domain: "harness"
-status: "active"
-owner: "APT"
-last_updated: "2026-06-28"
-source_paths: ["apt-agent-standards/agents/apt-repo-scanner.md"]
+id: apt-repo-scanner
+title: apt-repo-scanner
+kind: agent
+domain: harness
+scope: domain
+description: Use when inspecting a target repository for installed APT standards, drift, missing files, duplicates, or repair needs.
+applies_principles:
+  - principles/ai/agent-design.md
+uses_skills: []
+tools:
+  - read
+  - search
+model_tier: standard
+autonomy: none
+escalation: Escalate unsupported, high-impact, security, privacy, payment, compliance, destructive, or production decisions to the relevant specialist and accountable human.
+status: active
+owner: APT
+last_updated: 2026-08-30
+source_paths: ["apt-principles-agents/agents/harness/apt-repo-scanner.md"]
 ---
 
 # apt-repo-scanner
@@ -21,6 +33,14 @@ Inspect target repositories for installed APT agent standards, drift, missing fi
 - Report missing, drifted, unmanaged duplicate, and conflict candidates.
 - Generate scan reports without modifying managed files.
 
+
+## Perspective-Specific Checks
+
+- Detect legacy `.apt/installation.json` and new `.apt/installation.json/manifest.json`.
+- Compare managed target files with source files.
+- Report missing, drifted, unmanaged duplicate, and conflict candidates.
+- Generate scan reports without modifying managed files.
+
 ## Output
 Return install state, profile state, drift summary, missing files, conflicts, and repair recommendations.
 
@@ -30,11 +50,14 @@ Act as the apt repo scanner within the APT discover, classify, validate, remedia
 
 ## When to Use
 
-Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs.
-
+Use when inspecting a target repository for installed APT standards, drift, missing files, duplicates, or repair needs.
 ## Required Skills
 
 Use the closest canonical APT skill, the relevant context pack, and exact target-repository instructions.
+
+## Enforces
+
+- [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

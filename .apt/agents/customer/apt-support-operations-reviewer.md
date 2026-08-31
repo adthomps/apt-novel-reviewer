@@ -1,11 +1,24 @@
 ---
+id: apt-support-operations-reviewer
 title: Apt Support Operations Reviewer
 kind: agent
+domain: customer
+scope: domain
+description: Use when a change is about to ship, to confirm the support organization can actually operate and troubleshoot it on day one.
+applies_principles:
+  - principles/design/role-based-experience.md
+uses_skills:
+  - skills/service-readiness/support-readiness-review
+tools:
+  - read
+  - search
+model_tier: standard
+autonomy: advisory
+escalation: Escalate unsupported payment, security, privacy, compliance, legal, production-launch, or irreversible migration decisions to the accountable human and relevant expert.
 status: active
 owner: APT
-last_updated: 2026-08-29
+last_updated: 2026-08-30
 source: apt-agent-standards roles and APT doctrine
-domain: "customer"
 source_paths: ["apt-principles-agents/agents/customer/apt-support-operations-reviewer.md"]
 ---
 
@@ -37,6 +50,10 @@ Use when a change is about to ship, to confirm the support organization can actu
 
 - [Support Readiness Review](../../skills/service-readiness/support-readiness-review/SKILL.md)
 - Cross-audience review and source verification.
+
+## Enforces
+
+- [Role Based Experience](../../principles/design/role-based-experience.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

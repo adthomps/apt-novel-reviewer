@@ -4,7 +4,7 @@ description: Use when work must publish one canonical truth through audience-spe
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "Audience Layered Docs"
 domain: "documentation"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: audience map, canonical source, business and partner guides, developer contract, support runbook, AI examples, diagrams, demos, and freshness owner.
-6. Review one guide for every audience, copied truths, non-runnable examples, missing support identifiers, and docs that describe intent instead of behavior; separate blockers, recommendations, and open questions.
+1. Inventory canonical facts, contracts, identifiers, lifecycle states, status labels, owners, and freshness signals before drafting audience-specific material.
+2. Map each audience to its questions, decisions, tasks, prerequisites, terminology, depth, risks, examples, support needs, and next action.
+3. Design shared source fragments or references for repeated truth; keep audience files focused on explanation, sequence, and action rather than copied contracts.
+4. Build layers for the audiences actually served and cross-link them to canonical sources, related layers, runnable examples, troubleshooting, and escalation.
+5. Test representative comprehension and task completion, including terminology consistency and handoffs between business, partner, developer, support, internal, and agent views.
+6. Record the dependency map and maintenance trigger so a product, contract, state, support, or status change updates every affected layer without drift.
 
 ## Outputs
 
@@ -48,6 +48,8 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 
 - Treat **Audience Layered Docs** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Do not create one independently maintained truth per audience; centralize facts and vary explanation, depth, sequence, and action.
+- Maintain an audience-to-source dependency map so product and contract changes trigger every affected layer.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

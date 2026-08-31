@@ -46,6 +46,25 @@ Use context packs, source indexes, and prompts instead of copying the full repos
 - A role cannot approve its own high-risk remediation.
 - A failed or low-confidence role output must trigger fallback, retry, or human review.
 
+## Delegation Depth
+
+Delegation is one level deep. The orchestrator holds the delegation capability;
+a delegated role does not re-delegate. A role that finds it needs another
+perspective returns that gap to the orchestrator rather than spawning a
+sub-role of its own.
+
+An orchestrator that must fan out to several specialists therefore cannot itself
+be a delegated role — it must be the top-level session, or a script that invokes
+each role as its own top-level call (for example one headless invocation per
+role, aggregated). A single delegated "do everything" role is acceptable only
+for a bounded task that needs no further fan-out.
+
+Because a role's brief is the only context it gets and it cannot ask for more,
+the orchestrator must hand each role a complete brief: the change or artifact
+under review, the relevant slice of the plan, and the specific canonical sources
+the role must apply. A role with an insufficient brief fails and says so; it
+does not guess.
+
 ## Failure Conditions
 
 - Multiple agents work from different undocumented assumptions.

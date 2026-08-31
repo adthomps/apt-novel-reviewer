@@ -46,6 +46,10 @@ Review for unclear ownership, accidental coupling, irreversible migrations, prov
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Architecture canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-integration-architect](../../agents/architecture/apt-integration-architect.md) — Use when two or more systems need to be connected — via API, event stream, or bridge — and the integration pattern itself needs architectural review.
+
 ## Related
 
 - [APT Principles](../README.md)

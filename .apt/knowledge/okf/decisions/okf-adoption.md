@@ -2,14 +2,16 @@
 type: "Decision"
 title: "OKF Adoption"
 description: "Boundary decision for adopting OKF v0.2 as a portable APT knowledge layer without introducing generated wiki tooling or replacing canonical Markdown sources."
+resource: "apt-principles-agents/docs/refactor/okf-design.md"
+tags: ["apt", "decision", "knowledge", "okf", "governance"]
 status: "stable"
 kind: "okf-concept"
 domain: "knowledge"
 owner: "APT"
-last_updated: "2026-07-26"
+last_updated: "2026-08-24"
 source_paths: ["apt-principles-agents/docs/refactor/okf-design.md", "apt-principles-agents/docs/refactor/decision-register.md"]
 authority: "derived"
-verified: { by: "human:APT", at: "2026-07-26T00:00:00-07:00" }
+verified: { by: "human:APT", at: "2026-08-24T00:00:00-07:00" }
 sources: [{ id: "okf-design", resource: "apt-principles-agents/docs/refactor/okf-design.md", title: "OKF Design" }, { id: "decision-register", resource: "apt-principles-agents/docs/refactor/decision-register.md", title: "Refactor Decision Register" }]
 ---
 

@@ -1,15 +1,17 @@
 ---
-name: "APT Architecture Lead"
+name: apt-architecture-lead
 description: "Use when a change has structural or system-design implications spanning more than one architecture perspective, and someone needs to own the combined structural verdict."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: opus
+kind: agent-adapter
+domain: core
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/core/apt-architecture-lead.md"]
+title: "Apt Architecture Lead"
 ---
+<!-- Generated from apt-principles-agents/agents/core/apt-architecture-lead.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Architecture Lead
 
@@ -37,8 +39,12 @@ Use when a change has structural or system-design implications spanning more tha
 
 ## Required Skills
 
-- [System Architecture Review](../../skills/architecture/system-architecture-review/SKILL.md)
-- Cross-audience review and source verification.
+- `system-architecture-review` — installed under `.claude/skills/system-architecture-review/`.
+
+## Enforces
+
+- APT Principles Framework — check the work against this principle and cite the clause any finding rests on.
+- Practical Thinking — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

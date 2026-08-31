@@ -1,15 +1,17 @@
 ---
-name: "Drack"
-description: "Invoke Drack — use when implementation work targets the Cloudflare Workers/Pages + Hono stack, to confirm it follows the stack's actual constraints (bindings, cold starts, edge runtime limits)."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: drack
+description: "Use when implementation work targets the Cloudflare Workers/Pages + Hono stack, to confirm it follows the stack's actual constraints (bindings, cold starts, edge runtime limits)."
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: engineering
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/engineering/drack.md"]
+title: "Drack"
 ---
+<!-- Generated from apt-principles-agents/agents/engineering/drack.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Drack
 
@@ -43,8 +45,11 @@ Use when implementation work targets the Cloudflare Workers/Pages + Hono stack, 
 
 ## Required Skills
 
-- [Cloudflare + Hono Architecture](../../skills/architecture/cloudflare-hono-architecture/SKILL.md)
-- Cross-audience review and source verification.
+- `cloudflare-hono-architecture` — installed under `.claude/skills/cloudflare-hono-architecture/`.
+
+## Enforces
+
+- APT Quality & Testing (Validate) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

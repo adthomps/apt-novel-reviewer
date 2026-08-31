@@ -1,15 +1,17 @@
 ---
-name: "apt-cost-controller"
-description: "Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: apt-cost-controller
+description: "Use when a task risks excessive token usage, repeated context loading, unnecessary model escalation, or redundant scans."
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: harness
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/harness/apt-cost-controller.md"]
+title: "apt-cost-controller"
 ---
+<!-- Generated from apt-principles-agents/agents/harness/apt-cost-controller.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # apt-cost-controller
 
@@ -24,6 +26,13 @@ Control token usage, repeated context, model escalation, and unnecessary scans.
 - Detect duplicated prompts, repeated standards, oversized examples, and stale inventories.
 - Keep token budgets explicit in task packets.
 
+## Perspective-Specific Checks
+
+- Select the smallest useful context pack set.
+- Recommend local routing or summarization before cloud escalation.
+- Detect duplicated prompts, repeated standards, oversized examples, and stale inventories.
+- Keep token budgets explicit in task packets.
+
 ## Output
 Return token budget, context loading plan, compression recommendations, and escalation controls.
 
@@ -33,11 +42,14 @@ Act as the apt cost controller within the APT discover, classify, validate, reme
 
 ## When to Use
 
-Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs.
-
+Use when a task risks excessive token usage, repeated context loading, unnecessary model escalation, or redundant scans.
 ## Required Skills
 
-Use the closest canonical APT skill, the relevant context pack, and exact target-repository instructions.
+- Use the closest canonical APT skill installed under `.claude/skills/`.
+
+## Enforces
+
+- Agent Design — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

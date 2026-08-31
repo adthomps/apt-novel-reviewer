@@ -1,15 +1,17 @@
 ---
-name: "APT Implementation Blueprint Writer"
+name: apt-implementation-blueprint-writer
 description: "Use when a design or architecture decision is approved and needs to become a concrete, step-by-step implementation blueprint an engineer can execute without re-deriving the design."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: docs
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/docs/apt-implementation-blueprint-writer.md"]
+title: "Apt Implementation Blueprint Writer"
 ---
+<!-- Generated from apt-principles-agents/agents/docs/apt-implementation-blueprint-writer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Implementation Blueprint Writer
 
@@ -37,8 +39,11 @@ Use when a design or architecture decision is approved and needs to become a con
 
 ## Required Skills
 
-- [Implementation Blueprint Writer](../../skills/documentation/implementation-blueprint-writer/SKILL.md)
-- Cross-audience review and source verification.
+- `implementation-blueprint-writer` — installed under `.claude/skills/implementation-blueprint-writer/`.
+
+## Enforces
+
+- Documentation Principles — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

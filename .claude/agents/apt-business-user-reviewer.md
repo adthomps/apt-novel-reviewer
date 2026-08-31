@@ -1,15 +1,17 @@
 ---
-name: "APT Business User Reviewer"
+name: apt-business-user-reviewer
 description: "Use when a deliverable will be used by a business owner or operator (not a developer) to run their business, to confirm it matches how they actually think about their operations."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: customer
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/customer/apt-business-user-reviewer.md"]
+title: "Apt Business User Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/customer/apt-business-user-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Business User Reviewer
 
@@ -37,8 +39,11 @@ Use when a deliverable will be used by a business owner or operator (not a devel
 
 ## Required Skills
 
-- [Customer Journey Mapping](../../skills/design/customer-journey-mapping/SKILL.md)
-- Cross-audience review and source verification.
+- `customer-journey-mapping` — installed under `.claude/skills/customer-journey-mapping/`.
+
+## Enforces
+
+- Role Based Experience — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

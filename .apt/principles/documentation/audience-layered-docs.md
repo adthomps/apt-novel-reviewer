@@ -3,7 +3,7 @@ title: Audience Layered Docs
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "documentation"
 source_paths: ["apt-principles-agents/principles/documentation/audience-layered-docs.md"]
@@ -43,9 +43,16 @@ Review for one guide for every audience, copied truths, non-runnable examples, m
 
 - Treat **Audience Layered Docs** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Keep facts, contracts, identifiers, lifecycle states, and current-versus-planned status in one canonical source; audience layers select and explain that truth rather than copying independent versions.
+- Give each audience a named question, decision, task, prerequisite, depth, example, recovery path, and next action while preserving cross-links to the governing source.
+- Test terminology and task completion across business, partner, developer, support, internal, and agent audiences, and update all affected layers from the same source change.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Documentation canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [documentation-normalizer](../../agents/docs/documentation-normalizer.md) — Use to consolidate duplicated, stale, or scattered documentation into canonical homes, proposing a merge, move, and delete plan before any edits.
+
 ## Related
 
 - [APT Principles](../README.md)

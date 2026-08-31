@@ -36,6 +36,7 @@ Use this pack for React/Vite apps, public websites, portfolio surfaces, dashboar
 - [Documentation Standards](../standards/documentation/documentation-standards.md) for docs and learning surfaces
 - [Design Tokens](../references/design-tokens.json)
 - [Design Lint Gates](../references/design-lint-gates.json)
+- [Design Reference Intake](../docs/design-reference-intake.md)
 - shadcn/ui project files in the target repo, including `components.json`, component folders, aliases, Tailwind config, and global CSS/token files when present
 
 ## Required Checks

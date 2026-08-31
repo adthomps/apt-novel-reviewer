@@ -1,15 +1,17 @@
 ---
-name: "APT New Support Agent Reviewer"
+name: apt-new-support-agent-reviewer
 description: "Use when reviewing material a support agent will use to help a customer, to confirm a newly trained agent can resolve common cases without escalating."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: beginner-reviewers
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/beginner-reviewers/apt-new-support-agent-reviewer.md"]
+title: "Apt New Support Agent Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/beginner-reviewers/apt-new-support-agent-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt New Support Agent Reviewer
 
@@ -37,8 +39,11 @@ Use when reviewing material a support agent will use to help a customer, to conf
 
 ## Required Skills
 
-- [KB Article Writer](../../skills/service-readiness/kb-article-writer/SKILL.md)
-- Cross-audience review and source verification.
+- `kb-article-writer` — installed under `.claude/skills/kb-article-writer/`.
+
+## Enforces
+
+- Beginner Clarity — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

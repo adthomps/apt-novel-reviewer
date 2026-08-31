@@ -1,11 +1,24 @@
 ---
+id: apt-beginner-user-reviewer
 title: Apt Beginner User Reviewer
 kind: agent
+domain: beginner-reviewers
+scope: domain
+description: Use when a deliverable will be seen by someone with no prior context on APT or the product, to confirm it's understandable without assumed background.
+applies_principles:
+  - principles/thinking/beginner-clarity.md
+uses_skills:
+  - skills/thinking/beginner-clarity-review
+tools:
+  - read
+  - search
+model_tier: standard
+autonomy: advisory
+escalation: Escalate unsupported payment, security, privacy, compliance, legal, production-launch, or irreversible migration decisions to the accountable human and relevant expert.
 status: active
 owner: APT
-last_updated: 2026-08-29
+last_updated: 2026-08-30
 source: apt-agent-standards roles and APT doctrine
-domain: "beginner-reviewers"
 source_paths: ["apt-principles-agents/agents/beginner-reviewers/apt-beginner-user-reviewer.md"]
 ---
 
@@ -37,6 +50,10 @@ Use when a deliverable will be seen by someone with no prior context on APT or t
 
 - [Beginner Clarity Review](../../skills/thinking/beginner-clarity-review/SKILL.md)
 - Cross-audience review and source verification.
+
+## Enforces
+
+- [Beginner Clarity](../../principles/thinking/beginner-clarity.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

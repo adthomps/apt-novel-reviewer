@@ -1,15 +1,17 @@
 ---
-name: "APT Thinking Lead"
+name: apt-thinking-lead
 description: "Use before domain-specific perspectives are engaged, whenever the problem statement, assumptions, or tradeoffs behind a proposal haven't yet been made explicit and checkable."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: opus
+kind: agent-adapter
+domain: core
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/core/apt-thinking-lead.md"]
+title: "Apt Thinking Lead"
 ---
+<!-- Generated from apt-principles-agents/agents/core/apt-thinking-lead.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Thinking Lead
 
@@ -37,8 +39,12 @@ Use before domain-specific perspectives are engaged, whenever the problem statem
 
 ## Required Skills
 
-- [Problem Framing](../../skills/thinking/problem-framing/SKILL.md)
-- Cross-audience review and source verification.
+- `problem-framing` — installed under `.claude/skills/problem-framing/`.
+
+## Enforces
+
+- APT Principles Framework — check the work against this principle and cite the clause any finding rests on.
+- Practical Thinking — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

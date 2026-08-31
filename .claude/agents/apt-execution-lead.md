@@ -1,15 +1,17 @@
 ---
-name: "APT Execution Lead"
+name: apt-execution-lead
 description: "Use when a change is ready to move from design/architecture into implementation, and someone needs to confirm the plan is buildable, safely sequenced, and verifiable before work starts."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: opus
+kind: agent-adapter
+domain: core
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/core/apt-execution-lead.md"]
+title: "Apt Execution Lead"
 ---
+<!-- Generated from apt-principles-agents/agents/core/apt-execution-lead.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Execution Lead
 
@@ -37,8 +39,12 @@ Use when a change is ready to move from design/architecture into implementation,
 
 ## Required Skills
 
-- [Implementation Review](../../skills/engineering/implementation-review/SKILL.md)
-- Cross-audience review and source verification.
+- `implementation-review` — installed under `.claude/skills/implementation-review/`.
+
+## Enforces
+
+- APT Principles Framework — check the work against this principle and cite the clause any finding rests on.
+- Practical Thinking — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

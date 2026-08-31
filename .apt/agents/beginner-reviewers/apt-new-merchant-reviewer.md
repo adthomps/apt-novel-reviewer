@@ -1,11 +1,24 @@
 ---
+id: apt-new-merchant-reviewer
 title: Apt New Merchant Reviewer
 kind: agent
+domain: beginner-reviewers
+scope: domain
+description: Use when reviewing a merchant's first-run experience — signup, KYC, first transaction — to confirm a business owner without payments expertise can complete it unassisted.
+applies_principles:
+  - principles/thinking/beginner-clarity.md
+uses_skills:
+  - skills/ecommerce/merchant-onboarding-review
+tools:
+  - read
+  - search
+model_tier: standard
+autonomy: advisory
+escalation: Escalate unsupported payment, security, privacy, compliance, legal, production-launch, or irreversible migration decisions to the accountable human and relevant expert.
 status: active
 owner: APT
-last_updated: 2026-08-29
+last_updated: 2026-08-30
 source: apt-agent-standards roles and APT doctrine
-domain: "beginner-reviewers"
 source_paths: ["apt-principles-agents/agents/beginner-reviewers/apt-new-merchant-reviewer.md"]
 ---
 
@@ -37,6 +50,10 @@ Use when reviewing a merchant's first-run experience — signup, KYC, first tran
 
 - [Merchant Onboarding Review](../../skills/ecommerce/merchant-onboarding-review/SKILL.md)
 - Cross-audience review and source verification.
+
+## Enforces
+
+- [Beginner Clarity](../../principles/thinking/beginner-clarity.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

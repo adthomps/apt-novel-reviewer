@@ -1,15 +1,17 @@
 ---
-name: "apt-installer"
-description: "Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: apt-installer
+description: "Use when applying this repository’s installable agent standards and harness assets to a target repository for the first time."
+tools: Read, Grep, Glob, Edit, Write, MultiEdit
+model: sonnet
+kind: agent-adapter
+domain: harness
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/harness/apt-installer.md"]
+title: "apt-installer"
 ---
+<!-- Generated from apt-principles-agents/agents/harness/apt-installer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # apt-installer
 
@@ -25,6 +27,14 @@ Apply this repository's installable agent standards and harness assets to target
 - Preserve existing files unless `--force` is explicitly passed.
 - Write install manifests and install reports.
 
+## Perspective-Specific Checks
+
+- Always include `apt-core`.
+- Detect stack signals and recommend profiles.
+- Install only selected managed assets.
+- Preserve existing files unless `--force` is explicitly passed.
+- Write install manifests and install reports.
+
 ## Output
 Return installed profiles, copied files, skipped files, created local context, manifest paths, and next validation steps.
 
@@ -34,11 +44,14 @@ Act as the apt installer within the APT discover, classify, validate, remediate,
 
 ## When to Use
 
-Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs.
-
+Use when applying this repository’s installable agent standards and harness assets to a target repository for the first time.
 ## Required Skills
 
-Use the closest canonical APT skill, the relevant context pack, and exact target-repository instructions.
+- Use the closest canonical APT skill installed under `.claude/skills/`.
+
+## Enforces
+
+- Agent Design — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

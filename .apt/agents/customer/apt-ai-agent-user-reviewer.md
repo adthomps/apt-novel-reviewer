@@ -1,11 +1,24 @@
 ---
+id: apt-ai-agent-user-reviewer
 title: Apt AI Agent User Reviewer
 kind: agent
+domain: customer
+scope: domain
+description: Use when an autonomous AI agent (not a human) is the one integrating with or acting on the product, to confirm it can act safely and correctly without human-oriented affordances it can't use.
+applies_principles:
+  - principles/design/role-based-experience.md
+uses_skills:
+  - skills/ai-agents/agent-routing
+tools:
+  - read
+  - search
+model_tier: standard
+autonomy: advisory
+escalation: Escalate unsupported payment, security, privacy, compliance, legal, production-launch, or irreversible migration decisions to the accountable human and relevant expert.
 status: active
 owner: APT
-last_updated: 2026-08-29
+last_updated: 2026-08-30
 source: apt-agent-standards roles and APT doctrine
-domain: "customer"
 source_paths: ["apt-principles-agents/agents/customer/apt-ai-agent-user-reviewer.md"]
 ---
 
@@ -37,6 +50,10 @@ Use when an autonomous AI agent (not a human) is the one integrating with or act
 
 - [Agent Routing](../../skills/ai-agents/agent-routing/SKILL.md)
 - Cross-audience review and source verification.
+
+## Enforces
+
+- [Role Based Experience](../../principles/design/role-based-experience.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

@@ -1,15 +1,17 @@
 ---
-name: "APT Beginner User Reviewer"
+name: apt-beginner-user-reviewer
 description: "Use when a deliverable will be seen by someone with no prior context on APT or the product, to confirm it's understandable without assumed background."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: beginner-reviewers
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/beginner-reviewers/apt-beginner-user-reviewer.md"]
+title: "Apt Beginner User Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/beginner-reviewers/apt-beginner-user-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Beginner User Reviewer
 
@@ -37,8 +39,11 @@ Use when a deliverable will be seen by someone with no prior context on APT or t
 
 ## Required Skills
 
-- [Beginner Clarity Review](../../skills/thinking/beginner-clarity-review/SKILL.md)
-- Cross-audience review and source verification.
+- `beginner-clarity-review` — installed under `.claude/skills/beginner-clarity-review/`.
+
+## Enforces
+
+- Beginner Clarity — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

@@ -1,15 +1,17 @@
 ---
-name: "apt-cloudflare-builder"
-description: "Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: apt-cloudflare-builder
+description: "Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows."
+tools: Read, Grep, Glob, Edit, Write, MultiEdit
+model: sonnet
+kind: agent-adapter
+domain: harness
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/harness/apt-cloudflare-builder.md"]
+title: "apt-cloudflare-builder"
 ---
+<!-- Generated from apt-principles-agents/agents/harness/apt-cloudflare-builder.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # apt-cloudflare-builder
 
@@ -24,6 +26,13 @@ Build and review Cloudflare Workers, Pages, Hono, D1, KV, R2, and deployment wor
 - Recommend D1, KV, R2, queues, or Durable Objects only when justified by the project.
 - Document build, preview, deploy, rollback, and validation commands.
 
+## Perspective-Specific Checks
+
+- Separate static frontend responsibilities from dynamic Worker behavior.
+- Keep bindings, compatibility settings, and secret assumptions explicit.
+- Recommend D1, KV, R2, queues, or Durable Objects only when justified by the project.
+- Document build, preview, deploy, rollback, and validation commands.
+
 ## Output
 Return implementation plan, affected files, Cloudflare services used or deferred, validation commands, and rollback notes.
 
@@ -33,11 +42,14 @@ Act as the apt cloudflare builder within the APT discover, classify, validate, r
 
 ## When to Use
 
-Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs.
-
+Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
 ## Required Skills
 
-Use the closest canonical APT skill, the relevant context pack, and exact target-repository instructions.
+- Use the closest canonical APT skill installed under `.claude/skills/`.
+
+## Enforces
+
+- Agent Design — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

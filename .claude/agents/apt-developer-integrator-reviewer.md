@@ -1,15 +1,17 @@
 ---
-name: "APT Developer Integrator Reviewer"
+name: apt-developer-integrator-reviewer
 description: "Use when reviewing the steady-state integration experience for a developer already familiar with the product, to confirm advanced flows and edge cases are covered, not just the first call."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: customer
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/customer/apt-developer-integrator-reviewer.md"]
+title: "Apt Developer Integrator Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/customer/apt-developer-integrator-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Developer Integrator Reviewer
 
@@ -37,8 +39,11 @@ Use when reviewing the steady-state integration experience for a developer alrea
 
 ## Required Skills
 
-- [Developer Guide Writer](../../skills/documentation/developer-guide-writer/SKILL.md)
-- Distinct from `agents/beginner-reviewers/apt-new-developer-reviewer.md`, which reviews first-run onboarding rather than steady-state integration.
+- `developer-guide-writer` — installed under `.claude/skills/developer-guide-writer/`.
+
+## Enforces
+
+- Role Based Experience — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

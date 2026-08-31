@@ -1,15 +1,17 @@
 ---
-name: "Wrex"
-description: "Invoke Wrex — use as the senior cross-cutting sign-off for payments work, after specialist payment perspectives (fraud, chargeback, gateway, architecture) have reported, to reconcile them into one accountable payments recommendation."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: wrex
+description: "Use as the senior cross-cutting sign-off for payments work, after specialist payment perspectives (fraud, chargeback, gateway, architecture) have reported, to reconcile them into one accountable payments recommendation."
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: payments
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/payments/wrex.md"]
+title: "Wrex"
 ---
+<!-- Generated from apt-principles-agents/agents/payments/wrex.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Wrex
 
@@ -44,8 +46,12 @@ Use as the senior cross-cutting sign-off for payments work, after specialist pay
 
 ## Required Skills
 
-- [Payment Lifecycle Analysis](../../skills/payments/payment-lifecycle-analysis/SKILL.md)
-- Cross-perspective synthesis for the payments domain.
+- `payment-lifecycle-analysis` — installed under `.claude/skills/payment-lifecycle-analysis/`.
+
+## Enforces
+
+- Payment Lifecycle — check the work against this principle and cite the clause any finding rests on.
+- Payment Architecture — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

@@ -111,6 +111,14 @@ Return:
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Execution canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [ai-output-auditor](../../agents/engineering/ai-output-auditor.md) — Use to audit generated code, documentation, plans, review comments, or migration proposals for unsupported claims, invented files or APIs, hidden behavior changes, and missing validation.
+- [apt-engineering-reviewer](../../agents/engineering/apt-engineering-reviewer.md) — Use as a general implementation-quality review of code changes — correctness, maintainability, test coverage — before merge.
+- [apt-principles-reviewer](../../agents/core/apt-principles-reviewer.md) — Use to review code, documentation, plans, and diffs for APT Core alignment — behavior preservation, clear intent, small reviewable scope with a rollback path, and grounded output with no invented interfaces.
+- [apt-refactor-agent](../../agents/engineering/apt-refactor-agent.md) — Use when code is being restructured without an intended behavior change, to confirm the refactor is actually behavior-preserving.
+- [drack](../../agents/engineering/drack.md) — Use when implementation work targets the Cloudflare Workers/Pages + Hono stack, to confirm it follows the stack's actual constraints (bindings, cold starts, edge runtime limits).
+
 ## Related Checklists
 
 - `checklists/quality-testing-checklist.md`

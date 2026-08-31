@@ -1,15 +1,17 @@
 ---
-name: "Miranda"
-description: "Invoke Miranda — use when prioritization, sequencing, or tradeoff decisions across multiple initiatives need a product-management perspective."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: miranda
+description: "Use when prioritization, sequencing, or tradeoff decisions across multiple initiatives need a product-management perspective."
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: product
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/product/miranda.md"]
+title: "Miranda"
 ---
+<!-- Generated from apt-principles-agents/agents/product/miranda.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Miranda
 
@@ -43,8 +45,11 @@ Use when prioritization, sequencing, or tradeoff decisions across multiple initi
 
 ## Required Skills
 
-- [Roadmap Planner](../../skills/product/roadmap-planner/SKILL.md)
-- Cross-audience review and source verification.
+- `roadmap-planner` — installed under `.claude/skills/roadmap-planner/`.
+
+## Enforces
+
+- APT Execution Model (Build) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

@@ -1,7 +1,7 @@
 ---
 title: AI Agent Review Checklist
 version: v1
-last_updated: 2026-06-21
+last_updated: 2026-08-16
 owner: APT
 status: draft
 kind: "checklist"
@@ -20,6 +20,8 @@ Run it before an agent prompt becomes reusable, before an AI route ships, and be
 ## Required Checks
 
 - [ ] Role and task are explicit.
+- [ ] Intended human outcome, affected audiences, and unacceptable outcomes are explicit.
+- [ ] Risk classification and maximum autonomy level are recorded.
 - [ ] Canonical sources are named.
 - [ ] Tool-native installed files are distinguished from canonical APT doctrine.
 - [ ] In-scope and out-of-scope work are clear.
@@ -30,6 +32,10 @@ Run it before an agent prompt becomes reusable, before an AI route ships, and be
 - [ ] Evaluation cases or dry-run outputs cover normal, missing-context, forbidden-action, and degraded-provider paths.
 - [ ] Fallback, refusal, referral, or escalation behavior is defined for low-confidence or high-risk inputs.
 - [ ] Security, secrets, and production-impacting boundaries are protected.
+- [ ] Data authority, sensitivity, retention, deletion, and provider boundaries are defined.
+- [ ] Disclosure, human challenge, correction, refusal, and escalation behavior match the impact.
+- [ ] Evaluation covers relevant bias, accessibility, misuse, prompt-injection, and tool-abuse cases.
+- [ ] Monitoring, incident ownership, rollback, and shutdown behavior are defined for durable capabilities.
 - [ ] Harness stage is named: discover, classify, validate, remediate, verify, or approve.
 - [ ] Classification covers APT layer, risk, data sensitivity, model capability, locality, and approval needs.
 - [ ] Model routing uses the smallest sufficient capability and avoids vendor-specific doctrine.

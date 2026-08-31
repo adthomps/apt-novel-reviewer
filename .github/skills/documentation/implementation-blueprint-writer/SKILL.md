@@ -4,7 +4,7 @@ description: Use when work must publish one canonical truth through audience-spe
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "Implementation Blueprint Writer"
 domain: "documentation"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: audience map, canonical source, business and partner guides, developer contract, support runbook, AI examples, diagrams, demos, and freshness owner.
-6. Review one guide for every audience, copied truths, non-runnable examples, missing support identifiers, and docs that describe intent instead of behavior; separate blockers, recommendations, and open questions.
+1. Verify current architecture, file ownership, commands, contracts, generated boundaries, integrations, constraints, and relevant decisions from exact repository sources.
+2. Define outcome, audiences, scope, non-goals, assumptions, dependencies, risks, acceptance criteria, and decisions that require accountable approval.
+3. Map proposed changes to exact components and owners, including contract, data, security, compatibility, operational, documentation, support, and generated-output effects.
+4. Sequence coherent increments with prerequisites, implementation notes, validation commands, evidence, rollout, monitoring, rollback, and handoff criteria.
+5. Distinguish current, proposed, optional, illustrative, and out-of-scope behavior; identify gaps rather than inventing missing paths or product claims.
+6. Review the blueprint with implementer, operator, security/risk, documentation/support, and beginner perspectives before marking it ready.
 
 ## Outputs
 
@@ -48,6 +48,8 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 
 - Treat **Implementation Blueprint Writer** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Map every change to an exact owner, source boundary, dependency, validation command, rollout/rollback step, and acceptance signal.
+- Separate verified current state from proposed or illustrative structure so the blueprint remains executable and auditable.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

@@ -2,14 +2,16 @@
 type: "Workflow"
 title: "Cross-Repo Guidance Sync"
 description: "APT workflow for keeping downstream repositories current with selected principles, agents, skills, prompts, templates, and platform guidance."
+resource: "apt-principles-agents/docs/operations/operating.md"
+tags: ["apt", "workflow", "distribution", "sync", "okf"]
 status: "stable"
 kind: "okf-concept"
 domain: "knowledge"
 owner: "APT"
-last_updated: "2026-07-26"
+last_updated: "2026-08-24"
 source_paths: ["apt-principles-agents/docs/operations/operating.md", "apt-principles-agents/docs/operations/workspace-rollout.md", "apt-principles-agents/scripts/apt-assets.mjs"]
 authority: "derived"
-verified: { by: "human:APT", at: "2026-07-26T00:00:00-07:00" }
+verified: { by: "human:APT", at: "2026-08-24T00:00:00-07:00" }
 sources: [{ id: "distribution-operations", resource: "apt-principles-agents/docs/operations/operating.md", title: "Distribution operations" }, { id: "workspace-rollout", resource: "apt-principles-agents/docs/operations/workspace-rollout.md", title: "Workspace rollout" }, { id: "apt-assets", resource: "apt-principles-agents/scripts/apt-assets.mjs", title: "APT asset distribution script" }]
 ---
 

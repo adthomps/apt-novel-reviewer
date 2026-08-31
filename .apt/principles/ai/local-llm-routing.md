@@ -3,7 +3,7 @@ title: Local LLM Routing
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "ai"
 source_paths: ["apt-principles-agents/principles/ai/local-llm-routing.md"]
@@ -43,6 +43,9 @@ Review for unsupported claims, overpowered tools, weak-model routing for high-st
 
 - Treat **Local Llm Routing** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: task packet, sources, routing, tool boundaries, evaluation, review, approval.
+- Route locally only when measured capability, context capacity, latency, structured-output reliability, tool support, and data-handling behavior satisfy the task—not merely because local execution appears cheaper or private.
+- Keep high-impact architecture, security, privacy, health, payment, compliance, irreversible migration, and final approval decisions behind stronger evaluation and accountable human or specialist review.
+- Define confidence, validation, context-overflow, tool-failure, and unsupported-format triggers that automatically escalate the same task packet without losing provenance.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Ai canonical hub](README.md) and linked standards/checklists before making final claims.

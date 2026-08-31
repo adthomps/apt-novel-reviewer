@@ -15,5 +15,6 @@ Templates for connect customer evidence and business outcomes to scope, prioriti
 
 - [Product Overview.md](product-overview.md)
 - [Audience Map.md](audience-map.md)
+- [Intake Routing Decision.md](intake-routing-decision.md)
 - [Product Hub Checklist.md](product-hub-checklist.md)
 - [Product Decision Record.md](product-decision-record.md)

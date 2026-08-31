@@ -3,7 +3,7 @@ title: Migration Guides
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "documentation"
 source_paths: ["apt-principles-agents/principles/documentation/migration-guides.md"]
@@ -43,6 +43,9 @@ Review for one guide for every audience, copied truths, non-runnable examples, m
 
 - Treat **Migration Guides** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Identify source and target versions, affected consumers and data, prerequisites, compatibility window, behavior mappings, breaking changes, validation, dual-run or cutover evidence, rollback, and retirement criteria.
+- Provide task-based paths for fresh adoption, common migration, exceptions, troubleshooting, and support escalation without hiding irreversible steps or operational dependencies.
+- Keep dates, statuses, deprecations, known gaps, and customer communications owned and current; never present planned target behavior as already available.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Documentation canonical hub](README.md) and linked standards/checklists before making final claims.

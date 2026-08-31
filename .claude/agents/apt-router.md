@@ -1,15 +1,17 @@
 ---
-name: "APT Router"
+name: apt-router
 description: "Use at the start of any review-council engagement, before any specialist perspective agent is invoked, to decide which agents the request actually needs based on domain, audience, and risk."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: opus
+kind: agent-adapter
+domain: core
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/core/apt-router.md"]
+title: "Apt Router"
 ---
+<!-- Generated from apt-principles-agents/agents/core/apt-router.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Router
 
@@ -37,8 +39,12 @@ Use at the start of any review-council engagement, before any specialist perspec
 
 ## Required Skills
 
-- [Agent Routing](../../skills/ai-agents/agent-routing/SKILL.md)
-- Distinct from `agents/harness/apt-router.md`, which builds task packets for the installable APT harness workflow rather than selecting review-council perspectives.
+- `agent-routing` — installed under `.claude/skills/agent-routing/`.
+
+## Enforces
+
+- APT Principles Framework — check the work against this principle and cite the clause any finding rests on.
+- Practical Thinking — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

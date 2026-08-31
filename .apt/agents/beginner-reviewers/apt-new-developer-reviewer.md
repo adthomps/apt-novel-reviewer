@@ -1,11 +1,24 @@
 ---
+id: apt-new-developer-reviewer
 title: Apt New Developer Reviewer
 kind: agent
+domain: beginner-reviewers
+scope: domain
+description: Use when reviewing a developer's first-run experience — first API call, first local setup, first error — to confirm nothing assumes prior familiarity with this specific codebase.
+applies_principles:
+  - principles/thinking/beginner-clarity.md
+uses_skills:
+  - skills/documentation/developer-guide-writer
+tools:
+  - read
+  - search
+model_tier: standard
+autonomy: advisory
+escalation: Escalate unsupported payment, security, privacy, compliance, legal, production-launch, or irreversible migration decisions to the accountable human and relevant expert.
 status: active
 owner: APT
-last_updated: 2026-08-29
+last_updated: 2026-08-30
 source: apt-agent-standards roles and APT doctrine
-domain: "beginner-reviewers"
 source_paths: ["apt-principles-agents/agents/beginner-reviewers/apt-new-developer-reviewer.md"]
 ---
 
@@ -37,6 +50,10 @@ Use when reviewing a developer's first-run experience — first API call, first 
 
 - [Developer Guide Writer](../../skills/documentation/developer-guide-writer/SKILL.md)
 - Distinct from `agents/customer/apt-developer-integrator-reviewer.md`, which reviews the steady-state integration experience rather than first-run onboarding.
+
+## Enforces
+
+- [Beginner Clarity](../../principles/thinking/beginner-clarity.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

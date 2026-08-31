@@ -1,11 +1,24 @@
 ---
+id: apt-audience-docs-reviewer
 title: Apt Audience Docs Reviewer
 kind: agent
+domain: docs
+scope: domain
+description: Use when documentation exists but it's unclear whether it's actually usable by the audience it claims to serve (beginner, developer, business user, support agent).
+applies_principles:
+  - principles/documentation/README.md
+uses_skills:
+  - skills/documentation/audience-layered-docs
+tools:
+  - read
+  - search
+model_tier: standard
+autonomy: advisory
+escalation: Escalate unsupported payment, security, privacy, compliance, legal, production-launch, or irreversible migration decisions to the accountable human and relevant expert.
 status: active
 owner: APT
-last_updated: 2026-08-29
+last_updated: 2026-08-30
 source: apt-agent-standards roles and APT doctrine
-domain: "docs"
 source_paths: ["apt-principles-agents/agents/docs/apt-audience-docs-reviewer.md"]
 ---
 
@@ -37,6 +50,10 @@ Use when documentation exists but it's unclear whether it's actually usable by t
 
 - [Audience-Layered Docs](../../skills/documentation/audience-layered-docs/SKILL.md)
 - Cross-audience review and source verification.
+
+## Enforces
+
+- [Documentation Principles](../../principles/documentation/README.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

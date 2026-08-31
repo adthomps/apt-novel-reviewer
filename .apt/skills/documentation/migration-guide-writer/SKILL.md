@@ -4,7 +4,7 @@ description: Use when work must publish one canonical truth through audience-spe
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "Migration Guide Writer"
 domain: "documentation"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: audience map, canonical source, business and partner guides, developer contract, support runbook, AI examples, diagrams, demos, and freshness owner.
-6. Review one guide for every audience, copied truths, non-runnable examples, missing support identifiers, and docs that describe intent instead of behavior; separate blockers, recommendations, and open questions.
+1. Verify source and target versions, behaviors, schemas, authentication, data, consumers, dependencies, support obligations, dates, and deprecation status from canonical evidence.
+2. Segment fresh adopters, standard migrations, high-risk consumers, and exceptions; state prerequisites, compatibility windows, ownership, and approval requirements for each path.
+3. Build field/error/auth/state mappings, ordered steps, examples, validation, observability, dual-run or cutover checks, rollback, and data reconciliation where applicable.
+4. Document breaking changes, irreversible actions, downtime or degraded behavior, known gaps, troubleshooting, communication cadence, and support escalation without hiding uncertainty.
+5. Test the guide with representative consumers in a fixture, sandbox, rehearsal, or dry run and capture ambiguous steps, missing permissions, timing, and recovery evidence.
+6. Assign freshness, communication, exception, support, and retirement owners; separate current availability from planned target behavior and record the final exit criteria.
 
 ## Outputs
 
@@ -48,6 +48,8 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 
 - Treat **Migration Guide Writer** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Include mappings, compatibility window, rehearsal or dry-run evidence, observability, rollback, reconciliation, support, and retirement criteria.
+- Label current, deprecated, planned, and unavailable behavior explicitly so consumers can make safe timing decisions.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

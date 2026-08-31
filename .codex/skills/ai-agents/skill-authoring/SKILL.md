@@ -4,7 +4,7 @@ description: Use when work must route work by risk and capability, constrain too
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "Skill Authoring"
 domain: "ai-agents"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: task packet, routing decision, selected skills and agents, source evidence, evaluation, review outcome, and approval record.
-6. Review unsupported claims, excessive context, weak-model routing, unclear handoffs, and automation without approval; separate blockers, recommendations, and open questions.
+1. Name one bounded capability and its consumer; separate the reusable procedure from doctrine, accountable agent perspective, one-off prompt, and tool-specific adapter behavior.
+2. Define positive and negative triggers, required and optional inputs, prerequisites, source-loading rules, tool permissions, mutation boundaries, and stop conditions.
+3. Write an executable sequence with decision points, missing-evidence behavior, human approval gates, failure recovery, and the smallest useful context packet.
+4. Specify concrete outputs, required evidence, validation commands or review checks, residual-risk reporting, and the next accountable owner.
+5. Test representative success, ambiguity, missing-input, unsafe-action, tool-failure, and incompatible-environment cases across every supported host shape.
+6. Record canonical references, source provenance, owner, version or freshness signal, maintenance triggers, adapter differences, and retirement or migration behavior.
 
 ## Outputs
 
@@ -47,7 +47,9 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 ## Domain Checklist
 
 - Treat **Skill Authoring** as an explicit decision with defined scope, evidence, owner, and validation.
-- Define identity, credential, token, authorization, expiry, revocation, and audit boundaries separately.
+- Reject title-swapped procedures: the skill must materially change decisions, evidence, process, outputs, or failure handling for its named capability.
+- Keep the portable contract self-contained while isolating host-specific paths, metadata, permissions, and command conventions in adapters.
+- Require evaluation cases and maintenance triggers before distributing the skill as a durable capability.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

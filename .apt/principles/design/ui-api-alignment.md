@@ -3,7 +3,7 @@ title: UI API Alignment
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "design"
 source_paths: ["apt-principles-agents/principles/design/ui-api-alignment.md"]
@@ -43,6 +43,9 @@ Review for screen-first design, missing states, inaccessible interactions, role 
 
 - Treat **Ui Api Alignment** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: intent, audience, journey, roles, states, accessibility, UI/API alignment.
+- Map every visible action and state to the responsible API operation, permission, data source, side effect, completion signal, error, retry or recovery rule, and support identifier.
+- Do not hide backend uncertainty: loading, queued, partial, stale, conflicted, denied, failed, rolled-back, and eventually consistent states need truthful interface behavior.
+- Validate contracts and interface states together so schema, authorization, error, or lifecycle changes cannot silently create impossible controls, misleading success, role leakage, or dead ends.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Design canonical hub](README.md) and linked standards/checklists before making final claims.

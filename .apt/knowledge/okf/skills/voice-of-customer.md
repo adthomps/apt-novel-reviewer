@@ -2,14 +2,16 @@
 type: "Skill"
 title: "Voice Of Customer"
 description: "APT skill for connecting customer evidence and business outcomes to scope, prioritization, requirements, roadmap, metrics, and launch decisions."
+resource: "apt-principles-agents/skills/product/voice-of-customer/SKILL.md"
+tags: ["apt", "product", "skill", "voice-of-customer", "okf"]
 status: "stable"
 kind: "okf-concept"
 domain: "knowledge"
 owner: "APT"
-last_updated: "2026-07-26"
+last_updated: "2026-08-24"
 source_paths: ["apt-principles-agents/skills/product/voice-of-customer/SKILL.md"]
 authority: "derived"
-verified: { by: "human:APT", at: "2026-07-26T00:00:00-07:00" }
+verified: { by: "human:APT", at: "2026-08-24T00:00:00-07:00" }
 sources: [{ id: "voice-of-customer-skill", resource: "apt-principles-agents/skills/product/voice-of-customer/SKILL.md", title: "Voice Of Customer skill" }]
 ---
 

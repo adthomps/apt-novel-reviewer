@@ -1,15 +1,17 @@
 ---
-name: "APT Support Operations Reviewer"
+name: apt-support-operations-reviewer
 description: "Use when a change is about to ship, to confirm the support organization can actually operate and troubleshoot it on day one."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: customer
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/customer/apt-support-operations-reviewer.md"]
+title: "Apt Support Operations Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/customer/apt-support-operations-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Support Operations Reviewer
 
@@ -37,8 +39,11 @@ Use when a change is about to ship, to confirm the support organization can actu
 
 ## Required Skills
 
-- [Support Readiness Review](../../skills/service-readiness/support-readiness-review/SKILL.md)
-- Cross-audience review and source verification.
+- `support-readiness-review` — installed under `.claude/skills/support-readiness-review/`.
+
+## Enforces
+
+- Role Based Experience — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

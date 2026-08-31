@@ -1,15 +1,17 @@
 ---
-name: "APT Bank Acquirer Reviewer"
+name: apt-bank-acquirer-reviewer
 description: "Use when a deliverable will be reviewed or used by a bank or acquirer partner, to confirm it addresses their risk, compliance, and settlement concerns."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: customer
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/customer/apt-bank-acquirer-reviewer.md"]
+title: "Apt Bank Acquirer Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/customer/apt-bank-acquirer-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Bank Acquirer Reviewer
 
@@ -37,8 +39,11 @@ Use when a deliverable will be reviewed or used by a bank or acquirer partner, t
 
 ## Required Skills
 
-- [Partner/Acquirer Onboarding Review](../../skills/ecommerce/partner-acquirer-onboarding-review/SKILL.md)
-- Cross-audience review and source verification.
+- `partner-acquirer-onboarding-review` — installed under `.claude/skills/partner-acquirer-onboarding-review/`.
+
+## Enforces
+
+- Role Based Experience — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

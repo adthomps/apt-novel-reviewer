@@ -3,7 +3,7 @@ title: AI Usage Examples
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "documentation"
 source_paths: ["apt-principles-agents/principles/documentation/ai-usage-examples.md"]
@@ -43,6 +43,9 @@ Review for one guide for every audience, copied truths, non-runnable examples, m
 
 - Treat **Ai Usage Examples** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- State the task, intended audience, source inputs, model or capability assumptions, instructions, permitted tools, expected output, validation, human review, and prohibited actions so the example teaches a reproducible workflow rather than prompt folklore.
+- Label examples as executable, illustrative, historical, or provider-specific; record the tested environment and date without presenting model behavior as stable fact.
+- Remove secrets, personal or regulated data, hidden production actions, and unsupported claims; include failure, ambiguity, escalation, and safe-stop examples alongside successful output.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Documentation canonical hub](README.md) and linked standards/checklists before making final claims.

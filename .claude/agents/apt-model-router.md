@@ -1,15 +1,17 @@
 ---
-name: "apt-model-router"
-description: "Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: apt-model-router
+description: "Use when choosing the smallest sufficient local or cloud model tier for an APT task."
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: harness
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/harness/apt-model-router.md"]
+title: "apt-model-router"
 ---
+<!-- Generated from apt-principles-agents/agents/harness/apt-model-router.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # apt-model-router
 
@@ -19,6 +21,14 @@ Category: Router
 Choose the smallest sufficient local or cloud model tier for an APT task.
 
 ## Responsibilities
+- Estimate task complexity, context size, and verification needs.
+- Prefer local models for classification, summarization, checklist review, and task-packet creation.
+- Escalate to mid-tier models for implementation and documentation.
+- Escalate to frontier models for architecture, security, complex debugging, major migrations, and final review.
+- Record why escalation is necessary.
+
+## Perspective-Specific Checks
+
 - Estimate task complexity, context size, and verification needs.
 - Prefer local models for classification, summarization, checklist review, and task-packet creation.
 - Escalate to mid-tier models for implementation and documentation.
@@ -50,11 +60,14 @@ Act as the apt model router within the APT discover, classify, validate, remedia
 
 ## When to Use
 
-Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs.
-
+Use when choosing the smallest sufficient local or cloud model tier for an APT task.
 ## Required Skills
 
-Use the closest canonical APT skill, the relevant context pack, and exact target-repository instructions.
+- Use the closest canonical APT skill installed under `.claude/skills/`.
+
+## Enforces
+
+- Agent Design — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

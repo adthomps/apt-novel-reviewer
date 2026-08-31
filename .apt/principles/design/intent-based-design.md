@@ -3,7 +3,7 @@ title: Intent Based Design
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "design"
 source_paths: ["apt-principles-agents/principles/design/intent-based-design.md"]
@@ -43,9 +43,16 @@ Review for screen-first design, missing states, inaccessible interactions, role 
 
 - Treat **Intent Based Design** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: intent, audience, journey, roles, states, accessibility, UI/API alignment.
+- Model each primary intent as an end-to-end journey with entry conditions, permissions, success evidence, recovery, and a clear next action rather than as a collection of screens.
+- Design loading, empty, error, partial, success, denied, and recovery states before treating the happy path as complete.
+- Trace every visible action to its API, authorization, data, audit, support, and documentation behavior so the interface does not promise an unsupported capability.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Design canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [intent-ux-reviewer](../../agents/design/intent-ux-reviewer.md) — Use to review a product surface through user intent, workflow completion, state design, accessibility, and responsive behavior.
+
 ## Related
 
 - [APT Principles](../README.md)

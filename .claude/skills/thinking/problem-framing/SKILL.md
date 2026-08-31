@@ -4,7 +4,7 @@ description: Use when work must frame the real problem, expose assumptions, comp
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "Problem Framing"
 domain: "thinking"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: problem statement, desired outcome, constraints, assumptions, options, tradeoffs, decision, and unresolved questions.
-6. Review solution-first framing, false certainty, hidden constraints, and decisions without measurable outcomes; separate blockers, recommendations, and open questions.
+1. Separate the observed problem, requested solution, desired outcome, and affected audiences; flag where they do not logically align.
+2. Build an evidence table that distinguishes verified facts, interpretations, assumptions, constraints, and unknowns with owners.
+3. Define measurable success and failure signals plus the decision horizon, reversibility, and cost of delay.
+4. Generate at least two viable options, including “do nothing” or a smaller experiment when appropriate, and compare tradeoffs against explicit criteria.
+5. Seek disconfirming evidence for the leading option and identify which assumption would invalidate the recommendation.
+6. Record the decision, rationale, rejected alternatives, validation step, review date, and unresolved questions without presenting assumptions as facts.
 
 ## Outputs
 
@@ -48,6 +48,8 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 
 - Treat **Problem Framing** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: problem statement, assumptions, alternatives, decision, measurable outcome.
+- Show how the proposed action changes the desired outcome; reject solution-first framing when that causal link is unsupported.
+- Prefer the smallest reversible test that can resolve a consequential unknown before committing to broad implementation.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

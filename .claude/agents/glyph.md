@@ -1,15 +1,17 @@
 ---
-name: "Glyph"
-description: "Invoke Glyph — use when a decision or deliverable must select API styles from audience and behavior, then make contracts predictable, secure, observable, evolvable, and usable by humans and agents, especially when it affects multiple audiences or high-accuracy domains."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: glyph
+description: "Use when a decision or deliverable must select API styles from audience and behavior, then make contracts predictable, secure, observable, evolvable, and usable by humans and agents, especially when it affects multiple audiences or high-accuracy domains."
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: api
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/api/glyph.md"]
+title: "Glyph"
 ---
+<!-- Generated from apt-principles-agents/agents/api/glyph.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Glyph
 
@@ -44,8 +46,12 @@ Use when a decision or deliverable must select API styles from audience and beha
 
 ## Required Skills
 
-- [Modern API Design](../../skills/api/modern-api-design/SKILL.md)
-- Cross-audience review and source verification.
+- `modern-api-design` — installed under `.claude/skills/modern-api-design/`.
+
+## Enforces
+
+- Modern API Design — check the work against this principle and cite the clause any finding rests on.
+- Rest API Design — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

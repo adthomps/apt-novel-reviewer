@@ -116,6 +116,13 @@ Return:
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Execution canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-launch-readiness-lead](../../agents/product/apt-launch-readiness-lead.md) — Use before a launch or major release, to confirm the product, support, and operational readiness checks are actually complete, not just planned.
+- [apt-prd-writer](../../agents/product/apt-prd-writer.md) — Use when a feature or initiative needs a PRD written or reviewed — problem, goals, non-goals, success metrics, and scope.
+- [apt-voice-of-customer-analyst](../../agents/product/apt-voice-of-customer-analyst.md) — Use when raw customer feedback, support tickets, or interview notes need to be synthesized into themes that inform product decisions.
+- [miranda](../../agents/product/miranda.md) — Use when prioritization, sequencing, or tradeoff decisions across multiple initiatives need a product-management perspective.
+
 ## Related Checklists
 
 - `checklists/execution-readiness-checklist.md`

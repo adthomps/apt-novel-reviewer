@@ -1,15 +1,17 @@
 ---
-name: "APT API Docs Writer"
+name: apt-api-docs-writer
 description: "Use when API reference material, quickstarts, or integration guides need to be written or reviewed against the actual contract, not just described in prose."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: docs
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/docs/apt-api-docs-writer.md"]
+title: "Apt API Docs Writer"
 ---
+<!-- Generated from apt-principles-agents/agents/docs/apt-api-docs-writer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt API Docs Writer
 
@@ -37,8 +39,11 @@ Use when API reference material, quickstarts, or integration guides need to be w
 
 ## Required Skills
 
-- [API Guide Writer](../../skills/documentation/api-guide-writer/SKILL.md)
-- Cross-audience review and source verification.
+- `api-guide-writer` — installed under `.claude/skills/api-guide-writer/`.
+
+## Enforces
+
+- Documentation Principles — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

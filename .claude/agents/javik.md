@@ -1,15 +1,17 @@
 ---
-name: "Javik"
-description: "Invoke Javik — use as the senior cross-cutting sign-off for architecture work, after specialist architecture perspectives (api, integration, modernization) have reported, to reconcile them into one accountable structural recommendation."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: javik
+description: "Use as the senior cross-cutting sign-off for architecture work, after specialist architecture perspectives (api, integration, modernization) have reported, to reconcile them into one accountable structural recommendation."
+tools: Read, Grep, Glob
+model: opus
+kind: agent-adapter
+domain: architecture
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/architecture/javik.md"]
+title: "Javik"
 ---
+<!-- Generated from apt-principles-agents/agents/architecture/javik.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Javik
 
@@ -43,8 +45,11 @@ Use as the senior cross-cutting sign-off for architecture work, after specialist
 
 ## Required Skills
 
-- [System Architecture Review](../../skills/architecture/system-architecture-review/SKILL.md)
-- Cross-perspective synthesis for the architecture domain.
+- `system-architecture-review` — installed under `.claude/skills/system-architecture-review/`.
+
+## Enforces
+
+- System Architecture — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

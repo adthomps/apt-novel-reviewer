@@ -1,15 +1,17 @@
 ---
-name: "APT Audience Docs Reviewer"
+name: apt-audience-docs-reviewer
 description: "Use when documentation exists but it's unclear whether it's actually usable by the audience it claims to serve (beginner, developer, business user, support agent)."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: docs
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/docs/apt-audience-docs-reviewer.md"]
+title: "Apt Audience Docs Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/docs/apt-audience-docs-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Audience Docs Reviewer
 
@@ -37,8 +39,11 @@ Use when documentation exists but it's unclear whether it's actually usable by t
 
 ## Required Skills
 
-- [Audience-Layered Docs](../../skills/documentation/audience-layered-docs/SKILL.md)
-- Cross-audience review and source verification.
+- `audience-layered-docs` — installed under `.claude/skills/audience-layered-docs/`.
+
+## Enforces
+
+- Documentation Principles — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

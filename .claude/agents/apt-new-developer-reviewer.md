@@ -1,15 +1,17 @@
 ---
-name: "APT New Developer Reviewer"
+name: apt-new-developer-reviewer
 description: "Use when reviewing a developer's first-run experience — first API call, first local setup, first error — to confirm nothing assumes prior familiarity with this specific codebase."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: beginner-reviewers
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/beginner-reviewers/apt-new-developer-reviewer.md"]
+title: "Apt New Developer Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/beginner-reviewers/apt-new-developer-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt New Developer Reviewer
 
@@ -37,8 +39,11 @@ Use when reviewing a developer's first-run experience — first API call, first 
 
 ## Required Skills
 
-- [Developer Guide Writer](../../skills/documentation/developer-guide-writer/SKILL.md)
-- Distinct from `agents/customer/apt-developer-integrator-reviewer.md`, which reviews the steady-state integration experience rather than first-run onboarding.
+- `developer-guide-writer` — installed under `.claude/skills/developer-guide-writer/`.
+
+## Enforces
+
+- Beginner Clarity — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

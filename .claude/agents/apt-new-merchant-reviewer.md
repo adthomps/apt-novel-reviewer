@@ -1,15 +1,17 @@
 ---
-name: "APT New Merchant Reviewer"
+name: apt-new-merchant-reviewer
 description: "Use when reviewing a merchant's first-run experience — signup, KYC, first transaction — to confirm a business owner without payments expertise can complete it unassisted."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: beginner-reviewers
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/beginner-reviewers/apt-new-merchant-reviewer.md"]
+title: "Apt New Merchant Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/beginner-reviewers/apt-new-merchant-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt New Merchant Reviewer
 
@@ -37,8 +39,11 @@ Use when reviewing a merchant's first-run experience — signup, KYC, first tran
 
 ## Required Skills
 
-- [Merchant Onboarding Review](../../skills/ecommerce/merchant-onboarding-review/SKILL.md)
-- Cross-audience review and source verification.
+- `merchant-onboarding-review` — installed under `.claude/skills/merchant-onboarding-review/`.
+
+## Enforces
+
+- Beginner Clarity — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

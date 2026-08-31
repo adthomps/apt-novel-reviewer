@@ -46,6 +46,10 @@ Review for unclear ownership, accidental coupling, irreversible migrations, prov
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Architecture canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [javik](../../agents/architecture/javik.md) — Use as the senior cross-cutting sign-off for architecture work, after specialist architecture perspectives (api, integration, modernization) have reported, to reconcile them into one accountable structural recommendation.
+
 ## Related
 
 - [APT Principles](../README.md)

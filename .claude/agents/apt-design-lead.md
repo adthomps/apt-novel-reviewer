@@ -1,15 +1,17 @@
 ---
-name: "APT Design Lead"
+name: apt-design-lead
 description: "Use when a change touches UI, UX flow, or customer-facing design decisions spanning more than one audience or perspective, and someone needs to own the combined design verdict."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: opus
+kind: agent-adapter
+domain: core
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/core/apt-design-lead.md"]
+title: "Apt Design Lead"
 ---
+<!-- Generated from apt-principles-agents/agents/core/apt-design-lead.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Design Lead
 
@@ -37,8 +39,12 @@ Use when a change touches UI, UX flow, or customer-facing design decisions spann
 
 ## Required Skills
 
-- [Intent-Based UI Design](../../skills/design/intent-based-ui-design/SKILL.md)
-- Cross-audience review and source verification.
+- `intent-based-ui-design` — installed under `.claude/skills/intent-based-ui-design/`.
+
+## Enforces
+
+- APT Principles Framework — check the work against this principle and cite the clause any finding rests on.
+- Practical Thinking — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

@@ -1,15 +1,17 @@
 ---
-name: "Kasumi"
-description: "Invoke Kasumi — use when a change has security implications — authentication, data exposure, attack surface — that need review before it ships."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: kasumi
+description: "Use when a change has security implications — authentication, data exposure, attack surface — that need review before it ships."
+tools: Read, Grep, Glob
+model: opus
+kind: agent-adapter
+domain: risk
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/risk/kasumi.md"]
+title: "Kasumi"
 ---
+<!-- Generated from apt-principles-agents/agents/risk/kasumi.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Kasumi
 
@@ -43,8 +45,11 @@ Use when a change has security implications — authentication, data exposure, a
 
 ## Required Skills
 
-- [Security Review](../../skills/security-risk/security-review/SKILL.md)
-- Owns the security lens of the risk domain — see `agents/risk/apt-permissions-reviewer.md` and `apt-compliance-awareness-reviewer.md` for the governance/access lens.
+- `security-review` — installed under `.claude/skills/security-review/`.
+
+## Enforces
+
+- Security Review — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

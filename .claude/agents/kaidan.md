@@ -1,15 +1,17 @@
 ---
-name: "Kaidan"
-description: "Invoke Kaidan — use when a partner or acquirer integration/onboarding flow needs review, distinct from a single merchant's onboarding."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: kaidan
+description: "Use when a partner or acquirer integration/onboarding flow needs review, distinct from a single merchant's onboarding."
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: ecommerce
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/ecommerce/kaidan.md"]
+title: "Kaidan"
 ---
+<!-- Generated from apt-principles-agents/agents/ecommerce/kaidan.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Kaidan
 
@@ -43,8 +45,11 @@ Use when a partner or acquirer integration/onboarding flow needs review, distinc
 
 ## Required Skills
 
-- [Partner/Acquirer Onboarding Review](../../skills/ecommerce/partner-acquirer-onboarding-review/SKILL.md)
-- Cross-audience review and source verification.
+- `partner-acquirer-onboarding-review` — installed under `.claude/skills/partner-acquirer-onboarding-review/`.
+
+## Enforces
+
+- Marketplace Payments — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

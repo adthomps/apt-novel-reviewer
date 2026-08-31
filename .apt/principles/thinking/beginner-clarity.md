@@ -46,6 +46,13 @@ Review for solution-first framing, false certainty, hidden constraints, and deci
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Thinking canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-beginner-user-reviewer](../../agents/beginner-reviewers/apt-beginner-user-reviewer.md) — Use when a deliverable will be seen by someone with no prior context on APT or the product, to confirm it's understandable without assumed background.
+- [apt-new-developer-reviewer](../../agents/beginner-reviewers/apt-new-developer-reviewer.md) — Use when reviewing a developer's first-run experience — first API call, first local setup, first error — to confirm nothing assumes prior familiarity with this specific codebase.
+- [apt-new-merchant-reviewer](../../agents/beginner-reviewers/apt-new-merchant-reviewer.md) — Use when reviewing a merchant's first-run experience — signup, KYC, first transaction — to confirm a business owner without payments expertise can complete it unassisted.
+- [apt-new-support-agent-reviewer](../../agents/beginner-reviewers/apt-new-support-agent-reviewer.md) — Use when reviewing material a support agent will use to help a customer, to confirm a newly trained agent can resolve common cases without escalating.
+
 ## Related
 
 - [APT Principles](../README.md)

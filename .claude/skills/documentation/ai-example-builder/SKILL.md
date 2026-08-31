@@ -4,7 +4,7 @@ description: Use when work must publish one canonical truth through audience-spe
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "AI Example Builder"
 domain: "documentation"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: audience map, canonical source, business and partner guides, developer contract, support runbook, AI examples, diagrams, demos, and freshness owner.
-6. Review one guide for every audience, copied truths, non-runnable examples, missing support identifiers, and docs that describe intent instead of behavior; separate blockers, recommendations, and open questions.
+1. Define the learner, task, consequence level, source inputs, expected capability, allowed tools, approval boundaries, and observable success criteria.
+2. Capture the exact instructions and context-loading sequence while replacing secrets, personal data, regulated data, and production identifiers with safe fixtures.
+3. Provide expected output shape, source citations, validation steps, human review points, prohibited actions, and a safe-stop or escalation path.
+4. Include at least one ambiguity, missing-input, tool-failure, unsupported-claim, or unsafe-action case—not only an ideal successful response.
+5. Run the example in the named environment when it is labeled executable; record model/tool assumptions, date, command or interaction, result, and known nondeterminism.
+6. Link canonical doctrine, distinguish illustrative from verified behavior, assign a freshness owner, and define what product, model, tool, or policy change requires retesting.
 
 ## Outputs
 
@@ -48,6 +48,8 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 
 - Treat **Ai Example Builder** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Show safe failure and escalation behavior as well as success, with exact validation and human-review points.
+- Label provider/model assumptions and executable status so readers do not mistake a demonstration for a durable capability guarantee.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

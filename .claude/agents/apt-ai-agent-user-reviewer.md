@@ -1,15 +1,17 @@
 ---
-name: "APT AI Agent User Reviewer"
+name: apt-ai-agent-user-reviewer
 description: "Use when an autonomous AI agent (not a human) is the one integrating with or acting on the product, to confirm it can act safely and correctly without human-oriented affordances it can't use."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: customer
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/customer/apt-ai-agent-user-reviewer.md"]
+title: "Apt AI Agent User Reviewer"
 ---
+<!-- Generated from apt-principles-agents/agents/customer/apt-ai-agent-user-reviewer.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt AI Agent User Reviewer
 
@@ -37,8 +39,11 @@ Use when an autonomous AI agent (not a human) is the one integrating with or act
 
 ## Required Skills
 
-- [Agent Routing](../../skills/ai-agents/agent-routing/SKILL.md)
-- Cross-audience review and source verification.
+- `agent-routing` — installed under `.claude/skills/agent-routing/`.
+
+## Enforces
+
+- Role Based Experience — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

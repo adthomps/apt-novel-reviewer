@@ -2,14 +2,16 @@
 type: "Principle"
 title: "APT Knowledge System"
 description: "APT guidance for capturing, maintaining, and reusing source-aware knowledge across humans, agents, and downstream repositories."
+resource: "apt-principles-agents/principles/execution/knowledge-and-learning.md"
+tags: ["apt", "knowledge-system", "principle", "okf", "downstream-context"]
 status: "stable"
 kind: "okf-concept"
 domain: "knowledge"
 owner: "APT"
-last_updated: "2026-07-26"
+last_updated: "2026-08-24"
 source_paths: ["apt-principles-agents/principles/execution/knowledge-and-learning.md"]
 authority: "derived"
-verified: { by: "human:APT", at: "2026-07-26T00:00:00-07:00" }
+verified: { by: "human:APT", at: "2026-08-24T00:00:00-07:00" }
 sources: [{ id: "knowledge-system", resource: "apt-principles-agents/principles/execution/knowledge-and-learning.md", title: "APT Knowledge System" }]
 ---
 

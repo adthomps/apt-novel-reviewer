@@ -5,8 +5,8 @@ domain: design
 status: active
 owner: APT
 version: v1
-last_updated: 2026-06-28
-source_paths: ["apt-principles/design.md"]
+last_updated: 2026-08-16
+source_paths: ["apt-principles/design.md", "apt-design-reference/README.md"]
 supersedes: ["apt-principles/design.md"]
 ---
 
@@ -52,105 +52,80 @@ Predictable interaction patterns reduce cognitive load and implementation drift.
 
 ## Standards / Rules
 
-- Use APT visual tokens instead of one-off colors, spacing, radius, shadows, or motion.
-- Use Apt-prefixed presentational components where the project provides them.
+- Use the target project's semantic visual tokens instead of one-off colors, spacing, radius, shadows, or motion.
+- Reuse the target project's presentational primitives before adding new ones.
 - Keep UI components free of business logic and direct API calls.
-- Use calm motion only: subtle fade, transition, or hover lift.
+- Use motion to communicate state or spatial change, not as decoration.
 - Keep copy concise, precise, and non-marketing.
 - Treat accessibility states as part of the design, not a later fix.
-- Public APT surfaces should use the full APT design system unless a project has an approved brand layer.
-- Critical design lint failures block promotion unless a decision record accepts the exception.
+- Define and review every meaningful state, including loading, empty, success, error, disabled, permission, offline, and degraded states where applicable.
+- Critical design or accessibility failures block promotion unless a decision record accepts the exception.
+
+## Ownership Boundary
+
+This repository owns portable design doctrine: decision principles, required states and artifacts, reusable review criteria, semantic token roles, prompts, and examples.
+
+Each target repository owns its visual identity, literal token values, typography choices, component APIs, framework selection, route shell, product copy, and runtime implementation. Target-owned choices may conform to APT doctrine without becoming universal APT requirements.
+
+The public `applied-practical-thinking` repository is an inspectable APT implementation and showcase, not the source of every project's brand layer. Its authored design system, tokens, component contracts, and surface patterns live under `apps/web/docs/design/` in that repository.
 
 ## UI Component Implementation Standard
 
-For APT-aligned React, TypeScript, and Tailwind projects, shadcn/ui is the default UI implementation foundation unless the project requires VPDS or another approved enterprise design system.
+Use the component system already owned by the target repository. Before adding a primitive, inspect its framework, enterprise-system obligations, aliases, token source, existing component tiers, accessibility behavior, and distribution model.
 
-shadcn/ui should be treated as repo-owned source code, a composable UI pattern system, a registry-based distribution model, and an agent-friendly way to apply consistent UI across repositories. Components installed from shadcn are owned by the repo and may be modified to fit APT tokens, naming, accessibility, and product workflow needs.
+A healthy component architecture separates low-level primitives, reusable product patterns, and domain/workflow composition. The exact directories and naming belong to the target repository. Framework-specific guidance, including shadcn/ui, is an adapter or target-repo decision rather than universal doctrine.
 
-Use a layered component model:
-
-- `components/ui` for shadcn primitives.
-- `components/apt` for reusable Apt-prefixed wrappers.
-- `components/blocks` for product, domain, and workflow blocks.
-
-Agents and implementers must inspect existing structure, installed components, `components.json`, aliases, Tailwind configuration, global CSS tokens, and enterprise design-system requirements before adding shadcn components. Reuse existing primitives and wrappers before creating one-off UI.
-
-Preserve accessibility, keyboard behavior, focus states, semantic structure, ARIA behavior, design tokens, CSS variables, Tailwind utilities, and APT naming conventions when adapting primitives.
-
-Do not use shadcn/ui when the project is not React/Tailwind, when VPDS or another enterprise design system is mandatory, when transactional email constraints apply, or when a simpler static surface does not need component infrastructure.
+When adapting a primitive, preserve semantic structure, keyboard behavior, focus visibility, ARIA behavior, design tokens, and documented states.
 
 ## Baseline Visual Language
 
-- Dark-first background with deep navy/cosmic tones.
-- Glass surfaces may be used for cards and major panels.
-- Blue is the primary brand and action color for primary calls to action, links, focus rings, and high-frequency emphasis.
-- The restricted accent is secondary and reserved for support semantics such as section identity, large callouts, charts, and success treatment.
-- Inter is the primary UI and prose typeface where the project can load it; the system font stack is the compatibility fallback.
-- IBM Plex Mono is the technical companion for code, CLI, token values, file trees, prompts, and API examples.
-- Motion should be subtle and short.
+APT-aligned visual systems should be calm, legible, structurally consistent, and driven by semantic roles. They must define roles for background, surface, text, border, primary action, focus, selection, disabled controls, feedback states, spacing, shape, elevation, and motion.
 
-Canonical token roles from the current APT runtime:
-
-```text
-background: --background
-surface: --card
-primary: --primary
-accent: --accent
-text: --foreground
-border: --border
-radius-sm: 0.85rem
-radius-md: 1.1rem
-radius-lg: 1.35rem
-motion-fast: 140ms
-motion-normal: 220ms
-```
+Literal colors, fonts, radii, timing values, and decorative treatments are brand-layer choices owned by the target repository. The public APT site demonstrates one dark-first, blue-led interpretation; it is an example, not a mandatory skin for every APT-aligned product.
 
 ## Content Voice and Naming
 
-APT copy is precise, technical, and non-marketing. It should read like an experienced builder documenting decisions, not a campaign trying to create urgency.
+APT copy is precise, calm, honest, and non-marketing. It should help a user decide or act without manufacturing urgency.
 
 - Use calm declarative sentences, clear imperatives, and honest constraints.
 - Use impersonal instructional voice in doctrine and product UI; reserve first person for personal biography or author context.
-- Use short stable navigation labels such as Home, Labs, Proof, Principles, Insights, and About where those surfaces exist.
+- Use short, stable navigation labels that match the target user's language.
 - Use sentence case for most headings and body copy. Short uppercase labels may be used for eyebrows when the style is already established.
 - Avoid hype, exclamation, decorative emoji in chrome, and vague claims that cannot be backed by artifacts or evidence.
 - Treat disclaimers, AI-use notes, demo status, and evolving-reference notes as first-class content in footers, detail pages, and supporting metadata.
 
-Recurring APT tagline structure may use short paired clauses such as "Systems over screens. Decisions over demos." Treat these as compact identity signals, not filler copy.
-
 ## Brand Color Decision
 
-APT uses a mostly blue visual system by design. Blue carries the brand mark, default primary calls to action, focus rings, links, and high-frequency emphasis because it anchors the calm technical identity of Applied Practical Thinking.
+Color identity is a target-repository decision. A project should record why its primary, accent, and feedback colors exist; verify contrast; and keep those roles consistent across components, charts, content, and states.
 
-The restricted accent is intentionally secondary. It may create contrast for explicit section identity, selected support states, badges and tags, large callouts, chart accents, and success treatment where relevant. It should not become the default CTA, hover, focus, or active navigation color unless a project records an explicit brand decision.
+The public APT site owns its mostly blue brand decision and restricted accent policy in its local design system.
 
 ## Color Roles and Interaction Rules
 
 Color choices must start from semantic role, not visual preference.
 
-- Blue is for brand identity, primary calls to action, links, focus rings, and high-frequency action emphasis.
-- The restricted accent is for explicit section identity, selected support states, badges and tags, large callouts, chart accents, and success treatment.
+- Primary action, navigation, links, focus, selection, and brand identity need explicit roles; they need not share one literal color.
+- Accent colors require a defined purpose and must not compete indiscriminately with primary actions.
 - Neutral surfaces are for default navigation, secondary buttons, inactive tabs, cards, panels, dividers, and disabled surfaces.
 - Danger, warning, and success colors are semantic feedback colors. Do not use them as general decoration or to create arbitrary variety.
 - Disabled treatment should reduce contrast and interaction affordance without hiding the control or changing its meaning.
-- Raw colors require a design decision record. Implementation should use the semantic aliases in `references/design-tokens.json` even when an alias maps to an existing base token value.
+- Implementation should use semantic aliases. Raw values outside the target token source require an explicit design decision.
 
 ## Full Design System Standard
 
-The APT design system covers:
+A target design system should cover:
 
 - semantic color tokens for background, surfaces, borders, text, navigation, action, focus, selection, disabled, accent, success, warning, and danger
-- Inter-first typography with clear hierarchy, `0` body letter spacing, and IBM Plex Mono for technical material
+- typography roles with a clear hierarchy and readable prose and technical material
 - stable spacing and responsive constraints for boards, grids, toolbars, cards, and repeated items
-- global header shells that use the APT hybrid top-navigation template for brand identity, route-aware navigation, and optional utility actions
-- global footer shells that use the compact APT footer template for product/site navigation and legal metadata
-- restrained surfaces with no nested cards or decorative page-section cards
+- navigation and page shells that preserve orientation, route state, and access to likely next actions
+- restrained surfaces with explicit hierarchy rather than decoration-driven nesting
 - action components that use shared button, icon, menu, tab, toggle, slider, and input patterns
 - complete state design for loading, empty, success, error, disabled, permission, offline, and degraded states
 - content naming and messaging that is precise, honest, and matched to user intent
 - accessibility expectations for contrast, focus, keyboard use, reduced motion, and readable text wrapping
 
-Token and lint contracts live in `references/design-tokens.json` and `references/design-lint-gates.json`.
+Portable token roles and lint contracts live in `references/design-tokens.json` and `references/design-lint-gates.json`. Literal implementations remain local.
 
 ## Working Backwards Design Artifacts
 
@@ -160,14 +135,12 @@ End-user docs should describe how the target user starts, succeeds, recovers, an
 
 ## Brand, Background, and Iconography
 
-APT's visual signature is a dark-first cosmic surface with restrained glass, blue action emphasis, and a small set of reusable identity elements.
+Brand marks, backgrounds, imagery, and icon libraries are target-owned. Their use should reinforce identity and hierarchy without obscuring content or replacing labels and state.
 
-- The cosmic background may use a deep navy base, subtle radial primary/accent glows, and quiet starfield layers. It should support hierarchy, not compete with content.
-- Avoid photographic hero backgrounds for canonical APT doctrine/product surfaces unless the page is explicitly about a real person, place, product, or object that must be inspected.
-- The AptEmblem is the preferred brand mark: a circular A badge with primary-blue border/glow treatment. Use it in headers, footers, auth shells, docs chrome, and hero identity moments.
-- Use Lucide-style outline icons for interface controls and card leading icons. Icons should inherit semantic text color and remain secondary to labels and state.
-- Do not use emoji in product chrome, navigation, headings, buttons, or status controls. If emoji appears in markdown content tables, it should be content evidence, not UI decoration.
-- Glow is a signature treatment for the emblem and selected hero/data moments. It should not become a generic decoration on every card.
+- Use one coherent icon language and give controls accessible names.
+- Treat decorative imagery as optional; use factual imagery when a real person, object, place, or result must be inspected.
+- Keep identity treatments restrained enough that repeated surfaces remain readable.
+- Document asset provenance, licensing, and generated-media disclosure where relevant.
 
 ## Interaction Primitives
 
@@ -187,59 +160,25 @@ Primitive states must cover default, hover, focus-visible, active/selected, disa
 
 Charts are part of the design system, not decorative art.
 
-- Single-series charts use primary blue as the lead color.
-- Multi-series charts use the chart ramp in order: blue, teal, purple, orange, and pink.
-- Teal may highlight one series or insight when it carries real support, success, or chart-accent meaning.
-- Red, amber, and success colors appear in charts only when they represent actual status or risk.
-- Charts should live inside stable dark surfaces with muted axis labels, clear titles, and concise interpretation notes.
-- Dense dashboards should use neutral status pills with small semantic dots rather than flooding tables with colored badges.
+- Choose a chart from the comparison or decision the user needs to make.
+- Use a documented, accessible series ramp and distinguish data without relying on color alone.
+- Reserve feedback colors for actual status or risk semantics.
+- Include a clear title, labels, units, source, relevant uncertainty, and a concise interpretation when needed.
+- Provide a table, text alternative, or equivalent access path when the chart carries essential information.
 
 ## Surface Patterns
 
-APT product surfaces reuse a small set of recognizable patterns:
+Reusable surface patterns should state the user job, anatomy, supported states, accessibility behavior, content rules, constraints, and validation evidence. A target repo should select patterns because they fit the workflow—not because they are visually familiar.
 
-- Portfolio and product pages use the cosmic brand shell, clear identity, restrained hero composition, proof-oriented cards, and concise calls to action.
-- Insights/content pages use filterable cards, honest metadata, readable summaries, and editorial cover imagery only where it serves content browsing.
-- Dashboard/admin surfaces use a scan-first shell with sidebar or topbar navigation, KPI tiles, charts, tables, filters, and stable operational state treatment.
-- Docs/principles browsers use a three-column pattern when space allows: document tree, article body, and on-this-page navigation.
-- Account flows use focused auth cards, clear validation, password visibility, consent/terms handling, settings tabs, unsaved-change warnings, and explicit destructive sections.
-- Transactional email uses table-based layout, inline styles, flattened token colors, a preheader, one primary call to action, and preference/unsubscribe or compliance links where applicable.
-- Pattern libraries should include modal/dialog variants, onboarding checklist states, empty states, and full-page 403/404/500 errors.
-
-The vendored design reference kit in `examples/ui/design-reference-kit/` is evidence for these patterns. It is not a competing doctrine source.
+The examples under `examples/ui/` are portable evidence. The richer portfolio, docs, insights, dashboard, account, and other public specimens in `applied-practical-thinking/apps/web/docs/design/versions/v2/patterns/` are target-owned implementations.
 
 ## Header Template Pattern
 
-APT product, doctrine, and tool surfaces should use a hybrid top-navigation pattern that combines Applied's route-aware accessibility behavior with APT Coach's practical app shell.
-
-The header contract is:
-
-- outer shell: sticky top header with subtle bottom border, `bg-background/80` or `bg-card/80`, and backdrop blur
-- inner width: standard container or project max width with a stable `h-14` to `h-16` rhythm
-- brand block: small APT/product emblem, product/site name, and optional Applied Practical Thinking label
-- desktop navigation: route-aware links in a compact segmented or pill treatment, with active state using primary or neutral selected surface roles
-- grouped navigation: use dropdowns or grouped sections for operational clusters such as training, docs, workflow, or admin tools
-- utility area: optional theme, account/avatar, help, profile, settings, or external resource actions, visually separated from primary navigation
-- mobile navigation: drawer, sheet, or stacked panel with the same link set, active route state, Escape handling where available, and no hidden-only routes
-- metadata/context: compact desktop tools may show runtime, model, project, or environment context on the right side instead of account controls
-
-Keep the header dense but calm. It should orient the user and expose the next likely action without becoming a hero section or duplicating page content.
+Headers should establish identity and location, expose the most likely navigation and utility actions, preserve active-route state, and provide equivalent keyboard and mobile access. Exact height, positioning, styling, grouping, and brand treatment belong to the target repository.
 
 ## Footer Template Pattern
 
-APT product and doctrine sites should use the compact footer pattern proven in `apt-dream-to-reality` unless a project records a brand-layer exception.
-
-The footer contract is:
-
-- outer shell: top border using `border-border/60`, subtle `bg-card/55`, and optional backdrop blur
-- inner width: standard container with `px-4 py-8 md:py-10`
-- primary layout: `grid grid-cols-1 gap-8 md:grid-cols-4`
-- brand block: first column group spans two desktop columns and includes a small APT emblem, product/site name, Applied Practical Thinking label, and one concise description
-- link groups: two short columns with `text-sm` headings, `space-y-2` links, muted default text, and foreground hover state
-- divider: one horizontal border at `my-6`
-- metadata row: stacked on mobile and horizontal on desktop, using `text-sm` legal text and optional `text-xs` build, license, disclaimer, or AI-use note
-
-Keep the footer compact. It should confirm identity, expose the most useful routes, and close the page without becoming a second sitemap or marketing section.
+Footers should confirm identity, expose useful closing routes, and include applicable legal, privacy, support, build, license, disclaimer, and AI-use metadata. Their layout and styling belong to the target repository. Avoid turning the footer into a duplicate sitemap or marketing page.
 
 ## Required Artifacts
 
@@ -311,6 +250,7 @@ Return:
 - `thinking.md`
 - `architecture.md`
 - `system-standards.md`
+- `docs/design-reference-intake.md`
 
 ## Summary
 

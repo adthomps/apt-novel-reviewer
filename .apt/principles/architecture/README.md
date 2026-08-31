@@ -207,6 +207,13 @@ A new knowledge search feature defines:
 
 A React component calls an external API directly, transforms business data inline, handles auth assumptions locally, and stores prompt text in the component body.
 
+## Applied by
+
+- [apt-api-architect](../../agents/architecture/apt-api-architect.md) — Use when an API's overall structure — resource model, versioning strategy, service boundaries — needs architectural review, distinct from a single-endpoint contract review.
+- [apt-integration-architect](../../agents/architecture/apt-integration-architect.md) — Use when two or more systems need to be connected — via API, event stream, or bridge — and the integration pattern itself needs architectural review.
+- [apt-modernization-architect](../../agents/architecture/apt-modernization-architect.md) — Use when a legacy system, API, or integration needs a modernization path — replacing SOAP/XML/NVP or monolithic patterns with current APT-supported approaches.
+- [javik](../../agents/architecture/javik.md) — Use as the senior cross-cutting sign-off for architecture work, after specialist architecture perspectives (api, integration, modernization) have reported, to reconcile them into one accountable structural recommendation.
+
 ## Related Checklists
 
 - `checklists/architecture-review-checklist.md`

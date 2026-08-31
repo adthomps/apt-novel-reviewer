@@ -46,6 +46,14 @@ Review for screen-first design, missing states, inaccessible interactions, role 
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Design canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-ai-agent-user-reviewer](../../agents/customer/apt-ai-agent-user-reviewer.md) — Use when an autonomous AI agent (not a human) is the one integrating with or acting on the product, to confirm it can act safely and correctly without human-oriented affordances it can't use.
+- [apt-bank-acquirer-reviewer](../../agents/customer/apt-bank-acquirer-reviewer.md) — Use when a deliverable will be reviewed or used by a bank or acquirer partner, to confirm it addresses their risk, compliance, and settlement concerns.
+- [apt-business-user-reviewer](../../agents/customer/apt-business-user-reviewer.md) — Use when a deliverable will be used by a business owner or operator (not a developer) to run their business, to confirm it matches how they actually think about their operations.
+- [apt-developer-integrator-reviewer](../../agents/customer/apt-developer-integrator-reviewer.md) — Use when reviewing the steady-state integration experience for a developer already familiar with the product, to confirm advanced flows and edge cases are covered, not just the first call.
+- [apt-support-operations-reviewer](../../agents/customer/apt-support-operations-reviewer.md) — Use when a change is about to ship, to confirm the support organization can actually operate and troubleshoot it on day one.
+
 ## Related
 
 - [APT Principles](../README.md)

@@ -3,7 +3,7 @@ title: API Examples
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "documentation"
 source_paths: ["apt-principles-agents/principles/documentation/api-examples.md"]
@@ -43,6 +43,9 @@ Review for one guide for every audience, copied truths, non-runnable examples, m
 
 - Treat **Api Examples** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Make every executable example identify API version, environment, authentication placeholder, headers, request, response, state change, idempotency or retry behavior, correlation/support identifier, and cleanup where applicable.
+- Cover common errors, permission denial, validation failure, asynchronous completion, duplicate requests, partial failure, and recovery—not only a successful request copied from an idealized contract.
+- Test examples against the current schema or a maintained fixture in CI or an equivalent repeatable check, and assign an owner for version, SDK, credential, or behavior changes.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Documentation canonical hub](README.md) and linked standards/checklists before making final claims.

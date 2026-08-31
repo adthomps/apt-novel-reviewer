@@ -4,7 +4,7 @@ description: Use when work must publish one canonical truth through audience-spe
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "API Example Builder"
 domain: "documentation"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: audience map, canonical source, business and partner guides, developer contract, support runbook, AI examples, diagrams, demos, and freshness owner.
-6. Review one guide for every audience, copied truths, non-runnable examples, missing support identifiers, and docs that describe intent instead of behavior; separate blockers, recommendations, and open questions.
+1. Select a real consumer task and verify the current API version, environment, schema, authentication, authorization, lifecycle behavior, limits, and support identifiers from canonical sources.
+2. Build the smallest runnable request with safe placeholders, exact headers and body, expected response, resulting state change, and cleanup or reversal instructions.
+3. Add examples for validation errors, permission denial, duplicates/idempotency, retries, asynchronous completion, partial failure, rate behavior, and recovery where relevant.
+4. Provide variants only when they serve a named audience or language/SDK need; keep every variant behaviorally equivalent to the canonical contract.
+5. Execute examples against a maintained fixture, sandbox, mock contract, or schema validator and record the command, result, assumptions, and unavailable external behavior.
+6. Link troubleshooting and support identifiers, remove secrets and sensitive data, assign a freshness owner, and define version/schema/SDK changes that require retesting.
 
 ## Outputs
 
@@ -48,6 +48,8 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 
 - Treat **Api Example Builder** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Include state change, retry/idempotency, failure, recovery, support, and cleanup behavior instead of publishing happy-path snippets alone.
+- Keep language and SDK variants contract-equivalent and verify them through a repeatable sandbox, fixture, schema, or CI check.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

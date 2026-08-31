@@ -1,15 +1,17 @@
 ---
-name: "Suvi"
-description: "Invoke Suvi — use when a product is evaluating or building stablecoin acceptance or settlement, to confirm operational and compliance readiness before launch."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+name: suvi
+description: "Use when a product is evaluating or building stablecoin acceptance or settlement, to confirm operational and compliance readiness before launch."
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: payments
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/payments/suvi.md"]
+title: "Suvi"
 ---
+<!-- Generated from apt-principles-agents/agents/payments/suvi.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Suvi
 
@@ -44,8 +46,12 @@ Use when a product is evaluating or building stablecoin acceptance or settlement
 
 ## Required Skills
 
-- [Stablecoin Readiness Review](../../skills/stablecoin-crypto/stablecoin-readiness-review/SKILL.md)
-- Cross-audience review and source verification.
+- `stablecoin-readiness-review` — installed under `.claude/skills/stablecoin-readiness-review/`.
+
+## Enforces
+
+- Stablecoin Readiness — check the work against this principle and cite the clause any finding rests on.
+- Settlement And Reconciliation — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

@@ -4,7 +4,7 @@ description: Use when work must start from user intent and align journeys, roles
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "Intent Based UI Design"
 domain: "design"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: audience and intent map, journey, state model, permission matrix, UI/API alignment, accessibility checks, and demo flow.
-6. Review screen-first design, missing states, inaccessible interactions, role leakage, and demos that hide operational reality; separate blockers, recommendations, and open questions.
+1. Name the primary audiences, their top intents, entry points, context, permissions, and evidence of successful completion.
+2. Map each intent across the full journey, including loading, empty, error, partial, success, denied, recovery, and repeated-use states.
+3. Trace interface actions to API contracts, authorization rules, data ownership, audit behavior, documentation, and support recovery.
+4. Compare navigation and interaction options using task completion, accessibility, cognitive load, responsiveness, and operational clarity.
+5. Produce the audience-intent map, journey and state model, permission matrix, UI/API alignment table, accessible interaction notes, and truthful demo flow.
+6. Validate representative tasks with keyboard and responsive states; report role leakage, unsupported promises, dead ends, and hidden operational behavior as blockers.
 
 ## Outputs
 
@@ -48,6 +48,8 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 
 - Treat **Intent Based Ui Design** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: intent, audience, journey, roles, states, accessibility, UI/API alignment.
+- Make the most common valid next action visible without hiding source browsing, recovery, or expert paths.
+- Do not mark the design complete until non-happy states and the backing authorization/API behavior are reviewable.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

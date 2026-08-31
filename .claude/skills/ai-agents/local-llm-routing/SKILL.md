@@ -4,7 +4,7 @@ description: Use when work must route work by risk and capability, constrain too
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: consolidated APT guidance
 title: "Local LLM Routing"
 domain: "ai-agents"
@@ -29,12 +29,12 @@ Use for planning, design, implementation review, migration, troubleshooting, or 
 
 ## Process
 
-1. Restate the intended outcome and affected audiences.
-2. Inventory exact current behavior and source-backed constraints.
-3. Apply the relevant APT principles and identify missing evidence.
-4. Compare viable options, including compatibility and operational effects.
-5. Produce the required artifacts: task packet, routing decision, selected skills and agents, source evidence, evaluation, review outcome, and approval record.
-6. Review unsupported claims, excessive context, weak-model routing, unclear handoffs, and automation without approval; separate blockers, recommendations, and open questions.
+1. Classify the task by impact, reversibility, sensitivity, context size, required reasoning, structured-output needs, tools, latency, and validation availability.
+2. Record the actual local model, version, runtime, hardware constraints, context limit, tool support, data path, and representative evaluation evidence.
+3. Compare local, mid-tier, and stronger-model routes against explicit quality, privacy, cost, latency, reliability, and recovery requirements.
+4. Use local models for bounded work such as classification, extraction, formatting, deduplication, or draft summaries only when outputs can be checked deterministically or reviewed proportionately.
+5. Escalate on low confidence, context truncation, unsupported tools or formats, validation failure, cross-system reasoning, sensitive/high-accuracy domains, or any protected decision.
+6. Preserve the task packet, sources, intermediate result, evaluation, escalation reason, residual risk, and human approval across the handoff.
 
 ## Outputs
 
@@ -48,6 +48,8 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 
 - Treat **Local Llm Routing** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: task packet, context, routing, handoffs, evaluation, residual risk, approval.
+- Verify local data residency and retention behavior rather than treating “local” as an automatic privacy guarantee.
+- Define measurable escalation thresholds for quality, context, tool support, risk, and validation before routing production work.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 ## Required Reading

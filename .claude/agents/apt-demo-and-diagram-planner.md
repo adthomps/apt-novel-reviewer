@@ -1,15 +1,17 @@
 ---
-name: "APT Demo And Diagram Planner"
+name: apt-demo-and-diagram-planner
 description: "Use when a concept, architecture, or workflow needs a demo script or diagram to be understood, and it's unclear what to show, in what order, or at what level of detail."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: docs
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/docs/apt-demo-and-diagram-planner.md"]
+title: "Apt Demo And Diagram Planner"
 ---
+<!-- Generated from apt-principles-agents/agents/docs/apt-demo-and-diagram-planner.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Demo And Diagram Planner
 
@@ -37,8 +39,12 @@ Use when a concept, architecture, or workflow needs a demo script or diagram to 
 
 ## Required Skills
 
-- [Demo Plan Writer](../../skills/documentation/demo-plan-writer/SKILL.md)
-- Also see the [Diagram Generator](../../skills/documentation/diagram-generator/SKILL.md) skill for diagram output.
+- `demo-plan-writer` — installed under `.claude/skills/demo-plan-writer/`.
+- `diagram-generator` — installed under `.claude/skills/diagram-generator/`.
+
+## Enforces
+
+- Documentation Principles — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

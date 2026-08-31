@@ -3,7 +3,7 @@ title: Implementation Blueprints
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "documentation"
 source_paths: ["apt-principles-agents/principles/documentation/implementation-blueprints.md"]
@@ -43,6 +43,9 @@ Review for one guide for every audience, copied truths, non-runnable examples, m
 
 - Treat **Implementation Blueprints** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Tie every proposed change to verified current state, intended outcome, exact ownership and file boundaries, dependencies, contract effects, acceptance criteria, and unresolved decisions.
+- Sequence work into coherent increments with commands, tests, migration, data/security, documentation, support, rollout, rollback, and evidence capture—not a list of disconnected files to edit.
+- Mark current, proposed, optional, and out-of-scope behavior explicitly, and keep assumptions or illustrative paths from masquerading as repository facts.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Documentation canonical hub](README.md) and linked standards/checklists before making final claims.

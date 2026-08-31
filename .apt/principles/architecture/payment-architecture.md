@@ -46,6 +46,11 @@ Review for unclear ownership, accidental coupling, irreversible migrations, prov
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Architecture canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-payment-architect](../../agents/payments/apt-payment-architect.md) — Use when a payment system's structure — gateway abstraction, tokenization boundary, ledger design, or provider failover — needs architectural review before implementation.
+- [wrex](../../agents/payments/wrex.md) — Use as the senior cross-cutting sign-off for payments work, after specialist payment perspectives (fraud, chargeback, gateway, architecture) have reported, to reconcile them into one accountable payments recommendation.
+
 ## Related
 
 - [APT Principles](../README.md)

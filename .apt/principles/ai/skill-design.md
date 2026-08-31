@@ -3,7 +3,7 @@ title: Skill Design
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "ai"
 source_paths: ["apt-principles-agents/principles/ai/skill-design.md"]
@@ -43,6 +43,9 @@ Review for unsupported claims, overpowered tools, weak-model routing for high-st
 
 - Treat **Skill Design** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: task packet, sources, routing, tool boundaries, evaluation, review, approval.
+- Define a skill around one bounded capability with positive and negative triggers, required inputs, an executable procedure, named outputs, validation, and explicit stop or escalation conditions.
+- Make source-loading and tool permissions proportional to the task; a skill should not require broad context or mutation authority merely because the host can provide it.
+- Test the skill with representative success, ambiguity, missing-input, unsafe-action, and tool-failure cases, then record an owner and maintenance trigger for contract changes.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Ai canonical hub](README.md) and linked standards/checklists before making final claims.

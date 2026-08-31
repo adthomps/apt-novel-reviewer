@@ -1,11 +1,24 @@
 ---
-title: "apt-repair-agent"
-kind: "agent"
-domain: "harness"
-status: "active"
-owner: "APT"
-last_updated: "2026-06-28"
-source_paths: ["apt-agent-standards/agents/apt-repair-agent.md"]
+id: apt-repair-agent
+title: apt-repair-agent
+kind: agent
+domain: harness
+scope: domain
+description: Use when repairing or upgrading an existing APT standards installation while preserving local customizations.
+applies_principles:
+  - principles/ai/agent-design.md
+uses_skills: []
+tools:
+  - read
+  - search
+  - edit
+model_tier: standard
+autonomy: bounded-edit
+escalation: Escalate unsupported, high-impact, security, privacy, payment, compliance, destructive, or production decisions to the relevant specialist and accountable human.
+status: active
+owner: APT
+last_updated: 2026-08-30
+source_paths: ["apt-principles-agents/agents/harness/apt-repair-agent.md"]
 ---
 
 # apt-repair-agent
@@ -22,6 +35,15 @@ Repair or upgrade existing APT agent standard installations while preserving loc
 - Back up files before overwriting when `--backup` is used.
 - Require `--force` before overwriting drifted files.
 
+
+## Perspective-Specific Checks
+
+- Default to report-only or dry-run behavior.
+- Preserve `docs/project-context.md` and `.apt/installation.json/local-overrides.md`.
+- Recreate missing managed files only when approved.
+- Back up files before overwriting when `--backup` is used.
+- Require `--force` before overwriting drifted files.
+
 ## Output
 Return repair plan, files that would change or changed, skipped files, backups, and validation commands.
 
@@ -31,11 +53,14 @@ Act as the apt repair agent within the APT discover, classify, validate, remedia
 
 ## When to Use
 
-Use when the task matches this harness responsibility or the APT router selects it based on risk and evidence needs.
-
+Use when repairing or upgrading an existing APT standards installation while preserving local customizations.
 ## Required Skills
 
 Use the closest canonical APT skill, the relevant context pack, and exact target-repository instructions.
+
+## Enforces
+
+- [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

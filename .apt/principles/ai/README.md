@@ -5,7 +5,7 @@ domain: ai
 status: active
 owner: APT
 version: v1
-last_updated: 2026-06-28
+last_updated: 2026-08-16
 source_paths: ["apt-principles/ai-agent-framework.md"]
 supersedes: ["apt-principles/ai-agent-framework.md"]
 ---
@@ -84,6 +84,10 @@ Agents should load compact context packs, reusable prompts, source indexes, and 
 
 When local tools, local models, or repo-local analysis can complete the work safely, prefer them before external services. Escalate to remote or higher-capability systems when local execution lacks required quality, safety, modality, or integration support.
 
+### 11. Responsible AI preserves human agency
+
+Every durable AI use must state its human purpose, affected audiences, maximum autonomy, data boundary, evaluation, oversight, and incident behavior. AI must not silently broaden its objective, fabricate evidence, or make unreviewable high-impact decisions.
+
 ## Standards / Rules
 
 - Prompts that govern repeated work belong in `prompts/`.
@@ -91,6 +95,8 @@ When local tools, local models, or repo-local analysis can complete the work saf
 - `apt-principles-agents` owns canonical AI doctrine, review criteria, prompts, examples, and reference contracts.
 - `apt-principles-agents` owns cross-project installation, profile manifests, `.apt/installation.json`, tool-native file distribution, and sync behavior.
 - Installed tool-native files such as `AGENTS.md`, `.claude/`, `.codex/`, and `.github/` should not become competing doctrine sources.
+- Every canonical agent cites the principles it enforces (`applies_principles` frontmatter and a `## Enforces` section) and is reproducible from its canonical source by `scripts/build-agent-adapters.mjs`; a hand-edited platform adapter is drift.
+- Agent orchestration that must fan out to several specialists runs at the top level or as a script, never as a delegated sub-agent; delegation is one level deep.
 - AI must not bypass authentication, authorization, validation, or release gates.
 - AI routes and prompts in applications should be explicit, versioned, and reviewable.
 - AI workflows should define deterministic fallback behavior for provider failure, missing context, low confidence, or policy-sensitive input.
@@ -308,6 +314,7 @@ Return:
 - `standards/ai/local-first-ai-standard.md`
 - `standards/ai/security-harness-standard.md`
 - `standards/ai/repository-lifecycle-standard.md`
+- `standards/ai/responsible-ai-standard.md`
 
 ## Related Documents
 

@@ -1,15 +1,17 @@
 ---
-name: "APT Product Hub Builder"
+name: apt-product-hub-builder
 description: "Use when a product or feature area needs a single organized hub page pulling together its scattered docs, specs, and status into one navigable entry point."
-tools: [read, search, execute, todo]
-user-invocable: true
-kind: "platform-adapter"
-domain: "platforms"
-status: "active"
-owner: "APT"
-last_updated: "2026-08-30"
+tools: Read, Grep, Glob
+model: sonnet
+kind: agent-adapter
+domain: docs
+status: active
+owner: APT
+last_updated: 2026-08-30
 source_paths: ["apt-principles-agents/agents/docs/apt-product-hub-builder.md"]
+title: "Apt Product Hub Builder"
 ---
+<!-- Generated from apt-principles-agents/agents/docs/apt-product-hub-builder.md by scripts/build-agent-adapters.mjs. Edit the canonical file, not this one. -->
 
 # Apt Product Hub Builder
 
@@ -37,8 +39,11 @@ Use when a product or feature area needs a single organized hub page pulling tog
 
 ## Required Skills
 
-- [Product Hub Builder](../../skills/documentation/product-hub-builder/SKILL.md)
-- Cross-audience review and source verification.
+- `product-hub-builder` — installed under `.claude/skills/product-hub-builder/`.
+
+## Enforces
+
+- Documentation Principles — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

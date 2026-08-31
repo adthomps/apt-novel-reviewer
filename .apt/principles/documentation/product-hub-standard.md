@@ -3,7 +3,7 @@ title: Product Hub Standard
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-08-16
 source: apt-principles and apt-agent-standards
 domain: "documentation"
 source_paths: ["apt-principles-agents/principles/documentation/product-hub-standard.md"]
@@ -43,6 +43,9 @@ Review for one guide for every audience, copied truths, non-runnable examples, m
 
 - Treat **Product Hub Standard** as an explicit decision with defined scope, evidence, owner, and validation.
 - Required evidence: canonical source, audience layer, executable example, troubleshooting, freshness owner.
+- Establish one verified product truth for capabilities, lifecycle, roles, permissions, integrations, limitations, current/planned status, ownership, support, and change history before publishing audience views.
+- Serve business, partner, developer, support/operations, product/internal, and agent audiences through task-based layers, shared identifiers, runnable examples, diagrams, troubleshooting, and explicit next actions.
+- Treat demos and portfolio narratives as evidence-backed projections: link claims to executable or reviewable artifacts, disclose gaps, and assign freshness owners rather than marketing unverified behavior.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Documentation canonical hub](README.md) and linked standards/checklists before making final claims.

@@ -46,6 +46,10 @@ Review for unclear ownership, accidental coupling, irreversible migrations, prov
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Architecture canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-api-architect](../../agents/architecture/apt-api-architect.md) — Use when an API's overall structure — resource model, versioning strategy, service boundaries — needs architectural review, distinct from a single-endpoint contract review.
+
 ## Related
 
 - [APT Principles](../README.md)
