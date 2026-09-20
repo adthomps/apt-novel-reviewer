@@ -1,6 +1,9 @@
 .git/
 .apt/
 .apt-backups/
+.claude/
+.codex/
+.gemini/
 node_modules/
 graphify-out/
 dist/
@@ -9,9 +12,14 @@ coverage/
 projects/
 test-data/
 tmp-docx-sample-*/
+docs/apt/reports/
+**/test/
+**/*.test.*
 **/*.docx
 **/components/ui/
 **/fixtures/
+**/*.d.ts
+**/*.d.ts.map
 **/package.json
 **/tsconfig*.json
 **/*lock*

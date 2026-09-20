@@ -53,3 +53,7 @@ Non-goals are enforced from the prompt: no chat assistant, no cloud APIs, no in-
 - `pnpm build` - build all workspace packages/apps
 - `pnpm typecheck` - recursive TypeScript checks
 - `pnpm test` - recursive tests
+
+## Graphify
+
+See [docs/graphify.md](docs/graphify.md) for the manuscript-safe code architecture scope, exclusions, questions, and review workflow.

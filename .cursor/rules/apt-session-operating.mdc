@@ -1,0 +1,15 @@
+---
+description: APT session operating rule. Clarify before acting, build a task packet, use the cheapest sufficient Cursor Task model, and keep Working Backwards ahead of implementation.
+alwaysApply: true
+---
+
+# APT session operating
+
+This workspace is a container of independent repositories. Identify the child repo before editing.
+
+1. If the owning repository, customer or outcome, or plan-versus-implement choice is missing, ask at most two questions and stop. Do not invent a path.
+2. Load that repo's `AGENTS.md`, `.apt/installation.json` when present, and `docs/project-context.md` when present.
+3. Build a compact task packet. Route product work without an approved Working Backwards package to intake, not to requirements or code.
+4. Classify the next step as read, design, implement, test, or review. Use `.cursor/routing/cursor-model-map.md` for current Task slugs. Prefer deterministic search and a cheap explore model for reads.
+5. Do not implement from an unapproved Working Backwards package. Writers draft; critics do not edit; hooks never issue `PASS`.
+6. Record `[OPEN - owner]` versus `[BLOCKER - owner]`. Blockers stop build handoff.

@@ -15,7 +15,8 @@
     "codex",
     "claude",
     "copilot",
-    "gemini"
+    "gemini",
+    "cursor"
   ],
   "managedFiles": [
     {
@@ -371,6 +372,12 @@
       "target": ".apt/platforms/codex/source/skills/ux-review/SKILL.md",
       "kind": "canonical",
       "sha256": "698d0bbd325463c87788ea03791e7b6e20780b4ae22fa3ba69139e24c32ed675"
+    },
+    {
+      "source": "platforms/cursor/README.md",
+      "target": ".apt/platforms/cursor/README.md",
+      "kind": "canonical",
+      "sha256": "d78c4499b94290963d3ebaddd0993a99e4f6cb16d1c8edaaa234ad97100ee102"
     },
     {
       "source": "platforms/gemini/README.md",
@@ -1049,6 +1056,12 @@
       "target": ".apt/skills/thinking/beginner-clarity-review/SKILL.md",
       "kind": "canonical",
       "sha256": "94e42a90b86e492a8a9a4b7150a3de563035b6fa745ff5e3fe0ba6670e9f9f7a"
+    },
+    {
+      "source": "skills/thinking/clarify-before-acting/SKILL.md",
+      "target": ".apt/skills/thinking/clarify-before-acting/SKILL.md",
+      "kind": "canonical",
+      "sha256": "c1753786a12d560f78bfd30b76d90dd7765350274943074183946f3cde06bef4"
     },
     {
       "source": "skills/thinking/decision-rationalization/SKILL.md",
@@ -2431,6 +2444,396 @@
       "sha256": "698d0bbd325463c87788ea03791e7b6e20780b4ae22fa3ba69139e24c32ed675"
     },
     {
+      "source": "platforms/cursor/source/agents/harness/apt-architect.mdc",
+      "target": ".cursor/agents/apt-architect.mdc",
+      "kind": "platform-agent",
+      "sha256": "c6d8c78f252dab53c781b6c4f6628bf762a3fc829c241a8e56ce19b67f9e2874"
+    },
+    {
+      "source": "platforms/cursor/source/agents/apt-architecture-lead.mdc",
+      "target": ".cursor/agents/apt-architecture-lead.mdc",
+      "kind": "platform-agent",
+      "sha256": "054968129b49b883fca37cc7f18e0c81c42427167334986424c73e4c11746bca"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-cloudflare-builder.mdc",
+      "target": ".cursor/agents/apt-cloudflare-builder.mdc",
+      "kind": "platform-agent",
+      "sha256": "4cbc25a96058721cb04fc770f00ce96a92c9d7b5ebe4276da5e874b71f3b5e5c"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-code-reviewer.mdc",
+      "target": ".cursor/agents/apt-code-reviewer.mdc",
+      "kind": "platform-agent",
+      "sha256": "577c93aa3c4c9f23cc4368bc16fe010582acbe016292fc4572b9a74d94ccbe9c"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-cost-controller.mdc",
+      "target": ".cursor/agents/apt-cost-controller.mdc",
+      "kind": "platform-agent",
+      "sha256": "ca38971ffe8afc5296cee20bc4bcb4bd8a939655ef165b0becb910d2d6e6cc73"
+    },
+    {
+      "source": "platforms/cursor/source/agents/apt-design-lead.mdc",
+      "target": ".cursor/agents/apt-design-lead.mdc",
+      "kind": "platform-agent",
+      "sha256": "4e05468ae96b17bea458232956c3aac90ff194a449779d698d974186a8ded4aa"
+    },
+    {
+      "source": "platforms/cursor/source/agents/apt-execution-lead.mdc",
+      "target": ".cursor/agents/apt-execution-lead.mdc",
+      "kind": "platform-agent",
+      "sha256": "70a362ff39e1eb5e1c801c43c168f617e30b14d820e0e4d14bc854d98f44d1d3"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-harness-docs-reviewer.mdc",
+      "target": ".cursor/agents/apt-harness-docs-reviewer.mdc",
+      "kind": "platform-agent",
+      "sha256": "8adc88af43bcd25adf0e99a94f75d7034ba62e17c0010bf278122ebc9e26359d"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-installer.mdc",
+      "target": ".cursor/agents/apt-installer.mdc",
+      "kind": "platform-agent",
+      "sha256": "9bb0dd1a2c48dcdbe127a3cb35604346b11e7f052f752cc10b04a24020c005fe"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-model-router.mdc",
+      "target": ".cursor/agents/apt-model-router.mdc",
+      "kind": "platform-agent",
+      "sha256": "4099b6ede3937297bc57ccd139231178809637900701b9a4b6c5a3548723cf1d"
+    },
+    {
+      "source": "platforms/cursor/source/agents/apt-principal.mdc",
+      "target": ".cursor/agents/apt-principal.mdc",
+      "kind": "platform-agent",
+      "sha256": "81c61a0125b3ae13c18357d79ba2f7d3f25db62adcccce1b1bcf262d3e1624ea"
+    },
+    {
+      "source": "platforms/cursor/source/agents/core/apt-principles-reviewer.mdc",
+      "target": ".cursor/agents/apt-principles-reviewer.mdc",
+      "kind": "platform-agent",
+      "sha256": "50e492a823f11b2e2be4185b50299dc752a11c112b64036ec7ced427d7a17347"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-repair-agent.mdc",
+      "target": ".cursor/agents/apt-repair-agent.mdc",
+      "kind": "platform-agent",
+      "sha256": "df2b007b9477682ac12f64eafe1fd22251876d159f97ab188ce4d7677e561208"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-repo-scanner.mdc",
+      "target": ".cursor/agents/apt-repo-scanner.mdc",
+      "kind": "platform-agent",
+      "sha256": "f600b8122a31cfbaf7034f5f87c96f23295b73a3f4a82b5fe015b5246e5a1c71"
+    },
+    {
+      "source": "platforms/cursor/source/agents/apt-router.mdc",
+      "target": ".cursor/agents/apt-router.mdc",
+      "kind": "platform-agent",
+      "sha256": "298beb03eb9d4b7e88629a82acd7b58a571c34726102715dd37cc06a8021ce54"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-security-reviewer.mdc",
+      "target": ".cursor/agents/apt-security-reviewer.mdc",
+      "kind": "platform-agent",
+      "sha256": "512083cc3916afcc74dc5fda371bad5d2e67458de7aef264f3c7b9465beff1e8"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-task-router.mdc",
+      "target": ".cursor/agents/apt-task-router.mdc",
+      "kind": "platform-agent",
+      "sha256": "ee6c44a3d62a37cfa9b0d04973eff639ea41b012473e3bf3763cce0f50525e49"
+    },
+    {
+      "source": "platforms/cursor/source/agents/apt-thinking-lead.mdc",
+      "target": ".cursor/agents/apt-thinking-lead.mdc",
+      "kind": "platform-agent",
+      "sha256": "45d9a9baa5abc09dcf3f42dc3208d19c85bcedd916c4e8e0486fb3e9a8ba0b4d"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-ui-reviewer.mdc",
+      "target": ".cursor/agents/apt-ui-reviewer.mdc",
+      "kind": "platform-agent",
+      "sha256": "08c4b35841880c9f9c4f023226d519d85553428cd104deb9ad6ca3e632b052d7"
+    },
+    {
+      "source": "platforms/cursor/source/agents/harness/apt-verifier.mdc",
+      "target": ".cursor/agents/apt-verifier.mdc",
+      "kind": "platform-agent",
+      "sha256": "6778f200487088dbfa47de149326301567a6c986247e22fd125f59a655169977"
+    },
+    {
+      "source": "platforms/cursor/source/agents/drack.mdc",
+      "target": ".cursor/agents/drack.mdc",
+      "kind": "platform-agent",
+      "sha256": "4cc38d89ead51a83ba1da66f164482d27ab332eae95a3a353617a7f32d146373"
+    },
+    {
+      "source": "platforms/cursor/source/agents/glyph.mdc",
+      "target": ".cursor/agents/glyph.mdc",
+      "kind": "platform-agent",
+      "sha256": "e85482fc7bda8a10d4464e7cf2b1c36eeeb5795a1a5fb89007d9d5f1fcab45e2"
+    },
+    {
+      "source": "platforms/cursor/source/agents/javik.mdc",
+      "target": ".cursor/agents/javik.mdc",
+      "kind": "platform-agent",
+      "sha256": "7387448a431a339ee850c0c920ba0c58288847dc418f9ff24e179c65c1522803"
+    },
+    {
+      "source": "platforms/cursor/source/agents/kaidan.mdc",
+      "target": ".cursor/agents/kaidan.mdc",
+      "kind": "platform-agent",
+      "sha256": "83dea8fe9e6bcd2a63b9bad7f9ae7d49673bbad6f0375c5cfefc97b7c1e3ce5d"
+    },
+    {
+      "source": "platforms/cursor/source/agents/kasumi.mdc",
+      "target": ".cursor/agents/kasumi.mdc",
+      "kind": "platform-agent",
+      "sha256": "3648f6c16a4670f0fe1630d6aca8938906ca64e10f6a98223db24b5d83cc32b7"
+    },
+    {
+      "source": "platforms/cursor/source/agents/miranda.mdc",
+      "target": ".cursor/agents/miranda.mdc",
+      "kind": "platform-agent",
+      "sha256": "9819cf36eb52a836fdc4b37a7c6a5fb7b0943a1bb8738ee53f1f936a90cfc55a"
+    },
+    {
+      "source": "platforms/cursor/source/agents/samara.mdc",
+      "target": ".cursor/agents/samara.mdc",
+      "kind": "platform-agent",
+      "sha256": "9c02e45266ebe201cbae7c88c5178f193f3162f01309326510236d44dd4996a9"
+    },
+    {
+      "source": "platforms/cursor/source/agents/suvi.mdc",
+      "target": ".cursor/agents/suvi.mdc",
+      "kind": "platform-agent",
+      "sha256": "9c91a687dfa5af603a73cfe42069ab654fdafeba494afa95ae73e297d7e1f886"
+    },
+    {
+      "source": "platforms/cursor/source/agents/wrex.mdc",
+      "target": ".cursor/agents/wrex.mdc",
+      "kind": "platform-agent",
+      "sha256": "bbe1af3a610bfd064bbc16356692dbaa2a648ebf7e2e4fe86dfe805e5357fc97"
+    },
+    {
+      "source": "platforms/cursor/source/routing/cursor-model-map.md",
+      "target": ".cursor/routing/cursor-model-map.md",
+      "kind": "platform",
+      "sha256": "63bc2ea3584316061fa81929a92bf2981ab08721a8cd0b3fbf20b240099b873b"
+    },
+    {
+      "source": "platforms/cursor/source/rules/apt-session-operating.mdc",
+      "target": ".cursor/rules/apt-session-operating.mdc",
+      "kind": "platform",
+      "sha256": "70588f9403a7fcfa4707c735f4e9136fbc370e17ff94d7372ccb278f15fed3fd"
+    },
+    {
+      "source": "skills/ai-agents/agent-routing/SKILL.md",
+      "target": ".cursor/skills/ai-agents/agent-routing/SKILL.md",
+      "kind": "platform",
+      "sha256": "4939f80112df861e30c102cfce81ccf2de0bb79ed3db33e01dd6b93eeaee7d60"
+    },
+    {
+      "source": "skills/ai-agents/hallucination-review/SKILL.md",
+      "target": ".cursor/skills/ai-agents/hallucination-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "fbf7b241aceda4ddbc7565fa6674be1fadf76a9a9e7b8649d26fde080b114da2"
+    },
+    {
+      "source": "skills/ai-agents/local-llm-routing/SKILL.md",
+      "target": ".cursor/skills/ai-agents/local-llm-routing/SKILL.md",
+      "kind": "platform",
+      "sha256": "a534a9952b7253c1cf3041166e6b935feeb69b8dd8b8c569ba3b0fda1d0094f9"
+    },
+    {
+      "source": "skills/ai-agents/micro-group-review/SKILL.md",
+      "target": ".cursor/skills/ai-agents/micro-group-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "5f6c5429626bc1378ebcc7e7ed6e52667a2b05e0cab0a63ae180e595916943a6"
+    },
+    {
+      "source": "skills/ai-agents/model-selection/SKILL.md",
+      "target": ".cursor/skills/ai-agents/model-selection/SKILL.md",
+      "kind": "platform",
+      "sha256": "6c39e40d0b3a4607f6e6e417486da80a73da6b2b13c5419376941ba771c3e4ec"
+    },
+    {
+      "source": "skills/ai-agents/prompt-engineering/SKILL.md",
+      "target": ".cursor/skills/ai-agents/prompt-engineering/SKILL.md",
+      "kind": "platform",
+      "sha256": "6028a289de6742d0bc1ee7277396dac53a82d7c558dc43b2e7b48b1f6960baec"
+    },
+    {
+      "source": "skills/ai-agents/red-team-review/SKILL.md",
+      "target": ".cursor/skills/ai-agents/red-team-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "eb3850bd56ad5dab191fac6b672afbca8617c871a63a28a22b22c0a5c8d0afe9"
+    },
+    {
+      "source": "skills/ai-agents/skill-authoring/SKILL.md",
+      "target": ".cursor/skills/ai-agents/skill-authoring/SKILL.md",
+      "kind": "platform",
+      "sha256": "b66a65003f7ee8626b13b3ee346f0c938bab0e6642cb054cc94e0a0891ae5e50"
+    },
+    {
+      "source": "skills/ai-agents/swarm-review/SKILL.md",
+      "target": ".cursor/skills/ai-agents/swarm-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "b1205bedbfad9c762157441099c6cd8ba856026231d72c8ed00bd6853dd24ac7"
+    },
+    {
+      "source": "skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "target": ".cursor/skills/ai-agents/troubleshooting-swarm/SKILL.md",
+      "kind": "platform",
+      "sha256": "7b4f803650d8b3f72ff21447352390476a0a8dc58dd94cbc603bbb275ecfff7d"
+    },
+    {
+      "source": "platforms/codex/source/skills/ai-output-review/SKILL.md",
+      "target": ".cursor/skills/ai-output-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "6a9db15014e1b47855094fd779baa4becbf7b25f9e722737422f37ce33cb3325"
+    },
+    {
+      "source": "platforms/cursor/source/skills/apt-session-router/SKILL.md",
+      "target": ".cursor/skills/apt-session-router/SKILL.md",
+      "kind": "platform",
+      "sha256": "5a5a00a348860cb022e8937a001a82171a020f42a8521388df76f4695fc08c11"
+    },
+    {
+      "source": "skills/architecture/api-architecture-review/SKILL.md",
+      "target": ".cursor/skills/architecture/api-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "696121961274f110f41fdd388d67546d631db3ce286d7821b9200eef05783a7e"
+    },
+    {
+      "source": "skills/architecture/bridge-architecture-review/SKILL.md",
+      "target": ".cursor/skills/architecture/bridge-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "1131eb60b07b3d53d78951f6d4bff4160c6f5c755f0c0be0ac14efb995ec6b76"
+    },
+    {
+      "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "target": ".cursor/skills/architecture/cloudflare-hono-architecture/SKILL.md",
+      "kind": "platform",
+      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+    },
+    {
+      "source": "skills/architecture/integration-architecture-review/SKILL.md",
+      "target": ".cursor/skills/architecture/integration-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "e1b59daf724c38321dd381d78854bf49e797eddac4f33931423bb8d4dacea635"
+    },
+    {
+      "source": "skills/architecture/payment-architecture-review/SKILL.md",
+      "target": ".cursor/skills/architecture/payment-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "ba7b89f31b943eeec97ca96392dc15d501fb748fa832afe18a253c2948b5a099"
+    },
+    {
+      "source": "skills/architecture/system-architecture-review/SKILL.md",
+      "target": ".cursor/skills/architecture/system-architecture-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
+    },
+    {
+      "source": "platforms/cursor/source/skills/clarify-before-acting/SKILL.md",
+      "target": ".cursor/skills/clarify-before-acting/SKILL.md",
+      "kind": "platform",
+      "sha256": "305daa8e7b64c084dea32b128d315a182d07f8074bae10cbce9a0145a22275a1"
+    },
+    {
+      "source": "skills/design/customer-journey-mapping/SKILL.md",
+      "target": ".cursor/skills/design/customer-journey-mapping/SKILL.md",
+      "kind": "platform",
+      "sha256": "4e94c244a356f678bd5de59d0e0526ab8c73128aaaed9966daf1a2eaf0cd5fcf"
+    },
+    {
+      "source": "skills/design/demo-flow-design/SKILL.md",
+      "target": ".cursor/skills/design/demo-flow-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "dbaf73c068228b21f1d4875b17ce597a74d009eb233977d80cdb88eed327cb8e"
+    },
+    {
+      "source": "skills/design/intent-based-ui-design/SKILL.md",
+      "target": ".cursor/skills/design/intent-based-ui-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "ce17a18bf601a2377e9c2a6a84917df500e95a802babd4e93707b186ae29757f"
+    },
+    {
+      "source": "skills/design/role-permission-flow-design/SKILL.md",
+      "target": ".cursor/skills/design/role-permission-flow-design/SKILL.md",
+      "kind": "platform",
+      "sha256": "d62fd0fdb3009c6892b8f2c6f8224b10eaf8244c49bccd98e4803711f0b3169f"
+    },
+    {
+      "source": "skills/design/ui-api-alignment-review/SKILL.md",
+      "target": ".cursor/skills/design/ui-api-alignment-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "1150141460ac974cb8634c512dc7d2bb376018baca67f1981eedac095f0792e5"
+    },
+    {
+      "source": "skills/engineering/contract-change-review/SKILL.md",
+      "target": ".cursor/skills/engineering/contract-change-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "903fbbfe805d2a7dcceedf7bfb474083425e64de1245ed7d6b33e61c41b1f8a8"
+    },
+    {
+      "source": "skills/engineering/implementation-review/SKILL.md",
+      "target": ".cursor/skills/engineering/implementation-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "5f5728234edde48957f7d030644218103d234994fc6f16a3c4a338030b6dbee4"
+    },
+    {
+      "source": "skills/engineering/refactor-safety/SKILL.md",
+      "target": ".cursor/skills/engineering/refactor-safety/SKILL.md",
+      "kind": "platform",
+      "sha256": "31af10f5151fb66bba476620ff04e6b02c045412eab4797fb0578f7d4e0e79f6"
+    },
+    {
+      "source": "skills/thinking/assumption-check/SKILL.md",
+      "target": ".cursor/skills/thinking/assumption-check/SKILL.md",
+      "kind": "platform",
+      "sha256": "255ef347bb6191e810502585a85f23fb8cd09ea82eef1b2ad84bb7f1f9556034"
+    },
+    {
+      "source": "skills/thinking/beginner-clarity-review/SKILL.md",
+      "target": ".cursor/skills/thinking/beginner-clarity-review/SKILL.md",
+      "kind": "platform",
+      "sha256": "94e42a90b86e492a8a9a4b7150a3de563035b6fa745ff5e3fe0ba6670e9f9f7a"
+    },
+    {
+      "source": "skills/thinking/clarify-before-acting/SKILL.md",
+      "target": ".cursor/skills/thinking/clarify-before-acting/SKILL.md",
+      "kind": "platform",
+      "sha256": "c1753786a12d560f78bfd30b76d90dd7765350274943074183946f3cde06bef4"
+    },
+    {
+      "source": "skills/thinking/decision-rationalization/SKILL.md",
+      "target": ".cursor/skills/thinking/decision-rationalization/SKILL.md",
+      "kind": "platform",
+      "sha256": "eeb3f25f80964fb6bb7b929a11229084c0fbb483445b9561a3316093594c543b"
+    },
+    {
+      "source": "skills/thinking/problem-framing/SKILL.md",
+      "target": ".cursor/skills/thinking/problem-framing/SKILL.md",
+      "kind": "platform",
+      "sha256": "6485fe31879f9995552f252df2ff358d624b8b8f23a40bd5e93c6f8a4159d82d"
+    },
+    {
+      "source": "skills/thinking/tradeoff-analysis/SKILL.md",
+      "target": ".cursor/skills/thinking/tradeoff-analysis/SKILL.md",
+      "kind": "platform",
+      "sha256": "1923860b5b40b65e01e0520218b933f96f22c5ea9d9ccb887f234fd10ace86a5"
+    },
+    {
+      "source": "platforms/cursor/source/skills/working-backwards-critic/SKILL.md",
+      "target": ".cursor/skills/working-backwards-critic/SKILL.md",
+      "kind": "platform",
+      "sha256": "fb5ae77e8436c942287d09eb9a6c7252ec470878817b0c78dc3c728491e56213"
+    },
+    {
       "source": "prompts/agent-harness-review-prompt.md",
       "target": ".gemini/commands/agent-harness-review-prompt.md",
       "kind": "platform",
@@ -3315,7 +3718,7 @@
   ],
   "localContext": "docs/project-context.md",
   "lastOperation": {
-    "type": "sync",
-    "at": "2026-08-31T04:38:30.113Z"
+    "type": "install",
+    "at": "2026-09-06T18:01:39.781Z"
   }
 }
