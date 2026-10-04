@@ -3,7 +3,7 @@ title: Accessibility
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-10-03
 source: apt-principles and apt-agent-standards
 domain: "design"
 source_paths: ["apt-principles-agents/principles/design/accessibility.md"]
@@ -43,6 +43,9 @@ Review for screen-first design, missing states, inaccessible interactions, role 
 
 - Treat **Accessibility** as an explicit decision with defined scope, evidence, owner, and validation.
 - Test keyboard, focus, semantics, contrast, motion, errors, zoom, screen readers, and recovery.
+- Check contrast per surface, not per theme. A text token must reach WCAG AA (4.5:1) on every surface it appears on (background, card, muted, secondary, elevated), not just the page background. Low-lightness raised surfaces are where muted, link, and status text fail first.
+- Use the canonical status tokens (`success`, `warning`, `destructive`) instead of product-specific status colors, and never rely on color alone to carry state.
+- Keep contrast checks executable: list required pairs and fail the build when one drops below AA, rather than relying on a displayed checker.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Design canonical hub](README.md) and linked standards/checklists before making final claims.

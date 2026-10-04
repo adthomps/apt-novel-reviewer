@@ -1,7 +1,7 @@
 ---
 title: Design Review Checklist
 version: v1
-last_updated: 2026-04-28
+last_updated: 2026-10-03
 owner: APT
 status: draft
 kind: "checklist"
@@ -33,6 +33,8 @@ Run it before a UI change is merged or before a public page becomes a showcase e
 - [ ] Active navigation, hover, and focus states use primary or neutral selected-surface roles; the restricted accent is limited to explicit support semantics such as badges, callouts, charts, and success treatment.
 - [ ] Default navigation, secondary actions, inactive tabs, cards, panels, and disabled surfaces use neutral surface roles.
 - [ ] Danger, warning, and success colors are reserved for semantic feedback.
+- [ ] Status colors use the canonical `success`, `warning`, and `destructive` tokens; the product defines no status colors of its own.
+- [ ] Text tokens (body, muted, links, status) meet WCAG AA (4.5:1) on every surface they appear on, including muted, secondary, and elevated surfaces, and an automated check covers the required pairs.
 - [ ] Charts use the approved chart ramp, lead with primary blue, and reserve semantic colors for real status or risk.
 - [ ] Alerts, banners, toasts, badges, progress, skeletons, and status dots carry clear state meaning and do not rely on color alone.
 - [ ] Account/auth/settings flows include validation, password visibility where relevant, consent handling, unsaved-change warnings, and explicit destructive-action treatment.

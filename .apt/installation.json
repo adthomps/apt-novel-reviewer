@@ -3,7 +3,7 @@
   "source": {
     "repository": "apt-principles-agents",
     "version": "1.0.0",
-    "commit": "a0227b6baab22998321b1281e995428f1253f660"
+    "commit": "bfde6014df5916d690d8eed53eae79197f0655b9"
   },
   "manifests": [
     "core",
@@ -257,7 +257,7 @@
       "source": "checklists/design-review-checklist.md",
       "target": ".apt/checklists/design-review-checklist.md",
       "kind": "canonical",
-      "sha256": "02e846d9907b1c14067c9fc88cc2b4ed8592de55522356d3de2c50c1dbeb38aa"
+      "sha256": "9764cf2746b70be97c7be1ee146d5a4ffb38723382bc5894c42972cdbf95f663"
     },
     {
       "source": "checklists/documentation-checklist.md",
@@ -491,7 +491,7 @@
       "source": "principles/design/accessibility.md",
       "target": ".apt/principles/design/accessibility.md",
       "kind": "canonical",
-      "sha256": "3e1e57ac51ea7acfdac1e6758ab41c2c38d59714ddb234e5978d7ae9aff8ce8d"
+      "sha256": "a735ca92f98b7a69d32cfdad288d032ee1e7cc0333fe09bd57719b8858df048e"
     },
     {
       "source": "principles/design/customer-journey-design.md",
@@ -912,6 +912,18 @@
       "target": ".apt/skills/architecture/system-architecture-review/SKILL.md",
       "kind": "canonical",
       "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
+    },
+    {
+      "source": "skills/design/apt-contrast-check/check-contrast.mjs",
+      "target": ".apt/skills/design/apt-contrast-check/check-contrast.mjs",
+      "kind": "canonical",
+      "sha256": "6365e9362e41c8eb2a10f5cfb12a7bb9b28e37eb0fe5aaa092d9173df79e3c83"
+    },
+    {
+      "source": "skills/design/apt-contrast-check/SKILL.md",
+      "target": ".apt/skills/design/apt-contrast-check/SKILL.md",
+      "kind": "canonical",
+      "sha256": "d1246ed9b374aef74ff04ee898773d033a9d0c5b3abd6ea2cbe68e839257a4a0"
     },
     {
       "source": "skills/design/customer-journey-mapping/SKILL.md",
@@ -1730,6 +1742,18 @@
       "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
     },
     {
+      "source": "skills/design/apt-contrast-check/check-contrast.mjs",
+      "target": ".claude/skills/design/apt-contrast-check/check-contrast.mjs",
+      "kind": "platform",
+      "sha256": "6365e9362e41c8eb2a10f5cfb12a7bb9b28e37eb0fe5aaa092d9173df79e3c83"
+    },
+    {
+      "source": "skills/design/apt-contrast-check/SKILL.md",
+      "target": ".claude/skills/design/apt-contrast-check/SKILL.md",
+      "kind": "platform",
+      "sha256": "d1246ed9b374aef74ff04ee898773d033a9d0c5b3abd6ea2cbe68e839257a4a0"
+    },
+    {
       "source": "skills/design/customer-journey-mapping/SKILL.md",
       "target": ".claude/skills/design/customer-journey-mapping/SKILL.md",
       "kind": "platform",
@@ -2276,6 +2300,18 @@
       "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
     },
     {
+      "source": "skills/design/apt-contrast-check/check-contrast.mjs",
+      "target": ".codex/skills/design/apt-contrast-check/check-contrast.mjs",
+      "kind": "platform",
+      "sha256": "6365e9362e41c8eb2a10f5cfb12a7bb9b28e37eb0fe5aaa092d9173df79e3c83"
+    },
+    {
+      "source": "skills/design/apt-contrast-check/SKILL.md",
+      "target": ".codex/skills/design/apt-contrast-check/SKILL.md",
+      "kind": "platform",
+      "sha256": "d1246ed9b374aef74ff04ee898773d033a9d0c5b3abd6ea2cbe68e839257a4a0"
+    },
+    {
       "source": "skills/design/customer-journey-mapping/SKILL.md",
       "target": ".codex/skills/design/customer-journey-mapping/SKILL.md",
       "kind": "platform",
@@ -2742,6 +2778,18 @@
       "target": ".cursor/skills/clarify-before-acting/SKILL.md",
       "kind": "platform",
       "sha256": "305daa8e7b64c084dea32b128d315a182d07f8074bae10cbce9a0145a22275a1"
+    },
+    {
+      "source": "skills/design/apt-contrast-check/check-contrast.mjs",
+      "target": ".cursor/skills/design/apt-contrast-check/check-contrast.mjs",
+      "kind": "platform",
+      "sha256": "6365e9362e41c8eb2a10f5cfb12a7bb9b28e37eb0fe5aaa092d9173df79e3c83"
+    },
+    {
+      "source": "skills/design/apt-contrast-check/SKILL.md",
+      "target": ".cursor/skills/design/apt-contrast-check/SKILL.md",
+      "kind": "platform",
+      "sha256": "d1246ed9b374aef74ff04ee898773d033a9d0c5b3abd6ea2cbe68e839257a4a0"
     },
     {
       "source": "skills/design/customer-journey-mapping/SKILL.md",
@@ -3530,6 +3578,18 @@
       "sha256": "c77cfe6501500b2180d3eb3cb197c564ef5edac62f7b92f18764fd0c333dc299"
     },
     {
+      "source": "skills/design/apt-contrast-check/check-contrast.mjs",
+      "target": ".github/skills/design/apt-contrast-check/check-contrast.mjs",
+      "kind": "platform",
+      "sha256": "6365e9362e41c8eb2a10f5cfb12a7bb9b28e37eb0fe5aaa092d9173df79e3c83"
+    },
+    {
+      "source": "skills/design/apt-contrast-check/SKILL.md",
+      "target": ".github/skills/design/apt-contrast-check/SKILL.md",
+      "kind": "platform",
+      "sha256": "d1246ed9b374aef74ff04ee898773d033a9d0c5b3abd6ea2cbe68e839257a4a0"
+    },
+    {
       "source": "skills/design/customer-journey-mapping/SKILL.md",
       "target": ".github/skills/design/customer-journey-mapping/SKILL.md",
       "kind": "platform",
@@ -3718,7 +3778,7 @@
   ],
   "localContext": "docs/project-context.md",
   "lastOperation": {
-    "type": "install",
-    "at": "2026-09-06T18:01:39.781Z"
+    "type": "sync",
+    "at": "2026-10-04T14:17:32.236Z"
   }
 }
