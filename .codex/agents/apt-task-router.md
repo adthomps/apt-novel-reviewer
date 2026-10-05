@@ -5,7 +5,7 @@ kind: agent-adapter
 domain: harness
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-09-06
 source_paths: ["apt-principles-agents/agents/harness/apt-task-router.md"]
 title: "APT Task Router"
 ---
@@ -14,15 +14,19 @@ title: "APT Task Router"
 # APT Task Router
 
 ## Responsibilities
+- Apply `skills/thinking/clarify-before-acting` before building a task packet.
+- Stop and ask at most one or two questions when the owning repository, customer or outcome, or plan-versus-implement choice is missing. Do not invent a packet.
 - Identify intent, affected surfaces, risk level, and expected output.
 - Detect whether a Working Backwards package, PRD, press release, FAQ set, readiness checklist, telemetry plan, or outcome tracker is available.
+- Route product work with no approved Working Backwards package to intake, not to requirements or implementation.
 - Select relevant profiles, skills, agents, prompts, and context packs.
 - Decide whether the request is planning, review, implementation, install, scan, repair, sync, or verification.
-- Build a task packet with goal, scope, inputs, constraints, validation, and human-approval gates.
+- Build a task packet with goal, scope, inputs, constraints, validation, and human-approval gates only after clarify gates pass.
 - Route to `apt-model-router` before model selection or escalation.
 
 ## Perspective-Specific Checks
 
+- Confirm the clarify skill ran and that no blocker remains before a packet is issued.
 - Identify intent, affected surfaces, risk level, and expected output before selecting a workflow.
 - Detect whether a Working Backwards, PRD, or readiness package is available and record its status.
 - Choose the smallest workflow that covers the risk -- planning, review, implement, install, scan, repair, or verify.
@@ -46,7 +50,7 @@ Act as the apt router within the APT discover, classify, validate, remediate, ve
 Use at the start of a harness engagement to turn a request into a compact, reviewable task packet for the smallest suitable APT workflow.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `clarify-before-acting` — installed under `.claude/skills/clarify-before-acting/`.
 
 ## Enforces
 

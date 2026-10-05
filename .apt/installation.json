@@ -3,7 +3,7 @@
   "source": {
     "repository": "apt-principles-agents",
     "version": "1.0.0",
-    "commit": "bfde6014df5916d690d8eed53eae79197f0655b9"
+    "commit": "27126709d12a223de3c3217ad2b5b8ce52e8a78b"
   },
   "manifests": [
     "core",
@@ -1445,7 +1445,7 @@
       "source": "platforms/claude/source/agents/harness/apt-model-router.md",
       "target": ".claude/agents/apt-model-router.md",
       "kind": "platform-agent",
-      "sha256": "73881c69817816c3ee9961a3593c09127d94d1b3b9dcbdebc8240227a732a1a8"
+      "sha256": "64d269a899b7f77e609667531632a0c7012e4fdf00df02e322230b1b44e1b6f1"
     },
     {
       "source": "platforms/claude/source/agents/beginner-reviewers/apt-new-developer-reviewer.md",
@@ -1499,7 +1499,7 @@
       "source": "platforms/claude/source/agents/apt-router.md",
       "target": ".claude/agents/apt-router.md",
       "kind": "platform-agent",
-      "sha256": "055785a4ea099c9413ecea96f489323f23d3923549949687e6c36e52b5b5101c"
+      "sha256": "7853cea8a1e26918be644ccd78c9287ecbb6a78e0fbc3f4371f7444b3bec733d"
     },
     {
       "source": "platforms/claude/source/agents/harness/apt-security-reviewer.md",
@@ -1517,7 +1517,7 @@
       "source": "platforms/claude/source/agents/harness/apt-task-router.md",
       "target": ".claude/agents/apt-task-router.md",
       "kind": "platform-agent",
-      "sha256": "5eac4a94cd83d441f61ab9806f189175d456ae11c681060eee53ef93b8c315c5"
+      "sha256": "5047efeabbf55b1053d6428d67f47482d6299965aa8e9258e2a8dd4bf5fd1147"
     },
     {
       "source": "platforms/claude/source/agents/apt-thinking-lead.md",
@@ -2039,7 +2039,7 @@
       "source": "platforms/codex/source/agents/harness/apt-model-router.md",
       "target": ".codex/agents/apt-model-router.md",
       "kind": "platform-agent",
-      "sha256": "212c9b13c210822ed4a4546efba63958696d2ed1abab9d8bbd7b6905bcbcf0aa"
+      "sha256": "5c93fac131ef343931b1e2337c16a0336422df56c572397ab489bcacc0b2069c"
     },
     {
       "source": "platforms/codex/source/agents/beginner-reviewers/apt-new-developer-reviewer.md",
@@ -2093,7 +2093,7 @@
       "source": "platforms/codex/source/agents/apt-router.md",
       "target": ".codex/agents/apt-router.md",
       "kind": "platform-agent",
-      "sha256": "399021295e0d2cb34ce2c79548e802b784e6e07175fcaae4be7ecf85a21074e1"
+      "sha256": "3c13379fead42d6fee2c2e94c6c775bc7ead37a58d57f0cd78205d21a5db193a"
     },
     {
       "source": "platforms/codex/source/agents/harness/apt-security-reviewer.md",
@@ -2111,7 +2111,7 @@
       "source": "platforms/codex/source/agents/harness/apt-task-router.md",
       "target": ".codex/agents/apt-task-router.md",
       "kind": "platform-agent",
-      "sha256": "ccb4dcaf1c606d8abd3605ac8613aae1da64e789db47335e5702bde208fa4946"
+      "sha256": "86411a76839c74c46a93cb152f9adfedaa123bd1674016f8547a13ef5cee4b92"
     },
     {
       "source": "platforms/codex/source/agents/apt-thinking-lead.md",
@@ -2567,7 +2567,7 @@
       "source": "platforms/cursor/source/agents/apt-router.mdc",
       "target": ".cursor/agents/apt-router.mdc",
       "kind": "platform-agent",
-      "sha256": "298beb03eb9d4b7e88629a82acd7b58a571c34726102715dd37cc06a8021ce54"
+      "sha256": "4a29184c77b2c1e6ae4eb32389b85da97ac429201b74b1d0df796dc382330bf8"
     },
     {
       "source": "platforms/cursor/source/agents/harness/apt-security-reviewer.mdc",
@@ -3155,7 +3155,7 @@
       "source": "platforms/github-copilot/source/agents/generated/harness/apt-model-router.agent.md",
       "target": ".github/agents/apt-model-router.agent.md",
       "kind": "platform-agent",
-      "sha256": "c9bf4b6aab40afe6442dc6f3f03ba6524ce766f4fd68a11ea768d3d0f6e01e93"
+      "sha256": "1acdd33ebf948128301d0a848a2f0704ad10936671d5d7a5a26549f5eacd10f3"
     },
     {
       "source": "platforms/github-copilot/source/agents/generated/beginner-reviewers/apt-new-developer-reviewer.agent.md",
@@ -3209,7 +3209,7 @@
       "source": "platforms/github-copilot/source/agents/generated/apt-router.agent.md",
       "target": ".github/agents/apt-router.agent.md",
       "kind": "platform-agent",
-      "sha256": "a1e94d815959d9f49a431d1cbde012a8022b34b79296b12cf613c9146ec6cc78"
+      "sha256": "98e203de7af7ef6ce64a96e2c2390c43505e499cf169b88dfaf5f33ff8eb781b"
     },
     {
       "source": "platforms/github-copilot/source/agents/generated/harness/apt-security-reviewer.agent.md",
@@ -3227,7 +3227,7 @@
       "source": "platforms/github-copilot/source/agents/generated/harness/apt-task-router.agent.md",
       "target": ".github/agents/apt-task-router.agent.md",
       "kind": "platform-agent",
-      "sha256": "d4d9ae4065fee3f638092f907b4325584d8ca3e816d56a07b5a617c51f1f80f1"
+      "sha256": "846bb285c56c98b80e27c641423d3fb2eba6f7628aeca05a3e738fe0520fc814"
     },
     {
       "source": "platforms/github-copilot/source/agents/generated/apt-thinking-lead.agent.md",
@@ -3779,6 +3779,6 @@
   "localContext": "docs/project-context.md",
   "lastOperation": {
     "type": "sync",
-    "at": "2026-10-04T14:17:32.236Z"
+    "at": "2026-10-04T18:01:00.782Z"
   }
 }

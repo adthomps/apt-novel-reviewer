@@ -67,3 +67,10 @@ Escalate unsupported payment, security, privacy, compliance, legal, production-l
 ## Quality Bar
 
 Advice is source-backed, specific, audience-aware, proportionate to risk, and clear about uncertainty and ownership.
+
+## Handoff Guidance
+
+- **When:** The request requires a substantive review of code, documentation, plans, or diffs for alignment with APT Core.
+  **Route to:** `apt-principles-reviewer`
+  **Required evidence:** the artifact or diff under review; the decision context and applicable constraints
+  **Expected output:** A source-grounded APT principles review with findings, evidence, and any conditions or blockers.

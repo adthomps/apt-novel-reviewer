@@ -6,7 +6,7 @@ kind: agent-adapter
 domain: harness
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-09-06
 source_paths: ["apt-principles-agents/agents/harness/apt-model-router.md"]
 title: "apt-model-router"
 ---
@@ -15,17 +15,19 @@ title: "apt-model-router"
 # apt-model-router
 
 ## Responsibilities
+- Classify the task as read, design, implement, test, or review before choosing a tier. Split mixed sessions so cheap retrieval does not inherit a frontier model.
 - Estimate task complexity, context size, and verification needs.
-- Prefer local models for classification, summarization, checklist review, and task-packet creation.
-- Escalate to mid-tier models for implementation and documentation.
-- Escalate to frontier models for architecture, security, complex debugging, major migrations, and final review.
-- Record why escalation is necessary.
+- Prefer deterministic search and Tier 1 for classification, file reads, inventories, summarization, checklist review, and task-packet creation.
+- Use Tier 2 for implementation, documentation, and targeted tests.
+- Use Tier 3 for architecture, Working Backwards tradeoff work, security, complex debugging, major migrations, and independent final review.
+- Record why escalation is necessary. Do not escalate the whole session because one subtask is hard.
 
 ## Perspective-Specific Checks
 
+- Confirm the task class (read, design, implement, test, or review) was named before a tier was chosen.
 - Confirm the task's risk, ambiguity, context size, modality, and reversibility were each assessed before a tier was chosen.
 - Check that a local or deterministic option was ruled out with a stated reason, not skipped.
-- Flag a routing decision that names a specific vendor model instead of a capability tier.
+- Flag a routing decision that names a specific vendor model instead of a capability tier. Vendor names belong only in platform adapters.
 - Confirm a deterministic fallback is defined for provider failure or low confidence.
 
 ## Required Inputs
@@ -46,7 +48,8 @@ Act as the apt model router within the APT discover, classify, validate, remedia
 Use when choosing the smallest sufficient local or cloud model tier for an APT task.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `model-selection` — installed under `.claude/skills/model-selection/`.
+- `token-efficiency` — installed under `.claude/skills/token-efficiency/`.
 
 ## Enforces
 
