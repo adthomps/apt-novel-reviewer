@@ -5,7 +5,7 @@ domain: design
 status: active
 owner: APT
 version: v1
-last_updated: 2026-10-04
+last_updated: 2026-10-05
 source_paths: ["apt-principles/design.md", "apt-design-reference/README.md"]
 supersedes: ["apt-principles/design.md"]
 ---
@@ -104,15 +104,15 @@ APT copy is precise, calm, honest, and non-marketing. It should help a user deci
 
 Color identity is a target-repository decision. A project should record why its primary, accent, and feedback colors exist; verify contrast; and keep those roles consistent across components, charts, content, and states.
 
-The public APT site owns its mostly blue brand decision and restricted accent policy in its local design system.
+The public APT site keeps blue for brand, primary actions, links, and focus. Teal is the highlight color: hover and selected states that used to be a neutral grey surface may now be teal.
 
 ## Color Roles and Interaction Rules
 
 Color choices must start from semantic role, not visual preference.
 
-- Primary action, navigation, links, focus, selection, and brand identity need explicit roles; they need not share one literal color.
-- Accent colors require a defined purpose and must not compete indiscriminately with primary actions.
-- Neutral surfaces are for default navigation, secondary buttons, inactive tabs, cards, panels, dividers, and disabled surfaces.
+- Primary action, links, focus, and brand identity use the blue primary role.
+- Teal is the highlight for hover and selected states that previously used a neutral grey surface. That includes ghost and outline buttons, menu items, dropdown options, sidebar items, docs navigation, and selected support. It is not the default call-to-action color.
+- Neutral surfaces remain the resting treatment for default navigation, secondary buttons, inactive tabs, cards, panels, dividers, and disabled surfaces.
 - Danger, warning, and success colors are semantic feedback colors. Do not use them as general decoration or to create arbitrary variety.
 - Disabled treatment should reduce contrast and interaction affordance without hiding the control or changing its meaning.
 - Implementation should use semantic aliases. Raw values outside the target token source require an explicit design decision.

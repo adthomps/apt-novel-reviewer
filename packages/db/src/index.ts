@@ -59,6 +59,8 @@ function splitSqlStatements(sql: string): string[] {
 
 function loadMigrationSqlFiles(): string[] {
   const dirCandidates = [
+    // Electron resources are independent of the launch working directory.
+    ...(process.versions.electron ? [path.join((process as NodeJS.Process & { resourcesPath: string }).resourcesPath, "migrations")] : []),
     path.resolve(__dirname, "migrations"),
     path.resolve(process.cwd(), "packages", "db", "src", "migrations"),
     path.resolve(process.cwd(), "..", "..", "packages", "db", "src", "migrations")

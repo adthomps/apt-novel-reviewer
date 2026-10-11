@@ -1,4 +1,10 @@
 export const IPC = {
+  runtimeOpenDownloadPage: "runtime:open-download-page",
+  runtimeSelectExecutable: "runtime:select-executable",
+  runtimeStart: "runtime:start",
+  runtimeBeginPull: "runtime:begin-pull",
+  runtimeCancelPull: "runtime:cancel-pull",
+  runtimeGetPullStatus: "runtime:get-pull-status",
   runtimeGetStatus: "runtime:get-status",
   runtimeGetModels: "runtime:get-models",
   projectsList: "projects:list",

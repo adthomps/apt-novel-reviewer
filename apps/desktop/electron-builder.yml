@@ -1,0 +1,33 @@
+appId: com.appliedpracticalthinking.novelreviewer
+productName: APT Novel Reviewer
+# Keep the existing app.name/userData directory despite the installer display name.
+extraMetadata:
+  name: apt-novel-reviewer
+asar: true
+asarUnpack:
+  - '**/*.node'
+files:
+  - out/**
+  - package.json
+extraResources:
+  - from: ../../packages/db/src/migrations
+    to: migrations
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  executableName: APT-Novel-Reviewer
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  deleteAppDataOnUninstall: false
+  packElevateHelper: false
+artifactName: 'APT-Novel-Reviewer-${version}-${arch}-Setup.${ext}'
+directories:
+  output: ../../release
+publish: null
+npmRebuild: true

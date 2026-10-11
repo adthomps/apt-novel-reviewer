@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "pnpm --filter @apt/desktop dev",
     "build": "pnpm -r build",
+    "release:dir": "pnpm build && pnpm --filter @apt/desktop exec electron-builder --win --x64 --dir --publish never",
+    "release:win": "pnpm build && pnpm --filter @apt/desktop exec electron-builder --win --x64 --publish never && node scripts/release-checksum.mjs",
     "lint": "pnpm -r --if-present lint",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test"

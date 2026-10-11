@@ -3,6 +3,12 @@ import { IPC } from "../shared/ipc";
 
 contextBridge.exposeInMainWorld("aptApi", {
   runtime: {
+    openDownloadPage: () => ipcRenderer.invoke(IPC.runtimeOpenDownloadPage),
+    selectExecutable: () => ipcRenderer.invoke(IPC.runtimeSelectExecutable),
+    start: () => ipcRenderer.invoke(IPC.runtimeStart),
+    beginPull: () => ipcRenderer.invoke(IPC.runtimeBeginPull),
+    cancelPull: () => ipcRenderer.invoke(IPC.runtimeCancelPull),
+    getPullStatus: () => ipcRenderer.invoke(IPC.runtimeGetPullStatus),
     getStatus: () => ipcRenderer.invoke(IPC.runtimeGetStatus),
     getModels: () => ipcRenderer.invoke(IPC.runtimeGetModels)
   },

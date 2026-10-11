@@ -1,6 +1,7 @@
 node_modules
 .pnpm-store
 dist
+release/
 out
 coverage
 *.log
@@ -12,3 +13,4 @@ apps/desktop/.electron-vite
 projects/
 .apt-backups/
 graphify-out/
+tmp-docx-sample*/

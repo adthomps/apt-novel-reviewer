@@ -8,8 +8,15 @@ import { registerReviewIpc } from "./ipc/reviews";
 import { registerRuntimeIpc } from "./ipc/runtime";
 import { registerCanonIpc } from "./ipc/canon";
 import { getDbPath } from "./services/paths";
+import { shutdownRuntime } from "./services/runtime";
 
 let mainWindow: BrowserWindow | null = null;
+// Installer branding must not change the existing production database location.
+app.setName("@apt/desktop");
+if (!process.env.ELECTRON_RENDERER_URL) {
+  app.setPath("userData", path.join(app.getPath("appData"), "@apt", "desktop"));
+}
+app.on("before-quit", shutdownRuntime);
 const isDev = Boolean(process.env.ELECTRON_RENDERER_URL);
 
 if (isDev) {

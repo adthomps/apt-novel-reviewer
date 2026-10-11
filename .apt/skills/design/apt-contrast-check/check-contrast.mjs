@@ -31,20 +31,48 @@ function cssWithImports(cssPath, seen = new Set()) {
   return `${imported.join("\n")}\n${css}`;
 }
 
-/** Merges every block opened by `selector` in order, so later blocks override earlier ones. */
-function readBlock(css, selector) {
-  const tokens = {};
-  let found = false;
-  let from = 0;
-  for (;;) {
-    const start = css.indexOf(selector, from);
-    if (start < 0) break;
-    found = true;
-    const end = css.indexOf("}", start);
-    for (const match of css.slice(start, end).matchAll(/--([a-z0-9-]+):\s*([^;]+);/g)) tokens[match[1]] = match[2].trim();
-    from = end;
+/**
+ * Removes @media blocks other than prefers-color-scheme. Those are conditional overrides
+ * (for example a prefers-contrast: high border), not the theme, so they must not replace
+ * base token values. prefers-color-scheme blocks are kept because they can define a theme.
+ */
+function withoutConditionalMedia(css) {
+  let out = "";
+  let index = 0;
+  for (const match of css.matchAll(/@media\b[^{]*\{/g)) {
+    if (match.index < index) continue;
+    if (/prefers-color-scheme/.test(match[0])) continue;
+    let depth = 1;
+    let cursor = match.index + match[0].length;
+    while (cursor < css.length && depth > 0) {
+      if (css[cursor] === "{") depth += 1;
+      else if (css[cursor] === "}") depth -= 1;
+      cursor += 1;
+    }
+    out += css.slice(index, match.index);
+    index = cursor;
   }
-  return found ? tokens : null;
+  return out + css.slice(index);
+}
+
+/**
+ * Merges every block opened by any of `selectors`, in source order, so later blocks override
+ * earlier ones. Returns null when the first selector never appears.
+ */
+function readBlock(css, selectors) {
+  const list = Array.isArray(selectors) ? selectors : [selectors];
+  const starts = list.flatMap((selector) => {
+    const found = [];
+    for (let from = css.indexOf(selector); from >= 0; from = css.indexOf(selector, from + selector.length)) found.push({ selector, from });
+    return found;
+  }).sort((a, b) => a.from - b.from);
+  if (!starts.some((item) => item.selector === list[0])) return null;
+  const tokens = {};
+  for (const { from } of starts) {
+    const end = css.indexOf("}", from);
+    for (const match of css.slice(from, end).matchAll(/--([a-z0-9-]+):\s*([^;]+);/g)) tokens[match[1]] = match[2].trim();
+  }
+  return tokens;
 }
 
 /**
@@ -52,14 +80,18 @@ function readBlock(css, selector) {
  * Returns { dark: {name: value} | null, light: {...} | null, darkSelector, lightSelector, rootTheme }.
  */
 export function readThemes(cssPath, { dark, light } = {}) {
-  const css = cssWithImports(path.resolve(cssPath));
+  const css = withoutConditionalMedia(cssWithImports(path.resolve(cssPath)));
   const hasLightClass = /(^|[\s}])\.light\s*\{/m.test(css);
   const hasDarkClass = /(^|[\s}])\.dark\s*\{/m.test(css);
   const darkSelector = dark || (hasLightClass || !hasDarkClass ? ":root {" : ".dark {");
   const lightSelector = light || (hasLightClass ? ".light {" : hasDarkClass ? ":root {" : null);
+  // The theme class sits on <html>, which also matches :root, and both have equal specificity.
+  // So the class theme is :root and its own blocks merged in source order: a :root declaration
+  // after a class block wins in that theme too, exactly as the browser applies it.
+  const merged = (selector) => (selector === ":root {" ? readBlock(css, selector) : readBlock(css, [selector, ":root {"]));
   return {
-    dark: readBlock(css, darkSelector),
-    light: lightSelector ? readBlock(css, lightSelector) : null,
+    dark: merged(darkSelector),
+    light: lightSelector ? merged(lightSelector) : null,
     darkSelector,
     lightSelector,
     rootTheme: darkSelector === ":root {" ? "dark" : "light",

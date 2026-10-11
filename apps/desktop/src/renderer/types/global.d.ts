@@ -1,4 +1,4 @@
-import type { CreateProjectInput, RuntimeStatus, ReviewMode } from "@apt/types";
+import type { CreateProjectInput, RuntimeApi, ReviewMode } from "@apt/types";
 
 type FindingRow = {
   id: string;
@@ -36,10 +36,7 @@ type ReviewStartResult = {
 declare global {
   interface Window {
     aptApi: {
-      runtime: {
-        getStatus: () => Promise<RuntimeStatus>;
-        getModels: () => Promise<string[]>;
-      };
+      runtime: RuntimeApi;
       projects: {
         list: () => Promise<Array<{ id: string; name: string; updatedAt: number }>>;
         get: (projectId: string) => Promise<{ id: string; name: string; updatedAt: number } | null>;

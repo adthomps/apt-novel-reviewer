@@ -1,7 +1,7 @@
 ---
 title: Design Review Checklist
 version: v1
-last_updated: 2026-10-03
+last_updated: 2026-10-05
 owner: APT
 status: draft
 kind: "checklist"
@@ -30,8 +30,8 @@ Run it before a UI change is merged or before a public page becomes a showcase e
 - [ ] Typography uses Inter or the approved system fallback for UI/prose and IBM Plex Mono for code, token values, CLI examples, and technical snippets.
 - [ ] Iconography uses Lucide-style outline icons or the approved AptEmblem pattern; product chrome does not use emoji as decoration.
 - [ ] Primary actions, links, focus rings, and high-frequency action emphasis use the blue primary/action role.
-- [ ] Active navigation, hover, and focus states use primary or neutral selected-surface roles; the restricted accent is limited to explicit support semantics such as badges, callouts, charts, and success treatment.
-- [ ] Default navigation, secondary actions, inactive tabs, cards, panels, and disabled surfaces use neutral surface roles.
+- [ ] Hover and selected highlights use the teal accent where those states previously used a neutral grey surface. Focus rings, links, and primary calls to action stay on the blue primary role.
+- [ ] Default navigation, secondary actions, inactive tabs, cards, panels, and disabled surfaces use neutral surface roles at rest.
 - [ ] Danger, warning, and success colors are reserved for semantic feedback.
 - [ ] Status colors use the canonical `success`, `warning`, and `destructive` tokens; the product defines no status colors of its own.
 - [ ] Text tokens (body, muted, links, status) meet WCAG AA (4.5:1) on every surface they appear on, including muted, secondary, and elevated surfaces, and an automated check covers the required pairs.
