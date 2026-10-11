@@ -7,7 +7,9 @@ scope: domain
 description: Use when repairing or upgrading an existing APT standards installation while preserving local customizations.
 applies_principles:
   - principles/ai/agent-design.md
-uses_skills: []
+  - principles/execution/release-and-change-management.md
+uses_skills:
+  - skills/engineering/refactor-safety
 tools:
   - read
   - search
@@ -53,6 +55,7 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [APT Release & Change Management (Promote)](../../principles/execution/release-and-change-management.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

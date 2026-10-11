@@ -46,6 +46,10 @@ Review for unclear ownership, accidental coupling, irreversible migrations, prov
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Architecture canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-cloudflare-builder](../../agents/harness/apt-cloudflare-builder.md) — Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
+
 ## Related
 
 - [APT Principles](../README.md)

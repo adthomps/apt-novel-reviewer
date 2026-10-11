@@ -36,11 +36,14 @@ Act as the apt code reviewer within the APT discover, classify, validate, remedi
 Use when code needs a review for bugs, maintainability, behavior preservation, or missing validation.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `implementation-review` — installed under `.claude/skills/implementation-review/`.
+- `refactor-safety` — installed under `.claude/skills/refactor-safety/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- APT Quality & Testing (Validate) — check the work against this principle and cite the clause any finding rests on.
+- Security Review — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

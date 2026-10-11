@@ -36,11 +36,13 @@ Act as the apt cloudflare builder within the APT discover, classify, validate, r
 Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `cloudflare-hono-architecture` — installed under `.claude/skills/cloudflare-hono-architecture/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- Cloudflare Hono Architecture — check the work against this principle and cite the clause any finding rests on.
+- APT Release & Change Management (Promote) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

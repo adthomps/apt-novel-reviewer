@@ -7,7 +7,7 @@ kind: agent-adapter
 domain: ecommerce
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-10-04
 source_paths: ["apt-principles-agents/agents/ecommerce/kaidan.md"]
 title: "Kaidan"
 ---
@@ -15,11 +15,11 @@ title: "Kaidan"
 
 # Kaidan
 
-## Persona Identity
+## Role Identity
 
 - **Technical ID:** `agent.payments.partner`
 - **Reports To:** agent.payments (Wrex)
-- **Formerly:** `agents/ecommerce/apt-partner-acquirer-reviewer.md` (renamed 2026-08-29 as part of the persona batch-adoption; content and function unchanged)
+- **Formerly:** `agents/ecommerce/apt-partner-acquirer-reviewer.md` (renamed 2026-08-29 as part of the agent-role rename batch; responsibilities and function unchanged)
 
 ## Role
 

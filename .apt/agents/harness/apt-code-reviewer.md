@@ -7,7 +7,11 @@ scope: domain
 description: Use when code needs a review for bugs, maintainability, behavior preservation, or missing validation.
 applies_principles:
   - principles/ai/agent-design.md
-uses_skills: []
+  - principles/execution/quality-and-testing.md
+  - principles/security-risk/security-review.md
+uses_skills:
+  - skills/engineering/implementation-review
+  - skills/engineering/refactor-safety
 tools:
   - read
   - search
@@ -50,6 +54,8 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [APT Quality & Testing (Validate)](../../principles/execution/quality-and-testing.md) — check the work against this principle and cite the clause any finding rests on.
+- [Security Review](../../principles/security-risk/security-review.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

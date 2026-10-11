@@ -54,6 +54,7 @@ hook runs on every contributor's machine, hooks carry their own contract.
 | `pretooluse-bash-guard.mjs` | PreToolUse (Bash) | opt-in | Blocks deploy / publish / force-push / `curl \| sh` / `.env` reads unless `APT_APPROVED=1`. Fails open. |
 | `stop-verify-gate.mjs` | Stop | opt-in | If the dirty tree touches an enforceable domain, prints which reviews the change implies. Blocks only when `APT_STOP_GATE=block`. |
 | `subagentstop-evidence.mjs` | SubagentStop | opt-in | Appends each sub-agent's final message to `.apt/council-evidence/<session>.md`. Never blocks. |
+| `pretooluse-wb-critic-guard.mjs` | PreToolUse (Edit\|Write\|MultiEdit) | opt-in | While `.wb-critic.lock` exists at the repo root, blocks edits to Working Backwards writer artifacts so an in-progress critic review cannot rewrite what it scores. Never writes PASS. Fails open. Installed by any claude target; enable in repos that use the `working-backwards` manifest. Script: `.claude/hooks/pretooluse-wb-critic-guard.mjs`. |
 
 ## Per-repo activation
 

@@ -7,7 +7,12 @@ scope: domain
 description: Use when reviewing security-sensitive agent, code, configuration, MCP, model-routing, or lifecycle behavior.
 applies_principles:
   - principles/ai/agent-design.md
-uses_skills: []
+  - principles/security-risk/security-review.md
+  - principles/security-risk/data-handling.md
+  - principles/security-risk/permission-design.md
+uses_skills:
+  - skills/security-risk/security-review
+  - skills/security-risk/permission-review
 tools:
   - read
   - search
@@ -51,6 +56,9 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [Security Review](../../principles/security-risk/security-review.md) — check the work against this principle and cite the clause any finding rests on.
+- [Data Handling](../../principles/security-risk/data-handling.md) — check the work against this principle and cite the clause any finding rests on.
+- [Permission Design](../../principles/security-risk/permission-design.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

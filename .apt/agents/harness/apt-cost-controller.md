@@ -7,7 +7,11 @@ scope: domain
 description: Use when a task risks excessive token usage, repeated context loading, unnecessary model escalation, or redundant scans.
 applies_principles:
   - principles/ai/agent-design.md
-uses_skills: []
+  - principles/ai/model-routing.md
+  - principles/ai/local-llm-routing.md
+uses_skills:
+  - skills/source-backed/token-efficiency
+  - skills/ai-agents/model-selection
 tools:
   - read
   - search
@@ -51,6 +55,8 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [Model Routing](../../principles/ai/model-routing.md) — check the work against this principle and cite the clause any finding rests on.
+- [Local LLM Routing](../../principles/ai/local-llm-routing.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

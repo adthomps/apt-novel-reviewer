@@ -37,11 +37,13 @@ Act as the apt docs reviewer within the APT discover, classify, validate, remedi
 Use when reviewing this repository’s own documentation architecture, consistency, source-of-truth boundaries, or operating guidance.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `audience-layered-docs` — installed under `.claude/skills/audience-layered-docs/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- Audience Layered Docs — check the work against this principle and cite the clause any finding rests on.
+- APT Knowledge System (Learn & Scale) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

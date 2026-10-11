@@ -37,11 +37,12 @@ Act as the apt repair agent within the APT discover, classify, validate, remedia
 Use when repairing or upgrading an existing APT standards installation while preserving local customizations.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `refactor-safety` — installed under `.claude/skills/refactor-safety/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- APT Release & Change Management (Promote) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

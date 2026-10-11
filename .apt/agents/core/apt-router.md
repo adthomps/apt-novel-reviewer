@@ -21,6 +21,7 @@ owner: APT
 last_updated: 2026-08-30
 source: apt-agent-standards roles and APT doctrine
 source_paths: ["apt-principles-agents/agents/core/apt-router.md"]
+handoffs: '[{"target":"apt-principles-reviewer","when":"The request requires a substantive review of code, documentation, plans, or diffs for alignment with APT Core.","required_evidence":["the artifact or diff under review","the decision context and applicable constraints"],"expected_output":"A source-grounded APT principles review with findings, evidence, and any conditions or blockers."}]'
 ---
 
 # Apt Router

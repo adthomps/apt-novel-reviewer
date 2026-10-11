@@ -49,6 +49,10 @@ Review for unsupported claims, overpowered tools, weak-model routing for high-st
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Ai canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-agent-skill-steward](../../agents/core/apt-agent-skill-steward.md) — Use when a canonical agent role or skill is proposed, written, revised, or retired, to confirm it owns a distinct perspective or procedure, is grounded in principles, and is packaged correctly for every platform.
+
 ## Related
 
 - [APT Principles](../README.md)

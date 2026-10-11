@@ -38,11 +38,12 @@ Use as a general accuracy and completeness pass on any documentation deliverable
 
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `hallucination-review` — installed under `.claude/skills/hallucination-review/`.
 
 ## Enforces
 
 - Documentation Principles — check the work against this principle and cite the clause any finding rests on.
+- Support Ready Docs — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

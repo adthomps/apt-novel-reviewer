@@ -7,8 +7,12 @@ scope: domain
 description: Use when a change is about to ship, to confirm the support organization can actually operate and troubleshoot it on day one.
 applies_principles:
   - principles/design/role-based-experience.md
+  - principles/service-readiness/support-readiness.md
+  - principles/service-readiness/escalation-paths.md
+  - principles/service-readiness/troubleshooting-readiness.md
 uses_skills:
   - skills/service-readiness/support-readiness-review
+  - skills/service-readiness/escalation-path-review
 tools:
   - read
   - search
@@ -54,6 +58,9 @@ Use when a change is about to ship, to confirm the support organization can actu
 ## Enforces
 
 - [Role Based Experience](../../principles/design/role-based-experience.md) — check the work against this principle and cite the clause any finding rests on.
+- [Support Readiness](../../principles/service-readiness/support-readiness.md) — check the work against this principle and cite the clause any finding rests on.
+- [Escalation Paths](../../principles/service-readiness/escalation-paths.md) — check the work against this principle and cite the clause any finding rests on.
+- [Troubleshooting Readiness](../../principles/service-readiness/troubleshooting-readiness.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

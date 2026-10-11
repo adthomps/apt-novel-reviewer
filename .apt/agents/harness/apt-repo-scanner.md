@@ -7,6 +7,7 @@ scope: domain
 description: Use when inspecting a target repository for installed APT standards, drift, missing files, duplicates, or repair needs.
 applies_principles:
   - principles/ai/agent-design.md
+  - principles/execution/quality-and-testing.md
 uses_skills: []
 tools:
   - read
@@ -51,6 +52,7 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [APT Quality & Testing (Validate)](../../principles/execution/quality-and-testing.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

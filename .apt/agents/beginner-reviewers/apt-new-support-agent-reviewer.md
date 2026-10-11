@@ -7,6 +7,7 @@ scope: domain
 description: Use when reviewing material a support agent will use to help a customer, to confirm a newly trained agent can resolve common cases without escalating.
 applies_principles:
   - principles/thinking/beginner-clarity.md
+  - principles/service-readiness/knowledge-base-readiness.md
 uses_skills:
   - skills/service-readiness/kb-article-writer
 tools:
@@ -54,6 +55,7 @@ Use when reviewing material a support agent will use to help a customer, to conf
 ## Enforces
 
 - [Beginner Clarity](../../principles/thinking/beginner-clarity.md) — check the work against this principle and cite the clause any finding rests on.
+- [Knowledge Base Readiness](../../principles/service-readiness/knowledge-base-readiness.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

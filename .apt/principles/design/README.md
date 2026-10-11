@@ -5,7 +5,7 @@ domain: design
 status: active
 owner: APT
 version: v1
-last_updated: 2026-08-16
+last_updated: 2026-10-04
 source_paths: ["apt-principles/design.md", "apt-design-reference/README.md"]
 supersedes: ["apt-principles/design.md"]
 ---
@@ -65,9 +65,15 @@ Predictable interaction patterns reduce cognitive load and implementation drift.
 
 This repository owns portable design doctrine: decision principles, required states and artifacts, reusable review criteria, semantic token roles, prompts, and examples.
 
-Each target repository owns its visual identity, literal token values, typography choices, component APIs, framework selection, route shell, product copy, and runtime implementation. Target-owned choices may conform to APT doctrine without becoming universal APT requirements.
+This repository also owns the canonical APT design tokens and their generated artifacts (DR-015 / APT-019): `design/tokens/APT-TOKENS.json`, versioned in `design/VERSION` and generated into `design/generated/` (token CSS, Tailwind v3 preset, Tailwind v4 theme, typed values). Products receive them through the `design` manifest and declare how they align in an `apt-design.json` tier:
 
-The public `applied-practical-thinking` repository is an inspectable APT implementation and showcase, not the source of every project's brand layer. Its authored design system, tokens, component contracts, and surface patterns live under `apps/web/docs/design/` in that repository.
+- **Tier 1 (APT products):** literal token values come from `design/generated/` unchanged. A product-specific deviation needs an exclusion with a reason and a decision record.
+- **Tier 2 (brand products):** the product owns its palette and visual identity, but uses the APT semantic token names and meets the contrast contract.
+- **Tier 3 (legacy or no UI):** doctrine and review guidance only.
+
+Every target repository still owns its typography choices beyond the token scale, component APIs, framework selection, route shell, product copy, and runtime implementation. `node .apt/design/bin/apt-design-check.mjs` enforces the tier.
+
+The public `applied-practical-thinking` repository is an inspectable APT implementation and showcase. It consumes the canonical tokens like any Tier 1 product; its authored design doctrine documents live under `apps/web/docs/design/`.
 
 ## UI Component Implementation Standard
 
@@ -125,7 +131,7 @@ A target design system should cover:
 - content naming and messaging that is precise, honest, and matched to user intent
 - accessibility expectations for contrast, focus, keyboard use, reduced motion, and readable text wrapping
 
-Portable token roles and lint contracts live in `references/design-tokens.json` and `references/design-lint-gates.json`. Literal implementations remain local.
+Canonical token values live in `design/tokens/APT-TOKENS.json` and ship as generated files in `design/generated/`. `references/design-tokens.json` is a generated flat view of them, and `references/design-lint-gates.json` holds the review gates. Tier 1 products use the generated values; Tier 2 products implement their own values under the same semantic names.
 
 ## Working Backwards Design Artifacts
 

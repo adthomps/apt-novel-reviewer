@@ -60,6 +60,7 @@ Define what success looks like before build work begins.
 - Prefer small decision records over long undocumented debate.
 - Decision records should include owner, rationale, risk, mitigation, and revisit or expiry date when the decision accepts risk.
 - If the problem is unclear, produce a framing brief before producing code.
+- If the owning repository, customer or outcome, or plan-versus-implement choice is missing, ask at most one or two questions and stop. Use [Clarify Before Acting](../../skills/thinking/clarify-before-acting/SKILL.md). Do not invent a path.
 
 ## Required Artifacts
 
@@ -136,6 +137,7 @@ Thinking turns vague intent into clear, constrained, measurable work.
 ## Topic Guides
 
 - [Practical thinking](practical-thinking.md)
+- [Clarify before acting](../../skills/thinking/clarify-before-acting/SKILL.md)
 - [Decision framing](decision-framing.md)
 - [Tradeoff analysis](tradeoff-analysis.md)
 - [Assumption checking](assumption-checking.md)

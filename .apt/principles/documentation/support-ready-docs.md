@@ -46,6 +46,10 @@ Review for one guide for every audience, copied truths, non-runnable examples, m
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Documentation canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-docs-reviewer](../../agents/docs/apt-docs-reviewer.md) — Use as a general accuracy and completeness pass on any documentation deliverable that doesn't need a specialized audience or API-contract review.
+
 ## Related
 
 - [APT Principles](../README.md)

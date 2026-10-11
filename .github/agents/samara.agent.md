@@ -6,7 +6,7 @@ kind: agent-adapter
 domain: risk
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-10-04
 source_paths: ["apt-principles-agents/agents/risk/samara.md"]
 title: "Samara"
 ---
@@ -14,11 +14,11 @@ title: "Samara"
 
 # Samara
 
-## Persona Identity
+## Role Identity
 
 - **Technical ID:** `agent.risk`
 - **Reports To:** agent.edi
-- **Formerly:** `agents/risk/apt-permissions-reviewer.md` (renamed 2026-08-29 as part of the persona batch-adoption; content and function unchanged)
+- **Formerly:** `agents/risk/apt-permissions-reviewer.md` (renamed 2026-08-29 as part of the agent-role rename batch; responsibilities and function unchanged)
 - **Also Draws On:** `agents/risk/apt-compliance-awareness-reviewer.md` — the disclosures/regulated-process lens alongside access governance.
 
 ## Role

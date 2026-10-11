@@ -42,6 +42,7 @@ Use when applying this repository’s installable agent standards and harness as
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- APT Release & Change Management (Promote) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

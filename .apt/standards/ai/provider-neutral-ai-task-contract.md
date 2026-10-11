@@ -5,7 +5,7 @@ domain: "ai"
 status: "active"
 owner: "APT"
 last_updated: "2026-08-01"
-source_paths: ["apt-principles-agents/standards/ai/provider-neutral-ai-task-contract.md", "apt-product-team/prd-pm-ai-team.md", "apt-product-team/.claude/skills/working-backwards-methodology/SKILL.md"]
+source_paths: ["apt-principles-agents/standards/ai/provider-neutral-ai-task-contract.md", "apt-principles-agents/product-team/prd-pm-ai-team.md", "apt-principles-agents/product-team/.claude/skills/working-backwards-methodology/SKILL.md"]
 ---
 
 # Provider-Neutral AI Task Contract

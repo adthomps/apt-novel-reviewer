@@ -37,11 +37,15 @@ Act as the apt security reviewer within the APT discover, classify, validate, re
 Use when reviewing security-sensitive agent, code, configuration, MCP, model-routing, or lifecycle behavior.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `security-review` — installed under `.claude/skills/security-review/`.
+- `permission-review` — installed under `.claude/skills/permission-review/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- Security Review — check the work against this principle and cite the clause any finding rests on.
+- Data Handling — check the work against this principle and cite the clause any finding rests on.
+- Permission Design — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

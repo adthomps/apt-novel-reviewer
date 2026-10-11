@@ -50,10 +50,13 @@ Use when choosing the smallest sufficient local or cloud model tier for an APT t
 
 - `model-selection` — installed under `.claude/skills/model-selection/`.
 - `token-efficiency` — installed under `.claude/skills/token-efficiency/`.
+- `local-llm-routing` — installed under `.claude/skills/local-llm-routing/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- Model Routing — check the work against this principle and cite the clause any finding rests on.
+- Local LLM Routing — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

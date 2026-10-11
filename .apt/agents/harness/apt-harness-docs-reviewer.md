@@ -7,7 +7,10 @@ scope: domain
 description: Use when reviewing this repository’s own documentation architecture, consistency, source-of-truth boundaries, or operating guidance.
 applies_principles:
   - principles/ai/agent-design.md
-uses_skills: []
+  - principles/documentation/audience-layered-docs.md
+  - principles/execution/knowledge-and-learning.md
+uses_skills:
+  - skills/documentation/audience-layered-docs
 tools:
   - read
   - search
@@ -51,6 +54,8 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [Audience Layered Docs](../../principles/documentation/audience-layered-docs.md) — check the work against this principle and cite the clause any finding rests on.
+- [APT Knowledge System (Learn & Scale)](../../principles/execution/knowledge-and-learning.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

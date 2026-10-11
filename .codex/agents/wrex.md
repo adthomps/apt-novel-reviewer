@@ -5,7 +5,7 @@ kind: agent-adapter
 domain: payments
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-10-04
 source_paths: ["apt-principles-agents/agents/payments/wrex.md"]
 title: "Wrex"
 ---
@@ -13,11 +13,11 @@ title: "Wrex"
 
 # Wrex
 
-## Persona Identity
+## Role Identity
 
 - **Technical ID:** `agent.payments`
 - **Reports To:** agent.edi
-- **Formerly:** `agents/payments/apt-principal-payment-consultant.md` (renamed 2026-08-29 as part of the persona batch-adoption; content and function unchanged)
+- **Formerly:** `agents/payments/apt-principal-payment-consultant.md` (renamed 2026-08-29 as part of the agent-role rename batch; responsibilities and function unchanged)
 - **Also Draws On:** `agents/payments/apt-payment-architect.md`, `apt-fraud-risk-reviewer.md`, `apt-chargeback-risk-reviewer.md`, `apt-gateway-migration-reviewer.md`, `apt-transaction-intelligence-analyst.md`, `apt-crypto-payment-risk-reviewer.md`, and Suvi (`suvi.md`) — the full payments & commerce team this lead role oversees.
 
 ## Role

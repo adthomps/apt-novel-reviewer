@@ -7,7 +7,12 @@ scope: domain
 description: Use when reviewing UI work for intent, workflow continuity, state design, accessibility, or responsive behavior.
 applies_principles:
   - principles/ai/agent-design.md
-uses_skills: []
+  - principles/design/intent-based-design.md
+  - principles/design/accessibility.md
+  - principles/design/role-based-experience.md
+uses_skills:
+  - skills/design/intent-based-ui-design
+  - skills/design/apt-contrast-check
 tools:
   - read
   - search
@@ -53,6 +58,9 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [Intent Based Design](../../principles/design/intent-based-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [Accessibility](../../principles/design/accessibility.md) — check the work against this principle and cite the clause any finding rests on.
+- [Role Based Experience](../../principles/design/role-based-experience.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

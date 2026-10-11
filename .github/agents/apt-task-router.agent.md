@@ -52,10 +52,13 @@ Use at the start of a harness engagement to turn a request into a compact, revie
 ## Required Skills
 
 - `clarify-before-acting` — installed under `.claude/skills/clarify-before-acting/`.
+- `agent-routing` — installed under `.claude/skills/agent-routing/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- Practical Thinking — check the work against this principle and cite the clause any finding rests on.
+- Model Routing — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

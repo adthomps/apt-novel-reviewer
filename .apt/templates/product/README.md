@@ -3,7 +3,7 @@ title: Product Templates
 kind: index
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-10-04
 source: APT consolidation
 domain: "product"
 source_paths: ["apt-principles-agents/templates/product/README.md"]
@@ -18,3 +18,4 @@ Templates for connect customer evidence and business outcomes to scope, prioriti
 - [Intake Routing Decision.md](intake-routing-decision.md)
 - [Product Hub Checklist.md](product-hub-checklist.md)
 - [Product Decision Record.md](product-decision-record.md)
+- [Product Persona Profile.md](product-persona-profile.md)

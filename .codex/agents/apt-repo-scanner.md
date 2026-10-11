@@ -40,6 +40,7 @@ Use when inspecting a target repository for installed APT standards, drift, miss
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- APT Quality & Testing (Validate) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

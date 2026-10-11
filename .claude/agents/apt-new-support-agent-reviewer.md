@@ -44,6 +44,7 @@ Use when reviewing material a support agent will use to help a customer, to conf
 ## Enforces
 
 - Beginner Clarity — check the work against this principle and cite the clause any finding rests on.
+- Knowledge Base Readiness — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

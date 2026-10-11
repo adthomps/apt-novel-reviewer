@@ -7,7 +7,7 @@ kind: agent-adapter
 domain: architecture
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-10-04
 source_paths: ["apt-principles-agents/agents/architecture/javik.md"]
 title: "Javik"
 ---
@@ -15,11 +15,11 @@ title: "Javik"
 
 # Javik
 
-## Persona Identity
+## Role Identity
 
 - **Technical ID:** `agent.architecture`
 - **Reports To:** agent.edi
-- **Formerly:** `agents/architecture/apt-principal-architect.md` (renamed 2026-08-29 as part of the persona batch-adoption; content and function unchanged)
+- **Formerly:** `agents/architecture/apt-principal-architect.md` (renamed 2026-08-29 as part of the agent-role rename batch; responsibilities and function unchanged)
 
 ## Role
 

@@ -35,11 +35,13 @@ Act as the apt architect within the APT discover, classify, validate, remediate,
 Use when reviewing architecture, repository structure, migration strategy, or harness design before an approach is committed.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `system-architecture-review` — installed under `.claude/skills/system-architecture-review/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- System Architecture — check the work against this principle and cite the clause any finding rests on.
+- APT Release & Change Management (Promote) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

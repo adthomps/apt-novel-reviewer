@@ -48,6 +48,7 @@ Review for unclear ownership, accidental coupling, irreversible migrations, prov
 See the [Architecture canonical hub](README.md) and linked standards/checklists before making final claims.
 ## Applied by
 
+- [apt-architect](../../agents/harness/apt-architect.md) — Use when reviewing architecture, repository structure, migration strategy, or harness design before an approach is committed.
 - [javik](../../agents/architecture/javik.md) — Use as the senior cross-cutting sign-off for architecture work, after specialist architecture perspectives (api, integration, modernization) have reported, to reconcile them into one accountable structural recommendation.
 
 ## Related

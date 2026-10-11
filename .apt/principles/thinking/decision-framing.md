@@ -46,6 +46,10 @@ Review for solution-first framing, false certainty, hidden constraints, and deci
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Thinking canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-principles-steward](../../agents/core/apt-principles-steward.md) — Use when a principle, standard, checklist, or workspace-wide rule is proposed, changed, retired, or rolled out to consumer repositories, to own how APT doctrine evolves rather than whether one piece of work follows it.
+
 ## Related
 
 - [APT Principles](../README.md)

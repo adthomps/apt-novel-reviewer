@@ -46,6 +46,10 @@ Review for solution-first framing, false certainty, hidden constraints, and deci
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Thinking canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-wb-press-release-writer](../../agents/working-backwards/apt-wb-press-release-writer.md) — Sub-agent invoked by the Working Backwards orchestrator to draft or revise Stage 1, a customer-centered press release written as if the product has shipped, for the persona and profile recorded in the session.
+
 ## Related
 
 - [APT Principles](../README.md)

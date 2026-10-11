@@ -115,6 +115,14 @@ Return:
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Execution canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-architect](../../agents/harness/apt-architect.md) — Use when reviewing architecture, repository structure, migration strategy, or harness design before an approach is committed.
+- [apt-cloudflare-builder](../../agents/harness/apt-cloudflare-builder.md) — Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
+- [apt-installer](../../agents/harness/apt-installer.md) — Use when applying this repository’s installable agent standards and harness assets to a target repository for the first time.
+- [apt-principles-steward](../../agents/core/apt-principles-steward.md) — Use when a principle, standard, checklist, or workspace-wide rule is proposed, changed, retired, or rolled out to consumer repositories, to own how APT doctrine evolves rather than whether one piece of work follows it.
+- [apt-repair-agent](../../agents/harness/apt-repair-agent.md) — Use when repairing or upgrading an existing APT standards installation while preserving local customizations.
+
 ## Related Checklists
 
 - `checklists/release-readiness-checklist.md`

@@ -46,6 +46,12 @@ Review for unsupported claims, overpowered tools, weak-model routing for high-st
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Ai canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-cost-controller](../../agents/harness/apt-cost-controller.md) — Use when a task risks excessive token usage, repeated context loading, unnecessary model escalation, or redundant scans.
+- [apt-model-router](../../agents/harness/apt-model-router.md) — Use when choosing the smallest sufficient local or cloud model tier for an APT task.
+- [apt-task-router](../../agents/harness/apt-task-router.md) — Use at the start of a harness engagement to turn a request into a compact, reviewable task packet for the smallest suitable APT workflow.
+
 ## Related
 
 - [APT Principles](../README.md)

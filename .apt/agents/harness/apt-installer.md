@@ -7,6 +7,7 @@ scope: domain
 description: Use when applying this repository’s installable agent standards and harness assets to a target repository for the first time.
 applies_principles:
   - principles/ai/agent-design.md
+  - principles/execution/release-and-change-management.md
 uses_skills: []
 tools:
   - read
@@ -53,6 +54,7 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [APT Release & Change Management (Promote)](../../principles/execution/release-and-change-management.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

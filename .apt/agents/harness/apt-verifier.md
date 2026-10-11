@@ -7,7 +7,10 @@ scope: domain
 description: Use when outputs, installs, repairs, routing config, or documentation alignment must be verified before they are trusted.
 applies_principles:
   - principles/ai/agent-design.md
-uses_skills: []
+  - principles/execution/quality-and-testing.md
+  - principles/ai/ai-safety-and-evaluation.md
+uses_skills:
+  - skills/ai-agents/hallucination-review
 tools:
   - read
   - search
@@ -52,6 +55,8 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [APT Quality & Testing (Validate)](../../principles/execution/quality-and-testing.md) — check the work against this principle and cite the clause any finding rests on.
+- [Responsible AI, Alignment, Safety And Evaluation](../../principles/ai/ai-safety-and-evaluation.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

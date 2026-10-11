@@ -121,6 +121,8 @@ See the [Execution canonical hub](README.md) and linked standards/checklists bef
 - [apt-launch-readiness-lead](../../agents/product/apt-launch-readiness-lead.md) — Use before a launch or major release, to confirm the product, support, and operational readiness checks are actually complete, not just planned.
 - [apt-prd-writer](../../agents/product/apt-prd-writer.md) — Use when a feature or initiative needs a PRD written or reviewed — problem, goals, non-goals, success metrics, and scope.
 - [apt-voice-of-customer-analyst](../../agents/product/apt-voice-of-customer-analyst.md) — Use when raw customer feedback, support tickets, or interview notes need to be synthesized into themes that inform product decisions.
+- [apt-wb-orchestrator](../../agents/working-backwards/apt-wb-orchestrator.md) — Use to start, resume, or report on a Working Backwards package; it owns session state, stage order, the domain and repository profiles and persona, and invokes the writer sub-agents and the independent critic.
+- [apt-wb-requirements-writer](../../agents/working-backwards/apt-wb-requirements-writer.md) — Sub-agent invoked by the Working Backwards orchestrator to draft or revise Stages 3 and 4, traceable and testable requirements, an engineering handoff of validated increments, and a readiness checklist, all derived only from the passed press release and FAQs.
 - [miranda](../../agents/product/miranda.md) — Use when prioritization, sequencing, or tradeoff decisions across multiple initiatives need a product-management perspective.
 
 ## Related Checklists

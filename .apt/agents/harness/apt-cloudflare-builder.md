@@ -7,7 +7,10 @@ scope: domain
 description: Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
 applies_principles:
   - principles/ai/agent-design.md
-uses_skills: []
+  - principles/architecture/cloudflare-hono-architecture.md
+  - principles/execution/release-and-change-management.md
+uses_skills:
+  - skills/architecture/cloudflare-hono-architecture
 tools:
   - read
   - search
@@ -52,6 +55,8 @@ Use the closest canonical APT skill, the relevant context pack, and exact target
 ## Enforces
 
 - [Agent Design](../../principles/ai/agent-design.md) — check the work against this principle and cite the clause any finding rests on.
+- [Cloudflare Hono Architecture](../../principles/architecture/cloudflare-hono-architecture.md) — check the work against this principle and cite the clause any finding rests on.
+- [APT Release & Change Management (Promote)](../../principles/execution/release-and-change-management.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

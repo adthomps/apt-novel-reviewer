@@ -74,6 +74,7 @@ the work against it and cites the clause each finding rests on.
 See the [Ai canonical hub](README.md) and linked standards/checklists before making final claims.
 ## Applied by
 
+- [apt-agent-skill-steward](../../agents/core/apt-agent-skill-steward.md) — Use when a canonical agent role or skill is proposed, written, revised, or retired, to confirm it owns a distinct perspective or procedure, is grounded in principles, and is packaged correctly for every platform.
 - [apt-architect](../../agents/harness/apt-architect.md) — Use when reviewing architecture, repository structure, migration strategy, or harness design before an approach is committed.
 - [apt-cloudflare-builder](../../agents/harness/apt-cloudflare-builder.md) — Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
 - [apt-code-reviewer](../../agents/harness/apt-code-reviewer.md) — Use when code needs a review for bugs, maintainability, behavior preservation, or missing validation.

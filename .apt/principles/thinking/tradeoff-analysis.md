@@ -46,6 +46,10 @@ Review for solution-first framing, false certainty, hidden constraints, and deci
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Thinking canonical hub](README.md) and linked standards/checklists before making final claims.
+## Applied by
+
+- [apt-wb-faq-writer](../../agents/working-backwards/apt-wb-faq-writer.md) — Sub-agent invoked by the Working Backwards orchestrator to draft or revise Stage 2, the external FAQ (skeptical customer questions) and the internal FAQ (skeptical engineering, leadership, compliance, and operations questions), using the persona's reviewer agents as lenses.
+
 ## Related
 
 - [APT Principles](../README.md)

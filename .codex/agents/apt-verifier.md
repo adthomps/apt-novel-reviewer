@@ -36,11 +36,13 @@ Act as the apt verifier within the APT discover, classify, validate, remediate, 
 Use when outputs, installs, repairs, routing config, or documentation alignment must be verified before they are trusted.
 ## Required Skills
 
-- Use the closest canonical APT skill installed under `.claude/skills/`.
+- `hallucination-review` — installed under `.claude/skills/hallucination-review/`.
 
 ## Enforces
 
 - Agent Design — check the work against this principle and cite the clause any finding rests on.
+- APT Quality & Testing (Validate) — check the work against this principle and cite the clause any finding rests on.
+- Responsible AI, Alignment, Safety And Evaluation — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

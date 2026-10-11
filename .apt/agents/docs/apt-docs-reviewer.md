@@ -7,7 +7,9 @@ scope: domain
 description: Use as a general accuracy and completeness pass on any documentation deliverable that doesn't need a specialized audience or API-contract review.
 applies_principles:
   - principles/documentation/README.md
-uses_skills: []
+  - principles/documentation/support-ready-docs.md
+uses_skills:
+  - skills/ai-agents/hallucination-review
 tools:
   - read
   - search
@@ -53,6 +55,7 @@ Use as a general accuracy and completeness pass on any documentation deliverable
 ## Enforces
 
 - [Documentation Principles](../../principles/documentation/README.md) — check the work against this principle and cite the clause any finding rests on.
+- [Support Ready Docs](../../principles/documentation/support-ready-docs.md) — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

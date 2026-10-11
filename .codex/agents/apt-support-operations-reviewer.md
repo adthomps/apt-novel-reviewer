@@ -38,10 +38,14 @@ Use when a change is about to ship, to confirm the support organization can actu
 ## Required Skills
 
 - `support-readiness-review` — installed under `.claude/skills/support-readiness-review/`.
+- `escalation-path-review` — installed under `.claude/skills/escalation-path-review/`.
 
 ## Enforces
 
 - Role Based Experience — check the work against this principle and cite the clause any finding rests on.
+- Support Readiness — check the work against this principle and cite the clause any finding rests on.
+- Escalation Paths — check the work against this principle and cite the clause any finding rests on.
+- Troubleshooting Readiness — check the work against this principle and cite the clause any finding rests on.
 
 ## Inputs
 

@@ -150,6 +150,8 @@ Return:
 See the [Execution canonical hub](README.md) and linked standards/checklists before making final claims.
 ## Applied by
 
+- [apt-harness-docs-reviewer](../../agents/harness/apt-harness-docs-reviewer.md) — Use when reviewing this repository’s own documentation architecture, consistency, source-of-truth boundaries, or operating guidance.
+- [apt-principles-steward](../../agents/core/apt-principles-steward.md) — Use when a principle, standard, checklist, or workspace-wide rule is proposed, changed, retired, or rolled out to consumer repositories, to own how APT doctrine evolves rather than whether one piece of work follows it.
 - [documentation-normalizer](../../agents/docs/documentation-normalizer.md) — Use to consolidate duplicated, stale, or scattered documentation into canonical homes, proposing a merge, move, and delete plan before any edits.
 
 ## Related Checklists

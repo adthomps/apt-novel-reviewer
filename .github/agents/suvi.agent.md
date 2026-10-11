@@ -6,7 +6,7 @@ kind: agent-adapter
 domain: payments
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-10-04
 source_paths: ["apt-principles-agents/agents/payments/suvi.md"]
 title: "Suvi"
 ---
@@ -14,11 +14,11 @@ title: "Suvi"
 
 # Suvi
 
-## Persona Identity
+## Role Identity
 
 - **Technical ID:** `agent.payments.stablecoin`
 - **Reports To:** agent.payments (Wrex)
-- **Formerly:** `agents/payments/apt-stablecoin-readiness-reviewer.md` (renamed 2026-08-29 as part of the persona batch-adoption; content and function unchanged)
+- **Formerly:** `agents/payments/apt-stablecoin-readiness-reviewer.md` (renamed 2026-08-29 as part of the agent-role rename batch; responsibilities and function unchanged)
 - **Also Draws On:** `agents/payments/apt-crypto-payment-risk-reviewer.md` — the crypto-specific risk lens alongside stablecoin readiness.
 
 ## Role

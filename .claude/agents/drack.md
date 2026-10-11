@@ -7,7 +7,7 @@ kind: agent-adapter
 domain: engineering
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-10-04
 source_paths: ["apt-principles-agents/agents/engineering/drack.md"]
 title: "Drack"
 ---
@@ -15,11 +15,11 @@ title: "Drack"
 
 # Drack
 
-## Persona Identity
+## Role Identity
 
 - **Technical ID:** `agent.backend.platform`
-- **Reports To:** agent.backend (Legion — not yet adopted as a persona)
-- **Formerly:** `agents/engineering/apt-cloudflare-hono-engineer.md` (renamed 2026-08-29 as part of the persona batch-adoption; content and function unchanged)
+- **Reports To:** agent.backend (Legion — not yet adopted as an agent role)
+- **Formerly:** `agents/engineering/apt-cloudflare-hono-engineer.md` (renamed 2026-08-29 as part of the agent-role rename batch; responsibilities and function unchanged)
 
 ## Role
 
