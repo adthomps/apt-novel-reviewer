@@ -31,3 +31,11 @@ source_paths: ["apt-novel-reviewer/README.md", "apt-novel-reviewer/docs/project-
 npm test
 npm run build
 ```
+
+## Local Cloudflare
+
+Status: Not a Cloudflare app.
+
+Local command: `pnpm dev` starts the Electron desktop app. Reviews use a local Ollama endpoint.
+
+Fix: none. There is no Worker or Pages app to run locally.
