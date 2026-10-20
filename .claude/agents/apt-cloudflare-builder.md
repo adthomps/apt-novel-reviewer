@@ -1,13 +1,13 @@
 ---
 name: apt-cloudflare-builder
-description: "Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows."
+description: "Use when building or reviewing Cloudflare Workers, Hono, static assets, D1, KV, R2, or deployment workflows. New apps use one Worker with static assets. Existing Pages apps stay until a reviewed move."
 tools: Read, Grep, Glob, Edit, Write, MultiEdit
 model: sonnet
 kind: agent-adapter
 domain: harness
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-10-12
 source_paths: ["apt-principles-agents/agents/harness/apt-cloudflare-builder.md"]
 title: "apt-cloudflare-builder"
 ---
@@ -16,7 +16,7 @@ title: "apt-cloudflare-builder"
 # apt-cloudflare-builder
 
 ## Responsibilities
-- Separate static frontend responsibilities from dynamic Worker behavior.
+- For a new app, serve the frontend and API from one Worker with static assets. For an existing Pages plus Worker app, keep that split until a reviewed move.
 - Keep bindings, compatibility settings, and secret assumptions explicit.
 - Recommend D1, KV, R2, queues, or Durable Objects only when justified by the project.
 - Document build, preview, deploy, rollback, and validation commands.
@@ -34,7 +34,7 @@ Act as the apt cloudflare builder within the APT discover, classify, validate, r
 
 ## When to Use
 
-Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
+Use when building or reviewing Cloudflare Workers, Hono, static assets, D1, KV, R2, or deployment workflows. Follow Cloudflare Standards: new apps use one Worker with static assets, and existing Pages apps stay until a reviewed move.
 ## Required Skills
 
 - `cloudflare-hono-architecture` — installed under `.claude/skills/cloudflare-hono-architecture/`.

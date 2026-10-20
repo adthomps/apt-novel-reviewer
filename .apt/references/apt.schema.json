@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apt.local/schemas/apt-v1.json",
+  "title": "APT check config (apt.json)",
+  "description": "Optional per-repository config read by apt-check (bin/apt-check.mjs, installed shim .apt/bin/apt-check.mjs). DR-017. Design settings stay in apt-design.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "$defs": {
+    "level": {
+      "enum": ["warn", "error"],
+      "description": "warn reports findings and never fails. error fails when findings exceed baseline. Default warn."
+    },
+    "baseline": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Findings accepted while the repo cleans up. With level error, the check fails above it and asks for it to be lowered when findings fall below it. Default 0."
+    }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "level": { "$ref": "#/$defs/level" },
+        "baseline": { "$ref": "#/$defs/baseline" }
+      }
+    },
+    "architecture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "level": { "$ref": "#/$defs/level" },
+        "baseline": { "$ref": "#/$defs/baseline" },
+        "zones": {
+          "type": "object",
+          "description": "Zone name -> folders, relative to the repo root. Default: each apps/<name> folder as zone <name>, packages as zone packages.",
+          "additionalProperties": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+        },
+        "aliases": {
+          "type": "object",
+          "description": "Zone name -> package names that resolve into the zone (merged with workspace package.json names).",
+          "additionalProperties": { "type": "array", "items": { "type": "string" } }
+        },
+        "forbid": {
+          "type": "array",
+          "description": "Imports that are not allowed. Default: no app imports another app, and packages import no app.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "to"],
+            "properties": { "from": { "type": "string" }, "to": { "type": "string" } }
+          }
+        },
+        "presentational": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Folders of presentational components where fetch() is not allowed. Default: apps/web/src/components and apps/web/components when present."
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ description: Use when work must define boundaries, contracts, ownership, failure
 kind: skill
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-10-12
 source: consolidated APT guidance
 title: "Cloudflare Hono Architecture"
 domain: "architecture"
@@ -47,6 +47,7 @@ The output is practical, source-backed, audience-aware, testable, reversible whe
 ## Domain Checklist
 
 - Treat **Cloudflare Hono Architecture** as an explicit decision with defined scope, evidence, owner, and validation.
+- Follow Cloudflare Standards for new and existing apps. A new full-stack app uses one Worker with static assets. An existing Pages plus Worker app stays until a reviewed move.
 - Define boundaries, ownership, contracts, failure modes, deployment, observability, and reversibility.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 

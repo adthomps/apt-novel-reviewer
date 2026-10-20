@@ -142,7 +142,7 @@ export function checkContrast(themes) {
     // Primary text is AA on background and card only; on raised surfaces links use
     // text-foreground with an underline (APT-018).
     pairs.push(["primary", "background"], ["primary", "card"]);
-    for (const fill of ["primary", "success", "warning", "destructive"]) pairs.push([`${fill}-foreground`, fill]);
+    for (const fill of ["primary", "accent", "success", "warning", "destructive"]) pairs.push([`${fill}-foreground`, fill]);
     for (const [fg, bg] of pairs) {
       if (!tokens[fg] || !tokens[bg]) continue; // the product does not define this token
       const ratio = contrastRatio(tokens[fg], tokens[bg]);

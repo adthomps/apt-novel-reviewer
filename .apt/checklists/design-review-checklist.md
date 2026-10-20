@@ -30,7 +30,7 @@ Run it before a UI change is merged or before a public page becomes a showcase e
 - [ ] Typography uses Inter or the approved system fallback for UI/prose and IBM Plex Mono for code, token values, CLI examples, and technical snippets.
 - [ ] Iconography uses Lucide-style outline icons or the approved AptEmblem pattern; product chrome does not use emoji as decoration.
 - [ ] Primary actions, links, focus rings, and high-frequency action emphasis use the blue primary/action role.
-- [ ] Hover and selected highlights use the teal accent where those states previously used a neutral grey surface. Focus rings, links, and primary calls to action stay on the blue primary role.
+- [ ] Hover uses the quiet `accent` surface. Selected items use a faint primary tint with a 2px primary bar on the inline-start edge. Focus rings, links, and primary calls to action stay on the blue primary role.
 - [ ] Default navigation, secondary actions, inactive tabs, cards, panels, and disabled surfaces use neutral surface roles at rest.
 - [ ] Danger, warning, and success colors are reserved for semantic feedback.
 - [ ] Status colors use the canonical `success`, `warning`, and `destructive` tokens; the product defines no status colors of its own.
@@ -54,7 +54,7 @@ Run it before a UI change is merged or before a public page becomes a showcase e
 - One-off colors, spacing, or component behavior.
 - One-off shadcn additions that ignore existing primitives, wrappers, blocks, aliases, tokens, or enterprise design-system constraints.
 - Unclear color hierarchy between primary action, secondary action, navigation, selection, and status.
-- Teal used as the default CTA color without an approved brand decision.
+- A second accent hue or a saturated hover fill in UI chrome without an approved brand decision.
 - Danger, warning, or success colors used as decoration instead of semantic feedback.
 - Missing or ambiguous focus, hover, active, selected, or disabled color states.
 - Missing reusable primitive coverage for controls, disclosure, feedback, navigation, or technical content.

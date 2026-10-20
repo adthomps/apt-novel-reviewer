@@ -104,14 +104,15 @@ APT copy is precise, calm, honest, and non-marketing. It should help a user deci
 
 Color identity is a target-repository decision. A project should record why its primary, accent, and feedback colors exist; verify contrast; and keep those roles consistent across components, charts, content, and states.
 
-The public APT site keeps blue for brand, primary actions, links, and focus. Teal is the highlight color: hover and selected states that used to be a neutral grey surface may now be teal.
+The public APT site keeps blue for brand, primary actions, links, and focus. Hover is a quiet blue-tinted accent surface. Selected items use the primary blue. There is no second accent hue in UI chrome.
 
 ## Color Roles and Interaction Rules
 
 Color choices must start from semantic role, not visual preference.
 
 - Primary action, links, focus, and brand identity use the blue primary role.
-- Teal is the highlight for hover and selected states that previously used a neutral grey surface. That includes ghost and outline buttons, menu items, dropdown options, sidebar items, docs navigation, and selected support. It is not the default call-to-action color.
+- Hover on ghost and outline buttons, menu items, dropdown options, sidebar items, and docs navigation uses the quiet `accent` surface, so hover never competes with the primary action.
+- Selected items use a faint primary tint with a 2px primary bar on the inline-start edge. Selection is a primary role, the same as `navActive` and `selected` in the flat token reference.
 - Neutral surfaces remain the resting treatment for default navigation, secondary buttons, inactive tabs, cards, panels, dividers, and disabled surfaces.
 - Danger, warning, and success colors are semantic feedback colors. Do not use them as general decoration or to create arbitrary variety.
 - Disabled treatment should reduce contrast and interaction affordance without hiding the control or changing its meaning.

@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+// APT pre-push gate. apt-principles-agents installs this file into .apt/git-hooks/ and enables it
+// with `git config core.hooksPath .apt/git-hooks`. Edit the source in
+// apt-principles-agents/git-hooks/pre-push and sync; do not edit the installed copy.
+// It runs `.apt/bin/apt-check.mjs --mode push` (sync, profile, architecture; DR-017) and skips
+// itself in CI (the apt-check workflow covers CI) or when APT_SKIP_SYNC_CHECK=1.
+// Written with dynamic import() so it runs whether Node treats this extensionless file as
+// CommonJS or as an ES module (a repo with "type": "module").
+Promise.all([import("node:child_process"), import("node:fs"), import("node:path")]).then(([child, fs, path]) => {
+  if (process.env.CI || process.env.APT_SKIP_SYNC_CHECK === "1") process.exit(0);
+  let top;
+  try {
+    top = child.execFileSync("git", ["rev-parse", "--show-toplevel"], { encoding: "utf8" }).trim();
+  } catch {
+    process.exit(0);
+  }
+  const shim = path.join(top, ".apt", "bin", "apt-check.mjs");
+  if (!fs.existsSync(shim)) process.exit(0);
+  const result = child.spawnSync(process.execPath, [shim, "--mode", "push"], { cwd: top, stdio: ["ignore", "inherit", "inherit"] });
+  process.exit(result.status === 1 ? 1 : 0);
+}, () => process.exit(0));

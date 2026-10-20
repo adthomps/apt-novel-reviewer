@@ -3,7 +3,7 @@ title: Cloudflare Hono Architecture
 kind: principle
 status: active
 owner: APT
-last_updated: 2026-06-27
+last_updated: 2026-10-12
 source: apt-principles and apt-agent-standards
 domain: "architecture"
 source_paths: ["apt-principles-agents/principles/architecture/cloudflare-hono-architecture.md"]
@@ -42,13 +42,14 @@ Review for unclear ownership, accidental coupling, irreversible migrations, prov
 ## Topic-Specific Guidance
 
 - Treat **Cloudflare Hono Architecture** as an explicit decision with defined scope, evidence, owner, and validation.
+- Follow [Cloudflare Standards](../../standards/installable-summaries/cloudflare-standards.md) for new and existing apps. A new full-stack app uses one Worker with static assets. An existing Pages plus Worker app stays until a reviewed move.
 - Define boundaries, ownership, contracts, failure modes, deployment, observability, and reversibility.
 - State what is verified, what is assumed, and what requires specialist or human approval.
 
 See the [Architecture canonical hub](README.md) and linked standards/checklists before making final claims.
 ## Applied by
 
-- [apt-cloudflare-builder](../../agents/harness/apt-cloudflare-builder.md) — Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
+- [apt-cloudflare-builder](../../agents/harness/apt-cloudflare-builder.md) — Use when building or reviewing Cloudflare Workers, Hono, static assets, D1, KV, R2, or deployment workflows. New apps use one Worker with static assets. Existing Pages apps stay until a reviewed move.
 
 ## Related
 

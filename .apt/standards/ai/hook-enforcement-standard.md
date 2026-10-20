@@ -41,6 +41,11 @@ hook runs on every contributor's machine, hooks carry their own contract.
   `installation.json` like any managed file.
 - A hook is reviewed like a dependency: it is code that will run unattended in
   every consumer. Changes go through the same review as `scripts/`.
+- Every install also ships `.apt/git-hooks/pre-push` and sets `git config core.hooksPath .apt/git-hooks`.
+  This is a git hook rather than an agent hook, so it covers pushes from a terminal, an IDE, or any
+  agent tool. Install and sync leave `core.hooksPath` alone when it is already set, when the repo uses
+  husky, or when it has its own `.git/hooks` scripts, and report `skipped-git-hooks`. `core.hooksPath`
+  is local git config, so a fresh clone gets the gate on its first sync.
 - `settings.json` distributes only the non-destructive `SessionStart` notice by
   default. The blocking `PreToolUse` guards and the `Stop` gate are opt-in per
   repo — a maintainer adds the `hooks` entry once they accept the behavior.
@@ -49,7 +54,9 @@ hook runs on every contributor's machine, hooks carry their own contract.
 
 | Hook | Event | Default | Effect |
 | --- | --- | --- | --- |
-| `session-sync-check.mjs` | SessionStart | distributed | Prints a notice if the repo is behind canonical or has untracked agents. Never blocks. |
+| `session-sync-check.mjs` | SessionStart | distributed | Prints a notice when a sync would change managed files (design first, then guidance), when files were edited locally, or when agents are untracked. It uses the same hash scan as the pre-push gate. Never blocks. |
+| `git-hooks/pre-push` → `.apt/git-hooks/pre-push` | git pre-push | distributed to every install | Runs `.apt/bin/apt-check.mjs --mode push` ([apt-check](../../docs/apt-check.md): sync, profile, architecture). Blocks the push when the APT design is behind, or when a module set to level `error` goes over its baseline. Everything else only warns. Skips itself in CI and with `APT_SKIP_SYNC_CHECK=1`, and skips when apt-principles-agents can't be found. Bypass once with `git push --no-verify`. |
+| `templates/ci/apt-check.yml` → `.github/workflows/apt-check.yml` | CI (push to main, pull request) | distributed to every install | Checks out apt-principles-agents and runs `apt-check --mode ci`, which adds the repo's `apt-design-check`. This is the gate `--no-verify` can't skip. |
 | `pretooluse-managed-file-guard.mjs` | PreToolUse (Edit\|Write\|MultiEdit) | opt-in | Blocks writes to `.apt/**`, generated adapters, installed `.claude/agents/**`, generated catalogs — points at the canonical source. Fails open. |
 | `pretooluse-bash-guard.mjs` | PreToolUse (Bash) | opt-in | Blocks deploy / publish / force-push / `curl \| sh` / `.env` reads unless `APT_APPROVED=1`. Fails open. |
 | `stop-verify-gate.mjs` | Stop | opt-in | If the dirty tree touches an enforceable domain, prints which reviews the change implies. Blocks only when `APT_STOP_GATE=block`. |

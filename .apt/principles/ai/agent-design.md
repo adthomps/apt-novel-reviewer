@@ -76,7 +76,7 @@ See the [Ai canonical hub](README.md) and linked standards/checklists before mak
 
 - [apt-agent-skill-steward](../../agents/core/apt-agent-skill-steward.md) — Use when a canonical agent role or skill is proposed, written, revised, or retired, to confirm it owns a distinct perspective or procedure, is grounded in principles, and is packaged correctly for every platform.
 - [apt-architect](../../agents/harness/apt-architect.md) — Use when reviewing architecture, repository structure, migration strategy, or harness design before an approach is committed.
-- [apt-cloudflare-builder](../../agents/harness/apt-cloudflare-builder.md) — Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
+- [apt-cloudflare-builder](../../agents/harness/apt-cloudflare-builder.md) — Use when building or reviewing Cloudflare Workers, Hono, static assets, D1, KV, R2, or deployment workflows. New apps use one Worker with static assets. Existing Pages apps stay until a reviewed move.
 - [apt-code-reviewer](../../agents/harness/apt-code-reviewer.md) — Use when code needs a review for bugs, maintainability, behavior preservation, or missing validation.
 - [apt-cost-controller](../../agents/harness/apt-cost-controller.md) — Use when a task risks excessive token usage, repeated context loading, unnecessary model escalation, or redundant scans.
 - [apt-harness-docs-reviewer](../../agents/harness/apt-harness-docs-reviewer.md) — Use when reviewing this repository’s own documentation architecture, consistency, source-of-truth boundaries, or operating guidance.

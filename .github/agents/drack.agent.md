@@ -1,12 +1,12 @@
 ---
-description: "Use when implementation work targets the Cloudflare Workers/Pages + Hono stack, to confirm it follows the stack's actual constraints (bindings, cold starts, edge runtime limits)."
+description: "Use when implementation work targets Hono on Cloudflare Workers, to confirm bindings, runtime limits, and the new-app versus existing-Pages rule in Cloudflare Standards."
 tools: ["codebase", "search"]
 name: drack
 kind: agent-adapter
 domain: engineering
 status: active
 owner: APT
-last_updated: 2026-10-04
+last_updated: 2026-10-12
 source_paths: ["apt-principles-agents/agents/engineering/drack.md"]
 title: "Drack"
 ---
@@ -26,7 +26,7 @@ Provide the Drack perspective while keeping APT principles, evidence, and human 
 
 ## When to Use
 
-Use when implementation work targets the Cloudflare Workers/Pages + Hono stack, to confirm it follows the stack's actual constraints (bindings, cold starts, edge runtime limits).
+Use when implementation work targets Hono on Cloudflare Workers, to confirm bindings, runtime limits, and the new-app versus existing-Pages rule in Cloudflare Standards.
 
 ## Responsibilities
 
@@ -37,6 +37,8 @@ Use when implementation work targets the Cloudflare Workers/Pages + Hono stack, 
 
 ## Perspective-Specific Checks
 
+- For a new app, expect one Worker with static assets. For an existing Pages deployment, keep Pages until a reviewed move.
+- Confirm D1, KV, R2, Resend, and Clerk are present only when that repository already uses them, or the work is a new app that needs them.
 - Confirm bindings (D1, KV, R2, secrets) are configured and scoped correctly for the environment.
 - Check that code respects Workers runtime constraints (no persistent in-memory state assumed across requests, CPU time limits).
 - Confirm Hono routing, middleware, and error handling follow the project's established patterns.

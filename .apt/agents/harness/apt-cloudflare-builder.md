@@ -4,7 +4,7 @@ title: apt-cloudflare-builder
 kind: agent
 domain: harness
 scope: domain
-description: Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
+description: Use when building or reviewing Cloudflare Workers, Hono, static assets, D1, KV, R2, or deployment workflows. New apps use one Worker with static assets. Existing Pages apps stay until a reviewed move.
 applies_principles:
   - principles/ai/agent-design.md
   - principles/architecture/cloudflare-hono-architecture.md
@@ -20,7 +20,7 @@ autonomy: bounded-edit
 escalation: Escalate unsupported, high-impact, security, privacy, payment, compliance, destructive, or production decisions to the relevant specialist and accountable human.
 status: active
 owner: APT
-last_updated: 2026-08-30
+last_updated: 2026-10-12
 source_paths: ["apt-principles-agents/agents/harness/apt-cloudflare-builder.md"]
 ---
 
@@ -28,7 +28,7 @@ source_paths: ["apt-principles-agents/agents/harness/apt-cloudflare-builder.md"]
 
 
 ## Responsibilities
-- Separate static frontend responsibilities from dynamic Worker behavior.
+- For a new app, serve the frontend and API from one Worker with static assets. For an existing Pages plus Worker app, keep that split until a reviewed move.
 - Keep bindings, compatibility settings, and secret assumptions explicit.
 - Recommend D1, KV, R2, queues, or Durable Objects only when justified by the project.
 - Document build, preview, deploy, rollback, and validation commands.
@@ -47,7 +47,7 @@ Act as the apt cloudflare builder within the APT discover, classify, validate, r
 
 ## When to Use
 
-Use when building or reviewing Cloudflare Workers, Pages, Hono, D1, KV, R2, or deployment workflows.
+Use when building or reviewing Cloudflare Workers, Hono, static assets, D1, KV, R2, or deployment workflows. Follow [Cloudflare Standards](../../standards/installable-summaries/cloudflare-standards.md): new apps use one Worker with static assets, and existing Pages apps stay until a reviewed move.
 ## Required Skills
 
 Use the closest canonical APT skill, the relevant context pack, and exact target-repository instructions.

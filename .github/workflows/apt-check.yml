@@ -1,0 +1,29 @@
+# Installed by apt-principles-agents as .github/workflows/apt-check.yml (DR-017).
+# Edit the source in apt-principles-agents/templates/ci/apt-check.yml and sync; a locally
+# edited copy is left alone by sync.
+name: APT check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  apt-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout apt-principles-agents
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/apt-principles-agents
+          path: _apt-principles-agents
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: APT check (sync, profile, architecture, design)
+        run: node .apt/bin/apt-check.mjs --mode ci

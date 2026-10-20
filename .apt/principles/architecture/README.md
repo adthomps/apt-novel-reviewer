@@ -5,7 +5,7 @@ domain: architecture
 status: active
 owner: APT
 version: v1
-last_updated: 2026-06-28
+last_updated: 2026-10-12
 source_paths: ["apt-principles/architecture.md"]
 supersedes: ["apt-principles/architecture.md"]
 ---
@@ -100,12 +100,14 @@ Architecture maps and forbidden flows are captured in `references/architecture-m
 
 ### Cloudflare-Oriented Baseline
 
-- Cloudflare Pages for static frontend/docs delivery.
-- Cloudflare Workers for APIs, BFFs, and AI endpoints.
-- D1 for relational persistence when appropriate.
-- KV for lightweight key/value data.
-- R2 for object storage.
-- GitHub as source of truth.
+Stack choices for new and existing apps are in [Cloudflare Standards](../../standards/installable-summaries/cloudflare-standards.md).
+
+- New full-stack apps use React, Vite, TypeScript, Tailwind, shadcn/ui, Hono, and one Worker with static assets.
+- An existing Pages project plus a separate Worker stays until a reviewed move.
+- D1 for relational persistence when the app stores relational data.
+- KV for lightweight key/value data when the app needs it.
+- R2 for object storage when the app stores files.
+- GitHub as source of truth, with Wrangler deploys gated on pull requests.
 - Preview-first deployment flow.
 
 ## Architecture Patterns

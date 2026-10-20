@@ -3,7 +3,7 @@
   "source": {
     "repository": "apt-principles-agents",
     "version": "1.0.0",
-    "commit": "8d6ecd41060b00a9e9bf98b51075e286c0e8a402"
+    "commit": "47bf67556d0a5a33aee8f1fd968ebdb73d6f144b"
   },
   "manifests": [
     "core",
@@ -203,7 +203,7 @@
       "source": "agents/harness/apt-cloudflare-builder.md",
       "target": ".apt/agents/harness/apt-cloudflare-builder.md",
       "kind": "canonical",
-      "sha256": "0ac39625641ee2569b09e3b961bd1ddcbe6f149f4977d2f20297fe512d31e715"
+      "sha256": "9bd4c957f636a954b192248406a485610ebb55f57a6240ccdfc161f0632b9d44"
     },
     {
       "source": "agents/harness/apt-code-reviewer.md",
@@ -263,13 +263,19 @@
       "source": "agents/harness/apt-ui-reviewer.md",
       "target": ".apt/agents/harness/apt-ui-reviewer.md",
       "kind": "canonical",
-      "sha256": "2044d74dbc1f65a6b044ecce06a051edd18b0a1aabb7a25cc9d2c7a221267296"
+      "sha256": "91b31abc17ffbb1cad237adca6586fce9142b163bc0e6ca69a39955eaeb403e0"
     },
     {
       "source": "agents/harness/apt-verifier.md",
       "target": ".apt/agents/harness/apt-verifier.md",
       "kind": "canonical",
       "sha256": "c2bf4f192c48abfa8851ccc70df78bcf174a17dc20d720f0e96d4096d6aaf24f"
+    },
+    {
+      "source": "bin/apt-check-shim.mjs",
+      "target": ".apt/bin/apt-check.mjs",
+      "kind": "apt-check",
+      "sha256": "50b81f505b6db29ddbb04b2fdfd708051bf59931b72836695ae6e864c3f70015"
     },
     {
       "source": "checklists/ai-agent-review-checklist.md",
@@ -287,7 +293,7 @@
       "source": "checklists/design-review-checklist.md",
       "target": ".apt/checklists/design-review-checklist.md",
       "kind": "canonical",
-      "sha256": "dc32a89a632bda6d05cd18fc3b89cf43250b384cad4e4233724761c4bd6b55f3"
+      "sha256": "1e25aff8cd53e806a805517703695f754a3a5d72f02b92be678994288c8356a6"
     },
     {
       "source": "checklists/documentation-checklist.md",
@@ -348,6 +354,12 @@
       "target": ".apt/context/ui/README.md",
       "kind": "canonical",
       "sha256": "afaa0ed38cbbeac7a75d284c9816c634d71379dd309c7dca336851d57ed0a8b0"
+    },
+    {
+      "source": "git-hooks/pre-push",
+      "target": ".apt/git-hooks/pre-push",
+      "kind": "git-hook",
+      "sha256": "ed412626b6a52a64aecda847eadb4ef2b82f80ff040c10220b57f619bd55f9bd"
     },
     {
       "source": "knowledge/okf/decisions/okf-adoption.md",
@@ -425,7 +437,7 @@
       "source": "principles/ai/agent-design.md",
       "target": ".apt/principles/ai/agent-design.md",
       "kind": "canonical",
-      "sha256": "b8262265b0303f84e3e62759e41221d569063a44aaed686914eab56a118121f9"
+      "sha256": "f165965d26586c881af86f9f7112d1946680ef7a80f3aeb0f69d010cf7bbe75c"
     },
     {
       "source": "principles/ai/ai-safety-and-evaluation.md",
@@ -479,7 +491,7 @@
       "source": "principles/architecture/cloudflare-hono-architecture.md",
       "target": ".apt/principles/architecture/cloudflare-hono-architecture.md",
       "kind": "canonical",
-      "sha256": "bdf40f37a531e3dca752cbe6dc8a9a521847c7adcb1c5d84466254d45613f94f"
+      "sha256": "6c013bc04d38b0c54e39d5f6cbf43f6ad66136341babee3e8acfd7e6d8c08709"
     },
     {
       "source": "principles/architecture/event-driven-architecture.md",
@@ -509,7 +521,7 @@
       "source": "principles/architecture/README.md",
       "target": ".apt/principles/architecture/README.md",
       "kind": "canonical",
-      "sha256": "f83602b0a4f992459136ca75d08ab2aa5d06e24a960f87a3399b10a5e0fcb4e2"
+      "sha256": "b5d8c56c09558c3299019e6fb505625c33b0be80757ddbd19503d032788c7c72"
     },
     {
       "source": "principles/architecture/system-architecture.md",
@@ -545,7 +557,7 @@
       "source": "principles/design/README.md",
       "target": ".apt/principles/design/README.md",
       "kind": "canonical",
-      "sha256": "cc61a30f979fc611a2e343f014b0a22dab079963a1a8d6a27d2da8815d94c9b8"
+      "sha256": "5b631df9a3477b0006914311963db44e2be49a87be352aebabd2b034847982e4"
     },
     {
       "source": "principles/design/role-based-experience.md",
@@ -635,7 +647,7 @@
       "source": "principles/execution/quality-and-testing.md",
       "target": ".apt/principles/execution/quality-and-testing.md",
       "kind": "canonical",
-      "sha256": "5b599ff465f6dc998d241cabfa966cd4ce4d7f9add5f3809fa2ade3ccc9a0607"
+      "sha256": "b22c944eaa79109fb34db135be6b840be194f3b9c934e7429114c318677d9fb9"
     },
     {
       "source": "principles/execution/README.md",
@@ -647,7 +659,7 @@
       "source": "principles/execution/release-and-change-management.md",
       "target": ".apt/principles/execution/release-and-change-management.md",
       "kind": "canonical",
-      "sha256": "23fd88ba91985039e84de0924257b3f6f80eace97547973c6bb78301c1ef69a5"
+      "sha256": "b986fc0555b26444db1b5be2281097783037613a2411694ce76456064e2d8d95"
     },
     {
       "source": "principles/execution/working-backwards.md",
@@ -854,6 +866,12 @@
       "sha256": "1820bd95c2f66877360b045578dfe12d3c3f26973b4493b9bfe0e5a9d66cbfdc"
     },
     {
+      "source": "references/apt.schema.json",
+      "target": ".apt/references/apt.schema.json",
+      "kind": "apt-check",
+      "sha256": "b321b567ee3a5e731b048f1d8dc39bcae092a7dde12a740c8f2ca2e680ed2142"
+    },
+    {
       "source": "skills/ai-agents/agent-routing/SKILL.md",
       "target": ".apt/skills/ai-agents/agent-routing/SKILL.md",
       "kind": "canonical",
@@ -929,7 +947,7 @@
       "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "target": ".apt/skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "kind": "canonical",
-      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+      "sha256": "70c790fa7331d4e0c2cc5872b237cbc6c97f27263cd105f719268c90c2d578c4"
     },
     {
       "source": "skills/architecture/integration-architecture-review/SKILL.md",
@@ -953,7 +971,7 @@
       "source": "skills/design/apt-contrast-check/check-contrast.mjs",
       "target": ".apt/skills/design/apt-contrast-check/check-contrast.mjs",
       "kind": "canonical",
-      "sha256": "61e94f405c00683eb970d71960210367e54f3228e6de9711d137868c4efc8607"
+      "sha256": "4513557f1fb2ff67cd9cde3a800b916c946ee647881095e1b30c61cefef4568b"
     },
     {
       "source": "skills/design/apt-contrast-check/SKILL.md",
@@ -1145,7 +1163,7 @@
       "source": "standards/ai/hook-enforcement-standard.md",
       "target": ".apt/standards/ai/hook-enforcement-standard.md",
       "kind": "canonical",
-      "sha256": "378a7e0f85a147fbf07c3c1527f4d1e071ccb0a85eed6942f9d692dbff1eef61"
+      "sha256": "4a346552798e9b19be38857d6074f3152711aa8cf0d12376164270945bcf1e35"
     },
     {
       "source": "standards/ai/local-first-ai-standard.md",
@@ -1427,7 +1445,7 @@
       "source": "platforms/claude/source/agents/harness/apt-cloudflare-builder.md",
       "target": ".claude/agents/apt-cloudflare-builder.md",
       "kind": "platform-agent",
-      "sha256": "959be30e74d68cc9f11059ea1b7860a8403de1d7901d0a2742d8cafc9fa6ecde"
+      "sha256": "20a3b0c2bc13d7385a5ab387609f7bac781aa7d2c4675b3d2eba1c13f554b988"
     },
     {
       "source": "platforms/claude/source/agents/harness/apt-code-reviewer.md",
@@ -1601,7 +1619,7 @@
       "source": "platforms/claude/source/agents/harness/apt-ui-reviewer.md",
       "target": ".claude/agents/apt-ui-reviewer.md",
       "kind": "platform-agent",
-      "sha256": "005abd2cedaef8db6b848f76ce384fe414eb5d2e46bd6be7e527a09bd5f11e8a"
+      "sha256": "f7cad71eb21f0e786897cb6e620f3c940e4d479668120b9ef459d988131722a1"
     },
     {
       "source": "platforms/claude/source/agents/harness/apt-verifier.md",
@@ -1619,7 +1637,7 @@
       "source": "platforms/claude/source/agents/drack.md",
       "target": ".claude/agents/drack.md",
       "kind": "platform-agent",
-      "sha256": "814209462c5c7d9f40df520d5d74e4b2ae86414027add843f98057887c03a250"
+      "sha256": "c5309d43e655308eeeabfc84ef23d0b5b851aae5b6889408a370d38f7fa0308f"
     },
     {
       "source": "platforms/claude/source/agents/glyph.md",
@@ -1799,7 +1817,7 @@
       "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "target": ".claude/skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "kind": "platform",
-      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+      "sha256": "70c790fa7331d4e0c2cc5872b237cbc6c97f27263cd105f719268c90c2d578c4"
     },
     {
       "source": "skills/architecture/integration-architecture-review/SKILL.md",
@@ -1823,7 +1841,7 @@
       "source": "skills/design/apt-contrast-check/check-contrast.mjs",
       "target": ".claude/skills/design/apt-contrast-check/check-contrast.mjs",
       "kind": "platform",
-      "sha256": "61e94f405c00683eb970d71960210367e54f3228e6de9711d137868c4efc8607"
+      "sha256": "4513557f1fb2ff67cd9cde3a800b916c946ee647881095e1b30c61cefef4568b"
     },
     {
       "source": "skills/design/apt-contrast-check/SKILL.md",
@@ -2063,7 +2081,7 @@
       "source": "platforms/codex/source/agents/harness/apt-cloudflare-builder.md",
       "target": ".codex/agents/apt-cloudflare-builder.md",
       "kind": "platform-agent",
-      "sha256": "188e839382b61efa66d03fb428ed4f0fe6086b0faeff62c8dac552a53371cc4b"
+      "sha256": "51a9c36f551b591420f723397c689c65ce51627f56d61919679a98becbba369f"
     },
     {
       "source": "platforms/codex/source/agents/harness/apt-code-reviewer.md",
@@ -2237,7 +2255,7 @@
       "source": "platforms/codex/source/agents/harness/apt-ui-reviewer.md",
       "target": ".codex/agents/apt-ui-reviewer.md",
       "kind": "platform-agent",
-      "sha256": "3886878caed68e67f39c640c382ab7ed81dd9ad50ccd592bd0c97ccbf50552cc"
+      "sha256": "aee76ed1316daee988dea85fc4a729cf0522864a3359c77c0e4eeb4f415ca21b"
     },
     {
       "source": "platforms/codex/source/agents/harness/apt-verifier.md",
@@ -2255,7 +2273,7 @@
       "source": "platforms/codex/source/agents/drack.md",
       "target": ".codex/agents/drack.md",
       "kind": "platform-agent",
-      "sha256": "8623c04698bbea25d6b9a668428e59f63a433c726cc1bddcab90f9cd080e59de"
+      "sha256": "62dc553f956521bbbddeee2de3f8deb4bc38e33b4c57e9297c72ce2cc32015fb"
     },
     {
       "source": "platforms/codex/source/agents/glyph.md",
@@ -2393,7 +2411,7 @@
       "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "target": ".codex/skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "kind": "platform",
-      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+      "sha256": "70c790fa7331d4e0c2cc5872b237cbc6c97f27263cd105f719268c90c2d578c4"
     },
     {
       "source": "skills/architecture/integration-architecture-review/SKILL.md",
@@ -2417,7 +2435,7 @@
       "source": "skills/design/apt-contrast-check/check-contrast.mjs",
       "target": ".codex/skills/design/apt-contrast-check/check-contrast.mjs",
       "kind": "platform",
-      "sha256": "61e94f405c00683eb970d71960210367e54f3228e6de9711d137868c4efc8607"
+      "sha256": "4513557f1fb2ff67cd9cde3a800b916c946ee647881095e1b30c61cefef4568b"
     },
     {
       "source": "skills/design/apt-contrast-check/SKILL.md",
@@ -2657,7 +2675,7 @@
       "source": "platforms/cursor/source/agents/harness/apt-cloudflare-builder.mdc",
       "target": ".cursor/agents/apt-cloudflare-builder.mdc",
       "kind": "platform-agent",
-      "sha256": "1d643b452c514007c1da0e341129aa0679cf04e4476818780c3b7896afc17b76"
+      "sha256": "e9995c217bc1a170d9573e46971cb4d4fa0473cd67273618728c6c94ff798f91"
     },
     {
       "source": "platforms/cursor/source/agents/harness/apt-code-reviewer.mdc",
@@ -2831,7 +2849,7 @@
       "source": "platforms/cursor/source/agents/harness/apt-ui-reviewer.mdc",
       "target": ".cursor/agents/apt-ui-reviewer.mdc",
       "kind": "platform-agent",
-      "sha256": "61042026e4029bbbb4f0bdf36abbc1e3ce107a493ee00186467246f5936d3c3d"
+      "sha256": "cc89f48943a37654b33aeb1e06a3a1c6de7428f81d0acd6a3c9fe9a7d6619f52"
     },
     {
       "source": "platforms/cursor/source/agents/harness/apt-verifier.mdc",
@@ -2849,7 +2867,7 @@
       "source": "platforms/cursor/source/agents/drack.mdc",
       "target": ".cursor/agents/drack.mdc",
       "kind": "platform-agent",
-      "sha256": "680f990d0ade8279e6114863906d05a2d15d14c1d312f79cb6fe0053fc6bc703"
+      "sha256": "1521ba098f3a0a19b3c83db6815983e3f47d85b6b4b2d26f5504fe82a3f06b5a"
     },
     {
       "source": "platforms/cursor/source/agents/glyph.mdc",
@@ -3005,7 +3023,7 @@
       "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "target": ".cursor/skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "kind": "platform",
-      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+      "sha256": "70c790fa7331d4e0c2cc5872b237cbc6c97f27263cd105f719268c90c2d578c4"
     },
     {
       "source": "skills/architecture/integration-architecture-review/SKILL.md",
@@ -3035,7 +3053,7 @@
       "source": "skills/design/apt-contrast-check/check-contrast.mjs",
       "target": ".cursor/skills/design/apt-contrast-check/check-contrast.mjs",
       "kind": "platform",
-      "sha256": "61e94f405c00683eb970d71960210367e54f3228e6de9711d137868c4efc8607"
+      "sha256": "4513557f1fb2ff67cd9cde3a800b916c946ee647881095e1b30c61cefef4568b"
     },
     {
       "source": "skills/design/apt-contrast-check/SKILL.md",
@@ -3437,7 +3455,7 @@
       "source": "platforms/github-copilot/source/agents/generated/harness/apt-cloudflare-builder.agent.md",
       "target": ".github/agents/apt-cloudflare-builder.agent.md",
       "kind": "platform-agent",
-      "sha256": "c40b37e0595dc0fc5d7abff32fe87b9c1827ba004c899b0a8254c6340c2c34c8"
+      "sha256": "245b43d64da18f7b85a961c2779126cc05b20e5d68dc4a9138b6988c240f669a"
     },
     {
       "source": "platforms/github-copilot/source/agents/generated/harness/apt-code-reviewer.agent.md",
@@ -3611,7 +3629,7 @@
       "source": "platforms/github-copilot/source/agents/generated/harness/apt-ui-reviewer.agent.md",
       "target": ".github/agents/apt-ui-reviewer.agent.md",
       "kind": "platform-agent",
-      "sha256": "34cfddecba767dad04228a792f2f287854497c3efe71804d3e4dbbf9c365c65d"
+      "sha256": "e9f74349ae2d3e50911a3c13f5dda516a49523dd685e2aa3b199ab72b0713b0b"
     },
     {
       "source": "platforms/github-copilot/source/agents/generated/harness/apt-verifier.agent.md",
@@ -3629,7 +3647,7 @@
       "source": "platforms/github-copilot/source/agents/generated/drack.agent.md",
       "target": ".github/agents/drack.agent.md",
       "kind": "platform-agent",
-      "sha256": "bc595d449e87c54b299f54f4676b909a429355955d1d3a7203cf8b0b6ff9490b"
+      "sha256": "97c28e209caa44834bbefe023c97dd227d202fbefbf49689938a9f858c9894f2"
     },
     {
       "source": "platforms/github-copilot/source/agents/generated/glyph.agent.md",
@@ -3929,7 +3947,7 @@
       "source": "skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "target": ".github/skills/architecture/cloudflare-hono-architecture/SKILL.md",
       "kind": "platform",
-      "sha256": "2daa4ce4241ad3e5238a608e58c3d1baa0787f5939ef5c582a7b1d2b80bb4221"
+      "sha256": "70c790fa7331d4e0c2cc5872b237cbc6c97f27263cd105f719268c90c2d578c4"
     },
     {
       "source": "skills/architecture/integration-architecture-review/SKILL.md",
@@ -3953,7 +3971,7 @@
       "source": "skills/design/apt-contrast-check/check-contrast.mjs",
       "target": ".github/skills/design/apt-contrast-check/check-contrast.mjs",
       "kind": "platform",
-      "sha256": "61e94f405c00683eb970d71960210367e54f3228e6de9711d137868c4efc8607"
+      "sha256": "4513557f1fb2ff67cd9cde3a800b916c946ee647881095e1b30c61cefef4568b"
     },
     {
       "source": "skills/design/apt-contrast-check/SKILL.md",
@@ -4136,6 +4154,12 @@
       "sha256": "698d0bbd325463c87788ea03791e7b6e20780b4ae22fa3ba69139e24c32ed675"
     },
     {
+      "source": "templates/ci/apt-check.yml",
+      "target": ".github/workflows/apt-check.yml",
+      "kind": "ci",
+      "sha256": "600fce2897649764318006a33d9750068a79c17d8b9a54b4d7de69aae6c39163"
+    },
+    {
       "source": "CLAUDE.md",
       "target": "CLAUDE.md",
       "kind": "instruction",
@@ -4157,6 +4181,6 @@
   "localContext": "docs/project-context.md",
   "lastOperation": {
     "type": "sync",
-    "at": "2026-10-11T15:24:42.498Z"
+    "at": "2026-10-19T04:11:02.956Z"
   }
 }
