@@ -4,8 +4,9 @@
 name: APT check
 
 on:
+  # GitHub has no "default branch" filter, so list both default-branch names APT repos use.
   push:
-    branches: [main]
+    branches: [main, master]
   pull_request:
 
 permissions:

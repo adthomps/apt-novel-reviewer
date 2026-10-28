@@ -3,18 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* APT design tier 2 (apt-design.json): own palette under APT semantic token names.
+   Dark-only app, so :root is the dark theme. Values are the Tailwind colours the UI already uses. */
 :root {
   color-scheme: dark;
+  --background: 210 25% 8%;
+  --foreground: 212 42% 94%;
+  --card: 222 47% 11%;
+  --card-foreground: 210 40% 96%;
+  --primary: 158 64% 52%;
+  --primary-foreground: 229 84% 5%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --border: 215 25% 27%;
+  --input: 215 25% 27%;
+  --ring: 158 64% 52%;
+  --destructive: 345 83% 41%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 156 72% 67%;
+  --success-foreground: 229 84% 5%;
+  --warning: 46 97% 65%;
+  --warning-foreground: 229 84% 5%;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #0f1419;
+  background-color: hsl(var(--background));
   background-image:
     radial-gradient(circle at top right, rgba(62, 207, 142, 0.15), transparent 36%),
     radial-gradient(circle at bottom left, rgba(0, 168, 255, 0.1), transparent 42%);
-  color: #e9eff6;
+  color: hsl(var(--foreground));
   font-family: "Space Grotesk", sans-serif;
 }
 

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://apt.example/schemas/design-tokens.schema.json",
+  "id": "apt-design-tokens",
+  "version": "2.0.0-candidate",
+  "status": "candidate",
+  "description": "Machine-readable visual enforcement contract for APT.",
+  "sourceRelationship": {
+    "humanDoctrine": "APT-DESIGN-SYSTEM.md",
+    "internalContracts": [
+      "packages/config/src/aptTokens.ts",
+      "apps/web/index.css"
+    ],
+    "publicReference": "APT-TOKENS.json"
+  },
+  "tokens": {
+    "color": {
+      "background": "",
+      "foreground": "",
+      "card": "",
+      "cardForeground": "",
+      "primary": "",
+      "primaryForeground": "",
+      "accent": "",
+      "accentForeground": "",
+      "muted": "",
+      "mutedForeground": "",
+      "border": "",
+      "ring": ""
+    },
+    "typography": {
+      "hero": "",
+      "h1": "",
+      "h2": "",
+      "h3": "",
+      "body": "",
+      "lead": "text-lg md:text-xl leading-relaxed text-foreground/90",
+      "caption": ""
+    },
+    "spacing": {
+      "section": "py-12 md:py-16",
+      "sectionCompact": "py-8 md:py-12",
+      "cardPaddingDense": "p-5",
+      "cardPaddingDefault": "p-6",
+      "cardPaddingFeature": "p-8",
+      "gapDense": "gap-4",
+      "gapDefault": "gap-6",
+      "gapLarge": "gap-8"
+    },
+    "radius": {
+      "sm": "",
+      "md": "",
+      "lg": "",
+      "xl": ""
+    },
+    "motion": {
+      "hoverFocusPress": "140-220ms",
+      "standardTransition": "180-250ms",
+      "entranceViewTransition": "220-320ms",
+      "heroTransitionMax": "400ms",
+      "easingDefault": "ease-out",
+      "easingSmooth": "cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  },
+  "policy": {
+    "accentRestrictions": {
+      "allowed": [
+        "interactive elements",
+        "selected states",
+        "badges and tags",
+        "large callouts"
+      ],
+      "disallowed": [
+        "body text",
+        "captions",
+        "dense metadata",
+        "inline paragraph links without clear interaction and underline"
+      ]
+    },
+    "guardRails": {
+      "noRawColorValuesInComponents": true,
+      "noArbitrarySpacingValues": true,
+      "noNewRadiusValues": true,
+      "noNewShadowStylesOutsideTokens": true,
+      "noInlineStylesUnlessDynamicMeasurement": true,
+      "noTextAccentBelowTextLgUnlessInteractive": true
+    },
+    "cardVariantModel": {
+      "canonical": [
+        "default",
+        "interactive",
+        "elevated",
+        "hero",
+        "subtle",
+        "feature"
+      ]
+    },
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "success-if-relevant",
+      "partial-data"
+    ]
+  },
+  "componentContracts": {
+    "AptButton": {
+      "mustUseTokenizedColors": true
+    },
+    "AptCard": {
+      "mustUseTokenizedSurface": true,
+      "mustUseCanonicalVariantModel": true
+    },
+    "AptSection": {
+      "mustUseCanonicalSpacingVariants": true,
+      "mustUseCanonicalWidthVariants": true,
+      "mustUseCanonicalToneVariants": true
+    },
+    "AptTag": {
+      "mustUseSemanticVariants": true
+    }
+  }
+}

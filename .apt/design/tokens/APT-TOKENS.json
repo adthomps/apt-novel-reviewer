@@ -1,0 +1,466 @@
+{
+  "$schema": "https://schemas.tokens.studio/0.7.0/tokens.schema.json",
+  "apt": {
+    "color": {
+      "dark": {
+        "background": { "value": "hsl(220, 20%, 8%)", "type": "color", "description": "Primary page background" },
+        "foreground": { "value": "hsl(220, 10%, 95%)", "type": "color", "description": "Primary text color" },
+        "card": { "value": "hsl(220, 18%, 12%)", "type": "color", "description": "Card/elevated surface background" },
+        "card-foreground": { "value": "hsl(220, 10%, 95%)", "type": "color", "description": "Card text color" },
+        "popover": { "value": "hsl(220, 18%, 12%)", "type": "color", "description": "Popover background" },
+        "popover-foreground": { "value": "hsl(220, 10%, 95%)", "type": "color", "description": "Popover text" },
+        "primary": { "value": "hsl(220, 70%, 61%)", "type": "color", "description": "Brand accent color" },
+        "primary-foreground": { "value": "hsl(220, 20%, 8%)", "type": "color", "description": "Text on primary" },
+        "secondary": { "value": "hsl(220, 15%, 18%)", "type": "color", "description": "Secondary backgrounds" },
+        "secondary-foreground": { "value": "hsl(220, 10%, 90%)", "type": "color", "description": "Text on secondary" },
+        "muted": { "value": "hsl(220, 15%, 15%)", "type": "color", "description": "Subdued backgrounds" },
+        "muted-foreground": { "value": "hsl(220, 10%, 60%)", "type": "color", "description": "Secondary/subdued text" },
+        "accent": { "value": "hsl(220, 22%, 19%)", "type": "color", "description": "Quiet hover surface for ghost and outline buttons, menus, dropdowns, sidebar and docs navigation. Not a brand color, not the selected state, and not the call to action." },
+        "accent-foreground": { "value": "hsl(220, 10%, 95%)", "type": "color", "description": "Text on the accent hover surface" },
+        "overlay": { "value": "hsl(220, 20%, 4% / 0.82)", "type": "color", "description": "Modal and sheet overlay scrim" },
+        "destructive": { "value": "hsl(0, 65%, 45%)", "type": "color", "description": "Error/danger color" },
+        "destructive-foreground": { "value": "hsl(0, 0%, 100%)", "type": "color", "description": "Text on destructive" },
+        "success": { "value": "hsl(155, 50%, 45%)", "type": "color", "description": "Positive status (completed, approved). Text-safe on all theme surfaces." },
+        "success-foreground": { "value": "hsl(220, 20%, 8%)", "type": "color", "description": "Text on success fill" },
+        "warning": { "value": "hsl(38, 92%, 50%)", "type": "color", "description": "Caution status (review needed, partial). Text-safe on all theme surfaces." },
+        "warning-foreground": { "value": "hsl(220, 20%, 8%)", "type": "color", "description": "Text on warning fill" },
+        "border": { "value": "hsl(220, 15%, 20%)", "type": "color", "description": "Border and divider color" },
+        "input": { "value": "hsl(220, 15%, 18%)", "type": "color", "description": "Input field background" },
+        "ring": { "value": "hsl(220, 70%, 61%)", "type": "color", "description": "Focus ring color" },
+        "apt-glow": { "value": "hsl(220, 70%, 61%)", "type": "color", "description": "Glow effect color" },
+        "apt-surface": { "value": "hsl(220, 18%, 12%)", "type": "color", "description": "APT surface" },
+        "apt-surface-elevated": { "value": "hsl(220, 16%, 16%)", "type": "color", "description": "Elevated surface" },
+        "apt-text-secondary": { "value": "hsl(220, 10%, 60%)", "type": "color", "description": "Secondary text" },
+        "apt-border-subtle": { "value": "hsl(220, 15%, 22%)", "type": "color", "description": "Subtle borders" },
+        "sidebar-background": { "value": "hsl(220, 20%, 6%)", "type": "color", "description": "Sidebar background" },
+        "sidebar-foreground": { "value": "hsl(220, 10%, 95%)", "type": "color", "description": "Sidebar foreground" },
+        "sidebar-primary": { "value": "hsl(220, 70%, 61%)", "type": "color", "description": "Sidebar primary" },
+        "sidebar-primary-foreground": { "value": "hsl(220, 20%, 8%)", "type": "color", "description": "Sidebar primary-foreground" },
+        "sidebar-accent": { "value": "hsl(220, 22%, 19%)", "type": "color", "description": "Sidebar and docs navigation hover surface. Same as accent." },
+        "sidebar-accent-foreground": { "value": "hsl(220, 10%, 95%)", "type": "color", "description": "Text on the sidebar hover surface" },
+        "sidebar-border": { "value": "hsl(220, 15%, 18%)", "type": "color", "description": "Sidebar border" },
+        "sidebar-ring": { "value": "hsl(220, 70%, 61%)", "type": "color", "description": "Sidebar ring" }
+      },
+      "light": {
+        "background": { "value": "hsl(220, 15%, 95%)", "type": "color", "description": "Light mode background" },
+        "foreground": { "value": "hsl(220, 20%, 10%)", "type": "color", "description": "Light mode text" },
+        "card": { "value": "hsl(0, 0%, 100%)", "type": "color", "description": "Light mode card" },
+        "card-foreground": { "value": "hsl(220, 20%, 10%)", "type": "color", "description": "Light card text" },
+        "popover": { "value": "hsl(0, 0%, 100%)", "type": "color", "description": "Light popover" },
+        "popover-foreground": { "value": "hsl(220, 20%, 10%)", "type": "color", "description": "Light popover text" },
+        "primary": { "value": "hsl(220, 70%, 50%)", "type": "color", "description": "Light primary" },
+        "primary-foreground": { "value": "hsl(0, 0%, 100%)", "type": "color", "description": "Light primary text" },
+        "secondary": { "value": "hsl(220, 15%, 90%)", "type": "color", "description": "Light secondary" },
+        "secondary-foreground": { "value": "hsl(220, 20%, 10%)", "type": "color", "description": "Light secondary text" },
+        "muted": { "value": "hsl(220, 15%, 92%)", "type": "color", "description": "Light muted" },
+        "muted-foreground": { "value": "hsl(220, 10%, 40%)", "type": "color", "description": "Light muted text" },
+        "accent": { "value": "hsl(220, 30%, 91%)", "type": "color", "description": "Light-mode quiet hover surface for ghost and outline buttons, menus, dropdowns, sidebar and docs navigation. Not a brand color, not the selected state, and not the call to action." },
+        "accent-foreground": { "value": "hsl(220, 20%, 10%)", "type": "color", "description": "Text on the light accent hover surface" },
+        "overlay": { "value": "hsl(220, 20%, 8% / 0.78)", "type": "color", "description": "Modal and sheet overlay scrim" },
+        "destructive": { "value": "hsl(0, 70%, 50%)", "type": "color", "description": "Light destructive" },
+        "destructive-foreground": { "value": "hsl(0, 0%, 100%)", "type": "color", "description": "Light destructive text" },
+        "success": { "value": "hsl(160, 60%, 28%)", "type": "color", "description": "Positive status (completed, approved). Text-safe on all theme surfaces." },
+        "success-foreground": { "value": "hsl(0, 0%, 100%)", "type": "color", "description": "Text on success fill" },
+        "warning": { "value": "hsl(30, 95%, 30%)", "type": "color", "description": "Caution status (review needed, partial). Text-safe on all theme surfaces." },
+        "warning-foreground": { "value": "hsl(0, 0%, 100%)", "type": "color", "description": "Text on warning fill" },
+        "border": { "value": "hsl(220, 15%, 85%)", "type": "color", "description": "Light border" },
+        "input": { "value": "hsl(220, 15%, 85%)", "type": "color", "description": "Light input" },
+        "ring": { "value": "hsl(220, 70%, 50%)", "type": "color", "description": "Light focus ring" },
+        "apt-glow": { "value": "hsl(220, 70%, 50%)", "type": "color", "description": "Light glow" },
+        "apt-surface": { "value": "hsl(220, 20%, 18%)", "type": "color", "description": "Light surface" },
+        "apt-surface-elevated": { "value": "hsl(220, 18%, 22%)", "type": "color", "description": "Light elevated" },
+        "apt-text-secondary": { "value": "hsl(220, 10%, 60%)", "type": "color", "description": "Light secondary text" },
+        "apt-border-subtle": { "value": "hsl(220, 15%, 25%)", "type": "color", "description": "Light subtle border" },
+        "sidebar-background": { "value": "hsl(220, 15%, 97%)", "type": "color", "description": "Sidebar background" },
+        "sidebar-foreground": { "value": "hsl(220, 20%, 10%)", "type": "color", "description": "Sidebar foreground" },
+        "sidebar-primary": { "value": "hsl(220, 70%, 50%)", "type": "color", "description": "Sidebar primary" },
+        "sidebar-primary-foreground": { "value": "hsl(0, 0%, 100%)", "type": "color", "description": "Sidebar primary-foreground" },
+        "sidebar-accent": { "value": "hsl(220, 30%, 91%)", "type": "color", "description": "Light sidebar and docs navigation hover surface. Same as accent." },
+        "sidebar-accent-foreground": { "value": "hsl(220, 20%, 10%)", "type": "color", "description": "Text on the light sidebar hover surface" },
+        "sidebar-border": { "value": "hsl(220, 15%, 85%)", "type": "color", "description": "Sidebar border" },
+        "sidebar-ring": { "value": "hsl(220, 70%, 50%)", "type": "color", "description": "Sidebar ring" }
+      },
+      "chart": {
+        "1": { "value": "hsl(220, 70%, 61%)", "type": "color", "description": "Chart color 1 - Primary blue" },
+        "2": { "value": "hsl(30, 75%, 50%)", "type": "color", "description": "Chart color 2 - Orange" },
+        "3": { "value": "hsl(280, 55%, 55%)", "type": "color", "description": "Chart color 3 - Purple" },
+        "4": { "value": "hsl(340, 65%, 55%)", "type": "color", "description": "Chart color 4 - Pink" },
+        "5": { "value": "hsl(205, 90%, 70%)", "type": "color", "description": "Chart color 5 - Sky" }
+      },
+      "chartLight": {
+        "1": { "value": "hsl(220, 70%, 50%)", "type": "color", "description": "Light chart color 1 - Primary blue" },
+        "2": { "value": "hsl(30, 80%, 55%)", "type": "color", "description": "Light chart color 2 - Orange" },
+        "3": { "value": "hsl(280, 60%, 50%)", "type": "color", "description": "Light chart color 3 - Purple" },
+        "4": { "value": "hsl(340, 70%, 50%)", "type": "color", "description": "Light chart color 4 - Pink" },
+        "5": { "value": "hsl(205, 85%, 40%)", "type": "color", "description": "Light chart color 5 - Sky" }
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "sans": { "value": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", "type": "fontFamilies" },
+        "mono": { "value": "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace", "type": "fontFamilies" }
+      },
+      "fontSize": {
+        "xs": { "value": "0.75rem", "type": "fontSizes", "description": "12px - Captions" },
+        "sm": { "value": "0.875rem", "type": "fontSizes", "description": "14px - Small text" },
+        "base": { "value": "1rem", "type": "fontSizes", "description": "16px - Body text" },
+        "lg": { "value": "1.125rem", "type": "fontSizes", "description": "18px - Large body" },
+        "xl": { "value": "1.25rem", "type": "fontSizes", "description": "20px - H4" },
+        "2xl": { "value": "1.5rem", "type": "fontSizes", "description": "24px - H3" },
+        "3xl": { "value": "1.875rem", "type": "fontSizes", "description": "30px - H2" },
+        "4xl": { "value": "2.25rem", "type": "fontSizes", "description": "36px - H1" },
+        "5xl": { "value": "3rem", "type": "fontSizes", "description": "48px - Hero" },
+        "6xl": { "value": "3.75rem", "type": "fontSizes", "description": "60px - Hero large" }
+      },
+      "fontWeight": {
+        "normal": { "value": "400", "type": "fontWeights" },
+        "medium": { "value": "500", "type": "fontWeights" },
+        "semibold": { "value": "600", "type": "fontWeights" },
+        "bold": { "value": "700", "type": "fontWeights" }
+      },
+      "lineHeight": {
+        "none": { "value": "1", "type": "lineHeights" },
+        "tight": { "value": "1.25", "type": "lineHeights" },
+        "snug": { "value": "1.375", "type": "lineHeights" },
+        "normal": { "value": "1.5", "type": "lineHeights" },
+        "relaxed": { "value": "1.625", "type": "lineHeights" },
+        "loose": { "value": "2", "type": "lineHeights" }
+      },
+      "letterSpacing": {
+        "tighter": { "value": "-0.05em", "type": "letterSpacing" },
+        "tight": { "value": "-0.025em", "type": "letterSpacing" },
+        "normal": { "value": "0em", "type": "letterSpacing" },
+        "wide": { "value": "0.025em", "type": "letterSpacing" },
+        "wider": { "value": "0.05em", "type": "letterSpacing" },
+        "widest": { "value": "0.1em", "type": "letterSpacing" }
+      },
+      "scale": {
+        "hero": {
+          "fontSize": { "value": "{typography.fontSize.4xl}", "type": "fontSizes" },
+          "fontSizeMd": { "value": "{typography.fontSize.5xl}", "type": "fontSizes" },
+          "fontSizeLg": { "value": "{typography.fontSize.6xl}", "type": "fontSizes" },
+          "fontWeight": { "value": "{typography.fontWeight.bold}", "type": "fontWeights" },
+          "letterSpacing": { "value": "{typography.letterSpacing.tight}", "type": "letterSpacing" }
+        },
+        "h1": {
+          "fontSize": { "value": "{typography.fontSize.3xl}", "type": "fontSizes" },
+          "fontSizeMd": { "value": "{typography.fontSize.4xl}", "type": "fontSizes" },
+          "fontWeight": { "value": "{typography.fontWeight.bold}", "type": "fontWeights" },
+          "letterSpacing": { "value": "{typography.letterSpacing.tight}", "type": "letterSpacing" }
+        },
+        "h2": {
+          "fontSize": { "value": "{typography.fontSize.2xl}", "type": "fontSizes" },
+          "fontSizeMd": { "value": "{typography.fontSize.3xl}", "type": "fontSizes" },
+          "fontWeight": { "value": "{typography.fontWeight.semibold}", "type": "fontWeights" },
+          "letterSpacing": { "value": "{typography.letterSpacing.tight}", "type": "letterSpacing" }
+        },
+        "h3": {
+          "fontSize": { "value": "{typography.fontSize.xl}", "type": "fontSizes" },
+          "fontSizeMd": { "value": "{typography.fontSize.2xl}", "type": "fontSizes" },
+          "fontWeight": { "value": "{typography.fontWeight.semibold}", "type": "fontWeights" }
+        },
+        "h4": {
+          "fontSize": { "value": "{typography.fontSize.lg}", "type": "fontSizes" },
+          "fontWeight": { "value": "{typography.fontWeight.semibold}", "type": "fontWeights" }
+        },
+        "body": {
+          "fontSize": { "value": "{typography.fontSize.base}", "type": "fontSizes" },
+          "lineHeight": { "value": "{typography.lineHeight.relaxed}", "type": "lineHeights" }
+        },
+        "bodySmall": {
+          "fontSize": { "value": "{typography.fontSize.sm}", "type": "fontSizes" },
+          "lineHeight": { "value": "{typography.lineHeight.relaxed}", "type": "lineHeights" }
+        },
+        "caption": {
+          "fontSize": { "value": "{typography.fontSize.xs}", "type": "fontSizes" },
+          "color": { "value": "{color.dark.muted-foreground}", "type": "color" }
+        }
+      }
+    },
+    "spacing": {
+      "0": { "value": "0", "type": "spacing" },
+      "1": { "value": "0.25rem", "type": "spacing", "description": "4px" },
+      "2": { "value": "0.5rem", "type": "spacing", "description": "8px" },
+      "3": { "value": "0.75rem", "type": "spacing", "description": "12px" },
+      "4": { "value": "1rem", "type": "spacing", "description": "16px" },
+      "5": { "value": "1.25rem", "type": "spacing", "description": "20px" },
+      "6": { "value": "1.5rem", "type": "spacing", "description": "24px" },
+      "8": { "value": "2rem", "type": "spacing", "description": "32px" },
+      "10": { "value": "2.5rem", "type": "spacing", "description": "40px" },
+      "12": { "value": "3rem", "type": "spacing", "description": "48px" },
+      "16": { "value": "4rem", "type": "spacing", "description": "64px" },
+      "20": { "value": "5rem", "type": "spacing", "description": "80px" },
+      "24": { "value": "6rem", "type": "spacing", "description": "96px" },
+      "semantic": {
+        "section": { "value": "{spacing.16}", "type": "spacing", "description": "Section vertical padding" },
+        "sectionCompact": { "value": "{spacing.8}", "type": "spacing", "description": "Compact section padding" },
+        "cardPadding": { "value": "{spacing.6}", "type": "spacing", "description": "Standard card padding" },
+        "cardPaddingLarge": { "value": "{spacing.8}", "type": "spacing", "description": "Hero card padding" },
+        "gap": { "value": "{spacing.6}", "type": "spacing", "description": "Standard grid gap" },
+        "gapLarge": { "value": "{spacing.8}", "type": "spacing", "description": "Large component gap" }
+      }
+    },
+    "borderRadius": {
+      "none": { "value": "0", "type": "borderRadius" },
+      "sm": { "value": "calc(0.5rem - 4px)", "type": "borderRadius", "description": "Small radius" },
+      "md": { "value": "calc(0.5rem - 2px)", "type": "borderRadius", "description": "Medium radius" },
+      "lg": { "value": "0.5rem", "type": "borderRadius", "description": "Base radius (--radius)" },
+      "xl": { "value": "0.75rem", "type": "borderRadius", "description": "Large radius" },
+      "2xl": { "value": "1rem", "type": "borderRadius", "description": "Extra large radius" },
+      "full": { "value": "9999px", "type": "borderRadius", "description": "Circular/pill" }
+    },
+    "borderWidth": {
+      "0": { "value": "0", "type": "borderWidth" },
+      "1": { "value": "1px", "type": "borderWidth" },
+      "2": { "value": "2px", "type": "borderWidth" },
+      "4": { "value": "4px", "type": "borderWidth" }
+    },
+    "shadow": {
+      "elevation-1-light": { "value": "0 1px 2px 0 hsl(220 20% 8% / 0.08)", "type": "boxShadow" },
+      "elevation-2-light": { "value": "0 6px 18px -6px hsl(220 20% 8% / 0.18)", "type": "boxShadow" },
+      "elevation-3-light": { "value": "0 12px 32px -10px hsl(220 20% 8% / 0.26)", "type": "boxShadow" },
+      "elevation-4-light": { "value": "0 24px 60px -18px hsl(220 20% 8% / 0.36)", "type": "boxShadow" },
+      "elevation-1-dark": { "value": "0 1px 2px 0 hsl(220 20% 4% / 0.32)", "type": "boxShadow" },
+      "elevation-2-dark": { "value": "0 6px 18px -6px hsl(220 20% 4% / 0.42)", "type": "boxShadow" },
+      "elevation-3-dark": { "value": "0 12px 32px -10px hsl(220 20% 4% / 0.52)", "type": "boxShadow" },
+      "elevation-4-dark": { "value": "0 24px 60px -18px hsl(220 20% 4% / 0.62)", "type": "boxShadow" },
+      "apt-glow-subtle": { "value": "0 0 40px -10px hsl(var(--apt-glow) / 0.2)", "type": "boxShadow", "description": "APT glow effect" },
+      "apt-glow-strong": { "value": "0 0 40px hsl(var(--apt-glow) / 0.28), 0 0 80px hsl(var(--apt-glow) / 0.14)", "type": "boxShadow", "description": "Strong APT glow effect" },
+      "apt-hover-lift": { "value": "0 8px 24px -8px hsl(var(--apt-glow) / 0.15)", "type": "boxShadow", "description": "Hover lift shadow" }
+    },
+    "animation": {
+      "duration": {
+        "fast": { "value": "140ms", "type": "duration" },
+        "normal": { "value": "220ms", "type": "duration" },
+        "slow": { "value": "360ms", "type": "duration" },
+        "slower": { "value": "400ms", "type": "duration" },
+        "slowest": { "value": "500ms", "type": "duration" }
+      },
+      "easing": {
+        "default": { "value": "ease-out", "type": "easing" },
+        "smooth": { "value": "cubic-bezier(0.4, 0, 0.2, 1)", "type": "easing" },
+        "spring": { "value": "cubic-bezier(0.34, 1.56, 0.64, 1)", "type": "easing" }
+      },
+      "keyframes": {
+        "apt-fade-in": {
+          "from": { "opacity": "0" },
+          "to": { "opacity": "1" }
+        },
+        "apt-slide-up": {
+          "from": { "opacity": "0", "transform": "translateY(10px)" },
+          "to": { "opacity": "1", "transform": "translateY(0)" }
+        },
+        "apt-emblem-spin": {
+          "from": { "transform": "rotate(0deg)" },
+          "to": { "transform": "rotate(360deg)" }
+        },
+        "apt-pulse-glow": {
+          "0%, 100%": { "opacity": "0.6", "transform": "scale(1)" },
+          "50%": { "opacity": "1", "transform": "scale(1.05)" }
+        }
+      },
+      "presets": {
+        "fade-in": {
+          "animation": "apt-fade-in 400ms ease-out forwards",
+          "description": "Initial element appearance"
+        },
+        "slide-up": {
+          "animation": "apt-slide-up 500ms ease-out forwards",
+          "description": "Hero/modal entrances"
+        },
+        "hover-lift": {
+          "transition": "transform 140ms ease-out, box-shadow 140ms ease-out",
+          "hover": { "transform": "translateY(-2px)", "boxShadow": "{shadow.apt-hover-lift}" },
+          "description": "Interactive card hover"
+        },
+        "glow-subtle": {
+          "boxShadow": "{shadow.apt-glow-subtle}",
+          "description": "Subtle glow emphasis"
+        },
+        "emblem-spin": {
+          "animation": "apt-emblem-spin 4s linear infinite",
+          "description": "Brand emblem glow ring"
+        }
+      }
+    },
+    "container": {
+      "maxWidth": {
+        "prose": { "value": "65ch", "type": "sizing", "description": "Optimal reading width" },
+        "content": { "value": "56rem", "type": "sizing", "description": "Standard content (896px)" },
+        "wide": { "value": "72rem", "type": "sizing", "description": "Wide layouts (1152px)" },
+        "full": { "value": "80rem", "type": "sizing", "description": "Full width (1280px)" },
+        "container": { "value": "1400px", "type": "sizing", "description": "Main container" }
+      },
+      "padding": {
+        "default": { "value": "2rem", "type": "spacing" }
+      }
+    },
+    "component": {
+      "button": {
+        "height": {
+          "sm": { "value": "2.25rem", "type": "sizing", "description": "36px" },
+          "default": { "value": "2.5rem", "type": "sizing", "description": "40px" },
+          "lg": { "value": "3rem", "type": "sizing", "description": "48px" },
+          "icon": { "value": "2.5rem", "type": "sizing", "description": "40px square" }
+        },
+        "padding": {
+          "sm": { "value": "0.75rem", "type": "spacing" },
+          "default": { "value": "1rem", "type": "spacing" },
+          "lg": { "value": "2rem", "type": "spacing" }
+        },
+        "borderRadius": { "value": "{borderRadius.lg}", "type": "borderRadius" },
+        "variants": {
+          "primary": {
+            "background": { "value": "{color.dark.primary}", "type": "color" },
+            "foreground": { "value": "{color.dark.primary-foreground}", "type": "color" },
+            "shadow": { "value": "{shadow.elevation-1-dark}", "type": "boxShadow" },
+            "hoverShadow": { "value": "{shadow.elevation-2-dark}", "type": "boxShadow" }
+          },
+          "secondary": {
+            "background": { "value": "{color.dark.secondary}", "type": "color" },
+            "foreground": { "value": "{color.dark.secondary-foreground}", "type": "color" },
+            "border": { "value": "{color.dark.border}", "type": "color" }
+          },
+          "outline": {
+            "background": { "value": "transparent", "type": "color" },
+            "foreground": { "value": "{color.dark.foreground}", "type": "color" },
+            "border": { "value": "{color.dark.border}", "type": "color" },
+            "hoverBackground": { "value": "{color.dark.accent}", "type": "color" }
+          },
+          "ghost": {
+            "background": { "value": "transparent", "type": "color" },
+            "foreground": { "value": "{color.dark.foreground}", "type": "color" },
+            "hoverBackground": { "value": "{color.dark.accent}", "type": "color" }
+          }
+        }
+      },
+      "menu": {
+        "item": {
+          "background": { "value": "transparent", "type": "color" },
+          "foreground": { "value": "{color.dark.foreground}", "type": "color" },
+          "hoverBackground": { "value": "{color.dark.accent}", "type": "color", "description": "Menu item hover highlight" },
+          "hoverForeground": { "value": "{color.dark.accent-foreground}", "type": "color" }
+        }
+      },
+      "dropdown": {
+        "option": {
+          "background": { "value": "transparent", "type": "color" },
+          "foreground": { "value": "{color.dark.foreground}", "type": "color" },
+          "hoverBackground": { "value": "{color.dark.accent}", "type": "color", "description": "Dropdown option hover highlight" },
+          "hoverForeground": { "value": "{color.dark.accent-foreground}", "type": "color" }
+        }
+      },
+      "sidebar": {
+        "item": {
+          "background": { "value": "transparent", "type": "color" },
+          "foreground": { "value": "{color.dark.sidebar-foreground}", "type": "color" },
+          "hoverBackground": { "value": "{color.dark.accent}", "type": "color", "description": "Sidebar item hover highlight" },
+          "hoverForeground": { "value": "{color.dark.accent-foreground}", "type": "color" },
+          "selected": {
+            "background": { "value": "hsl(220, 70%, 61% / 0.12)", "type": "color", "description": "Selected item surface: faint primary tint" },
+            "foreground": { "value": "{color.dark.foreground}", "type": "color" },
+            "indicator": { "value": "{color.dark.primary}", "type": "color", "description": "2px inline-start bar marking the selected item" }
+          }
+        }
+      },
+      "docsNav": {
+        "item": {
+          "background": { "value": "transparent", "type": "color" },
+          "foreground": { "value": "{color.dark.foreground}", "type": "color" },
+          "hoverBackground": { "value": "{color.dark.accent}", "type": "color", "description": "Docs navigation item hover highlight" },
+          "hoverForeground": { "value": "{color.dark.accent-foreground}", "type": "color" },
+          "selected": {
+            "background": { "value": "hsl(220, 70%, 61% / 0.12)", "type": "color", "description": "Selected item surface: faint primary tint" },
+            "foreground": { "value": "{color.dark.foreground}", "type": "color" },
+            "indicator": { "value": "{color.dark.primary}", "type": "color", "description": "2px inline-start bar marking the selected item" }
+          }
+        }
+      },
+      "card": {
+        "borderRadius": { "value": "{borderRadius.lg}", "type": "borderRadius" },
+        "padding": { "value": "{spacing.6}", "type": "spacing" },
+        "variants": {
+          "default": {
+            "background": { "value": "{color.dark.card}", "type": "color" },
+            "border": { "value": "{color.dark.border}", "type": "color" }
+          },
+          "elevated": {
+            "background": { "value": "{color.dark.card}", "type": "color" },
+            "border": { "value": "{color.dark.border}", "type": "color" },
+            "shadow": { "value": "{shadow.elevation-3-dark}", "type": "boxShadow" }
+          },
+          "interactive": {
+            "background": { "value": "{color.dark.card}", "type": "color" },
+            "border": { "value": "{color.dark.border}", "type": "color" },
+            "hoverBorder": { "value": "hsl(220, 70%, 61% / 0.5)", "type": "color" },
+            "hoverShadow": { "value": "{shadow.elevation-3-dark}", "type": "boxShadow" }
+          },
+          "hero": {
+            "background": { "value": "hsl(220, 18%, 12% / 0.5)", "type": "color" },
+            "backdropBlur": { "value": "blur(8px)", "type": "blur" },
+            "borderRadius": { "value": "{borderRadius.xl}", "type": "borderRadius" },
+            "shadow": { "value": "{shadow.elevation-4-dark}", "type": "boxShadow" }
+          },
+          "subtle": {
+            "background": { "value": "hsl(220, 15%, 15% / 0.5)", "type": "color" },
+            "border": { "value": "transparent", "type": "color" }
+          }
+        }
+      },
+      "tag": {
+        "borderRadius": { "value": "{borderRadius.md}", "type": "borderRadius" },
+        "fontSize": {
+          "sm": { "value": "10px", "type": "fontSizes" },
+          "default": { "value": "{typography.fontSize.xs}", "type": "fontSizes" }
+        },
+        "padding": {
+          "sm": { "value": "0.5rem 0.125rem", "type": "spacing" },
+          "default": { "value": "0.625rem 0.125rem", "type": "spacing" }
+        },
+        "variants": {
+          "default": {
+            "background": { "value": "{color.dark.secondary}", "type": "color" },
+            "foreground": { "value": "{color.dark.secondary-foreground}", "type": "color" }
+          },
+          "primary": {
+            "background": { "value": "hsl(220, 70%, 61% / 0.2)", "type": "color" },
+            "foreground": { "value": "{color.dark.primary}", "type": "color" }
+          },
+          "muted": {
+            "background": { "value": "{color.dark.muted}", "type": "color" },
+            "foreground": { "value": "{color.dark.muted-foreground}", "type": "color" }
+          },
+          "outline": {
+            "background": { "value": "transparent", "type": "color" },
+            "foreground": { "value": "{color.dark.foreground}", "type": "color" },
+            "border": { "value": "{color.dark.border}", "type": "color" }
+          }
+        }
+      },
+      "emblem": {
+        "sizes": {
+          "sm": { "value": "32px", "type": "sizing" },
+          "md": { "value": "48px", "type": "sizing" },
+          "lg": { "value": "80px", "type": "sizing" },
+          "xl": { "value": "128px", "type": "sizing" }
+        },
+        "glowColor": { "value": "{color.dark.primary}", "type": "color" },
+        "borderWidth": { "value": "2px", "type": "borderWidth" }
+      }
+    },
+    "breakpoints": {
+      "sm": { "value": "640px", "type": "dimension" },
+      "md": { "value": "768px", "type": "dimension" },
+      "lg": { "value": "1024px", "type": "dimension" },
+      "xl": { "value": "1280px", "type": "dimension" },
+      "2xl": { "value": "1400px", "type": "dimension" }
+    }
+  },
+  "$metadata": {
+    "tokenSetOrder": ["apt"],
+    "version": "2.2.0",
+    "name": "APT Design System",
+    "description": "Applied Practical Thinking design tokens. Canonical source: apt-principles-agents/design/tokens (APT-019).",
+    "author": "APT"
+  }
+}

@@ -9,7 +9,8 @@
     "core",
     "ai-development",
     "documentation",
-    "ux-review"
+    "ux-review",
+    "design"
   ],
   "platforms": [
     "codex",
@@ -354,6 +355,150 @@
       "target": ".apt/context/ui/README.md",
       "kind": "canonical",
       "sha256": "afaa0ed38cbbeac7a75d284c9816c634d71379dd309c7dca336851d57ed0a8b0"
+    },
+    {
+      "source": "design/bin/apt-design-check.mjs",
+      "target": ".apt/design/bin/apt-design-check.mjs",
+      "kind": "canonical",
+      "sha256": "b9429d77ac750652b9ba9f90054d50a09705a8b898cc06aeea1f8c89c2c5af5a"
+    },
+    {
+      "source": "design/CHANGELOG.md",
+      "target": ".apt/design/CHANGELOG.md",
+      "kind": "canonical",
+      "sha256": "3001232144c9f26f5419772e782060eefaa8558837aec9bf6a76292acd47afb9"
+    },
+    {
+      "source": "design/generated/apt-preview.html",
+      "target": ".apt/design/generated/apt-preview.html",
+      "kind": "canonical",
+      "sha256": "f1afa415ba5cc6e4df5c84b21da7b8379093cf068ca8ea84f338a38bfeb7df62"
+    },
+    {
+      "source": "design/generated/apt-theme.css",
+      "target": ".apt/design/generated/apt-theme.css",
+      "kind": "canonical",
+      "sha256": "dd7ced2c5bae1bcb79bdd07138c7be56fdf8250b62587ac4d4ed14fad015bf46"
+    },
+    {
+      "source": "design/generated/apt-tokens.css",
+      "target": ".apt/design/generated/apt-tokens.css",
+      "kind": "canonical",
+      "sha256": "70533a4147094ac613e88ea926027a57464ddffc80406bf6ebd892d792b8b176"
+    },
+    {
+      "source": "design/generated/apt-tokens.dark-first.css",
+      "target": ".apt/design/generated/apt-tokens.dark-first.css",
+      "kind": "canonical",
+      "sha256": "0853aa664c94165d257b2ef6407e466148251192dbf08490786cd96e36bf0123"
+    },
+    {
+      "source": "design/generated/tailwind-preset.cjs",
+      "target": ".apt/design/generated/tailwind-preset.cjs",
+      "kind": "canonical",
+      "sha256": "d16bb3a534ed3532d8be019c9469b6f61acfd91e11af5d3ab3b7e35fd2ea6df6"
+    },
+    {
+      "source": "design/generated/tokens.ts",
+      "target": ".apt/design/generated/tokens.ts",
+      "kind": "canonical",
+      "sha256": "40504de903b0fd92796b6aff03dbf46a7238f2679b345c9c5e09c3d4199a7371"
+    },
+    {
+      "source": "design/README.md",
+      "target": ".apt/design/README.md",
+      "kind": "canonical",
+      "sha256": "1692871c48404a1d6263acc9f6d89d8f900e8ee5fd75e3e9b22282f2afd27c4e"
+    },
+    {
+      "source": "design/tokens/APT-TOKENS-CONTRACT.json",
+      "target": ".apt/design/tokens/APT-TOKENS-CONTRACT.json",
+      "kind": "canonical",
+      "sha256": "0e5916712fe9e475ce4e2be84fc0b3db4ed96829a83d64e2caaea5a9f8f5460e"
+    },
+    {
+      "source": "design/tokens/APT-TOKENS.json",
+      "target": ".apt/design/tokens/APT-TOKENS.json",
+      "kind": "canonical",
+      "sha256": "5b8e24b48665eaa1a5061b218ba4389bd62539e86525e9774be79874f3fb7807"
+    },
+    {
+      "source": "design/VERSION",
+      "target": ".apt/design/VERSION",
+      "kind": "canonical",
+      "sha256": "c4a2383a03bdb6739d16a0e24058e4b9c7da4e63d203e0be2f448868cc03c530"
+    },
+    {
+      "source": "examples/ui/account-auth-settings-pattern.md",
+      "target": ".apt/examples/ui/account-auth-settings-pattern.md",
+      "kind": "canonical",
+      "sha256": "acc9d812a08670d9c7d3c52d3e08b380797e30539583e0ce7f39de73d057912c"
+    },
+    {
+      "source": "examples/ui/chart-data-visualization-pattern.md",
+      "target": ".apt/examples/ui/chart-data-visualization-pattern.md",
+      "kind": "canonical",
+      "sha256": "145f7e29320848ed390bfe4bba0c72725c703b9e7864e4652165165171f007ad"
+    },
+    {
+      "source": "examples/ui/content-insights-card-pattern.md",
+      "target": ".apt/examples/ui/content-insights-card-pattern.md",
+      "kind": "canonical",
+      "sha256": "2e0fc529177155751a9c900b3686fa527f03c762c1c6e0dbd261c7622a65b85b"
+    },
+    {
+      "source": "examples/ui/dashboard-layout-pattern.md",
+      "target": ".apt/examples/ui/dashboard-layout-pattern.md",
+      "kind": "canonical",
+      "sha256": "3736dcf85b5bde2609ea85e3294c2084b37be04785bc0512886aac8da3cce1b7"
+    },
+    {
+      "source": "examples/ui/design-reference-kit.md",
+      "target": ".apt/examples/ui/design-reference-kit.md",
+      "kind": "canonical",
+      "sha256": "77d228947475d40c127af7f58e54611a5a4ac36c4be4d351b7fe7ccdb11ed990"
+    },
+    {
+      "source": "examples/ui/design-system-primitives-pattern.md",
+      "target": ".apt/examples/ui/design-system-primitives-pattern.md",
+      "kind": "canonical",
+      "sha256": "a497da7160080799c765b6422426b5c74f798d14ffd4cf91164570f5164aa7be"
+    },
+    {
+      "source": "examples/ui/docs-principles-browser-pattern.md",
+      "target": ".apt/examples/ui/docs-principles-browser-pattern.md",
+      "kind": "canonical",
+      "sha256": "ba8b3aae9dc5164df764451c9af5c56af1363676265c86f6fb6349b2aafa65f8"
+    },
+    {
+      "source": "examples/ui/feedback-alert-toast-pattern.md",
+      "target": ".apt/examples/ui/feedback-alert-toast-pattern.md",
+      "kind": "canonical",
+      "sha256": "bfd48f78ad3e4a2efe4120af54a7f53826c157a2d5c57a63ef622512268d43d6"
+    },
+    {
+      "source": "examples/ui/footer-layout-pattern.md",
+      "target": ".apt/examples/ui/footer-layout-pattern.md",
+      "kind": "canonical",
+      "sha256": "f99c3769b2bc2783f6fa5be38a659489d3a194b7ea3f2b5e65bbf75a3dc84d61"
+    },
+    {
+      "source": "examples/ui/navigation-layout-pattern.md",
+      "target": ".apt/examples/ui/navigation-layout-pattern.md",
+      "kind": "canonical",
+      "sha256": "0bf1c08a99b03326726a4f736ce7bf0b03a2aa8babf8a5448fc138ddd5fc0148"
+    },
+    {
+      "source": "examples/ui/product-portfolio-surface-pattern.md",
+      "target": ".apt/examples/ui/product-portfolio-surface-pattern.md",
+      "kind": "canonical",
+      "sha256": "c325cd722a1052ac1b8f8fb3871dd52f3a98664ac3cffa5584fe1c79fdad898b"
+    },
+    {
+      "source": "examples/ui/transactional-email-pattern.md",
+      "target": ".apt/examples/ui/transactional-email-pattern.md",
+      "kind": "canonical",
+      "sha256": "eacf38c8eb3c77aaed6e60f943707f052a6b7c763b8ce8f2270987d4ce43af31"
     },
     {
       "source": "git-hooks/pre-push",
@@ -866,10 +1011,28 @@
       "sha256": "1820bd95c2f66877360b045578dfe12d3c3f26973b4493b9bfe0e5a9d66cbfdc"
     },
     {
+      "source": "references/apt-design.schema.json",
+      "target": ".apt/references/apt-design.schema.json",
+      "kind": "canonical",
+      "sha256": "2b0cd611a65b6b6daaf29c567f604d6179972ad78237143abc1279f96810a845"
+    },
+    {
       "source": "references/apt.schema.json",
       "target": ".apt/references/apt.schema.json",
       "kind": "apt-check",
       "sha256": "b321b567ee3a5e731b048f1d8dc39bcae092a7dde12a740c8f2ca2e680ed2142"
+    },
+    {
+      "source": "references/design-lint-gates.json",
+      "target": ".apt/references/design-lint-gates.json",
+      "kind": "canonical",
+      "sha256": "f014e7014fa2c5eefb16aaf9da72d65548808ef9d63114a2aeeb12ab0a3854d6"
+    },
+    {
+      "source": "references/design-tokens.json",
+      "target": ".apt/references/design-tokens.json",
+      "kind": "canonical",
+      "sha256": "8eba1f9c47916ddecd2acef9d6d42f5fc4e3312465d26a213cbf8831ae689d04"
     },
     {
       "source": "skills/ai-agents/agent-routing/SKILL.md",
@@ -1254,6 +1417,12 @@
       "target": ".apt/templates/decision-records/README.md",
       "kind": "canonical",
       "sha256": "52522e28b6091c5e71da4d58ab2358c9d50f189d5d1ac9a56365d2a435268e47"
+    },
+    {
+      "source": "templates/DESIGN.md",
+      "target": ".apt/templates/DESIGN.md",
+      "kind": "canonical",
+      "sha256": "cd6f681bd7e105f47c2d5d93d45332a923de4e7d38faaf9b301563ccccfa0972"
     },
     {
       "source": "templates/docs/ai-usage-examples.md",
@@ -4157,7 +4326,7 @@
       "source": "templates/ci/apt-check.yml",
       "target": ".github/workflows/apt-check.yml",
       "kind": "ci",
-      "sha256": "600fce2897649764318006a33d9750068a79c17d8b9a54b4d7de69aae6c39163"
+      "sha256": "3b1911058b7a661aa55f743dbab3762ce0abfaa052041e0bc73feb86cdd55af1"
     },
     {
       "source": "CLAUDE.md",
@@ -4178,9 +4347,10 @@
       "sha256": "86bf9a43158f4400aa09d4caba98f2551d841725d30c3e7b6c939981330449a0"
     }
   ],
+  "designVersion": "2.2.0",
   "localContext": "docs/project-context.md",
   "lastOperation": {
-    "type": "sync",
-    "at": "2026-10-19T04:11:02.956Z"
+    "type": "install",
+    "at": "2026-10-27T02:28:01.974Z"
   }
 }

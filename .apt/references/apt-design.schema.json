@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apt.local/schemas/apt-design-v1.json",
+  "title": "APT design alignment config (apt-design.json)",
+  "description": "Per-repository config read by .apt/design/bin/apt-design-check.mjs (DR-015 / APT-019).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tier"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "tier": {
+      "enum": [1, 2, 3],
+      "description": "1 = canonical APT values (exclusions only); 2 = own palette with APT semantic token names and contrast; 3 = guidance only, no checks."
+    },
+    "css": {
+      "type": "string",
+      "description": "Stylesheet that defines or @imports the theme tokens, relative to the repository root."
+    },
+    "themes": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Theme block selectors. Omit to auto-detect (.light => :root dark; .dark => :root light).",
+      "properties": {
+        "dark": { "type": "string", "examples": [":root {", ".dark {"] },
+        "light": { "type": "string", "examples": [":root {", ".light {"] }
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "description": "Tier 1 tokens allowed to differ from canonical values. Each needs a reason and a decision record.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["token", "reason", "decision"],
+        "properties": {
+          "token": { "type": "string", "description": "Token name without the leading --." },
+          "themes": { "type": "array", "items": { "enum": ["dark", "light"] }, "uniqueItems": true },
+          "reason": { "type": "string", "minLength": 10 },
+          "decision": { "type": "string", "description": "Path to the decision record accepting the exclusion." }
+        }
+      }
+    },
+    "lint": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "roots": { "type": "array", "items": { "type": "string" }, "description": "Folders scanned for raw colors (default apps/web/src)." },
+        "allowlist": { "type": "array", "items": { "type": "string" }, "description": "Files where literal colors are data, not styling." },
+        "disable": {
+          "type": "array",
+          "items": { "enum": ["raw-palette", "raw-monochrome", "raw-hex", "accent-interaction"] },
+          "uniqueItems": true
+        },
+        "baseline": { "type": "integer", "minimum": 0, "description": "Lint findings accepted while a repo cleans up (mainly Tier 2). The check fails above it and asks for it to be lowered when findings fall below it. Default 0." }
+      }
+    }
+  },
+  "allOf": [
+    { "if": { "properties": { "tier": { "enum": [1, 2] } } }, "then": { "required": ["tier", "css"] } }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "./.apt/references/apt-design.schema.json",
+  "tier": 2,
+  "css": "apps/desktop/src/renderer/styles.css",
+  "lint": {
+    "roots": ["apps/desktop/src/renderer", "packages/ui/src"],
+    "baseline": 366
+  }
+}

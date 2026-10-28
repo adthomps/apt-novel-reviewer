@@ -1,0 +1,5 @@
+{
+  "$schema": "./.apt/references/apt.schema.json",
+  "profile": { "level": "error" },
+  "architecture": { "level": "error" }
+}
